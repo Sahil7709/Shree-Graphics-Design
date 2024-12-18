@@ -164,19 +164,7 @@
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
             </div>
           </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Shirt</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">T-Shirt</a>
-            </li>
-
-          </ul>
-
+  
         </li>
 
         <li class="menu-category">
@@ -190,19 +178,38 @@
             </div>
           </button>
 
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">Shirt</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="#" class="submenu-title">T-Shirt</a>
-            </li>
-
-          </ul>
 
         </li>
+
+        <li class="menu-category">
+
+<button class="accordion-menu" data-accordion-btn>
+  <p class="menu-title">vendors</p>
+
+  <div>
+    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+  </div>
+</button>
+
+
+
+</li>
+
+<li class="menu-category">
+
+<button class="accordion-menu" data-accordion-btn>
+  <p class="menu-title">Services</p>
+
+  <div>
+    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+  </div>
+</button>
+
+
+
+</li>
 
       </ul>
 

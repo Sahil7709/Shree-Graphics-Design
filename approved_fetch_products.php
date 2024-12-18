@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="CSS/index.css">
 </head>
 <body>
-
+    
 <?php
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'Logo');

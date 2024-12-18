@@ -9,7 +9,7 @@
   <!-- Include Font Awesome for Icons -->
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
   <!-- Custom CSS -->
-    <link rel="stylesheet" href ="css/index.css">
+    <link rel="stylesheet" href ="CSS/index.css">
 
 </head>
 <body>
@@ -23,6 +23,8 @@
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     <a href="#customers"><i class="fas fa-users"></i> Customers</a>
     <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+    <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
+    <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
     <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
 
@@ -32,37 +34,51 @@
 
     <!-- Overview Cards -->
     <div class="row">
+      
       <div class="col-md-3">
-        <div class="card text-white bg-primary">
-          <div class="card-body">
-            <h5 class="card-title">Total Sales</h5>
-            <p class="card-text">$45,000</p>
-          </div>
-        </div>
+        <a href="products.php">
+          <div class="card text-white bg-primary">
+            <div class="card-body">
+             <h5 class="card-title">  Products</h5>
+              <!-- <p class="card-text">$45,000</p> -->
+           </div>
+         </div>
+        </a>
       </div>
+
       <div class="col-md-3">
+      <a href="admin_orders.php">
+ 
         <div class="card text-white bg-success">
           <div class="card-body">
             <h5 class="card-title">Orders</h5>
-            <p class="card-text">1,200</p>
+            <!-- <p class="card-text">1,200</p> -->
           </div>
         </div>
+        </a>
       </div>
+
       <div class="col-md-3">
+        <a href="services.php">
         <div class="card text-white bg-warning">
           <div class="card-body">
-            <h5 class="card-title">Products</h5>
-            <p class="card-text">350</p>
+            <h5 class="card-title">Services</h5>
+            <!-- <p class="card-text">350</p> -->
           </div>
         </div>
+        </a>
       </div>
+
+
       <div class="col-md-3">
+        <a href="slider.php">
         <div class="card text-white bg-danger">
           <div class="card-body">
-            <h5 class="card-title">Pending Issues</h5>
-            <p class="card-text">12</p>
+            <h5 class="card-title">Slider</h5>
+            <!-- <p class="card-text">12</p> -->
           </div>
         </div>
+        </a>
       </div>
     </div>
 
@@ -72,7 +88,7 @@
       <table class="table table-striped">
         <thead>
           <tr>
-            <th>#</th>
+            <th>Id</th>
             <th>Product Name</th>
             <th>Category</th>
             <th>Price</th>

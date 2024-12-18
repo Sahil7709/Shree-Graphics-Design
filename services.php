@@ -16,6 +16,8 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
+
 
   <!--
     - google font link
@@ -306,10 +308,59 @@
   <div class="container">
     <div class="product-box">
   
-      <!-- PRODUCT GRID -->
-      <div class="product-grid">
-        <?php include 'approved_fetch_products.php'; ?>
-      </div>
+    <?php
+// services.php
+
+// Database connection
+$conn = new mysqli('localhost', 'root', '', 'logo');
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+// Fetch services
+$sql = "SELECT * FROM services";
+$result = $conn->query($sql);
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h2>Our Services</h2>
+
+<div class="services-container">
+    <?php
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo '
+            <div class="service-card">
+                <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img">
+                <h3>' . $row['service_name'] . '</h3>
+                <p>' . $row['service_description'] . '</p>
+                <p class="price">Rs. ' . $row['service_price'] . '</p>
+            </div>';
+        }
+    } else {
+        echo "No services available.";
+    }
+
+    // Close the database connection
+    $conn->close();
+    ?>
+</div>
+
+</body>
+</html>
+
 
     </div>
   </div>

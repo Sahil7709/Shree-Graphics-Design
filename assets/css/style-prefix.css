@@ -3208,3 +3208,45 @@ footer {
   }
 
 }
+
+/* Style for the service card */
+.service-card {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  width: 250px;  /* Set width for the card */
+  margin: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-img {
+  width: 100%;   /* Makes sure the image takes up the full width of its container */
+  height: 200px; /* Fixed height for the image */
+  object-fit: cover; /* Ensures the image covers the space without stretching */
+  border-radius: 8px; /* Optional: adds rounded corners to the image */
+}
+
+.service-card h3 {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.service-card p {
+  font-size: 14px;
+  color: #666;
+}
+
+.service-card .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #000;
+}
+@media (max-width: 768px) {
+  .service-card {
+      width: 100%;  /* Full width on smaller screens */
+  }
+
+  .service-img {
+      height: 150px;  /* Smaller height on mobile */
+  }
+}

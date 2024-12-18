@@ -25,7 +25,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 </head>
 <body>
   <!-- Sidebar -->
-<div class="sidebar">
+  <div class="sidebar">
     <div class="text-center py-4">
       <h3>My Dashboard</h3>
     </div>
@@ -34,8 +34,10 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     <a href="#customers"><i class="fas fa-users"></i> Customers</a>
     <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+    <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
+    <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
     <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
-</div>
+  </div>
 <?php
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'Logo');
