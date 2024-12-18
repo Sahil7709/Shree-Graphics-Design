@@ -1,0 +1,147 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+  }
+  .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #343a40;
+    color: #fff;
+  }
+  .sidebar a {
+    display: block;
+    padding: 15px;
+    text-decoration: none;
+    color: #adb5bd;
+  }
+  .sidebar a:hover {
+    background-color: #495057;
+    color: #fff;
+  }
+  .main-content {
+    margin-left: 250px;
+    padding: 20px;
+  }
+  .card {
+    margin-bottom: 20px;
+  }
+
+  
+/* Ensure both default and hover images have the same size */
+.product-img {
+  width: 300px; /* Fixed width */
+  height: 300px; /* Fixed height */
+  object-fit: cover; /* Ensures images fill the space without distortion */
+}
+
+/* Hover image style */
+.product-img.hover {
+  display: none;
+}
+
+/* When the default image is hovered, display the hover image */
+.showcase-banner:hover .product-img.default {
+  display: none;
+}
+
+.showcase-banner:hover .product-img.hover {
+  display: block;
+}
+
+
+/* FOR ORDERS */
+
+/* Main content area */
+main {
+  margin-left: 250px;
+  padding: 20px;
+  width: calc(100% - 250px);
+}
+
+/* Table styling */
+.table-container {
+    margin-left: 250px;
+    padding: 20px;
+  }
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+th {
+  background-color: #343a40;
+  color: white;
+}
+
+td {
+  background-color: #f9f9f9;
+}
+
+tr:nth-child(even) td {
+  background-color: #f1f1f1;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button styles for Accept and Reject */
+button {
+  padding: 8px 15px;
+  margin: 5px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button.accept {
+  background-color: #28a745;
+  color: white;
+}
+
+button.reject {
+  background-color: #dc3545;
+  color: white;
+}
+
+button.accept:hover {
+  background-color: #218838;
+}
+
+button.reject:hover {
+  background-color: #c82333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .sidebar {
+    width: 200px;
+  }
+
+  main {
+    margin-left: 200px;
+    width: calc(100% - 200px);
+  }
+}
+
+@media (max-width: 576px) {
+  .sidebar {
+    width: 150px;
+  }
+
+  main {
+    margin-left: 150px;
+    width: calc(100% - 150px);
+  }
+}
