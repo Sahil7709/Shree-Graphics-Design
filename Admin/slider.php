@@ -25,7 +25,7 @@
     <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
     <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
-    <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
 
   <!-- Main Content -->

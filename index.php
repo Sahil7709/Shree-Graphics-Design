@@ -407,10 +407,10 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/dress.svg" alt="clothes" width="20" height="20"
+                    <img src="./assets/images/icons/home.svg" alt="clothes" width="20" height="20"
                       class="menu-title-img">
 
-                    <p class="menu-title">Clothes</p>
+                    <p class="menu-title">Home </p>
                   </div>
 
                   <div>
