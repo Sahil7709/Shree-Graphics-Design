@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $logoFile = $_FILES['logoFile'];
         
         // Correct the file path to point to the Admin/uploads folder
-        $targetDir = "../Logo/Admin/uploads"; // Path to the Admin folder's uploads directory
+        $targetDir = "/uploads"; // Path to the Admin folder's uploads directory
         
         // Ensure the file is not too long and make it unique by appending timestamp
         $targetFile = $targetDir . time() . "_" . basename($logoFile["name"]);
@@ -80,27 +80,28 @@ $conn->close();
 
 <main>
     <div class="form-container">
-        <h2>Vendor Order Form</h2>
+        <!-- <h2>Vendor Order Form</h2> -->
 
         <!-- Form for submitting order details -->
-        <form action="vendorsForm.php" method="post" enctype="multipart/form-data">
-            <label for="customerName">Name:</label>
-            <input type="text" id="customerName" name="customerName" required>
+        <form action="Admin/submit_vendor.php" method="POST" enctype="multipart/form-data">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-            <label for="customerContact">Contact:</label>
-            <input type="text" id="customerContact" name="customerContact" required>
+    <label for="contact">Contact:</label>
+    <input type="text" id="contact" name="contact" required>
 
-            <label for="customerEmail">Email:</label>
-            <input type="email" id="customerEmail" name="customerEmail" required>
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-            <label for="logoFile">Upload Logo:</label>
-            <input type="file" id="logoFile" name="logoFile" accept="image/*" required>
+    <label for="logo">Logo (Image):</label>
+    <input type="file" id="logo" name="logo" accept="image/*" required>
 
-            <label for="itemQuantity">Number of Items:</label>
-            <input type="number" id="itemQuantity" name="itemQuantity" min="1" required>
+    <label for="quantity">Quantity:</label>
+    <input type="number" id="quantity" name="quantity" required>
 
-            <button type="submit" class="submit-btn">Submit Order</button>
-        </form>
+    <button type="submit">Submit</button>
+</form>
+
     </div>
 </main>
 

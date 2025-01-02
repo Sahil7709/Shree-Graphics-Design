@@ -1,22 +1,24 @@
 <?php
-session_start();
+// Database connection
+$host = 'localhost'; // Change if necessary
+$dbname = 'logo';
+$username = 'root'; // Database username
+$password = ''; // Database password
 
-// Enable error reporting
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-// Include database connection
-include '../Admin/db.php'; // Adjust the path to where db.php is located (one level up to Admin folder)
-
-// Fetch vendor data from the database
 try {
-    $sql = "SELECT * FROM vendors"; // Replace 'vendor' with the actual table name if different
-    $stmt = $pdo->query($sql); // Use PDO's query method
-    $vendors = $stmt->fetchAll(PDO::FETCH_ASSOC); // Fetch all rows as an associative array
+    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 } catch (PDOException $e) {
-    die("Query failed: " . $e->getMessage());
+    die("Connection failed: " . $e->getMessage());
 }
+
+// Fetch vendors data from the database
+$sql = "SELECT * FROM vendors";
+$stmt = $pdo->prepare($sql);
+$stmt->execute();
+$vendors = $stmt->fetchAll(PDO::FETCH_ASSOC);
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -47,47 +49,43 @@ try {
   </div>
 
   <div class="main-content">
-     <!-- Main Content -->
-  <div class="container my-5">
-    <h1 class="text-center mb-4">Customers</h1>
-    <div class="table-responsive">
-      <table class="table table-bordered table-striped">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Name</th>
-            <th>Contact</th>
-            <th>Email</th>
-            <th>Logo</th>
-            <th>Quantity</th>
-          </tr>
-        </thead>
-        <tbody>
-          <?php if (!empty($vendors)): ?>
-            <?php foreach ($vendors as $row): ?>
-              <tr>
-                <td><?php echo htmlspecialchars($row['id']); ?></td>
-                <td><?php echo htmlspecialchars($row['name']); ?></td>
-                <td><?php echo htmlspecialchars($row['contact']); ?></td>
-                <td><?php echo htmlspecialchars($row['email']); ?></td>
-                <td>
-                  <img src="../Admin/<?php echo htmlspecialchars($row['logo']); ?>" alt="Logo Image" class="img-thumbnail" style="max-width: 100px;">
-                </td>
-                <td><?php echo htmlspecialchars($row['quantity']); ?></td>
-              </tr>
-            <?php endforeach; ?>
-          <?php else: ?>
+    <!-- Main Content -->
+    <div class="container my-5">
+      <h1 class="text-center mb-4">Customers</h1>
+      <div class="table-responsive">
+        <table class="table table-bordered table-striped">
+          <thead>
             <tr>
-              <td colspan="6" class="text-center">No data available</td>
+              <th>ID</th>
+              <th>Name</th>
+              <th>Contact</th>
+              <th>Email</th>
+              <th>Logo</th>
+              <th>Quantity</th>
             </tr>
-          <?php endif; ?>
-        </tbody>
-      </table>
+          </thead>
+          <tbody>
+            <?php
+            // Loop through each vendor and display their details in the table
+            foreach ($vendors as $vendor) {
+                echo "<tr>
+                        <td>{$vendor['id']}</td>
+                        <td>{$vendor['name']}</td>
+                        <td>{$vendor['contact']}</td>
+                        <td>{$vendor['email']}</td>
+                        <td><img src='{$vendor['logo']}' alt='Logo' width='100'></td>
+                        <td>{$vendor['quantity']}</td>
+                      </tr>";
+            }
+            ?>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-  </div>
 
-  <!-- Include Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Include Bootstrap JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
