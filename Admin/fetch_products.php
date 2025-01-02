@@ -5,82 +5,86 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Showcase</title>
     <link rel="stylesheet" href="CSS/index.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
+
 <body>
 
 <?php
+
 // Database connection
-$conn = new mysqli('localhost', 'root', '', 'Logo');
+include 'db.php';  // Include your PDO-based database connection
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
+// Check if the database connection is successful
+if (!$pdo) {
+    die("Database connection failed.");
 }
 
-// Fetch products
-$sql = "SELECT * FROM products";
-$result = $conn->query($sql);
+try {
+    // Fetch products
+    $stmt = $pdo->query("SELECT * FROM products");
 
-// Check if there are products
-if ($result->num_rows > 0) {
-    while ($row = $result->fetch_assoc()) {
+    // Check if there are products
+    if ($stmt->rowCount() > 0) {
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-        // Ensure the image paths are correctly formed
-        $image_default_path = "admin/uploads/" . basename($row['image_default']);
-        $image_hover_path = "admin/uploads/" . basename($row['image_hover']);
+            // Ensure the image paths are correctly formed
+            $image_default_path = "admin/uploads/" . basename($row['image_default']);
+            $image_hover_path = "admin/uploads/" . basename($row['image_hover']);
 
-        // Check if images exist before displaying
-        $image_default_path = file_exists($image_default_path) ? $image_default_path : 'default_image_path.jpg';  // Replace with a default image if not found
-        $image_hover_path = file_exists($image_hover_path) ? $image_hover_path : 'default_image_path.jpg';  // Replace with a default image if not found
+            // Check if images exist before displaying
+            $image_default_path = file_exists($image_default_path) ? $image_default_path : 'default_image_path.jpg';  // Replace with a default image if not found
+            $image_hover_path = file_exists($image_hover_path) ? $image_hover_path : 'default_image_path.jpg';  // Replace with a default image if not found
 
-        // Display product
-        echo '
-        <div class="showcase">
-            <div class="showcase-banner">
-                <a href="order_product.php?id=' . $row['id'] . '"> <!-- Link to the order page -->
-                    <img src="' . $image_default_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img default">
-                    <img src="' . $image_hover_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img hover">
-                    <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>
-                </a>
-                <div class="showcase-actions">
-                    <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
-                    <button class="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
-                    <button class="btn-action"><ion-icon name="repeat-outline"></ion-icon></button>
-                    <button class="btn-action"><ion-icon name="bag-add-outline"></ion-icon></button>
+            // Display product
+            echo '
+            <div class="showcase">
+                <div class="showcase-banner">
+                    <a href="order_product.php?id=' . $row['id'] . '"> <!-- Link to the order page -->
+                        <img src="' . $image_default_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img default">
+                        <img src="' . $image_hover_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img hover">
+                        <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>
+                    </a>
+                    <div class="showcase-actions">
+                        <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
+                        <button class="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
+                        <button class="btn-action"><ion-icon name="repeat-outline"></ion-icon></button>
+                        <button class="btn-action"><ion-icon name="bag-add-outline"></ion-icon></button>
+                    </div>
                 </div>
-            </div>
-            <div class="showcase-content">
-                <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>
-                <a href="order_product.php?id=' . $row['id'] . '"><h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3></a>
-                <div class="showcase-rating">';
+                <div class="showcase-content">
+                    <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>
+                    <a href="order_product.php?id=' . $row['id'] . '"><h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3></a>
+                    <div class="showcase-rating">';
 
-        // Rating stars display
-        for ($i = 0; $i < $row['rating']; $i++) {
-            echo '<ion-icon name="star"></ion-icon>';
-        }
-        for ($i = $row['rating']; $i < 5; $i++) {
-            echo '<ion-icon name="star-outline"></ion-icon>';
-        }
+            // Rating stars display
+            for ($i = 0; $i < $row['rating']; $i++) {
+                echo '<ion-icon name="star"></ion-icon>';
+            }
+            for ($i = $row['rating']; $i < 5; $i++) {
+                echo '<ion-icon name="star-outline"></ion-icon>';
+            }
 
-        echo '</div>
-                <div class="price-box">
-                    <p class="price">$' . number_format($row['discount_price'], 2) . '</p>';
-                    
-        // Only show original price if there is a discount
-        if ($row['discount_price'] < $row['price']) {
-            echo '<del>$' . number_format($row['price'], 2) . '</del>';
-        }
+            echo '</div>
+                    <div class="price-box">
+                        <p class="price">$' . number_format($row['discount_price'], 2) . '</p>';
 
-        echo '</div>
-            </div>
-        </div>';
+            // Only show original price if there is a discount
+            if ($row['discount_price'] < $row['price']) {
+                echo '<del>$' . number_format($row['price'], 2) . '</del>';
+            }
+
+            echo '</div>
+                </div>
+            </div>';
+        }
+    } else {
+        echo "No products found.";
     }
-} else {
-    echo "No products found.";
+} catch (PDOException $e) {
+    echo "Error fetching products: " . $e->getMessage();
 }
-
-// Close the database connection
-$conn->close();
 ?>
 
 </body>

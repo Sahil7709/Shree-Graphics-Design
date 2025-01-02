@@ -1,3 +1,14 @@
+<?php
+session_start();
+
+include 'db.php';  // Include your database connection
+
+// Fetch products from the database
+$query = "SELECT * FROM products"; // Modify this based on your table name and columns
+$stmt = $pdo->query($query);
+$products = $stmt->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,11 +32,11 @@
     <a href="index.php"><i class="fas fa-chart-line"></i> Overview</a>
     <a href="Products.php"><i class="fas fa-box-open"></i> Products</a>
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
-    <a href="#customers"><i class="fas fa-users"></i> Customers</a>
+    <a href="customers.php"><i class="fas fa-users"></i> Customers</a>
     <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
     <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
-    <a href="#logout"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
 
   <!-- Main Content -->
@@ -84,34 +95,53 @@
 
     <!-- Tables -->
     <h2 id="products" class="mt-5">Products</h2>
-    <div class="table-responsive">
-      <table class="table table-striped">
-        <thead>
-          <tr>
-            <th>Id</th>
-            <th>Product Name</th>
-            <th>Category</th>
-            <th>Price</th>
-            <th>Stock</th>
-            <th>Actions</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>Product 1</td>
-            <td>Category A</td>
-            <td>$20</td>
-            <td>50</td>
-            <td>
-              <button class="btn btn-sm btn-warning">Edit</button>
-              <button class="btn btn-sm btn-danger">Delete</button>
-            </td>
-          </tr>
-          <!-- Add more rows as needed -->
-        </tbody>
-      </table>
-    </div>
+ 
+  <div class="table-responsive">
+ <!-- Product Table -->
+ <table class="table table-striped">
+      <thead class="table-dark">
+        <tr>
+          <th>ID</th>
+          <!-- <th>Image</th> -->
+          <th>Name</th>
+          <th>Category</th>
+          <th>Price</th>
+          <th>Stock</th>
+          <th>Discount</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <?php foreach ($products as $index => $product): ?>
+        <tr>
+          <td><?php echo $index + 1; ?></td>
+          <!-- <td>
+          <?php 
+          $imagePath = "./uploads" . $product['image_default'];
+          if (file_exists($imagePath)) {
+              echo '<img src="' . htmlspecialchars($imagePath) . '" alt="' . htmlspecialchars($product['name']) . '" width="50">';
+          } else {
+              echo '<img src="assets/images/default-placeholder.png" alt="Default Image" width="50">';
+          }
+          ?>
+          </td> -->
+          <td><?php echo $product['name']; ?></td>
+          <td><?php echo $product['category']; ?></td>
+          <td>Rs. <?php echo number_format($product['price'], 2); ?></td>
+          <td><?php echo $product['stock']; ?></td>
+          <td><?php echo $product['discount_price']; ?>%</td>
+          <td>
+            <a href="edit_product.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-warning">
+              <i class="fas fa-edit"></i> Edit
+            </a>
+            <a href="delete_product.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-danger" onclick="return confirm('Are you sure you want to delete this product?');">
+              <i class="fas fa-trash-alt"></i> Delete
+            </a>
+          </td>
+        </tr>
+        <?php endforeach; ?>
+      </tbody>
+    </table>   
   </div>
 
   <!-- Include Bootstrap JS -->

@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 include 'db.php';  // Include the database connection
 
 // Get the product ID from the URL

@@ -15,9 +15,9 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style-prefix.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
+  <!-- <link rel="stylesheet" href="./assets/css/style-prefix.css"> -->
 
+  <link rel="stylesheet" href="../Logo/assets/css/style.css">
 
   <!--
     - google font link
@@ -303,71 +303,48 @@
     - MAIN
   -->
   <main>
-<!-- PRODUCT CONTAINER -->
-<div class="product-container">
-  <div class="container">
-    <div class="product-box">
-  
-    <?php
-// services.php
+  <!-- PRODUCT CONTAINER -->
+  <div class="product-container">
+    <div class="container">
+      <!-- <h2 class="section-title">Our Services</h2> -->
+      <div class="services-container">
+        <div class="product-grid">
+        <?php
+        // Database connection
+        $conn = new mysqli('localhost', 'root', '', 'logo');
 
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'logo');
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch services
-$sql = "SELECT * FROM services";
-$result = $conn->query($sql);
-
-?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Services</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-
-<h2>Our Services</h2>
-
-<div class="services-container">
-    <?php
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '
-            <div class="service-card">
-                <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img">
-                <h3>' . $row['service_name'] . '</h3>
-                <p>' . $row['service_description'] . '</p>
-                <p class="price">Rs. ' . $row['service_price'] . '</p>
-            </div>';
+        // Check connection
+        if ($conn->connect_error) {
+            die("Connection failed: " . $conn->connect_error);
         }
-    } else {
-        echo "No services available.";
-    }
 
-    // Close the database connection
-    $conn->close();
-    ?>
-</div>
+        // Fetch services
+        $sql = "SELECT * FROM services";
+        $result = $conn->query($sql);
 
-</body>
-</html>
+        if ($result->num_rows > 0) {
+            while ($row = $result->fetch_assoc()) {
+                echo '
+                <div class="service-card">
+                    <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img">
+                    <h3 class="service-title">' . $row['service_name'] . '</h3>
+                    <p class="service-description">' . $row['service_description'] . '</p>
+                    <p class="service-price">Rs. ' . $row['service_price'] . '</p>
+                </div>';
+            }
+        } else {
+            echo "<p>No services available.</p>";
+        }
 
-
+        // Close the database connection
+        $conn->close();
+        ?>
+      </div>
+    </div>
     </div>
   </div>
-</div>
-
-
 </main>
+
 
   <!--
     - FOOTER

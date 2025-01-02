@@ -15,7 +15,7 @@
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
   <!--
     - google font link
@@ -25,11 +25,44 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+    <style>
+/* Style for Logo Order Section and Modal */
+/* Center the entire logo-order-section */
+.logo-order-section {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;      /* Vertically center */
+    height: 20vh;            /* Make it take up the full height of the viewport */
+}
+
+/* Center the content inside the wrapper */
+.wrapper {
+    display: flex;
+    justify-content: center;  /* Horizontally center */
+    align-items: center;      /* Vertically center */
+    width: 100%;              /* Ensure it spans the full width */
+}
+
+/* Ensure the order-box doesn't exceed content's size */
+.order-box {
+    display: flex;
+    justify-content: center;  /* Horizontally center button */
+    align-items: center;      /* Vertically center button */
+}
+
+/* Style the button */
+.order-btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+</style>
+
 </head>
 
 <body>
-
-  <!--
+    <!--
     - HEADER
   -->
 
@@ -151,7 +184,7 @@
       <ul class="mobile-menu-category-list">
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Home</a>
+          <a href="index.php" class="menu-title">Home</a>
         </li>
 
         <li class="menu-category">
@@ -165,7 +198,7 @@
             </div>
           </button>
 
-        
+      
 
         </li>
 
@@ -179,10 +212,6 @@
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
             </div>
           </button>
-        </li>
-
-        
-        <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
             <p class="menu-title">vendors</p>
@@ -193,13 +222,6 @@
             </div>
           </button>
 
-        
-
-        </li>
-
-        
-        <li class="menu-category">
-
           <button class="accordion-menu" data-accordion-btn>
             <p class="menu-title">Services</p>
 
@@ -209,7 +231,7 @@
             </div>
           </button>
 
-        
+          
 
         </li>
 
@@ -297,27 +319,23 @@
     </nav>
 
   </header>
-  <!--
-    - MAIN
-  -->
   <main>
-<!-- PRODUCT CONTAINER -->
-<div class="product-container">
-  <div class="container">
-    <div class="product-box">
-  
-      <!-- PRODUCT GRID -->
-      <div class="product-grid">
-        <?php include 'approved_fetch_products.php'; ?>
+  <div class="logo-order-section">
+    <div class="wrapper">
+      <div class="order-box">
+        <div class="order-grid">
+          <!-- Wrap the button with an anchor tag to redirect on click -->
+          <a href="vendorsForm.php">
+            <button id="openOrderFormBtn" class="order-btn">Place Order</button>
+          </a>
+        </div>
       </div>
-
     </div>
   </div>
-</div>
-
-
 </main>
 
+
+  
   <!--
     - FOOTER
   -->
@@ -610,16 +628,22 @@
   </footer>
 
   <!--
-    - custom js link
-  -->
-  <script src="./assets/js/script.js"></script>
-
-  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-</body>
+  <!-- script for Ventodr order form open  -->
+  <script>
+  // When the "Place Order" button is clicked, redirect to the vendorsForm.php page
+  document.getElementById('openOrderFormBtn').addEventListener('click', function() {
+    window.location.href = 'vendorsForm.php'; // Redirect to the new page
+  });
+</script>
 
+
+
+
+</body>
 </html>
+

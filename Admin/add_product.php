@@ -1,6 +1,8 @@
 <?php
+session_start();
+
 // Database connection
-$conn = new mysqli("localhost", "root", "", "Logo");
+include 'db.php';  // Include your database connection
 
 // Check connection
 if ($conn->connect_error) {

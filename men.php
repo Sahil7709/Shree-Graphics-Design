@@ -676,7 +676,8 @@
 
       <h1 class="mb-4">Product Showcase</h1>
            <div class="product-grid">
-   
+      <?php include 'Admin/fetch_products.php'; ?> 
+
 </div> 
 
 

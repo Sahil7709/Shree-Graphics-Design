@@ -33,7 +33,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="index.php"><i class="fas fa-chart-line"></i> Overview</a>
     <a href="Products.php"><i class="fas fa-box-open"></i> Products</a>
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
-    <a href="#customers"><i class="fas fa-users"></i> Customers</a>
+    <a href="customers.php"><i class="fas fa-users"></i> Customers</a>
     <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
     <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
@@ -115,8 +115,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <!-- Category -->
         <div class="mb-3">
           <label for="category" class="form-label">Category</label>
-          <input type="text" class="form-control" id="category" name="category" required>
-        </div>
+          <select class="form-control" id="category" name="category" required>
+            <option value="" disabled selected>Select a category</option>
+            <option value="Fashion">Men</option>
+            <option value="Electronics">Women</option>
+          </select>
+       </div>
+
 
         <!-- Price -->
         <div class="mb-3">
