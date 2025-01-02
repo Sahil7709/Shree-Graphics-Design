@@ -393,7 +393,7 @@
           <div class="sidebar-category">
 
             <div class="sidebar-top">
-              <h2 class="sidebar-title">Category</h2>
+              <h2 class="sidebar-title">Quick Links</h2>
 
               <button class="sidebar-close-btn" data-mobile-menu-close-btn>
                 <ion-icon name="close-outline"></ion-icon>
@@ -407,15 +407,17 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/home.svg" alt="clothes" width="20" height="20"
+                    <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
                       class="menu-title-img">
 
-                    <p class="menu-title">Home </p>
+                   <a href="index.php"> <p class="menu-title">Home </p></a>
                   </div>
 
                   <div>
+                  <a href="index.php"> 
                     <ion-icon name="add-outline" class="add-icon"></ion-icon>
                     <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    </a>
                   </div>
 
                 </button>
@@ -448,15 +450,15 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/jewelry.svg" alt="clothes" class="menu-title-img" width="20"
+                    <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
                       height="20">
-
-                    <p class="menu-title">Men's</p>
+  
+                    <a href="services.php"> <p class="menu-title">Services</p></a>
                   </div>
 
-                  <div>
+                  <div>   <a href="services.php">
                     <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
                   </div>
 
                 </button>
@@ -487,15 +489,15 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/perfume.svg" alt="perfume" class="menu-title-img" width="20"
+                    <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
                       height="20">
 
-                    <p class="menu-title">Womens</p>
+                    <a href="vendors.php" ><p class="menu-title">vendors</p></a>
                   </div>
 
-                  <div>
+                  <div>  <a href="vendors.php" >
                     <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
                   </div>
 
                 </button>
@@ -530,7 +532,7 @@
 
           <div class="product-showcase">
 
-            <h3 class="showcase-heading">best sellers</h3>
+            <h3 class="showcase-heading"></h3>
 
             <div class="showcase-wrapper">
 

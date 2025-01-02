@@ -15,9 +15,9 @@
   <!--
     - custom css link
   -->
-  <!-- <link rel="stylesheet" href="./assets/css/style-prefix.css"> -->
+  <!-- <link rel="stylesheet" href="assets/css/style-prefix.css"> -->
 
-  <link rel="stylesheet" href="../Logo/assets/css/style.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 
   <!--
     - google font link
@@ -302,48 +302,46 @@
   <!--
     - MAIN
   -->
-  <main>
+<main>
   <!-- PRODUCT CONTAINER -->
-  <div class="product-container">
-    <div class="container">
-      <!-- <h2 class="section-title">Our Services</h2> -->
-      <div class="services-container">
-        <div class="product-grid">
-        <?php
-        // Database connection
-        $conn = new mysqli('localhost', 'root', '', 'logo');
+  <div class="service-container">
+   
+          <?php
+          // Database connection
+          $conn = new mysqli('localhost', 'root', '', 'logo');
 
-        // Check connection
-        if ($conn->connect_error) {
-            die("Connection failed: " . $conn->connect_error);
-        }
+          // Check connection
+          if ($conn->connect_error) {
+              die("Connection failed: " . $conn->connect_error);
+          }
 
-        // Fetch services
-        $sql = "SELECT * FROM services";
-        $result = $conn->query($sql);
+          // Fetch services
+          $sql = "SELECT * FROM services";
+          $result = $conn->query($sql);
 
-        if ($result->num_rows > 0) {
-            while ($row = $result->fetch_assoc()) {
-                echo '
-                <div class="service-card">
-                    <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img">
-                    <h3 class="service-title">' . $row['service_name'] . '</h3>
-                    <p class="service-description">' . $row['service_description'] . '</p>
-                    <p class="service-price">Rs. ' . $row['service_price'] . '</p>
-                </div>';
-            }
-        } else {
-            echo "<p>No services available.</p>";
-        }
+          if ($result->num_rows > 0) {
+              $index = 1; // To assign unique classes
+              while ($row = $result->fetch_assoc()) {
+                  echo '
+                  <div class="service-card service-card-' . $index . '">
+                      <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img service-img-' . $index . '">
+                      <h3 class="service-title service-title-' . $index . '">' . $row['service_name'] . '</h3>
+                      <p class="service-description service-description-' . $index . '">' . $row['service_description'] . '</p>
+                      <p class="service-price service-price-' . $index . '">Rs. ' . $row['service_price'] . '</p>
+                  </div>';
+                  $index++;
+              }
+          } else {
+              echo "<p>No services available.</p>";
+          }
 
-        // Close the database connection
-        $conn->close();
-        ?>
-      </div>
-    </div>
-    </div>
+          // Close the database connection
+          $conn->close();
+          ?>
+
   </div>
 </main>
+
 
 
   <!--
