@@ -321,16 +321,16 @@
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        $index = 1; // To assign unique classes
         while ($row = $result->fetch_assoc()) {
             echo '
-            <div class="service-card service-card-' . $index . '">
-                <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img service-img-' . $index . '">
-                <h3 class="service-title service-title-' . $index . '">' . $row['service_name'] . '</h3>
-                <p class="service-description service-description-' . $index . '">' . $row['service_description'] . '</p>
-                <p class="service-price service-price-' . $index . '">Rs. ' . $row['service_price'] . '</p>
+            <div class="service-card">
+                <img src="admin/uploads/' . htmlspecialchars($row['service_image']) . '" 
+                     alt="' . htmlspecialchars($row['service_name']) . '" 
+                     class="service-img">
+                <h3 class="service-title">' . htmlspecialchars($row['service_name']) . '</h3>
+                <p class="service-description">' . htmlspecialchars($row['service_description']) . '</p>
+                <p class="service-price">Rs. ' . htmlspecialchars($row['service_price']) . '</p>
             </div>';
-            $index++;
         }
     } else {
         echo "<p>No services available.</p>";
