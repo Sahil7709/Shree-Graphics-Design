@@ -68,11 +68,11 @@ try {
 
             echo '</div>
                     <div class="price-box">
-                        <p class="price">$' . number_format($row['discount_price'], 2) . '</p>';
+                        <p class="price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
 
             // Only show original price if there is a discount
             if ($row['discount_price'] < $row['price']) {
-                echo '<del>$' . number_format($row['price'], 2) . '</del>';
+                echo '<del>Rs.' . number_format($row['price'], 2) . '</del>';
             }
 
             echo '</div>

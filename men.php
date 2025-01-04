@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anon - eCommerce Website</title>
+  <title>Devcon - eCommerce Website</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon"> -->
 
   <!--
     - custom css link
@@ -41,8 +41,9 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+        <!-- <img src="./assets/images/logo/logo.svg" alt="Devcon's logo" width="120" height="36"> -->
         </a>
+        Devcon
 
         <div class="header-search-container">
 
@@ -54,7 +55,7 @@
 
         </div>
 
-        <div class="header-user-actions">
+        <!-- <div class="header-user-actions">
 
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
@@ -70,7 +71,7 @@
             <span class="count">0</span>
           </button>
 
-        </div>
+        </div> -->
 
       </div>
 
@@ -323,7 +324,7 @@
               <h2 class="banner-title">Women's latest fashion sale</h2>
 
               <p class="banner-text">
-                starting at RS.  <b>20</b>.00
+                starting at RS. <b>20</b>.00
               </p>
 
               <a href="#" class="banner-btn">Shop now</a>
@@ -562,8 +563,8 @@
                     </div>
 
                     <div class="price-box">
-                      <del>$5.00</del>
-                      <p class="price">$4.00</p>
+                      <del>Rs.5.00</del>
+                      <p class="price">Rs. 4.00</p>
                     </div>
 
                   </div>
@@ -591,8 +592,8 @@
                     </div>
 
                     <div class="price-box">
-                      <del>$17.00</del>
-                      <p class="price">$7.00</p>
+                      <del>Rs.17.00</del>
+                      <p class="price">Rs. 7.00</p>
                     </div>
 
                   </div>
@@ -620,8 +621,8 @@
                     </div>
 
                     <div class="price-box">
-                      <del>$5.00</del>
-                      <p class="price">$3.00</p>
+                      <del>Rs.5.00</del>
+                      <p class="price">Rs.3.00</p>
                     </div>
 
                   </div>
@@ -649,8 +650,8 @@
                     </div>
 
                     <div class="price-box">
-                      <del>$15.00</del>
-                      <p class="price">$12.00</p>
+                      <del>Rs.15.00</del>
+                      <p class="price">Rs.12.00</p>
                     </div>
 
                   </div>
@@ -735,8 +736,8 @@
                     </div>
 
                     <div class="price-box">
-                      <p class="price">$48.00</p>
-                      <del>$75.00</del>
+                      <p class="price">Rs. 48.00</p>
+                      <del>Rs. 75.00</del>
                     </div>
 
                   </div>
@@ -788,8 +789,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$45.00</p>
-                    <del>$56.00</del>
+                    <p class="price">Rs. 45.00</p>
+                    <del>Rs. 56.00</del>
                   </div>
               
                 </div>
@@ -839,8 +840,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$58.00</p>
-                    <del>$65.00</del>
+                    <p class="price">Rs. 58.00</p>
+                    <del>Rs. 65.00</del>
                   </div>
               
                 </div>
@@ -892,8 +893,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
-                    <del>$35.00</del>
+                    <p class="price">Rs. 25.00</p>
+                    <del>Rs. 35.00</del>
                   </div>
               
                 </div>
@@ -943,8 +944,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$99.00</p>
-                    <del>$105.00</del>
+                    <p class="price">Rs. 99.00</p>
+                    <del>Rs. 105.00</del>
                   </div>
               
                 </div>
@@ -996,8 +997,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$150.00</p>
-                    <del>$170.00</del>
+                    <p class="price">Rs. 150.00</p>
+                    <del>Rs. 170.00</del>
                   </div>
               
                 </div>
@@ -1046,8 +1047,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$100.00</p>
-                    <del>$120.00</del>
+                    <p class="price">Rs. 100.00</p>
+                    <del>Rs. 120.00</del>
                   </div>
               
                 </div>
@@ -1099,8 +1100,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$25.00</p>
-                    <del>$30.00</del>
+                    <p class="price">Rs.25.00</p>
+                    <del>Rs.30.00</del>
                   </div>
               
                 </div>
@@ -1150,8 +1151,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$32.00</p>
-                    <del>$45.00</del>
+                    <p class="price">Rs.32.00</p>
+                    <del>Rs.45.00</del>
                   </div>
               
                 </div>
@@ -1203,8 +1204,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$58.00</p>
-                    <del>$64.00</del>
+                    <p class="price">Rs. 58.00</p>
+                    <del>Rs. 64.00</del>
                   </div>
               
                 </div>
@@ -1254,8 +1255,8 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$50.00</p>
-                    <del>$65.00</del>
+                    <p class="price">Rs. 50.00</p>
+                    <del>Rs. 65.00</del>
                   </div>
               
                 </div>
@@ -1307,12 +1308,12 @@
                   </div>
               
                   <div class="price-box">
-                    <p class="price">$78.00</p>
-                    <del>$85.00</del>
+                    <p class="price"> Rs. 78.00</p>
+                    <del> Rs. 85.00</del>
                   </div>
               
                 </div>
-              
+            Rs. 
               </div>
 
             </div>
@@ -1382,7 +1383,7 @@
 
               <h2 class="cta-title">Summer collection</h2>
 
-              <p class="cta-text">Starting @ $10</p>
+              <p class="cta-text">Starting @ Rs.10</p>
 
               <button class="cta-btn">Shop now</button>
 
@@ -1411,7 +1412,7 @@
                 <div class="service-content">
 
                   <h3 class="service-title">Worldwide Delivery</h3>
-                  <p class="service-desc">For Order Over $100</p>
+                  <p class="service-desc">For Order Over Rs.100</p>
 
                 </div>
 
@@ -1471,7 +1472,7 @@
                 <div class="service-content">
               
                   <h3 class="service-title">30% money back</h3>
-                  <p class="service-desc">For Order Over $100</p>
+                  <p class="service-desc">For Order Over Rs. 100</p>
               
                 </div>
               
@@ -1886,7 +1887,7 @@
         <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
         </p>
 
       </div>

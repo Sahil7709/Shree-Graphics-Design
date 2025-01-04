@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anon - eCommerce Website</title>
+  <title>Devcon - eCommerce Website</title>
 
   <!--
     - favicon
@@ -43,9 +43,9 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+          <!-- <img src="./assets/images/logo/logo.svg" alt="Devcon's logo" width="120" height="36"> -->
         </a>
-
+        Devcon
         <div class="header-search-container">
 
           <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
@@ -56,7 +56,7 @@
 
         </div>
 
-        <div class="header-user-actions">
+        <!-- <div class="header-user-actions">
 
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
@@ -72,13 +72,15 @@
             <span class="count">0</span>
           </button>
 
-        </div>
+        </div> -->
 
       </div>
 
     </div>
+    
 
     <nav class="desktop-navigation-menu">
+      
 
       <div class="container">
 
@@ -305,41 +307,41 @@
 <main>
   <!-- PRODUCT CONTAINER -->
   <div class="service-container">
-   
-          <?php
-          // Database connection
-          $conn = new mysqli('localhost', 'root', '', 'logo');
+    <?php
+    // Database connection
+    $conn = new mysqli('localhost', 'root', '', 'logo');
 
-          // Check connection
-          if ($conn->connect_error) {
-              die("Connection failed: " . $conn->connect_error);
-          }
+    // Check connection
+    if ($conn->connect_error) {
+        die("Connection failed: " . $conn->connect_error);
+    }
 
-          // Fetch services
-          $sql = "SELECT * FROM services";
-          $result = $conn->query($sql);
+    // Fetch services
+    $sql = "SELECT * FROM services";
+    $result = $conn->query($sql);
 
-          if ($result->num_rows > 0) {
-              $index = 1; // To assign unique classes
-              while ($row = $result->fetch_assoc()) {
-                  echo '
-                  <div class="service-card service-card-' . $index . '">
-                      <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img service-img-' . $index . '">
-                      <h3 class="service-title service-title-' . $index . '">' . $row['service_name'] . '</h3>
-                      <p class="service-description service-description-' . $index . '">' . $row['service_description'] . '</p>
-                      <p class="service-price service-price-' . $index . '">Rs. ' . $row['service_price'] . '</p>
-                  </div>';
-                  $index++;
-              }
-          } else {
-              echo "<p>No services available.</p>";
-          }
+    if ($result->num_rows > 0) {
+        $index = 1; // To assign unique classes
+        while ($row = $result->fetch_assoc()) {
+            echo '
+            <div class="service-card service-card-' . $index . '">
+                <img src="admin/uploads/' . $row['service_image'] . '" alt="' . $row['service_name'] . '" class="service-img service-img-' . $index . '">
+                <h3 class="service-title service-title-' . $index . '">' . $row['service_name'] . '</h3>
+                <p class="service-description service-description-' . $index . '">' . $row['service_description'] . '</p>
+                <p class="service-price service-price-' . $index . '">Rs. ' . $row['service_price'] . '</p>
+            </div>';
+            $index++;
+        }
+    } else {
+        echo "<p>No services available.</p>";
+    }
 
-          // Close the database connection
-          $conn->close();
-          ?>
+    // Close the database connection
+    $conn->close();
+    ?>
+</div>
 
-  </div>
+
 </main>
 
 
@@ -626,7 +628,7 @@
         <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
         </p>
 
       </div>

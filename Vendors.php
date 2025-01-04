@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anon - eCommerce Website</title>
+  <title>Devcon - eCommerce Website</title>
 
   <!--
     - favicon
@@ -74,7 +74,8 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+        Devcon
+          <!-- <img src="./assets/images/logo/logo.svg" alt="Devcon's logo" width="120" height="36"> -->
         </a>
 
         <div class="header-search-container">
@@ -87,7 +88,7 @@
 
         </div>
 
-        <div class="header-user-actions">
+        <!-- <div class="header-user-actions">
 
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
@@ -103,7 +104,7 @@
             <span class="count">0</span>
           </button>
 
-        </div>
+        </div> -->
 
       </div>
 
@@ -618,7 +619,7 @@
         <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
         </p>
 
       </div>

@@ -24,11 +24,23 @@ if ($conn->query($sql) === TRUE) {
                          VALUES ('New order received for product: $product_name by $user_name')";
     $conn->query($notification_sql); // Insert notification into the database
 
-    echo "Order placed successfully. Admin will be notified through the dashboard.";
+    // Success message and redirect to index.php
+    $message = "Order placed successfully!";
+    $redirect_url = "index.php"; // The page to redirect to
 } else {
-    echo "Error: " . $sql . "<br>" . $conn->error;
+    // Failure message and redirect to index.php
+    $message = "Error placing order. Please try again.";
+    $redirect_url = "index.php"; // The page to redirect to
 }
 
 // Step 3: Close the database connection
 $conn->close();
 ?>
+
+<script>
+// Display the popup message
+alert("<?php echo $message; ?>");
+
+// Redirect to the index.php page
+window.location.href = "<?php echo $redirect_url; ?>";
+</script>

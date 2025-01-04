@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anon - eCommerce Website</title>
+  <title>Devcon - eCommerce Website</title>
 
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="./assets/images/logo/devcon.webp" type="image/x-icon"> -->
 
   <!--
     - custom css link
@@ -41,8 +41,9 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <img src="./assets/images/logo/logo.svg" alt="Anon's logo" width="120" height="36">
+          <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
+        Devcon 
 
         <div class="header-search-container">
 
@@ -54,7 +55,7 @@
 
         </div>
 
-        <div class="header-user-actions">
+        <!-- <div class="header-user-actions">
 
           <button class="action-btn">
             <ion-icon name="person-outline"></ion-icon>
@@ -70,7 +71,7 @@
             <span class="count">0</span>
           </button>
 
-        </div>
+        </div> -->
 
       </div>
 
@@ -530,7 +531,7 @@
 
           </div>
 
-          <div class="product-showcase">
+          <!-- <div class="product-showcase">
 
             <h3 class="showcase-heading"></h3>
 
@@ -659,7 +660,7 @@
 
             </div>
 
-          </div>
+          </div> -->
 
         </div>
 
@@ -733,7 +734,7 @@
 
               <h2 class="cta-title">Summer collection</h2>
 
-              <p class="cta-text">Starting @ $10</p>
+              <p class="cta-text">Starting @ Rs. 10</p>
 
               <button class="cta-btn">Shop now</button>
 
@@ -1237,7 +1238,7 @@
         <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
         </p>
 
       </div>

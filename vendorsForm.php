@@ -29,7 +29,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         $logoFile = $_FILES['logoFile'];
         
         // Correct the file path to point to the Admin/uploads folder
-        $targetDir = "/uploads"; // Path to the Admin folder's uploads directory
+        $targetDir = "uploads/"; // Path to the Admin folder's uploads directory
         
         // Ensure the file is not too long and make it unique by appending timestamp
         $targetFile = $targetDir . time() . "_" . basename($logoFile["name"]);
@@ -41,23 +41,24 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             // Move uploaded file to target directory
             if (move_uploaded_file($logoFile["tmp_name"], $targetFile)) {
                 $logoFilePath = $targetFile; // Set the logo file path
+                // Insert data into the 'vendors' table
+                $sql = "INSERT INTO vendors (name, contact, email, quantity, logo) 
+                        VALUES ('$customerName', '$customerContact', '$customerEmail', '$itemQuantity', '$logoFilePath')";
+                
+                if ($conn->query($sql) === TRUE) {
+                    // Show a success popup and redirect after 2 seconds
+                    echo "<script>
+                            alert('Vendor added successfully!');
+                            window.location.href = 'vendor.php';
+                          </script>";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
             } else {
                 echo "Sorry, there was an error uploading your logo.";
             }
         } else {
             echo "Invalid file type. Only JPG, JPEG, PNG, and GIF are allowed.";
-        }
-    }
-
-    // Insert data into the 'vendors' table
-    if ($logoFilePath != "") {
-        $sql = "INSERT INTO vendors (name, contact, email, quantity, logo) 
-                VALUES ('$customerName', '$customerContact', '$customerEmail', '$itemQuantity', '$logoFilePath')";
-
-        if ($conn->query($sql) === TRUE) {
-            echo "New record created successfully.";
-        } else {
-            echo "Error: " . $sql . "<br>" . $conn->error;
         }
     } else {
         echo "Please upload a valid logo.";
@@ -80,28 +81,25 @@ $conn->close();
 
 <main>
     <div class="form-container">
-        <!-- <h2>Vendor Order Form</h2> -->
-
         <!-- Form for submitting order details -->
-        <form action="Admin/submit_vendor.php" method="POST" enctype="multipart/form-data">
-    <label for="name">Name:</label>
-    <input type="text" id="name" name="name" required>
+        <form action="submit_vendor.php" method="POST" enctype="multipart/form-data">
+            <label for="customerName">Name:</label>
+            <input type="text" id="customerName" name="customerName" required>
 
-    <label for="contact">Contact:</label>
-    <input type="text" id="contact" name="contact" required>
+            <label for="customerContact">Contact:</label>
+            <input type="text" id="customerContact" name="customerContact" required>
 
-    <label for="email">Email:</label>
-    <input type="email" id="email" name="email" required>
+            <label for="customerEmail">Email:</label>
+            <input type="email" id="customerEmail" name="customerEmail" required>
 
-    <label for="logo">Logo (Image):</label>
-    <input type="file" id="logo" name="logo" accept="image/*" required>
+            <label for="logoFile">Logo (Image):</label>
+            <input type="file" id="logoFile" name="logoFile" accept="image/*" required>
 
-    <label for="quantity">Quantity:</label>
-    <input type="number" id="quantity" name="quantity" required>
+            <label for="itemQuantity">Quantity:</label>
+            <input type="number" id="itemQuantity" name="itemQuantity" required>
 
-    <button type="submit">Submit</button>
-</form>
-
+            <button type="submit">Submit</button>
+        </form>
     </div>
 </main>
 

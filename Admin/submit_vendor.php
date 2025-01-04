@@ -1,55 +1,70 @@
 <?php
-// Database connection
-$host = 'localhost'; // Change if necessary
-$dbname = 'logo';
-$username = 'root'; // Database username
-$password = ''; // Database password
+// Database connection settings
+$servername = "localhost"; // your server name
+$username = "root"; // your database username
+$password = ""; // your database password (if any)
+$dbname = "logo"; // your database name
 
-try {
-    $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
-    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (PDOException $e) {
-    die("Connection failed: " . $e->getMessage());
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Getting form data
-    $name = $_POST['name'];
-    $contact = $_POST['contact'];
-    $email = $_POST['email'];
-    $quantity = $_POST['quantity'];
+// Check if the form is submitted and handle the data
+if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+    // Collect form data
+    $customerName = $_POST['customerName'];
+    $customerContact = $_POST['customerContact'];
+    $customerEmail = $_POST['customerEmail'];
+    $itemQuantity = $_POST['itemQuantity'];
 
-    // Handling file upload
-    $logo = $_FILES['logo'];
-    $targetDir = "uploads/"; // Make sure this directory exists and is writable
-    $targetFile = $targetDir . basename($logo['name']);
-    $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+    // Initialize logo file path
+    $logoFilePath = "";
 
-    // Check if the file is an image
-    if (getimagesize($logo['tmp_name'])) {
-        // Move the uploaded file to the target directory
-        if (move_uploaded_file($logo['tmp_name'], $targetFile)) {
-            // Store only the relative path in the database
-            $logoPath = 'uploads/' . basename($logo['name']);
-            
-            // Insert data into the database
-            $sql = "INSERT INTO vendors (name, contact, email, logo, quantity) 
-                    VALUES (:name, :contact, :email, :logo, :quantity)";
-            $stmt = $pdo->prepare($sql);
-            $stmt->execute([
-                ':name' => $name,
-                ':contact' => $contact,
-                ':email' => $email,
-                ':logo' => $logoPath, // Save the relative path
-                ':quantity' => $quantity
-            ]);
+    // Handle file upload
+    if (isset($_FILES['logoFile']) && $_FILES['logoFile']['error'] == 0) {
+        $logoFile = $_FILES['logoFile'];
+        
+        // Correct the file path to point to the Admin/uploads folder
+        $targetDir = "uploads/"; // Path to the Admin folder's uploads directory
+        
+        // Ensure the file is not too long and make it unique by appending timestamp
+        $targetFile = $targetDir . time() . "_" . basename($logoFile["name"]);
 
-            echo "Vendor added successfully!";
+        // Check if file is a valid image (optional check)
+        $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
+        $allowedTypes = array('jpg', 'jpeg', 'png', 'gif');
+        if (in_array($imageFileType, $allowedTypes)) {
+            // Move uploaded file to target directory
+            if (move_uploaded_file($logoFile["tmp_name"], $targetFile)) {
+                $logoFilePath = $targetFile; // Set the logo file path
+
+                // Insert data into the 'vendors' table
+                $sql = "INSERT INTO vendors (name, contact, email, quantity, logo) 
+                        VALUES ('$customerName', '$customerContact', '$customerEmail', '$itemQuantity', '$logoFilePath')";
+                
+                if ($conn->query($sql) === TRUE) {
+                    echo "<script>
+                            alert('Vendor added successfully!');
+                            window.location.href = 'vendor.php';
+                          </script>";
+                } else {
+                    echo "Error: " . $sql . "<br>" . $conn->error;
+                }
+            } else {
+                echo "Sorry, there was an error uploading your logo.";
+            }
         } else {
-            echo "Sorry, there was an error uploading your logo.";
+            echo "Invalid file type. Only JPG, JPEG, PNG, and GIF are allowed.";
         }
     } else {
-        echo "File is not an image.";
+        echo "Please upload a valid logo.";
     }
 }
+
+// Close the connection
+$conn->close();
 ?>
