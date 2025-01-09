@@ -10,14 +10,15 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="./assets/images/logo/devcon.webp" type="image/x-icon"> -->
 
   <!--
     - custom css link
   -->
-  <link rel="stylesheet" href="assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 
-  <link rel="stylesheet" href="assets/css/style.css">
+
   <!--
     - google font link
   -->
@@ -26,7 +27,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -43,9 +43,10 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <!-- <img src="./assets/images/logo/logo.svg" alt="Devcon's logo" width="120" height="36"> -->
+          <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
-        Devcon
+        Devcon 
+
         <div class="header-search-container">
 
           <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
@@ -55,13 +56,30 @@
           </button>
 
         </div>
+
+        <!-- <div class="header-user-actions">
+
+          <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="bag-handle-outline"></ion-icon>
+            <span class="count">0</span>
+          </button>
+
+        </div> -->
+
       </div>
 
     </div>
-    
 
     <nav class="desktop-navigation-menu">
-      
 
       <div class="container">
 
@@ -95,7 +113,33 @@
 
     </nav>
 
+    <div class="mobile-bottom-navigation">
 
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
+
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
+
+        <span class="count">0</span>
+      </button>
+
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
+
+    </div>
 
     <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
 
@@ -110,7 +154,7 @@
       <ul class="mobile-menu-category-list">
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Home</a>
+          <a href="index.php" class="menu-title">Home</a>
         </li>
 
         <li class="menu-category">
@@ -124,7 +168,7 @@
             </div>
           </button>
 
-        
+      
 
         </li>
 
@@ -138,10 +182,6 @@
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
             </div>
           </button>
-        </li>
-
-        
-        <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
             <p class="menu-title">vendors</p>
@@ -151,9 +191,6 @@
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
             </div>
           </button>
-        </li>
-    
-        <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
             <p class="menu-title">Services</p>
@@ -164,7 +201,7 @@
             </div>
           </button>
 
-        
+          
 
         </li>
 
@@ -250,90 +287,53 @@
       </div>
 
     </nav>
+
   </header>
+
   <!--
     - MAIN
   -->
-<main>
+  <main>
 
-<nav class="navbar navbar-expand-lg bg-light shadow-sm">
-  <div class="container">
-    <!-- Brand/Logo -->
 
-    <!-- Toggler for Mobile -->
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <!-- Navbar Links -->
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav ms-auto">
-        <li class="nav-item">
-          <a class="nav-link text-dark fw-semibold" href="#">T-Shirt</a>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Apparels
-          </a>
-          <ul class="dropdown-menu shadow border-0 rounded">
-            <li><a class="dropdown-item" href="#">Cap</a></li>
-            <li><a class="dropdown-item" href="#">Jacket</a></li>
-          </ul>
-        </li>
-        
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Travel
-          </a>
-          <ul class="dropdown-menu shadow border-0 rounded">
-            <li><a class="dropdown-item" href="#">Hand Bag</a></li>
-            <li><a class="dropdown-item" href="#">Laptop bag</a></li>
-          </ul>
-        </li>
-      
-      </ul>
-    </div>
-  </div>
-</nav>
+<!-- PRODUCT CONTAINER -->
+<div class="service-container">
+  <?php
+  // Database connection
+  $conn = new mysqli('localhost', 'root', '', 'logo');
 
-  <!-- PRODUCT CONTAINER -->
-  <div class="service-container">
-    <?php
-    // Database connection
-    $conn = new mysqli('localhost', 'root', '', 'logo');
+  // Check connection
+  if ($conn->connect_error) {
+      die("Connection failed: " . $conn->connect_error);
+  }
 
-    // Check connection
-    if ($conn->connect_error) {
-        die("Connection failed: " . $conn->connect_error);
-    }
+  // Fetch services
+  $sql = "SELECT * FROM services";
+  $result = $conn->query($sql);
 
-    // Fetch services
-    $sql = "SELECT * FROM services";
-    $result = $conn->query($sql);
+  if ($result->num_rows > 0) {
+      while ($row = $result->fetch_assoc()) {
+          echo '
+          <div class="service-card">
+              <img src="admin/uploads/' . htmlspecialchars($row['service_image']) . '" 
+                   alt="' . htmlspecialchars($row['service_name']) . '" 
+                   class="service-img">
+              <h3 class="service-title">' . htmlspecialchars($row['service_name']) . '</h3>
+              <p class="service-description">' . htmlspecialchars($row['service_description']) . '</p>
+              <p class="service-price">Rs. ' . htmlspecialchars($row['service_price']) . '</p>
+          </div>';
+      }
+  } else {
+      echo "<p>No services available.</p>";
+  }
 
-    if ($result->num_rows > 0) {
-        while ($row = $result->fetch_assoc()) {
-            echo '
-            <div class="service-card">
-                <img src="admin/uploads/' . htmlspecialchars($row['service_image']) . '" 
-                     alt="' . htmlspecialchars($row['service_name']) . '" 
-                     class="service-img">
-                <h3 class="service-title">' . htmlspecialchars($row['service_name']) . '</h3>
-                <p class="service-description">' . htmlspecialchars($row['service_description']) . '</p>
-                <p class="service-price">Rs. ' . htmlspecialchars($row['service_price']) . '</p>
-            </div>';
-        }
-    } else {
-        echo "<p>No services available.</p>";
-    }
-
-    // Close the database connection
-    $conn->close();
-    ?>
+  // Close the database connection
+  $conn->close();
+  ?>
 </div>
 
 
 </main>
-
   <!--
     - FOOTER
   -->
@@ -342,7 +342,7 @@
 
     <div class="footer-category">
 
-      <div class="container">
+      <!-- <div class="container">
 
         <h2 class="footer-category-title">Brand directory</h2>
 
@@ -412,7 +412,7 @@
           <a href="#" class="footer-category-link">lipstick</a>
         </div>
 
-      </div>
+      </div> -->
 
     </div>
 
@@ -625,21 +625,6 @@
 
   </footer>
 
-  <script>
-    document.querySelectorAll('.secondary-menu-category-list .menu-title').forEach(link => {
-    link.addEventListener('click', function (e) {
-        if (this.hash) {
-            e.preventDefault();
-            const target = document.querySelector(this.hash);
-            if (target) {
-                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        }
-    });
-});
-
-  </script>
-
   <!--
     - custom js link
   -->
@@ -651,48 +636,36 @@
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-</body>
+
+  <!-- For Banner -->
+
   <script>
-    document.querySelectorAll('.menu-category > .menu-title').forEach(menu => {
-  menu.addEventListener('click', function (e) {
-    e.preventDefault();
-    const dropdown = this.nextElementSibling;
-    if (dropdown) {
-      dropdown.style.display =
-        dropdown.style.display === 'block' ? 'none' : 'block';
-    }
-  });
+    const sliderContainer = document.querySelector('.slider-container');
+const sliderItems = document.querySelectorAll('.slider-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+
+// Function to update the slider position
+function updateSlider() {
+  sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Event Listeners for Buttons
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+  updateSlider();
 });
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', () => {
-  const menuCategories = document.querySelectorAll('.menu-category');
-
-  menuCategories.forEach(category => {
-    const dropdownPanel = category.querySelector('.dropdown-panel');
-
-    category.addEventListener('click', () => {
-      const isVisible = dropdownPanel.style.display === 'block';
-      document.querySelectorAll('.dropdown-panel').forEach(panel => {
-        panel.style.display = 'none'; // Hide all other panels
-      });
-      dropdownPanel.style.display = isVisible ? 'none' : 'block'; // Toggle the current panel
-    });
-  });
-
-  // Close dropdown if clicked outside
-  document.addEventListener('click', event => {
-    if (!event.target.closest('.menu-category')) {
-      document.querySelectorAll('.dropdown-panel').forEach(panel => {
-        panel.style.display = 'none';
-      });
-    }
-  });
-});
-
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
 
 </html>
