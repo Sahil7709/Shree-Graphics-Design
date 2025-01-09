@@ -33,7 +33,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="Products.php"><i class="fas fa-box-open"></i> Products</a>
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     <a href="customers.php"><i class="fas fa-users"></i> Customers</a>
-    <a href="#settings"><i class="fas fa-cog"></i> Settings</a>
+    <!-- <a href="#settings"><i class="fas fa-cog"></i> Settings</a> -->
     <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
     <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
@@ -44,54 +44,52 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <h1 class="mb-4">Welcome to the Dashboard</h1>
 
     <!-- Overview Cards -->
-    <div class="row">
-      
-      <div class="col-md-3">
-        <a href="products.php">
-          <div class="card text-white bg-primary">
-            <div class="card-body">
-             <h5 class="card-title">  Products</h5>
-              <!-- <p class="card-text">$45,000</p> -->
-           </div>
-         </div>
-        </a>
-      </div>
-
-      <div class="col-md-3">
-      <a href="admin_orders.php">
- 
-        <div class="card text-white bg-success">
-          <div class="card-body">
-            <h5 class="card-title">Orders</h5>
-            <!-- <p class="card-text">1,200</p> -->
-          </div>
+ <div class="row">
+  <div class="col-md-3">
+    <a href="products.php">
+      <div class="card text-white bg-primary small-card">
+        <div class="card-body">
+          <h5 class="card-title">Products</h5>
+          <!-- <p class="card-text">$45,000</p> -->
         </div>
-        </a>
       </div>
+    </a>
+  </div>
 
-      <div class="col-md-3">
-        <a href="services.php">
-        <div class="card text-white bg-warning">
-          <div class="card-body">
-            <h5 class="card-title">Services</h5>
-            <!-- <p class="card-text">350</p> -->
-          </div>
+  <div class="col-md-3">
+    <a href="admin_orders.php">
+      <div class="card text-white bg-success small-card">
+        <div class="card-body">
+          <h5 class="card-title">Orders</h5>
+          <!-- <p class="card-text">1,200</p> -->
         </div>
-        </a>
       </div>
+    </a>
+  </div>
 
-
-      <div class="col-md-3">
-        <a href="slider.php">
-        <div class="card text-white bg-danger">
-          <div class="card-body">
-            <h5 class="card-title">Slider</h5>
-            <!-- <p class="card-text">12</p> -->
-          </div>
+  <div class="col-md-3">
+    <a href="services.php">
+      <div class="card text-white bg-warning small-card">
+        <div class="card-body">
+          <h5 class="card-title">Services</h5>
+          <!-- <p class="card-text">350</p> -->
         </div>
-        </a>
       </div>
-    </div>
+    </a>
+  </div>
+
+  <div class="col-md-3">
+    <a href="customers.php">
+      <div class="card text-white bg-danger small-card">
+        <div class="card-body">
+          <h5 class="card-title">Customers</h5>
+          <!-- <p class="card-text">12</p> -->
+        </div>
+      </div>
+    </a>
+  </div>
+</div>
+
 
     <!-- Tables -->
     <h2 id="products" class="mt-5">Products</h2>

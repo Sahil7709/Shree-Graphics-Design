@@ -15,10 +15,9 @@
   <!--
     - custom css link
   -->
-  <!-- <link rel="stylesheet" href="assets/css/style-prefix.css"> -->
+  <link rel="stylesheet" href="assets/css/style-prefix.css">
 
   <link rel="stylesheet" href="assets/css/style.css">
-
   <!--
     - google font link
   -->
@@ -27,6 +26,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 
 <body>
@@ -55,25 +55,6 @@
           </button>
 
         </div>
-
-        <!-- <div class="header-user-actions">
-
-          <button class="action-btn">
-            <ion-icon name="person-outline"></ion-icon>
-          </button>
-
-          <button class="action-btn">
-            <ion-icon name="heart-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
-
-          <button class="action-btn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
-
-        </div> -->
-
       </div>
 
     </div>
@@ -114,33 +95,7 @@
 
     </nav>
 
-    <div class="mobile-bottom-navigation">
 
-      <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="menu-outline"></ion-icon>
-      </button>
-
-      <button class="action-btn">
-        <ion-icon name="bag-handle-outline"></ion-icon>
-
-        <span class="count">0</span>
-      </button>
-
-      <button class="action-btn">
-        <ion-icon name="home-outline"></ion-icon>
-      </button>
-
-      <button class="action-btn">
-        <ion-icon name="heart-outline"></ion-icon>
-
-        <span class="count">0</span>
-      </button>
-
-      <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="grid-outline"></ion-icon>
-      </button>
-
-    </div>
 
     <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
 
@@ -196,12 +151,8 @@
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
             </div>
           </button>
-
-        
-
         </li>
-
-        
+    
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
@@ -299,12 +250,51 @@
       </div>
 
     </nav>
-
   </header>
   <!--
     - MAIN
   -->
 <main>
+
+<nav class="navbar navbar-expand-lg bg-light shadow-sm">
+  <div class="container">
+    <!-- Brand/Logo -->
+
+    <!-- Toggler for Mobile -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Navbar Links -->
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link text-dark fw-semibold" href="#">T-Shirt</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Apparels
+          </a>
+          <ul class="dropdown-menu shadow border-0 rounded">
+            <li><a class="dropdown-item" href="#">Cap</a></li>
+            <li><a class="dropdown-item" href="#">Jacket</a></li>
+          </ul>
+        </li>
+        
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle text-dark fw-semibold" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Travel
+          </a>
+          <ul class="dropdown-menu shadow border-0 rounded">
+            <li><a class="dropdown-item" href="#">Hand Bag</a></li>
+            <li><a class="dropdown-item" href="#">Laptop bag</a></li>
+          </ul>
+        </li>
+      
+      </ul>
+    </div>
+  </div>
+</nav>
+
   <!-- PRODUCT CONTAINER -->
   <div class="service-container">
     <?php
@@ -343,8 +333,6 @@
 
 
 </main>
-
-
 
   <!--
     - FOOTER
@@ -637,6 +625,21 @@
 
   </footer>
 
+  <script>
+    document.querySelectorAll('.secondary-menu-category-list .menu-title').forEach(link => {
+    link.addEventListener('click', function (e) {
+        if (this.hash) {
+            e.preventDefault();
+            const target = document.querySelector(this.hash);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+        }
+    });
+});
+
+  </script>
+
   <!--
     - custom js link
   -->
@@ -649,5 +652,47 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
+  <script>
+    document.querySelectorAll('.menu-category > .menu-title').forEach(menu => {
+  menu.addEventListener('click', function (e) {
+    e.preventDefault();
+    const dropdown = this.nextElementSibling;
+    if (dropdown) {
+      dropdown.style.display =
+        dropdown.style.display === 'block' ? 'none' : 'block';
+    }
+  });
+});
+
+  </script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+  const menuCategories = document.querySelectorAll('.menu-category');
+
+  menuCategories.forEach(category => {
+    const dropdownPanel = category.querySelector('.dropdown-panel');
+
+    category.addEventListener('click', () => {
+      const isVisible = dropdownPanel.style.display === 'block';
+      document.querySelectorAll('.dropdown-panel').forEach(panel => {
+        panel.style.display = 'none'; // Hide all other panels
+      });
+      dropdownPanel.style.display = isVisible ? 'none' : 'block'; // Toggle the current panel
+    });
+  });
+
+  // Close dropdown if clicked outside
+  document.addEventListener('click', event => {
+    if (!event.target.closest('.menu-category')) {
+      document.querySelectorAll('.dropdown-panel').forEach(panel => {
+        panel.style.display = 'none';
+      });
+    }
+  });
+});
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
 </html>

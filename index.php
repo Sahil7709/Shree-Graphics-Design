@@ -302,78 +302,61 @@
       - BANNER
     -->
 
-    <div class="banner">
+    <?php
+// Database connection
+$host = 'localhost';
+$user = 'root';          // Default user for XAMPP
+$password = '';          // Default password for XAMPP (empty by default)
+$dbname = 'logo';        // Your database name
 
-      <div class="container">
+// Create connection
+$conn = new mysqli($host, $user, $password, $dbname);
 
-        <div class="slider-container has-scrollbar">
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
 
-          <div class="slider-item">
 
-            <img src="./assets/images/banner-1.jpg" alt="women's latest fashion sale" class="banner-img">
+// Fetch slider images from the database
+$sql = "SELECT * FROM slider_images";
+$result = $conn->query($sql);
+?>
+<div class="banner">
+   <div class="container">
+      <div class="slider-container has-scrollbar">
+         <?php
+         // Fetch slider images from the database
+         $sql = "SELECT * FROM slider_images";
+         $result = $conn->query($sql);
 
-            <div class="banner-content">
-
-              <p class="banner-subtitle">Trending item</p>
-
-              <h2 class="banner-title">Women's latest fashion sale</h2>
-
-              <p class="banner-text">
-                starting at RS.  <b>20</b>.00
-              </p>
-
-              <a href="#" class="banner-btn">Shop now</a>
-
-            </div>
-
-          </div>
-
-          <div class="slider-item">
-
-            <img src="./assets/images/banner-2.jpg" alt="modern sunglasses" class="banner-img">
-
-            <div class="banner-content">
-
-              <p class="banner-subtitle">Trending accessories</p>
-
-              <h2 class="banner-title">Modern sunglasses</h2>
-
-              <p class="banner-text">
-                starting at RS <b>15</b>.00
-              </p>
-
-              <a href="#" class="banner-btn">Shop now</a>
-
-            </div>
-
-          </div>
-
-          <div class="slider-item">
-
-            <img src="./assets/images/banner-3.jpg" alt="new fashion summer sale" class="banner-img">
-
-            <div class="banner-content">
-
-              <p class="banner-subtitle">Sale Offer</p>
-
-              <h2 class="banner-title">New fashion summer sale</h2>
-
-              <p class="banner-text">
-                starting at RS <b>29</b>.99
-              </p>
-
-              <a href="#" class="banner-btn">Shop now</a>
-
-            </div>
-
-          </div>
-
-        </div>
-
+         if ($result->num_rows > 0) {
+            // Output data of each row
+            while($row = $result->fetch_assoc()) {
+                echo '<div class="slider-item">';
+                echo '<img src="Admin/uploads/' . $row['image_url'] . '" alt="' . htmlspecialchars($row['title']) . '" class="banner-img">';
+                echo '<div class="banner-content">';
+                echo '<p class="banner-subtitle">' . htmlspecialchars($row['subtitle']) . '</p>';
+                echo '<h2 class="banner-title">' . htmlspecialchars($row['title']) . '</h2>';
+                echo '<p class="banner-text">starting at RS. <b>' . number_format($row['price'], 2) . '</b></p>';
+                echo '<a href="#" class="banner-btn">Shop now</a>';
+                echo '</div>';
+                echo '</div>';
+            }
+         } else {
+            echo "No slider images found.";
+         }
+         ?>
       </div>
+   </div>
+</div>
 
-    </div>
 
+
+<?php
+// Close connection
+$conn->close();
+?>
 
 
     <!--
@@ -847,7 +830,7 @@
       - BLOG
     -->
 
-    <div class="blog">
+    <!-- <div class="blog">
 
       <div class="container">
 
@@ -948,7 +931,7 @@
 
       </div>
 
-    </div>
+    </div> -->
 
   </main>
 
@@ -964,7 +947,7 @@
 
     <div class="footer-category">
 
-      <div class="container">
+      <!-- <div class="container">
 
         <h2 class="footer-category-title">Brand directory</h2>
 
@@ -1034,7 +1017,7 @@
           <a href="#" class="footer-category-link">lipstick</a>
         </div>
 
-      </div>
+      </div> -->
 
     </div>
 
@@ -1286,6 +1269,8 @@ nextBtn.addEventListener('click', () => {
 });
 
   </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
 </body>
 
 </html>

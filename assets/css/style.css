@@ -3065,3 +3065,38 @@ body.modal-open {
   font-size: 16px;
   font-weight: bold;
 }
+
+/* 2nd Nav Bar  */
+.secondary-navigation .dropdown-panel {
+  display: none;
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  padding: 10px;
+}
+
+.secondary-navigation .menu-category:hover .dropdown-panel {
+  display: block;
+}
+
+.secondary-menu-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 20px;
+  position: relative;
+}
+
+.menu-title {
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+}
+
+.dropdown-panel-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}

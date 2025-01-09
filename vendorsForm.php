@@ -82,7 +82,7 @@ $conn->close();
 <main>
     <div class="form-container">
         <!-- Form for submitting order details -->
-        <form action="submit_vendor.php" method="POST" enctype="multipart/form-data">
+        <form action="Admin/submit_vendor.php" method="POST" enctype="multipart/form-data">
             <label for="customerName">Name:</label>
             <input type="text" id="customerName" name="customerName" required>
 
