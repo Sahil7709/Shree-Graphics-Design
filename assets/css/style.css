@@ -3066,37 +3066,56 @@ body.modal-open {
   font-weight: bold;
 }
 
-/* 2nd Nav Bar  */
-.secondary-navigation .dropdown-panel {
-  display: none;
-  position: absolute;
-  background-color: white;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 10;
-  padding: 10px;
-}
-
-.secondary-navigation .menu-category:hover .dropdown-panel {
-  display: block;
-}
-
-.secondary-menu-category-list {
+.desktop-menu-category-list {
   list-style: none;
   padding: 0;
   margin: 0;
   display: flex;
-  gap: 20px;
-  position: relative;
 }
 
-.menu-title {
-  text-decoration: none;
-  color: black;
-  font-weight: bold;
+/* 2nd Nav */
+.desktop-menu-category-list {
+list-style: none;
+padding: 0;
+margin: 0;
+display: flex;
 }
 
-.dropdown-panel-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
+.menu-category {
+position: relative;
+margin-right: 20px;
+}
+
+.menu-category .menu-title {
+text-decoration: none;
+color: #000;
+}
+
+.menu-category .dropdown {
+list-style: none;
+position: absolute;
+top: 100%;
+left: 0;
+background-color: #fff;
+border: 1px solid #ddd;
+display: none;
+padding: 10px 0;
+min-width: 150px;
+}
+
+.menu-category:hover .dropdown {
+display: block;
+}
+
+.dropdown li {
+padding: 5px 15px;
+}
+
+.dropdown li a {
+text-decoration: none;
+color: #333;
+}
+
+.dropdown li a:hover {
+color: #007bff;
 }

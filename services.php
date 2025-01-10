@@ -27,6 +27,56 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+    <style>
+     .desktop-menu-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu-category {
+  position: relative;
+  margin-right: 20px;
+}
+
+.menu-category .menu-title {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-category .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  padding: 10px 0;
+  min-width: 150px;
+}
+
+.menu-category:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 5px 15px;
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown li a:hover {
+  color: #007bff;
+}
+
+
+    </style>
+
 </head>
 
 <body>
@@ -57,23 +107,6 @@
 
         </div>
 
-        <!-- <div class="header-user-actions">
-
-          <button class="action-btn">
-            <ion-icon name="person-outline"></ion-icon>
-          </button>
-
-          <button class="action-btn">
-            <ion-icon name="heart-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
-
-          <button class="action-btn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
-
-        </div> -->
 
       </div>
 
@@ -81,37 +114,37 @@
 
     <nav class="desktop-navigation-menu">
 
-      <div class="container">
+<div class="container">
 
-        <ul class="desktop-menu-category-list">
+  <ul class="desktop-menu-category-list">
 
-          <li class="menu-category">
-            <a href="index.php" class="menu-title">Home</a>
-          </li>
-      
-          <li class="menu-category">
-            <a href="Women.php" class="menu-title">Women's</a>
-          
-          </li>
+    <li class="menu-category">
+      <a href="index.php" class="menu-title">Home</a>
+    </li>
 
-          <li class="menu-category">
-            <a href="men.php" class="menu-title">Men's</a>
-          </li>
+    <li class="menu-category">
+      <a href="Women.php" class="menu-title">Women's</a>
+    
+    </li>
 
-          
-          <li class="menu-category">
-            <a href="vendors.php" class="menu-title">vendors</a>
-          </li>
+    <li class="menu-category">
+      <a href="men.php" class="menu-title">Men's</a>
+    </li>
 
-          <li class="menu-category">
-            <a href="services.php" class="menu-title">Services</a>
-          </li>
+    
+    <li class="menu-category">
+      <a href="vendors.php" class="menu-title">vendors</a>
+    </li>
 
-        </ul>
+    <li class="menu-category">
+      <a href="services.php" class="menu-title">Services</a>
+    </li>
 
-      </div>
+  </ul>
 
-    </nav>
+</div>
+
+</nav>
 
     <div class="mobile-bottom-navigation">
 
@@ -288,6 +321,47 @@
 
     </nav>
 
+    <!-- 2nd Nav Bar  -->
+
+<nav class="desktop-navigation-menu">
+
+<div class="container"> 
+
+  <ul class="desktop-menu-category-list">
+
+    <li class="menu-category">
+      <a href="services.php" class="menu-title">T-Shirt</a>
+      <ul class="dropdown">
+        <li><a href="round_neck.php">Round Neck</a></li>
+        <li><a href="v_neck.php">V-Neck</a></li>
+      </ul>
+    </li>
+
+    <li class="menu-category">
+      <a href="services.php" class="menu-title">Apparels</a>
+      <ul class="dropdown">
+        <li><a href="cap.php">Cap</a></li>
+        <li><a href="jackets.php">Jackets</a></li>
+      </ul>
+    </li>
+
+    <li class="menu-category">
+      <a href="services.php" class="menu-title">Travel</a>
+      <ul class="dropdown">
+        <li><a href="handbag.php">Hand Bag</a></li>
+        <li><a href="laptopbag.php">Laptop Bag</a></li>
+        <li><a href="travelbag.php">Travel Bag</a></li>
+      </ul>
+    </li>
+
+
+
+  </ul>
+
+</div>
+
+</nav>
+
   </header>
 
   <!--
@@ -342,78 +416,7 @@
 
     <div class="footer-category">
 
-      <!-- <div class="container">
-
-        <h2 class="footer-category-title">Brand directory</h2>
-
-        <div class="footer-category-box">
-
-          <h3 class="category-box-title">Fashion :</h3>
-
-          <a href="#" class="footer-category-link">T-shirt</a>
-          <a href="#" class="footer-category-link">Shirts</a>
-          <a href="#" class="footer-category-link">shorts & jeans</a>
-          <a href="#" class="footer-category-link">jacket</a>
-          <a href="#" class="footer-category-link">dress & frock</a>
-          <a href="#" class="footer-category-link">innerwear</a>
-          <a href="#" class="footer-category-link">hosiery</a>
-
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">footwear :</h3>
-        
-          <a href="#" class="footer-category-link">sport</a>
-          <a href="#" class="footer-category-link">formal</a>
-          <a href="#" class="footer-category-link">Boots</a>
-          <a href="#" class="footer-category-link">casual</a>
-          <a href="#" class="footer-category-link">cowboy shoes</a>
-          <a href="#" class="footer-category-link">safety shoes</a>
-          <a href="#" class="footer-category-link">Party wear shoes</a>
-          <a href="#" class="footer-category-link">Branded</a>
-          <a href="#" class="footer-category-link">Firstcopy</a>
-          <a href="#" class="footer-category-link">Long shoes</a>
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">jewellery :</h3>
-        
-          <a href="#" class="footer-category-link">Necklace</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple rings</a>
-          <a href="#" class="footer-category-link">Pendants</a>
-          <a href="#" class="footer-category-link">Crystal</a>
-          <a href="#" class="footer-category-link">Bangles</a>
-          <a href="#" class="footer-category-link">bracelets</a>
-          <a href="#" class="footer-category-link">nosepin</a>
-          <a href="#" class="footer-category-link">chain</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple rings</a>
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">cosmetics :</h3>
-        
-          <a href="#" class="footer-category-link">Shampoo</a>
-          <a href="#" class="footer-category-link">Bodywash</a>
-          <a href="#" class="footer-category-link">Facewash</a>
-          <a href="#" class="footer-category-link">makeup kit</a>
-          <a href="#" class="footer-category-link">liner</a>
-          <a href="#" class="footer-category-link">lipstick</a>
-          <a href="#" class="footer-category-link">prefume</a>
-          <a href="#" class="footer-category-link">Body soap</a>
-          <a href="#" class="footer-category-link">scrub</a>
-          <a href="#" class="footer-category-link">hair gel</a>
-          <a href="#" class="footer-category-link">hair colors</a>
-          <a href="#" class="footer-category-link">hair dye</a>
-          <a href="#" class="footer-category-link">sunscreen</a>
-          <a href="#" class="footer-category-link">skin loson</a>
-          <a href="#" class="footer-category-link">liner</a>
-          <a href="#" class="footer-category-link">lipstick</a>
-        </div>
-
-      </div> -->
-
+    
     </div>
 
     <div class="footer-nav">
