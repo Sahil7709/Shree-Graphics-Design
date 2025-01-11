@@ -116,8 +116,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="mb-3">
           <label for="category" class="form-label">Category</label>
           <select class="form-control" id="category" name="category" required>
-            <option value="women">Women</option>
-            <option value="men">Men</option>
+          <option value="">Select Product </option>
             <option value="v_neck_tshirt">V Neck T-shirt</option>
             <option value="travelbag">Travel Bag</option>
             <option value="round_neck_tshirt">Round Neck T-shirt</option>
