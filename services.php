@@ -28,7 +28,11 @@
     rel="stylesheet">
 
     <style>
-     .desktop-menu-category-list {
+    .service-container{
+      margin-left: 60px;
+      margin-right: 60px;
+    }
+  .desktop-menu-category-list {
   list-style: none;
   padding: 0;
   margin: 0;
