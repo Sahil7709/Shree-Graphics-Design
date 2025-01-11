@@ -34,12 +34,10 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="Products.php"><i class="fas fa-box-open"></i> Products</a>
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     <a href="customers.php"><i class="fas fa-users"></i> Customers</a>
-    <!-- <a href="#settings"><i class="fas fa-cog"></i> Settings</a> -->
     <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
     <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
-
 
   <!-- Main Content -->
   <div class="main-content">
@@ -55,7 +53,6 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
       <thead class="table-dark">
         <tr>
           <th>ID</th>
-          <!-- <th>Image</th> -->
           <th>Name</th>
           <th>Category</th>
           <th>Price</th>
@@ -65,24 +62,14 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </tr>
       </thead>
       <tbody>
-        <?php foreach ($products as $index => $product): ?>
+        <?php foreach ($products as $product): ?>
         <tr>
-          <td><?php echo $index + 1; ?></td>
-          <!-- <td>
-          <?php 
-          $imagePath = "./uploads" . $product['image_default'];
-          if (file_exists($imagePath)) {
-              echo '<img src="' . htmlspecialchars($imagePath) . '" alt="' . htmlspecialchars($product['name']) . '" width="50">';
-          } else {
-              echo '<img src="assets/images/default-placeholder.png" alt="Default Image" width="50">';
-          }
-          ?>
-          </td> -->
-          <td><?php echo $product['name']; ?></td>
-          <td><?php echo $product['category']; ?></td>
+          <td><?php echo htmlspecialchars($product['id']); ?></td>
+          <td><?php echo htmlspecialchars($product['name']); ?></td>
+          <td><?php echo htmlspecialchars($product['category']); ?></td>
           <td>Rs. <?php echo number_format($product['price'], 2); ?></td>
-          <td><?php echo $product['stock']; ?></td>
-          <td><?php echo $product['discount_price']; ?>%</td>
+          <td><?php echo htmlspecialchars($product['stock']); ?></td>
+          <td><?php echo htmlspecialchars($product['discount_price']); ?>%</td>
           <td>
             <a href="edit_product.php?id=<?php echo $product['id']; ?>" class="btn btn-sm btn-warning">
               <i class="fas fa-edit"></i> Edit
@@ -113,18 +100,20 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
 
         <!-- Category -->
-        <div class="mb-3">
-          <label for="category" class="form-label">Category</label>
-          <select class="form-control" id="category" name="category" required>
-          <option value="">Select Product </option>
-            <option value="v_neck_tshirt">V Neck T-shirt</option>
-            <option value="travelbag">Travel Bag</option>
-            <option value="round_neck_tshirt">Round Neck T-shirt</option>
-            <option value="laptopbag">Laptop Bag</option>
-            <option value="jacket">Jacket</option>
-            <option value="handbag">Handbag</option>
-          </select>
-        </div>
+      <div class="mb-3">
+        <label for="category" class="form-label">Category</label>
+        <select class="form-control" id="category" name="category" required>
+          <option value="">Select Product</option>
+          <option value="v_neck_tshirt">V Neck T-shirt</option>
+          <option value="travelbag">Travel Bag</option>
+          <option value="round_neck_tshirt">Round Neck T-shirt</option>
+          <option value="laptopbag">Laptop Bag</option>
+          <option value="jacket">Jacket</option>
+          <option value="handbag">Handbag</option>
+          <option value="cap">Cap</option> <!-- Added "Cap" option -->
+        </select>
+      </div>
+
 
         <!-- Price -->
         <div class="mb-3">
@@ -163,14 +152,12 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="submit" class="btn btn-primary">Add Product</button>
+       <button type="submit" class="btn btn-primary">Add Product</button>
+       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
       </div>
     </form>
   </div>
 </div>
-
-
 
   <!-- Include Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

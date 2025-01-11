@@ -500,12 +500,12 @@ $conn->close();
 
         
 
-        <div class="product-box">
+    <div class="product-box">
     <!-- PRODUCT GRID -->
-    <div class="product-grid">
-        <?php include 'Admin/fetch_products.php'; ?>
+        <div class="product-grid">
+          <?php include 'Admin/fetch_products.php'; ?>
+        </div>
     </div>
-</div>
       </div>
 
     </div>
