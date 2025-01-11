@@ -537,9 +537,15 @@
 
   <div class="product-box">
 <!-- PRODUCT GRID -->
+<?php
+// Set the category filter to 'cap'
+$category_filter = 'cap';
+?>
+
 <div class="product-grid">
   <?php include 'Admin/fetch_products.php'; ?>
 </div>
+
 </div>
 </div>
 

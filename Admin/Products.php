@@ -116,12 +116,16 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <div class="mb-3">
           <label for="category" class="form-label">Category</label>
           <select class="form-control" id="category" name="category" required>
-            <option value="" disabled selected>Select a category</option>
-            <option value="Fashion">Men</option>
-            <option value="Electronics">Women</option>
+            <option value="women">Women</option>
+            <option value="men">Men</option>
+            <option value="v_neck_tshirt">V Neck T-shirt</option>
+            <option value="travelbag">Travel Bag</option>
+            <option value="round_neck_tshirt">Round Neck T-shirt</option>
+            <option value="laptopbag">Laptop Bag</option>
+            <option value="jacket">Jacket</option>
+            <option value="handbag">Handbag</option>
           </select>
-       </div>
-
+        </div>
 
         <!-- Price -->
         <div class="mb-3">
@@ -166,6 +170,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     </form>
   </div>
 </div>
+
 
 
   <!-- Include Bootstrap JS -->

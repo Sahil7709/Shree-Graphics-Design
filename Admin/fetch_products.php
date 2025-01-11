@@ -10,7 +10,6 @@
 </head>
 
 <body>
-
 <?php
 
 // Database connection
@@ -21,9 +20,25 @@ if (!$pdo) {
     die("Database connection failed.");
 }
 
+// Check if category filter is set
+$category_filter = isset($category_filter) ? $category_filter : '';
+
+// Prepare the SQL query based on the category filter
+$query = "SELECT * FROM products";
+if ($category_filter) {
+    $query .= " WHERE category = :category";
+}
+
 try {
-    // Fetch products
-    $stmt = $pdo->query("SELECT * FROM products");
+    // Prepare and execute the query
+    $stmt = $pdo->prepare($query);
+
+    // Bind category parameter if the filter is set
+    if ($category_filter) {
+        $stmt->bindParam(':category', $category_filter);
+    }
+
+    $stmt->execute();
 
     // Check if there are products
     if ($stmt->rowCount() > 0) {
@@ -86,6 +101,7 @@ try {
     echo "Error fetching products: " . $e->getMessage();
 }
 ?>
+
 
 </body>
 </html>
