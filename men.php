@@ -55,24 +55,6 @@
 
         </div>
 
-        <!-- <div class="header-user-actions">
-
-          <button class="action-btn">
-            <ion-icon name="person-outline"></ion-icon>
-          </button>
-
-          <button class="action-btn">
-            <ion-icon name="heart-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
-
-          <button class="action-btn">
-            <ion-icon name="bag-handle-outline"></ion-icon>
-            <span class="count">0</span>
-          </button>
-
-        </div> -->
-
       </div>
 
     </div>
@@ -87,14 +69,14 @@
             <a href="index.php" class="menu-title">Home</a>
           </li>
       
-          <li class="menu-category">
+          <!-- <li class="menu-category">
             <a href="Women.php" class="menu-title">Women's</a>
           
           </li>
 
           <li class="menu-category">
             <a href="men.php" class="menu-title">Men's</a>
-          </li>
+          </li> -->
 
           
           <li class="menu-category">

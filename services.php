@@ -126,14 +126,14 @@
       <a href="index.php" class="menu-title">Home</a>
     </li>
 
-    <li class="menu-category">
+    <!-- <li class="menu-category">
       <a href="Women.php" class="menu-title">Women's</a>
     
     </li>
 
     <li class="menu-category">
       <a href="men.php" class="menu-title">Men's</a>
-    </li>
+    </li> -->
 
     
     <li class="menu-category">

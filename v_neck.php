@@ -141,14 +141,14 @@
   <a href="index.php" class="menu-title">Home</a>
 </li>
 
-<li class="menu-category">
+<!-- <li class="menu-category">
   <a href="Women.php" class="menu-title">Women's</a>
 
 </li>
 
 <li class="menu-category">
   <a href="men.php" class="menu-title">Men's</a>
-</li>
+</li> -->
 
 
 <li class="menu-category">
@@ -211,14 +211,14 @@
 
     <li class="menu-category">
 
-      <button class="accordion-menu" data-accordion-btn>
+      <!-- <button class="accordion-menu" data-accordion-btn>
         <p class="menu-title">Men's</p>
 
         <div>
           <ion-icon name="add-outline" class="add-icon"></ion-icon>
           <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
         </div>
-      </button>
+      </button> -->
 
   
 
@@ -226,14 +226,14 @@
 
     <li class="menu-category">
 
-      <button class="accordion-menu" data-accordion-btn>
+      <!-- <button class="accordion-menu" data-accordion-btn>
         <p class="menu-title">Women's</p>
 
         <div>
           <ion-icon name="add-outline" class="add-icon"></ion-icon>
           <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
         </div>
-      </button>
+      </button> -->
 
       <button class="accordion-menu" data-accordion-btn>
         <p class="menu-title">vendors</p>

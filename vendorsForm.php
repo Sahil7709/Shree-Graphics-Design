@@ -76,32 +76,77 @@ $conn->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vendor Form</title>
     <link rel="stylesheet" href="assets/css/style.css"> <!-- Add your CSS file here -->
+    <style>
+        /* Simple styling for modal background */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: none; /* Hidden by default */
+            justify-content: center;
+            align-items: center;
+        }
+
+        .form-container {
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 600px;
+            display: none; /* Hidden by default */
+        }
+    </style>
 </head>
 <body>
 
 <main>
-    <div class="form-container">
-        <!-- Form for submitting order details -->
-        <form action="Admin/submit_vendor.php" method="POST" enctype="multipart/form-data">
-            <label for="customerName">Name:</label>
-            <input type="text" id="customerName" name="customerName" required>
+    <!-- Modal overlay to close when clicking outside -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="form-container" id="formContainer">
+            <!-- Form for submitting order details -->
+            <form action="Admin/submit_vendor.php" method="POST" enctype="multipart/form-data">
+                <label for="customerName">Name:</label>
+                <input type="text" id="customerName" name="customerName" required>
 
-            <label for="customerContact">Contact:</label>
-            <input type="text" id="customerContact" name="customerContact" required>
+                <label for="customerContact">Contact:</label>
+                <input type="text" id="customerContact" name="customerContact" required>
 
-            <label for="customerEmail">Email:</label>
-            <input type="email" id="customerEmail" name="customerEmail" required>
+                <label for="customerEmail">Email:</label>
+                <input type="email" id="customerEmail" name="customerEmail" required>
 
-            <label for="logoFile">Logo (Image):</label>
-            <input type="file" id="logoFile" name="logoFile" accept="image/*" required>
+                <label for="logoFile">Logo (Image):</label>
+                <input type="file" id="logoFile" name="logoFile" accept="image/*" required>
 
-            <label for="itemQuantity">Quantity:</label>
-            <input type="number" id="itemQuantity" name="itemQuantity" required>
+                <label for="itemQuantity">Quantity:</label>
+                <input type="number" id="itemQuantity" name="itemQuantity" required>
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
     </div>
 </main>
+
+<script>
+    // JavaScript to handle the modal close functionality
+    const modalOverlay = document.getElementById('modalOverlay');
+    const formContainer = document.getElementById('formContainer');
+
+    // Show the modal when the page loads
+    window.onload = function() {
+        modalOverlay.style.display = 'flex';
+        formContainer.style.display = 'block';
+    }
+
+    // Close the modal if clicking outside the form
+    modalOverlay.addEventListener('click', function(event) {
+        if (event.target === modalOverlay) {
+            modalOverlay.style.display = 'none';
+        }
+    });
+</script>
 
 </body>
 </html>
