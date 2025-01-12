@@ -76,6 +76,8 @@
 
 .dropdown li a:hover {
   color: #007bff;
+  color:hsl(0, 100%, 70%);
+
 }
 
 

@@ -437,11 +437,7 @@
                 <data value="60" class="stock" title="Available Stock">60</data>
               </a>
             </li>
-
-            
-
           </ul>
-
         </li>
 
       
