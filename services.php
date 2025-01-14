@@ -346,34 +346,15 @@
                                 <li><a href="travelbag.php">Travel Bag</a></li>
                             </ul>
                         </li>
-
-
                         <li class="menu-category">
-                            <a href="services.php" class="menu-title">Leather</a>
-                            <!-- <ul class="dropdown">
-        <li><a href="handbag.php">Hand Bag</a></li>
-        <li><a href="laptopbag.php">Laptop Bag</a></li>
-        <li><a href="travelbag.php">Travel Bag</a></li>
-      </ul> -->
-                        </li>
+                    <a href="services.php" class="menu-title">Awards</a>
 
-                        <li class="menu-category">
-                            <a href="services.php" class="menu-title">Mug</a>
-                            <!-- <ul class="dropdown">
-        <li><a href="handbag.php">Hand Bag</a></li>
-        <li><a href="laptopbag.php">Laptop Bag</a></li>
-        <li><a href="travelbag.php">Travel Bag</a></li>
-      </ul> -->
-                        </li>
+                </li>
 
-                        <li class="menu-category">
-                            <a href="services.php" class="menu-title">Writing Inastrument</a>
-                            <!-- <ul class="dropdown">
-        <li><a href="handbag.php">Hand Bag</a></li>
-        <li><a href="laptopbag.php">Laptop Bag</a></li>
-        <li><a href="travelbag.php">Travel Bag</a></li>
-      </ul> -->
-                        </li>
+                <li class="menu-category">
+                    <a href="services.php" class="menu-title">Brands</a>
+                </li>
+
 
 
                     </ul>
