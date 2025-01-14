@@ -10,12 +10,15 @@
   <!--
     - favicon
   -->
-  <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon">
+  <!-- <link rel="shortcut icon" href="./assets/images/logo/devcon.webp" type="image/x-icon"> -->
 
   <!--
     - custom css link
   -->
+  <link rel="stylesheet" href="./assets/css/style-prefix.css">
   <link rel="stylesheet" href="./assets/css/style.css">
+
+
 
   <!--
     - google font link
@@ -25,44 +28,11 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <style>
-/* Style for Logo Order Section and Modal */
-/* Center the entire logo-order-section */
-.logo-order-section {
-    display: flex;
-    justify-content: center;  /* Horizontally center */
-    align-items: center;      /* Vertically center */
-    height: 20vh;            /* Make it take up the full height of the viewport */
-}
-
-/* Center the content inside the wrapper */
-.wrapper {
-    display: flex;
-    justify-content: center;  /* Horizontally center */
-    align-items: center;      /* Vertically center */
-    width: 100%;              /* Ensure it spans the full width */
-}
-
-/* Ensure the order-box doesn't exceed content's size */
-.order-box {
-    display: flex;
-    justify-content: center;  /* Horizontally center button */
-    align-items: center;      /* Vertically center button */
-}
-
-/* Style the button */
-.order-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-</style>
-
 </head>
 
 <body>
-    <!--
+
+  <!--
     - HEADER
   -->
 
@@ -286,105 +256,217 @@
   </header>
 
 
-  <!-- Main -->
+
+
+
+  <!--
+    - MAIN
+  -->
+
   <main>
-  <div class="logo-order-section">
-    <div class="wrapper">
-      <div class="order-box">
-        <div class="order-grid">
-          <!-- Wrap the button with an anchor tag to redirect on click -->
-          <a href="vendorsForm.php">
-            <button id="openOrderFormBtn" class="order-btn">Place Order</button>
-          </a>
-        </div>
-      </div>
-    </div>
-  </div>
-</main>
 
 
+    <!--
+      - PRODUCT
+    -->
+
+    <div class="product-container">
+
+      <div class="container">
+
+
+        <!--
+          - SIDEBAR
+        -->
+
+        <div class="sidebar  has-scrollbar" data-mobile-menu>
+
+          <div class="sidebar-category">
+
+            <div class="sidebar-top">
+              <h2 class="sidebar-title">Quick Links</h2>
+
+              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+                <ion-icon name="close-outline"></ion-icon>
+              </button>
+            </div>
+
+            <ul class="sidebar-menu-category-list">
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
+                      class="menu-title-img">
+
+                   <a href="index.php"> <p class="menu-title">Home </p></a>
+                  </div>
+
+                  <div>
+                  <a href="index.php"> 
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    </a>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Shirt</p>
+                      <data value="300" class="stock" title="Available Stock">300</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">T-Shirt</p>
+                      <data value="60" class="stock" title="Available Stock">60</data>
+                    </a>
+                  </li>
+
+                  
+
+                </ul>
+
+              </li>
+
+            
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
+                      height="20">
   
+                    <a href="services.php"> <p class="menu-title">Services</p></a>
+                  </div>
+
+                  <div>   <a href="services.php">
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Shirt</p>
+                      <data value="46" class="stock" title="Available Stock">46</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name"> T-Shirt</p>
+                      <data value="73" class="stock" title="Available Stock">73</data>
+                    </a>
+                  </li>
+
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
+                      height="20">
+
+                    <a href="vendors.php" ><p class="menu-title">vendors</p></a>
+                  </div>
+
+                  <div>  <a href="vendors.php" >
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">Shirt</p>
+                      <data value="12" class="stock" title="Available Stock">12 pcs</data>
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="#" class="sidebar-submenu-title">
+                      <p class="product-name">T-Shirt</p>
+                      <data value="60" class="stock" title="Available Stock">60 pcs</data>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+
+
+
+          </div>
+        </div>
+        <div class="product-container">
+        <h1>Hello</h1>
+        <p>Here All info of Company will come </p>
+
+        </div>
+
+         <!-- CONTACT FORM SECTION -->
+         <div class="contact-form-section">
+  <form action="submit_contact.php" method="post" id="contactForm">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="verificationCode">Code</label>
+      <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
+    </div>
+    <div class="form-group">
+      <p id="codeDisplay" class="code-box">ABC123</p>
+      <button type="button" id="refreshCodeBtn">Refresh Code</button>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+</div>
+
+
+      </div>
+      
+    </div>
+    
+  </main>
+  
+
+
+
+
+
   <!--
     - FOOTER
   -->
 
   <footer>
 
-    <div class="footer-category">
-
-      <div class="container">
-
-        <h2 class="footer-category-title">Brand directory</h2>
-
-        <div class="footer-category-box">
-
-          <h3 class="category-box-title">Fashion :</h3>
-
-          <a href="#" class="footer-category-link">T-shirt</a>
-          <a href="#" class="footer-category-link">Shirts</a>
-          <a href="#" class="footer-category-link">shorts & jeans</a>
-          <a href="#" class="footer-category-link">jacket</a>
-          <a href="#" class="footer-category-link">dress & frock</a>
-          <a href="#" class="footer-category-link">innerwear</a>
-          <a href="#" class="footer-category-link">hosiery</a>
-
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">footwear :</h3>
-        
-          <a href="#" class="footer-category-link">sport</a>
-          <a href="#" class="footer-category-link">formal</a>
-          <a href="#" class="footer-category-link">Boots</a>
-          <a href="#" class="footer-category-link">casual</a>
-          <a href="#" class="footer-category-link">cowboy shoes</a>
-          <a href="#" class="footer-category-link">safety shoes</a>
-          <a href="#" class="footer-category-link">Party wear shoes</a>
-          <a href="#" class="footer-category-link">Branded</a>
-          <a href="#" class="footer-category-link">Firstcopy</a>
-          <a href="#" class="footer-category-link">Long shoes</a>
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">jewellery :</h3>
-        
-          <a href="#" class="footer-category-link">Necklace</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple rings</a>
-          <a href="#" class="footer-category-link">Pendants</a>
-          <a href="#" class="footer-category-link">Crystal</a>
-          <a href="#" class="footer-category-link">Bangles</a>
-          <a href="#" class="footer-category-link">bracelets</a>
-          <a href="#" class="footer-category-link">nosepin</a>
-          <a href="#" class="footer-category-link">chain</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple rings</a>
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">cosmetics :</h3>
-        
-          <a href="#" class="footer-category-link">Shampoo</a>
-          <a href="#" class="footer-category-link">Bodywash</a>
-          <a href="#" class="footer-category-link">Facewash</a>
-          <a href="#" class="footer-category-link">makeup kit</a>
-          <a href="#" class="footer-category-link">liner</a>
-          <a href="#" class="footer-category-link">lipstick</a>
-          <a href="#" class="footer-category-link">prefume</a>
-          <a href="#" class="footer-category-link">Body soap</a>
-          <a href="#" class="footer-category-link">scrub</a>
-          <a href="#" class="footer-category-link">hair gel</a>
-          <a href="#" class="footer-category-link">hair colors</a>
-          <a href="#" class="footer-category-link">hair dye</a>
-          <a href="#" class="footer-category-link">sunscreen</a>
-          <a href="#" class="footer-category-link">skin loson</a>
-          <a href="#" class="footer-category-link">liner</a>
-          <a href="#" class="footer-category-link">lipstick</a>
-        </div>
-
-      </div>
-
-    </div>
 
     <div class="footer-nav">
 
@@ -596,21 +678,60 @@
   </footer>
 
   <!--
+    - custom js link
+  -->
+  <script src="./assets/js/script.js"></script>
+
+  <!--
     - ionicon link
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-  <!-- script for Ventodr order form open  -->
+
+  <!-- For Banner -->
+
   <script>
-  // When the "Place Order" button is clicked, redirect to the vendorsForm.php page
-  document.getElementById('openOrderFormBtn').addEventListener('click', function() {
-    window.location.href = 'vendorsForm.php'; // Redirect to the new page
+    const sliderContainer = document.querySelector('.slider-container');
+const sliderItems = document.querySelectorAll('.slider-item');
+const prevBtn = document.querySelector('.prev-btn');
+const nextBtn = document.querySelector('.next-btn');
+
+let currentIndex = 0;
+
+// Function to update the slider position
+function updateSlider() {
+  sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+}
+
+// Event Listeners for Buttons
+prevBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+  updateSlider();
+});
+
+nextBtn.addEventListener('click', () => {
+  currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+  updateSlider();
+});
+
+  </script>
+
+
+<!-- Script for Contact Form -->
+<script>
+  document.getElementById('refreshCodeBtn').addEventListener('click', function () {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+    let newCode = '';
+    for (let i = 0; i < 6; i++) {
+      newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    document.getElementById('codeDisplay').textContent = newCode;
   });
 </script>
 
-
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
+
 </html>
