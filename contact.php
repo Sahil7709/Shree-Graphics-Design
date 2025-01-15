@@ -46,31 +46,31 @@
         <a href="#" class="header-logo">
           <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
-        Devcon 
+        Devcon
 
 
-      <div class="header-search-container">
-        <ul class="desktop-menu-category-list">
+        <div class="header-search-container">
+          <ul class="desktop-menu-category-list">
 
-      <li class="menu-category">
-        <a href="index.php" class="menu-title">Home</a>
-      </li>
-
-
-        <li class="menu-category">
-          <a href="vendors.php" class="menu-title">vendors</a>
-        </li>
-
-        <li class="menu-category">
-          <a href="services.php" class="menu-title">Services</a>
-        </li>
+            <li class="menu-category">
+              <a href="index.php" class="menu-title">Home</a>
+            </li>
 
 
-        <li class="menu-category">
-          <a href="contact.php" class="menu-title">Contact</a>
-        </li>
+            <li class="menu-category">
+              <a href="vendors.php" class="menu-title">vendors</a>
+            </li>
 
-        </ul>
+            <li class="menu-category">
+              <a href="services.php" class="menu-title">Services</a>
+            </li>
+
+
+            <li class="menu-category">
+              <a href="contact.php" class="menu-title">Contact</a>
+            </li>
+
+          </ul>
         </div>
       </div>
 
@@ -133,7 +133,7 @@
             </div>
           </button>
 
-      
+
 
         </li>
 
@@ -166,7 +166,7 @@
             </div>
           </button>
 
-          
+
 
         </li>
 
@@ -301,13 +301,15 @@
                     <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
                       class="menu-title-img">
 
-                   <a href="index.php"> <p class="menu-title">Home </p></a>
+                    <a href="index.php">
+                      <p class="menu-title">Home </p>
+                    </a>
                   </div>
 
                   <div>
-                  <a href="index.php"> 
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    <a href="index.php">
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
                     </a>
                   </div>
 
@@ -329,13 +331,13 @@
                     </a>
                   </li>
 
-                  
+
 
                 </ul>
 
               </li>
 
-            
+
               <li class="sidebar-menu-category">
 
                 <button class="sidebar-accordion-menu" data-accordion-btn>
@@ -343,13 +345,15 @@
                   <div class="menu-title-flex">
                     <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
                       height="20">
-  
-                    <a href="services.php"> <p class="menu-title">Services</p></a>
+
+                    <a href="services.php">
+                      <p class="menu-title">Services</p>
+                    </a>
                   </div>
 
-                  <div>   <a href="services.php">
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
+                  <div> <a href="services.php">
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
                   </div>
 
                 </button>
@@ -383,12 +387,14 @@
                     <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
                       height="20">
 
-                    <a href="vendors.php" ><p class="menu-title">vendors</p></a>
+                    <a href="vendors.php">
+                      <p class="menu-title">vendors</p>
+                    </a>
                   </div>
 
-                  <div>  <a href="vendors.php" >
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
+                  <div> <a href="vendors.php">
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
                   </div>
 
                 </button>
@@ -417,14 +423,14 @@
           </div>
         </div>
         <div class="product-container">
-        <h1>Hello</h1>
-        <p>Here All info of Company will come </p>
+          <h1>Hello</h1>
+          <p>Here All info of Company will come </p>
 
         </div>
 
-         <!-- CONTACT FORM SECTION -->
-         <div class="contact-form-section">
-  <form action="submit_contact.php" method="post" id="contactForm">
+        <!-- CONTACT FORM SECTION -->
+        <div class="contact-form-section">
+  <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
     <div class="form-group">
       <label for="name">Name</label>
       <input type="text" id="name" name="name" placeholder="Enter your full name" required>
@@ -439,10 +445,12 @@
     </div>
     <div class="form-group">
       <label for="verificationCode">Code</label>
-      <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
+      <!-- Display the code inside a div -->
+      <div id="codeDisplay" class="code-box">ABC123</div>
+      <!-- Input field to store the code (invisibly) -->
+      <input type="hidden" id="verificationCode" name="verificationCode" value="ABC123" required>
     </div>
     <div class="form-group">
-      <p id="codeDisplay" class="code-box">ABC123</p>
       <button type="button" id="refreshCodeBtn">Refresh Code</button>
     </div>
     <button type="submit" class="submit-btn">Submit</button>
@@ -451,11 +459,11 @@
 
 
       </div>
-      
+
     </div>
-    
+
   </main>
-  
+
 
 
 
@@ -501,87 +509,87 @@
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Products</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">New products</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Best sales</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Contact us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Our Company</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Delivery</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Legal Notice</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Terms and conditions</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">About us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Secure payment</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Services</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">New products</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Best sales</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Contact us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
@@ -693,44 +701,70 @@
 
   <script>
     const sliderContainer = document.querySelector('.slider-container');
-const sliderItems = document.querySelectorAll('.slider-item');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
 
-let currentIndex = 0;
+    let currentIndex = 0;
 
-// Function to update the slider position
-function updateSlider() {
-  sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+    // Function to update the slider position
+    function updateSlider() {
+      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-// Event Listeners for Buttons
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
-  updateSlider();
-});
+    // Event Listeners for Buttons
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+      updateSlider();
+    });
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
-  updateSlider();
-});
-
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+      updateSlider();
+    });
   </script>
 
 
-<!-- Script for Contact Form -->
-<script>
-  document.getElementById('refreshCodeBtn').addEventListener('click', function () {
-    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-    let newCode = '';
-    for (let i = 0; i < 6; i++) {
-      newCode += characters.charAt(Math.floor(Math.random() * characters.length));
-    }
-    document.getElementById('codeDisplay').textContent = newCode;
-  });
-</script>
+  <!-- Script for Contact Form -->
+  <script>
+    // Initialize the verification code
+    const generateCode = () => {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      let newCode = '';
+      for (let i = 0; i < 6; i++) {
+        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return newCode;
+    };
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    // Update the displayed code
+    const refreshCode = () => {
+      const newCode = generateCode();
+      document.getElementById('codeDisplay').textContent = newCode;
+    };
+
+    // Event listener for refreshing the code
+    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+
+    // Validate the code on form submission
+    const validateCode = () => {
+      const displayedCode = document.getElementById('codeDisplay').textContent;
+      const enteredCode = document.getElementById('verificationCode').value;
+
+      if (displayedCode !== enteredCode) {
+        alert('Verification code is incorrect. Please try again.');
+        return false; // Prevent form submission
+      }
+
+      return true; // Allow form submission
+    };
+
+    // Set an initial code when the page loads
+    window.onload = refreshCode;
+  </script>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
