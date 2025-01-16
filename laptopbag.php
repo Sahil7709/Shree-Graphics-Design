@@ -16,7 +16,6 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
-  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
 
 
   <!--
@@ -27,79 +26,217 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+
     <style>
-        /* Basic styling */
-.desktop-menu-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
+           
+/* Style the code box */
+.code-box {
+  font-size: 20px;  /* Adjust the font size */
+  font-family: monospace;  /* Monospaced font for a code appearance */
+  background-color: #f0f0f0;  /* Light background color */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 150px;  /* Adjust the width as per your preference */
+  text-align: center;
+  cursor: not-allowed;  /* Make it non-interactive */
+  user-select: none;  /* Disable text selection */
+  pointer-events: none;  /* Disable interaction with the element */
+}
+.contact-form-section button {
+  padding: 8px 12px; /* Reduced padding to make buttons smaller */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.menu-category {
-  position: relative;
-  margin-right: 20px;
+/* Style the code box */
+.code-box {
+  font-size: 20px;  /* Adjust the font size */
+  font-family: monospace;  /* Monospaced font for a code appearance */
+  background-color: #f0f0f0;  /* Light background color */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 150px;  /* Adjust the width as per your preference */
+  text-align: center;
+  cursor: not-allowed;  /* Make it non-interactive */
+  user-select: none;  /* Disable text selection */
+  pointer-events: none;  /* Disable interaction with the element */
 }
-
-.menu-category .menu-title {
-  text-decoration: none;
-  color: #000;
-  padding: 10px 15px;
-  display: inline-block;
+.contact-form-section button {
+  padding: 8px 12px; /* Reduced padding to make buttons smaller */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
 }
-
-.menu-category .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none; /* Hidden by default */
-  padding: 10px 0;
-  min-width: 150px;
-  z-index: 1000; /* Ensures the dropdown is above other elements */
-}
-
-.menu-category:hover .dropdown {
-  display: block; /* Show on hover */
-}
-
-.dropdown li {
-  padding: 5px 15px;
-}
-
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-  display: block;
-  
-}
-
-.dropdown li a:hover {
-  color:  hsl(0, 100%, 70%);;
-}
-
-/* Ensure parent container doesn't hide overflow */
+    /* Product Grid */
+ /* Container and Row */
 .container {
-  position: relative;
-  z-index: auto; /* Prevents conflicts with dropdown z-index */
+  display: flex;
+  gap: 30px; /* Adds space between the columns */
+  padding: 20px;
 }
 
-/* Add clearfix to prevent layout issues */
-.container::after {
-  content: '';
-  display: table;
-  clear: both;
+.row {
+  display: flex;
+  width: 100%;
 }
 
-.product-box{
-    margin-top: 20px;
+/* Column Styling */
+.col-8 {
+  flex: 2; /* Occupies more space for the product grid */
 }
-.sidebar-category{
-    margin-top: 20px;
+
+.col-4 {
+  flex: 1; /* Occupies less space for the contact form */
 }
-    </style>
+
+/* Product Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 products per row */
+  gap: 20px; /* Space between products */
+}
+
+.product-grid > * {
+  border: 1px solid #ddd;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #fff;
+}
+
+/* Contact Form Styling */
+.contact-form-section {
+  position: sticky;
+  top: 20px; /* Keeps the form 20px from the top when scrolling */
+  background-color: #fff; /* Ensures the background color is consistent */
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.code-box {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.submit-btn:hover {
+  background-color: #0056b3;
+}
+
+    /* Basic styling */
+    .desktop-menu-category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .menu-category {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    .menu-category .menu-title {
+      text-decoration: none;
+      color: #000;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .menu-category .dropdown {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      /* Hidden by default */
+      padding: 10px 0;
+      min-width: 150px;
+      z-index: 1000;
+      /* Ensures the dropdown is above other elements */
+    }
+
+    .menu-category:hover .dropdown {
+      display: block;
+      /* Show on hover */
+    }
+
+    .dropdown li {
+      padding: 5px 15px;
+    }
+
+    .dropdown li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+
+    }
+
+    .dropdown li a:hover {
+      color: hsl(0, 100%, 70%);
+      ;
+    }
+
+    /* Ensure parent container doesn't hide overflow */
+    .container {
+      position: relative;
+      z-index: auto;
+      /* Prevents conflicts with dropdown z-index */
+    }
+
+    /* Add clearfix to prevent layout issues */
+    .container::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .product-box {
+      margin-top: 20px;
+    }
+
+
+  </style>
+
 
 </head>
 
@@ -332,7 +469,7 @@
             <ul class="desktop-menu-category-list">
 
                 <li class="menu-category">
-                    <h3> <a href="services.php" class="menu-title">Embroidery Designing</a></h3>
+                   <a href="services.php" class="menu-title">Embroidery Designing</a>
                 </li>
 
 
@@ -387,154 +524,6 @@
 <div class="container">
 
 
-  <!--
-    - SIDEBAR
-  -->
-
-  <div class="sidebar  has-scrollbar" data-mobile-menu>
-
-    <div class="sidebar-category">
-
-      <div class="sidebar-top">
-        <h2 class="sidebar-title">Quick Links</h2>
-
-        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-      </div>
-
-      <ul class="sidebar-menu-category-list">
-
-        <li class="sidebar-menu-category">
-
-          <button class="sidebar-accordion-menu" data-accordion-btn>
-
-            <div class="menu-title-flex">
-              <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
-                class="menu-title-img">
-
-             <a href="index.php"> <p class="menu-title">Home </p></a>
-            </div>
-
-            <div>
-            <a href="index.php"> 
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-              </a>
-            </div>
-
-          </button>
-
-          <ul class="sidebar-submenu-category-list" data-accordion>
-
-            <li class="sidebar-submenu-category">
-              <a href="#" class="sidebar-submenu-title">
-                <p class="product-name">Shirt</p>
-                <data value="300" class="stock" title="Available Stock">300</data>
-              </a>
-            </li>
-
-            <li class="sidebar-submenu-category">
-              <a href="#" class="sidebar-submenu-title">
-                <p class="product-name">T-Shirt</p>
-                <data value="60" class="stock" title="Available Stock">60</data>
-              </a>
-            </li>
-
-            
-
-          </ul>
-
-        </li>
-
-      
-        <li class="sidebar-menu-category">
-
-          <button class="sidebar-accordion-menu" data-accordion-btn>
-
-            <div class="menu-title-flex">
-              <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
-                height="20">
-
-              <a href="services.php"> <p class="menu-title">Services</p></a>
-            </div>
-
-            <div>   <a href="services.php">
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
-            </div>
-
-          </button>
-
-          <ul class="sidebar-submenu-category-list" data-accordion>
-
-            <li class="sidebar-submenu-category">
-              <a href="#" class="sidebar-submenu-title">
-                <p class="product-name">Shirt</p>
-                <data value="46" class="stock" title="Available Stock">46</data>
-              </a>
-            </li>
-
-            <li class="sidebar-submenu-category">
-              <a href="#" class="sidebar-submenu-title">
-                <p class="product-name"> T-Shirt</p>
-                <data value="73" class="stock" title="Available Stock">73</data>
-              </a>
-            </li>
-
-
-          </ul>
-
-        </li>
-
-        <li class="sidebar-menu-category">
-
-          <button class="sidebar-accordion-menu" data-accordion-btn>
-
-            <div class="menu-title-flex">
-              <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
-                height="20">
-
-              <a href="vendors.php" ><p class="menu-title">vendors</p></a>
-            </div>
-
-            <div>  <a href="vendors.php" >
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
-            </div>
-
-          </button>
-
-          <ul class="sidebar-submenu-category-list" data-accordion>
-
-            <li class="sidebar-submenu-category">
-              <a href="#" class="sidebar-submenu-title">
-                <p class="product-name">Shirt</p>
-                <data value="12" class="stock" title="Available Stock">12 pcs</data>
-              </a>
-            </li>
-
-            <li class="sidebar-submenu-category">
-              <a href="#" class="sidebar-submenu-title">
-                <p class="product-name">T-Shirt</p>
-                <data value="60" class="stock" title="Available Stock">60 pcs</data>
-              </a>
-            </li>
-
-            
-
-          </ul>
-
-        </li>
-
-      </ul>
-
-    </div>
-
-
-  </div>
-
-
   
 
   <div class="product-box">
@@ -547,7 +536,45 @@ $category_filter = 'laptopbag';
 <div class="product-grid">
   <?php include 'Admin/fetch_products.php'; ?>
 </div>
+
 </div>
+
+<!-- CONTACT FORM COLUMN -->
+<div class="col-4 form-column">
+  <div class="contact-form-section">
+    <form action="submit_contact.php" method="post" id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="verificationCode">Code</label>
+        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
+      </div>
+      <div class="form-group">
+      <label for="verificationCode">Code</label>
+      <!-- Display the code inside a div -->
+      <div id="codeDisplay" class="code-box">ABC123</div>
+      <!-- Input field to store the code (invisibly) -->
+      <input type="hidden" id="verificationCode" name="verificationCode" value="ABC123" required>
+    </div>
+    <div class="form-group">
+      <button type="button" id="refreshCodeBtn">Refresh Code</button>
+    </div>
+
+      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+    </form>
+  </div>
+</div>
+
 </div>
 
 </div>
@@ -812,6 +839,47 @@ nextBtn.addEventListener('click', () => {
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+   <!-- For Contact Form  -->
+   
+  <!-- Script for Contact Form -->
+  <script>
+    // Initialize the verification code
+    const generateCode = () => {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let newCode = '';
+      for (let i = 0; i < 6; i++) {
+        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return newCode;
+    };
+
+    // Update the displayed code
+    const refreshCode = () => {
+      const newCode = generateCode();
+      document.getElementById('codeDisplay').textContent = newCode;
+    };
+
+    // Event listener for refreshing the code
+    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+
+    // Validate the code on form submission
+    const validateCode = () => {
+      const displayedCode = document.getElementById('codeDisplay').textContent;
+      const enteredCode = document.getElementById('verificationCode').value;
+
+      if (displayedCode !== enteredCode) {
+        alert('Verification code is incorrect. Please try again.');
+        return false; // Prevent form submission
+      }
+
+      return true; // Allow form submission
+    };
+
+    // Set an initial code when the page loads
+    window.onload = refreshCode;
+  </script>
 
  
 </body>

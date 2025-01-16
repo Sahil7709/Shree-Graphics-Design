@@ -16,7 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
-  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
+  
 
 
   <!--
@@ -28,6 +28,30 @@
     rel="stylesheet">
 
   <style>
+         
+/* Style the code box */
+.code-box {
+  font-size: 20px;  /* Adjust the font size */
+  font-family: monospace;  /* Monospaced font for a code appearance */
+  background-color: #f0f0f0;  /* Light background color */
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  width: 150px;  /* Adjust the width as per your preference */
+  text-align: center;
+  cursor: not-allowed;  /* Make it non-interactive */
+  user-select: none;  /* Disable text selection */
+  pointer-events: none;  /* Disable interaction with the element */
+}
+.contact-form-section button {
+  padding: 8px 12px; /* Reduced padding to make buttons smaller */
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
     /* Product Grid */
  /* Container and Row */
 .container {
@@ -114,10 +138,6 @@
   background-color: #0056b3;
 }
 
-
-
-
-
     /* Basic styling */
     .desktop-menu-category-list {
       list-style: none;
@@ -192,9 +212,7 @@
       margin-top: 20px;
     }
 
-    .sidebar-category {
-      margin-top: 20px;
-    }
+
   </style>
 
 </head>
@@ -429,7 +447,7 @@
           <ul class="desktop-menu-category-list">
 
             <li class="menu-category">
-              <h3> <a href="services.php" class="menu-title">Embroidery Designing</a></h3>
+              <a href="services.php" class="menu-title">Embroidery Designing</a>
             </li>
 
 
@@ -483,164 +501,7 @@
 
       <div class="container">
 
-
-        <!--
-    - SIDEBAR
-  -->
-
-        <div class="sidebar  has-scrollbar" data-mobile-menu>
-
-          <div class="sidebar-category">
-
-            <div class="sidebar-top">
-              <h2 class="sidebar-title">Quick Links</h2>
-
-              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <ul class="sidebar-menu-category-list">
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
-                      class="menu-title-img">
-
-                    <a href="index.php">
-                      <p class="menu-title">Home </p>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="index.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                    </a>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Shirt</p>
-                      <data value="300" class="stock" title="Available Stock">300</data>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">T-Shirt</p>
-                      <data value="60" class="stock" title="Available Stock">60</data>
-                    </a>
-                  </li>
-
-
-
-                </ul>
-
-              </li>
-
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
-                      height="20">
-
-                    <a href="services.php">
-                      <p class="menu-title">Services</p>
-                    </a>
-                  </div>
-
-                  <div> <a href="services.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Shirt</p>
-                      <data value="46" class="stock" title="Available Stock">46</data>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name"> T-Shirt</p>
-                      <data value="73" class="stock" title="Available Stock">73</data>
-                    </a>
-                  </li>
-
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
-                      height="20">
-
-                    <a href="vendors.php">
-                      <p class="menu-title">vendors</p>
-                    </a>
-                  </div>
-
-                  <div> <a href="vendors.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Shirt</p>
-                      <data value="12" class="stock" title="Available Stock">12 pcs</data>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">T-Shirt</p>
-                      <data value="60" class="stock" title="Available Stock">60 pcs</data>
-                    </a>
-                  </li>
-
-
-
-                </ul>
-
-              </li>
-
-            </ul>
-
-          </div>
-
-
-        </div>
-
-
-
-
-   <!-- products  -->
+  <!-- products  -->
    <div class="product-box">
   <div class="container">
     <div class="row">
@@ -654,34 +515,35 @@
         </div>
       </div>
 
-      <!-- CONTACT FORM COLUMN -->
-      <div class="col-4 form-column">
-        <div class="contact-form-section">
-          <form action="submit_contact.php" method="post" id="contactForm">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="verificationCode">Code</label>
-              <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
-            </div>
-            <div class="form-group">
-              <p id="codeDisplay" class="code-box">ABC123</p>
-              <button type="button" id="refreshCodeBtn">Refresh Code</button>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-          </form>
-        </div>
+<!-- CONTACT FORM COLUMN -->
+<div class="col-4 form-column">
+  <div class="contact-form-section">
+    <form action="submit_contact.php" method="post" id="contactForm">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
       </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="verificationCode">Code</label>
+        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
+      </div>
+      <div class="form-group">
+        <p id="codeDisplay" class="code-box">ABC123</p>
+        <button type="button" id="refreshCodeBtn">Refresh Code</button>
+      </div>
+      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+    </form>
+  </div>
+</div>
+
     </div>
   </div>
 </div>
@@ -953,6 +815,46 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
+
+    <!-- For Contact Form  -->
+   
+  <!-- Script for Contact Form -->
+  <script>
+    // Initialize the verification code
+    const generateCode = () => {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let newCode = '';
+      for (let i = 0; i < 6; i++) {
+        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return newCode;
+    };
+
+    // Update the displayed code
+    const refreshCode = () => {
+      const newCode = generateCode();
+      document.getElementById('codeDisplay').textContent = newCode;
+    };
+
+    // Event listener for refreshing the code
+    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+
+    // Validate the code on form submission
+    const validateCode = () => {
+      const displayedCode = document.getElementById('codeDisplay').textContent;
+      const enteredCode = document.getElementById('verificationCode').value;
+
+      if (displayedCode !== enteredCode) {
+        alert('Verification code is incorrect. Please try again.');
+        return false; // Prevent form submission
+      }
+
+      return true; // Allow form submission
+    };
+
+    // Set an initial code when the page loads
+    window.onload = refreshCode;
+  </script>
 
 </body>
 
