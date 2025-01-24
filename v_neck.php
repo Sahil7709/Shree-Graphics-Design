@@ -27,252 +27,266 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-        <style>
-      /* 2nd Nav */
-.desktop-menu-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
-
-.menu-category {
-  position: relative;
-  margin-right: 20px;
-}
-
-.menu-category .menu-title {
-  text-decoration: none;
-  color: #000;
-}
-
-.menu-category .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000; /* Add a high z-index */
-}
-
-.menu-category:hover .dropdown {
-  display: block;
-}
-
-.dropdown li {
-  padding: 5px 15px;
-  border-bottom: 1px solid #ddd; /* Add a small gray line under each item */
-}
-
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-}
-
-.dropdown li a:hover {
-  color: var(--salmon-pink);
-}
-
-/* Add a higher z-index to the nav container */
-.desktop-navigation-menu {
-  position: relative;
-  z-index: 1000;
-}
-
-  
-  </style>
-        
     <style>
-             
-/* Style the code box */
-.code-box {
-  font-size: 20px;  /* Adjust the font size */
-  font-family: monospace;  /* Monospaced font for a code appearance */
-  background-color: #f0f0f0;  /* Light background color */
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  width: 150px;  /* Adjust the width as per your preference */
-  text-align: center;
-  cursor: not-allowed;  /* Make it non-interactive */
-  user-select: none;  /* Disable text selection */
-  pointer-events: none;  /* Disable interaction with the element */
-}
-.contact-form-section button {
-  padding: 8px 12px; /* Reduced padding to make buttons smaller */
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+        /* 2nd Nav */
+        .desktop-menu-category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
-    /* Product Grid */
- /* Container and Row */
-.container {
-  display: flex;
-  gap: 30px; /* Adds space between the columns */
-  padding: 20px;
-}
+        .menu-category {
+            position: relative;
+            margin-right: 20px;
+        }
 
-.row {
-  display: flex;
-  width: 100%;
-}
+        .menu-category .menu-title {
+            text-decoration: none;
+            color: #000;
+        }
 
-/* Column Styling */
-.col-8 {
-  flex: 2; /* Occupies more space for the product grid */
-}
+        .menu-category .dropdown {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            display: none;
+            padding: 10px 0;
+            min-width: 200px;
+            z-index: 1000;
+            /* Add a high z-index */
+        }
 
-.col-4 {
-  flex: 1; /* Occupies less space for the contact form */
-}
+        .menu-category:hover .dropdown {
+            display: block;
+        }
 
-/* Product Grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 products per row */
-  gap: 20px; /* Space between products */
-}
+        .dropdown li {
+            padding: 5px 15px;
+            border-bottom: 1px solid #ddd;
+            /* Add a small gray line under each item */
+        }
 
-.product-grid > * {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  background-color: #fff;
-}
+        .dropdown li a {
+            text-decoration: none;
+            color: #333;
+        }
 
-/* Contact Form Styling */
-.contact-form-section {
-  position: sticky;
-  top: 20px; /* Keeps the form 20px from the top when scrolling */
-  background-color: #fff; /* Ensures the background color is consistent */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
+        .dropdown li a:hover {
+            color: var(--salmon-pink);
+        }
 
-/* Form Styling */
-.form-group {
-  margin-bottom: 15px;
-}
+        /* Add a higher z-index to the nav container */
+        .desktop-navigation-menu {
+            position: relative;
+            z-index: 1000;
+        }
+    </style>
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+    <style>
+        /* Style the code box */
+        .code-box {
+            font-size: 20px;
+            /* Adjust the font size */
+            font-family: monospace;
+            /* Monospaced font for a code appearance */
+            background-color: #f0f0f0;
+            /* Light background color */
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 5px;
+            width: 150px;
+            /* Adjust the width as per your preference */
+            text-align: center;
+            cursor: not-allowed;
+            /* Make it non-interactive */
+            user-select: none;
+            /* Disable text selection */
+            pointer-events: none;
+            /* Disable interaction with the element */
+        }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+        .contact-form-section button {
+            padding: 8px 12px;
+            /* Reduced padding to make buttons smaller */
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
 
-.code-box {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+        /* Product Grid */
+        /* Container and Row */
+        .container {
+            display: flex;
+            gap: 30px;
+            /* Adds space between the columns */
+            padding: 20px;
+        }
 
-.submit-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+        .row {
+            display: flex;
+            width: 100%;
+        }
 
-.submit-btn:hover {
-  background-color: #0056b3;
-}
+        /* Column Styling */
+        .col-8 {
+            flex: 2;
+            /* Occupies more space for the product grid */
+        }
 
-    /* Basic styling */
-    .desktop-menu-category-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
+        .col-4 {
+            flex: 1;
+            /* Occupies less space for the contact form */
+        }
 
-    .menu-category {
-      position: relative;
-      margin-right: 20px;
-    }
+        /* Product Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            /* 3 products per row */
+            gap: 20px;
+            /* Space between products */
+        }
 
-    .menu-category .menu-title {
-      text-decoration: none;
-      color: #000;
-      padding: 10px 15px;
-      display: inline-block;
-    }
+        .product-grid>* {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            text-align: center;
+            background-color: #fff;
+        }
 
-    .menu-category .dropdown {
-      list-style: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      display: none;
-      /* Hidden by default */
-      padding: 10px 0;
-      min-width: 150px;
-      z-index: 1000;
-      /* Ensures the dropdown is above other elements */
-    }
+        /* Contact Form Styling */
+        .contact-form-section {
+            position: sticky;
+            top: 20px;
+            /* Keeps the form 20px from the top when scrolling */
+            background-color: #fff;
+            /* Ensures the background color is consistent */
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            /* Subtle shadow */
+        }
 
-    .menu-category:hover .dropdown {
-      display: block;
-      /* Show on hover */
-    }
+        /* Form Styling */
+        .form-group {
+            margin-bottom: 15px;
+        }
 
-    .dropdown li {
-      padding: 5px 15px;
-    }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
 
-    .dropdown li a {
-      text-decoration: none;
-      color: #333;
-      display: block;
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
 
-    }
+        .code-box {
+            font-size: 16px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
 
-    .dropdown li a:hover {
-      color: hsl(0, 100%, 70%);
-      ;
-    }
+        .submit-btn {
+            background-color: #007bff;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
 
-    /* Ensure parent container doesn't hide overflow */
-    .container {
-      position: relative;
-      z-index: auto;
-      /* Prevents conflicts with dropdown z-index */
-    }
+        .submit-btn:hover {
+            background-color: #0056b3;
+        }
 
-    /* Add clearfix to prevent layout issues */
-    .container::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
+        /* Basic styling */
+        .desktop-menu-category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
-    .product-box {
-      margin-top: 20px;
-    }
+        .menu-category {
+            position: relative;
+            margin-right: 20px;
+        }
 
+        .menu-category .menu-title {
+            text-decoration: none;
+            color: #000;
+            padding: 10px 15px;
+            display: inline-block;
+        }
 
-  </style>
+        .menu-category .dropdown {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            display: none;
+            /* Hidden by default */
+            padding: 10px 0;
+            min-width: 150px;
+            z-index: 1000;
+            /* Ensures the dropdown is above other elements */
+        }
+
+        .menu-category:hover .dropdown {
+            display: block;
+            /* Show on hover */
+        }
+
+        .dropdown li {
+            padding: 5px 15px;
+        }
+
+        .dropdown li a {
+            text-decoration: none;
+            color: #333;
+            display: block;
+
+        }
+
+        .dropdown li a:hover {
+            color: hsl(0, 100%, 70%);
+            ;
+        }
+
+        /* Ensure parent container doesn't hide overflow */
+        .container {
+            position: relative;
+            z-index: auto;
+            /* Prevents conflicts with dropdown z-index */
+        }
+
+        /* Add clearfix to prevent layout issues */
+        .container::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+
+        .product-box {
+            margin-top: 20px;
+        }
+    </style>
 
 
 </head>
@@ -496,103 +510,107 @@
 
         </nav>
 
-       <!-- 2nd Nav Bar  -->
+        <!-- 2nd Nav Bar  -->
 
-       <nav class="desktop-navigation-menu">
-
-<div class="container">
-
-    <ul class="desktop-menu-category-list">
-
-        <ul class="desktop-menu-category-list">
-
-            <li class="menu-category">
-                 <a href="#" class="menu-title">Embroidery Designing</a>
-            </li>
-
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">T-Shirt</a>
-                <ul class="dropdown">
-                    <li><a href="round_neck.php">Round Neck</a></li>
-                    <li><a href="v_neck.php">V-Neck</a></li>
-                    <li><a href="">Pool T-Shirt </a></li>
-                    <li><a href="">Cut and sew T-Shirt</a></li>
-                    <li><a href="">Basic Pool T-Shirt</a></li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="" class="menu-title">Apparels</a>
-                <ul class="dropdown">
-                    <li><a href="cap.php">Cap</a></li>
-                    <li><a href="jackets.php">Jackets</a></li>
-                    <li><a href="">Sweartshirt</a></li>
-                    <li><a href="">Denim Shirt</a></li>
-                    <li><a href="">Windcheaters</a></li>
-                    <li><a href="">Ties</a></li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Travel</a>
-                <ul class="dropdown">
-                    <li><a href="handbag.php">Hand Bag</a></li>
-                    <li><a href="">Strolley Bags</a></li>
-                    <li><a href="travelbag.php">Travel Bags</a></li>
-                    <li><a href="">Back Packs</a></li>
-                    <li><a href="laptopbag.php">Laptop Bags</a></li>
-                    <li><a href="">Laptop Cum Overnighter Bag</a></li>
-                    <li><a href="">Trekking Bag</a></li>
-                    <li><a href="">Passport Holder</a></li>
-                    <li><a href="">I Pad Pouch</a></li>
-                    <li><a href="">Laptop Hand Bag</a></li>
-                    <li><a href="">Laptop Pouch</a></li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="" class="menu-title">Leather</a>
-                <ul class="dropdown">
-                    <li><a href="">Leather office Bags</a></li>
-                    <li><a href="">Leather Passport Holder</a></li>
-                    <li><a href="">Leather Wallets</a></li>
-                    <li><a href="">Leather Organizers</a></li>
-                    <li><a href="">Leather Gift Sets</a></li>
-                </ul>
-            </li>
-
-            <li class="menu-category">
-        <a href="" class="menu-title">Awards</a>
-
-    </li>
-
-    <li class="menu-category">
-        <a href="" class="menu-title">Brands</a>
-    </li>
-
-
-
-        </ul>
-
-</div>
-
-</nav>
-    </header>
-
-    <main>
-
-        <div class="product-container">
+        <nav class="desktop-navigation-menu">
 
             <div class="container">
 
+                <ul class="desktop-menu-category-list">
 
-                <div class="product-box">
-                    <!-- PRODUCT GRID -->
-                    <?php
+                    <ul class="desktop-menu-category-list">
+
+                        <li class="menu-category">
+                            <a href="#" class="menu-title">Embroidery Designing</a>
+                        </li>
+
+
+                        <li class="menu-category">
+                            <a href="#" class="menu-title">T-Shirt</a>
+                            <ul class="dropdown">
+                                <li><a href="round_neck.php">Round Neck</a></li>
+                                <li><a href="v_neck.php">V-Neck</a></li>
+                                <li><a href="">Pool T-Shirt </a></li>
+                                <li><a href="">Cut and sew T-Shirt</a></li>
+                                <li><a href="">Basic Pool T-Shirt</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Apparels</a>
+                            <ul class="dropdown">
+                                <li><a href="cap.php">Cap</a></li>
+                                <li><a href="jackets.php">Jackets</a></li>
+                                <li><a href="">Sweartshirt</a></li>
+                                <li><a href="">Denim Shirt</a></li>
+                                <li><a href="">Windcheaters</a></li>
+                                <li><a href="">Ties</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="#" class="menu-title">Travel</a>
+                            <ul class="dropdown">
+                                <li><a href="handbag.php">Hand Bag</a></li>
+                                <li><a href="">Strolley Bags</a></li>
+                                <li><a href="travelbag.php">Travel Bags</a></li>
+                                <li><a href="">Back Packs</a></li>
+                                <li><a href="laptopbag.php">Laptop Bags</a></li>
+                                <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                                <li><a href="">Trekking Bag</a></li>
+                                <li><a href="">Passport Holder</a></li>
+                                <li><a href="">I Pad Pouch</a></li>
+                                <li><a href="">Laptop Hand Bag</a></li>
+                                <li><a href="">Laptop Pouch</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Leather</a>
+                            <ul class="dropdown">
+                                <li><a href="">Leather office Bags</a></li>
+                                <li><a href="">Leather Passport Holder</a></li>
+                                <li><a href="">Leather Wallets</a></li>
+                                <li><a href="">Leather Organizers</a></li>
+                                <li><a href="">Leather Gift Sets</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Awards</a>
+
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Brands</a>
+                        </li>
+
+
+
+                    </ul>
+
+            </div>
+
+        </nav>
+    </header>
+
+    <main>
+    <div class="product-container">
+
+      <div class="container">
+
+        <!-- products  -->
+        <div class="product-box">
+          <div class="container">
+            <div class="row">
+              <!-- PRODUCT COLUMN -->
+              <div class="col-8 product-column">
+               
+               <!-- PRODUCT GRID -->
+               <?php
                     // Set the category filter to 'cap'
                     $category_filter = 'v_neck_tshirt';
                     ?>
@@ -600,41 +618,49 @@
                     <div class="product-grid">
                         <?php include 'Admin/fetch_products.php'; ?>
                     </div>
-
                     
+              </div>
+
+              <!-- CONTACT FORM COLUMN -->
+              <div class="col-4 form-column">
+                <div class="contact-form-section">
+                  <form action="submit_contact.php" method="post" id="contactForm">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="verificationCode">Code</label>
+                      <input type="text" id="verificationCode" name="verificationCode"
+                        placeholder="Enter the code below" required>
+                    </div>
+                    <div class="form-group">
+                      <p id="codeDisplay" class="code-box">ABC123</p>
+                      <button type="button" id="refreshCodeBtn">Refresh Code</button>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+                  </form>
                 </div>
+              </div>
 
-<!-- CONTACT FORM COLUMN -->
-<div class="col-4 form-column">
-  <div class="contact-form-section">
-    <form action="submit_contact.php" method="post" id="contactForm">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-      </div>
-      <div class="form-group">
-        <label for="verificationCode">Code</label>
-        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
-      </div>
-      <div class="form-group">
-        <p id="codeDisplay" class="code-box">ABC123</p>
-        <button type="button" id="refreshCodeBtn">Refresh Code</button>
-      </div>
-      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
-    </form>
-  </div>
-</div>
             </div>
-
+          </div>
         </div>
+
+
+
+
+      </div>
+
+    </div>
 
     </main>
 
@@ -871,70 +897,70 @@
     <!-- For Banner -->
 
     <script>
-    const sliderContainer = document.querySelector('.slider-container');
-    const sliderItems = document.querySelectorAll('.slider-item');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+        const sliderContainer = document.querySelector('.slider-container');
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    // Function to update the slider position
-    function updateSlider() {
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+        // Function to update the slider position
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
 
-    // Event Listeners for Buttons
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
-        updateSlider();
-    });
+        // Event Listeners for Buttons
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+            updateSlider();
+        });
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
-        updateSlider();
-    });
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-     <!-- For Contact Form  -->
-   
-  <!-- Script for Contact Form -->
-  <script>
-    // Initialize the verification code
-    const generateCode = () => {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      let newCode = '';
-      for (let i = 0; i < 6; i++) {
-        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      return newCode;
-    };
+    <!-- For Contact Form  -->
 
-    // Update the displayed code
-    const refreshCode = () => {
-      const newCode = generateCode();
-      document.getElementById('codeDisplay').textContent = newCode;
-    };
+    <!-- Script for Contact Form -->
+    <script>
+        // Initialize the verification code
+        const generateCode = () => {
+            const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+            let newCode = '';
+            for (let i = 0; i < 6; i++) {
+                newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+            }
+            return newCode;
+        };
 
-    // Event listener for refreshing the code
-    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+        // Update the displayed code
+        const refreshCode = () => {
+            const newCode = generateCode();
+            document.getElementById('codeDisplay').textContent = newCode;
+        };
 
-    // Validate the code on form submission
-    const validateCode = () => {
-      const displayedCode = document.getElementById('codeDisplay').textContent;
-      const enteredCode = document.getElementById('verificationCode').value;
+        // Event listener for refreshing the code
+        document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
 
-      if (displayedCode !== enteredCode) {
-        alert('Verification code is incorrect. Please try again.');
-        return false; // Prevent form submission
-      }
+        // Validate the code on form submission
+        const validateCode = () => {
+            const displayedCode = document.getElementById('codeDisplay').textContent;
+            const enteredCode = document.getElementById('verificationCode').value;
 
-      return true; // Allow form submission
-    };
+            if (displayedCode !== enteredCode) {
+                alert('Verification code is incorrect. Please try again.');
+                return false; // Prevent form submission
+            }
 
-    // Set an initial code when the page loads
-    window.onload = refreshCode;
-  </script>
+            return true; // Allow form submission
+        };
+
+        // Set an initial code when the page loads
+        window.onload = refreshCode;
+    </script>
 
 </body>
 

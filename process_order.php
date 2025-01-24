@@ -38,9 +38,9 @@ $conn->close();
 ?>
 
 <script>
-// Display the popup message
-alert("<?php echo $message; ?>");
+    // Display the popup message
+    alert("<?php echo $message; ?>");
 
-// Redirect to the index.php page
-window.location.href = "<?php echo $redirect_url; ?>";
+    // Redirect to the index.php page
+    window.location.href = "<?php echo $redirect_url; ?>";
 </script>

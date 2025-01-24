@@ -25,63 +25,63 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <style>
-      /* 2nd Nav */
-.desktop-menu-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+  <style>
+    /* 2nd Nav */
+    .desktop-menu-category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
 
-.menu-category {
-  position: relative;
-  margin-right: 20px;
-}
+    .menu-category {
+      position: relative;
+      margin-right: 20px;
+    }
 
-.menu-category .menu-title {
-  text-decoration: none;
-  color: #000;
-}
+    .menu-category .menu-title {
+      text-decoration: none;
+      color: #000;
+    }
 
-.menu-category .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000; /* Add a high z-index */
-}
+    .menu-category .dropdown {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 1000;
+      /* Add a high z-index */
+    }
 
-.menu-category:hover .dropdown {
-  display: block;
-}
+    .menu-category:hover .dropdown {
+      display: block;
+    }
 
-.dropdown li {
-  padding: 5px 15px;
-  border-bottom: 1px solid #ddd; /* Add a small gray line under each item */
-}
+    .dropdown li {
+      padding: 5px 15px;
+      border-bottom: 1px solid #ddd;
+      /* Add a small gray line under each item */
+    }
 
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-}
+    .dropdown li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-.dropdown li a:hover {
-  color: var(--salmon-pink);
-}
+    .dropdown li a:hover {
+      color: var(--salmon-pink);
+    }
 
-/* Add a higher z-index to the nav container */
-.desktop-navigation-menu {
-  position: relative;
-  z-index: 1000;
-}
-
-  
+    /* Add a higher z-index to the nav container */
+    .desktop-navigation-menu {
+      position: relative;
+      z-index: 1000;
+    }
   </style>
 </head>
 
@@ -94,307 +94,306 @@
   <header>
 
 
-<div class="header-main">
+    <div class="header-main">
 
-  <div class="container">
+      <div class="container">
 
-    <a href="#" class="header-logo">
-      <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
-    </a>
-    Devcon 
-
-
-  <div class="header-search-container">
-    <ul class="desktop-menu-category-list">
-
-  <li class="menu-category">
-    <a href="index.php" class="menu-title">Home</a>
-  </li>
+        <a href="#" class="header-logo">
+          <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
+        </a>
+        Devcon
 
 
-    <li class="menu-category">
-      <a href="vendors.php" class="menu-title">vendors</a>
-    </li>
+        <div class="header-search-container">
+          <ul class="desktop-menu-category-list">
 
-    <li class="menu-category">
-      <a href="services.php" class="menu-title">Services</a>
-    </li>
+            <li class="menu-category">
+              <a href="index.php" class="menu-title">Home</a>
+            </li>
 
 
-    <li class="menu-category">
-      <a href="contact.php" class="menu-title">Contact</a>
-    </li>
+            <li class="menu-category">
+              <a href="vendors.php" class="menu-title">vendors</a>
+            </li>
 
-    </ul>
+            <li class="menu-category">
+              <a href="services.php" class="menu-title">Services</a>
+            </li>
+
+
+            <li class="menu-category">
+              <a href="contact.php" class="menu-title">Contact</a>
+            </li>
+
+          </ul>
+        </div>
+      </div>
+
     </div>
-  </div>
-
-</div>
 
 
 
-<div class="mobile-bottom-navigation">
+    <div class="mobile-bottom-navigation">
 
-  <button class="action-btn" data-mobile-menu-open-btn>
-    <ion-icon name="menu-outline"></ion-icon>
-  </button>
-
-  <button class="action-btn">
-    <ion-icon name="bag-handle-outline"></ion-icon>
-
-    <span class="count">0</span>
-  </button>
-
-  <button class="action-btn">
-    <ion-icon name="home-outline"></ion-icon>
-  </button>
-
-  <button class="action-btn">
-    <ion-icon name="heart-outline"></ion-icon>
-
-    <span class="count">0</span>
-  </button>
-
-  <button class="action-btn" data-mobile-menu-open-btn>
-    <ion-icon name="grid-outline"></ion-icon>
-  </button>
-
-</div>
-
-<nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
-
-  <div class="menu-top">
-    <h2 class="menu-title">Menu</h2>
-
-    <button class="menu-close-btn" data-mobile-menu-close-btn>
-      <ion-icon name="close-outline"></ion-icon>
-    </button>
-  </div>
-
-  <ul class="mobile-menu-category-list">
-
-    <li class="menu-category">
-      <a href="index.php" class="menu-title">Home</a>
-    </li>
-
-    <li class="menu-category">
-
-      <button class="accordion-menu" data-accordion-btn>
-        <p class="menu-title">Men's</p>
-
-        <div>
-          <ion-icon name="add-outline" class="add-icon"></ion-icon>
-          <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-        </div>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
       </button>
 
-  
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
 
-    </li>
-
-    <li class="menu-category">
-
-      <button class="accordion-menu" data-accordion-btn>
-        <p class="menu-title">Women's</p>
-
-        <div>
-          <ion-icon name="add-outline" class="add-icon"></ion-icon>
-          <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-        </div>
+        <span class="count">0</span>
       </button>
 
-      <button class="accordion-menu" data-accordion-btn>
-        <p class="menu-title">vendors</p>
-
-        <div>
-          <ion-icon name="add-outline" class="add-icon"></ion-icon>
-          <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-        </div>
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
       </button>
 
-      <button class="accordion-menu" data-accordion-btn>
-        <p class="menu-title">Services</p>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
 
-        <div>
-          <ion-icon name="add-outline" class="add-icon"></ion-icon>
-          <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-        </div>
+        <span class="count">0</span>
       </button>
 
-      
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
 
-    </li>
+    </div>
 
-  </ul>
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
 
-  <div class="menu-bottom">
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
 
-    <ul class="menu-category-list">
-
-      <li class="menu-category">
-
-        <button class="accordion-menu" data-accordion-btn>
-          <p class="menu-title">Language</p>
-
-          <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
         </button>
+      </div>
 
-        <ul class="submenu-category-list" data-accordion>
+      <ul class="mobile-menu-category-list">
 
-          <li class="submenu-category">
-            <a href="#" class="submenu-title">English</a>
+        <li class="menu-category">
+          <a href="index.php" class="menu-title">Home</a>
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Men's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Women's</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">vendors</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Services</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+
+
+        </li>
+
+      </ul>
+
+      <div class="menu-bottom">
+
+        <ul class="menu-category-list">
+
+          <li class="menu-category">
+
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Language</p>
+
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
+
+            <ul class="submenu-category-list" data-accordion>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">English</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Espa&ntilde;ol</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">Fren&ccedil;h</a>
+              </li>
+
+            </ul>
+
           </li>
 
-          <li class="submenu-category">
-            <a href="#" class="submenu-title">Espa&ntilde;ol</a>
-          </li>
+          <li class="menu-category">
+            <button class="accordion-menu" data-accordion-btn>
+              <p class="menu-title">Currency</p>
+              <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
+            </button>
 
-          <li class="submenu-category">
-            <a href="#" class="submenu-title">Fren&ccedil;h</a>
+            <ul class="submenu-category-list" data-accordion>
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">USD &dollar;</a>
+              </li>
+
+              <li class="submenu-category">
+                <a href="#" class="submenu-title">EUR &euro;</a>
+              </li>
+            </ul>
           </li>
 
         </ul>
 
-      </li>
+        <ul class="menu-social-container">
 
-      <li class="menu-category">
-        <button class="accordion-menu" data-accordion-btn>
-          <p class="menu-title">Currency</p>
-          <ion-icon name="caret-back-outline" class="caret-back"></ion-icon>
-        </button>
-
-        <ul class="submenu-category-list" data-accordion>
-          <li class="submenu-category">
-            <a href="#" class="submenu-title">USD &dollar;</a>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="log-facebook"></ion-icon>
+            </a>
           </li>
 
-          <li class="submenu-category">
-            <a href="#" class="submenu-title">EUR &euro;</a>
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-twitter"></ion-icon>
+            </a>
           </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-instagram"></ion-icon>
+            </a>
+          </li>
+
+          <li>
+            <a href="#" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+
         </ul>
-      </li>
 
-    </ul>
+      </div>
 
-    <ul class="menu-social-container">
+    </nav>
 
-      <li>
-        <a href="#" class="social-link">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a>
-      </li>
+    <!-- 2nd Nav Bar  -->
 
-      <li>
-        <a href="#" class="social-link">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-      </li>
+    <nav class="desktop-navigation-menu">
 
-      <li>
-        <a href="#" class="social-link">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-      </li>
-
-      <li>
-        <a href="#" class="social-link">
-          <ion-icon name="logo-linkedin"></ion-icon>
-        </a>
-      </li>
-
-    </ul>
-
-  </div>
-
-</nav>
-
-           <!-- 2nd Nav Bar  -->
-
-           <nav class="desktop-navigation-menu">
-
-<div class="container">
-
-    <ul class="desktop-menu-category-list">
+      <div class="container">
 
         <ul class="desktop-menu-category-list">
 
+          <ul class="desktop-menu-category-list">
+
             <li class="menu-category">
-                 <a href="#" class="menu-title">Embroidery Designing</a>
+              <a href="#" class="menu-title">Embroidery Designing</a>
             </li>
 
 
             <li class="menu-category">
-                <a href="#" class="menu-title">T-Shirt</a>
-                <ul class="dropdown">
-                    <li><a href="round_neck.php">Round Neck</a></li>
-                    <li><a href="v_neck.php">V-Neck</a></li>
-                    <li><a href="">Pool T-Shirt </a></li>
-                    <li><a href="">Cut and sew T-Shirt</a></li>
-                    <li><a href="">Basic Pool T-Shirt</a></li>
+              <a href="#" class="menu-title">T-Shirt</a>
+              <ul class="dropdown">
+                <li><a href="round_neck.php">Round Neck</a></li>
+                <li><a href="v_neck.php">V-Neck</a></li>
+                <li><a href="">Pool T-Shirt </a></li>
+                <li><a href="">Cut and sew T-Shirt</a></li>
+                <li><a href="">Basic Pool T-Shirt</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="" class="menu-title">Apparels</a>
-                <ul class="dropdown">
-                    <li><a href="cap.php">Cap</a></li>
-                    <li><a href="jackets.php">Jackets</a></li>
-                    <li><a href="">Sweartshirt</a></li>
-                    <li><a href="">Denim Shirt</a></li>
-                    <li><a href="">Windcheaters</a></li>
-                    <li><a href="">Ties</a></li>
+              <a href="" class="menu-title">Apparels</a>
+              <ul class="dropdown">
+                <li><a href="cap.php">Cap</a></li>
+                <li><a href="jackets.php">Jackets</a></li>
+                <li><a href="">Sweartshirt</a></li>
+                <li><a href="">Denim Shirt</a></li>
+                <li><a href="">Windcheaters</a></li>
+                <li><a href="">Ties</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="#" class="menu-title">Travel</a>
-                <ul class="dropdown">
-                    <li><a href="handbag.php">Hand Bag</a></li>
-                    <li><a href="">Strolley Bags</a></li>
-                    <li><a href="travelbag.php">Travel Bags</a></li>
-                    <li><a href="">Back Packs</a></li>
-                    <li><a href="laptopbag.php">Laptop Bags</a></li>
-                    <li><a href="">Laptop Cum Overnighter Bag</a></li>
-                    <li><a href="">Trekking Bag</a></li>
-                    <li><a href="">Passport Holder</a></li>
-                    <li><a href="">I Pad Pouch</a></li>
-                    <li><a href="">Laptop Hand Bag</a></li>
-                    <li><a href="">Laptop Pouch</a></li>
+              <a href="#" class="menu-title">Travel</a>
+              <ul class="dropdown">
+                <li><a href="handbag.php">Hand Bag</a></li>
+                <li><a href="">Strolley Bags</a></li>
+                <li><a href="travelbag.php">Travel Bags</a></li>
+                <li><a href="">Back Packs</a></li>
+                <li><a href="laptopbag.php">Laptop Bags</a></li>
+                <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                <li><a href="">Trekking Bag</a></li>
+                <li><a href="">Passport Holder</a></li>
+                <li><a href="">I Pad Pouch</a></li>
+                <li><a href="">Laptop Hand Bag</a></li>
+                <li><a href="">Laptop Pouch</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="" class="menu-title">Leather</a>
-                <ul class="dropdown">
-                    <li><a href="">Leather office Bags</a></li>
-                    <li><a href="">Leather Passport Holder</a></li>
-                    <li><a href="">Leather Wallets</a></li>
-                    <li><a href="">Leather Organizers</a></li>
-                    <li><a href="">Leather Gift Sets</a></li>
-                </ul>
+              <a href="" class="menu-title">Leather</a>
+              <ul class="dropdown">
+                <li><a href="">Leather office Bags</a></li>
+                <li><a href="">Leather Passport Holder</a></li>
+                <li><a href="">Leather Wallets</a></li>
+                <li><a href="">Leather Organizers</a></li>
+                <li><a href="">Leather Gift Sets</a></li>
+              </ul>
             </li>
 
             <li class="menu-category">
-        <a href="" class="menu-title">Awards</a>
+              <a href="" class="menu-title">Awards</a>
 
-    </li>
+            </li>
 
-    <li class="menu-category">
-        <a href="" class="menu-title">Brands</a>
-    </li>
+            <li class="menu-category">
+              <a href="" class="menu-title">Brands</a>
+            </li>
 
 
+          </ul>
 
-        </ul>
+      </div>
 
-</div>
+    </nav>
 
-</nav>
-
-</header>
+  </header>
 
 
 
@@ -405,65 +404,74 @@
 
   <main>
 
-   <!--
+    <!--
       - BANNER
     -->
 
     <?php
-// Database connection
-$host = 'localhost';
-$user = 'root';          // Default user for XAMPP
-$password = '';          // Default password for XAMPP (empty by default)
-$dbname = 'logo';        // Your database name
+    // Database connection
+    $host = 'localhost';
+    $user = 'root'; // Default user for XAMPP
+    $password = ''; // Default password for XAMPP (empty by default)
+    $dbname = 'logo'; // Your database name
+    
+    // Create connection
+    $conn = new mysqli($host, $user, $password, $dbname);
 
-// Create connection
-$conn = new mysqli($host, $user, $password, $dbname);
+    // Check connection
+    if ($conn->connect_error) {
+      die('Connection failed: ' . $conn->connect_error);
+    }
 
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+    // Fetch slider images from the database
+    $sql = 'SELECT * FROM slider_images';
+    $result = $conn->query($sql);
+    ?>
+    <div class="banner">
+      <div class="container">
+        <div class="slider-container has-scrollbar">
+          <?php
+          // Fetch slider images from the database
+          $sql = 'SELECT * FROM slider_images';
+          $result = $conn->query($sql);
 
-
-// Fetch slider images from the database
-$sql = "SELECT * FROM slider_images";
-$result = $conn->query($sql);
-?>
-<div class="banner">
-   <div class="container">
-      <div class="slider-container has-scrollbar">
-         <?php
-         // Fetch slider images from the database
-         $sql = "SELECT * FROM slider_images";
-         $result = $conn->query($sql);
-
-         if ($result->num_rows > 0) {
+          if ($result->num_rows > 0) {
             // Output data of each row
-            while($row = $result->fetch_assoc()) {
-                echo '<div class="slider-item">';
-                echo '<img src="Admin/uploads/' . $row['image_url'] . '" alt="' . htmlspecialchars($row['title']) . '" class="banner-img">';
-                echo '<div class="banner-content">';
-                echo '<p class="banner-subtitle">' . htmlspecialchars($row['subtitle']) . '</p>';
-                echo '<h2 class="banner-title">' . htmlspecialchars($row['title']) . '</h2>';
-                echo '<p class="banner-text">starting at RS. <b>' . number_format($row['price'], 2) . '</b></p>';
-                echo '<a href="#" class="banner-btn">Shop now</a>';
-                echo '</div>';
-                echo '</div>';
+            while ($row = $result->fetch_assoc()) {
+              echo '<div class="slider-item">';
+              echo '<img src="Admin/uploads/' .
+                $row['image_url'] .
+                '" alt="' .
+                htmlspecialchars($row['title']) .
+                '" class="banner-img">';
+              echo '<div class="banner-content">';
+              echo '<p class="banner-subtitle">' .
+                htmlspecialchars($row['subtitle']) .
+                '</p>';
+              echo '<h2 class="banner-title">' .
+                htmlspecialchars($row['title']) .
+                '</h2>';
+              echo '<p class="banner-text">starting at RS. <b>' .
+                number_format($row['price'], 2) .
+                '</b></p>';
+              echo '<a href="#" class="banner-btn">Shop now</a>';
+              echo '</div>';
+              echo '</div>';
             }
-         } else {
-            echo "No slider images found.";
-         }
-         ?>
+          } else {
+            echo 'No slider images found.';
+          }
+          ?>
+        </div>
       </div>
-   </div>
-</div>
+    </div>
 
 
 
-<?php
+    <?php
+    // Close connection
 // Close connection
-$conn->close();
-?>
+    ?>$conn->close(); ?>
 
 
     <!--
@@ -501,13 +509,15 @@ $conn->close();
                     <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
                       class="menu-title-img">
 
-                   <a href="index.php"> <p class="menu-title">Home </p></a>
+                    <a href="index.php">
+                      <p class="menu-title">Home </p>
+                    </a>
                   </div>
 
                   <div>
-                  <a href="index.php"> 
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                    <a href="index.php">
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
                     </a>
                   </div>
 
@@ -529,13 +539,13 @@ $conn->close();
                     </a>
                   </li>
 
-                  
+
 
                 </ul>
 
               </li>
 
-            
+
               <li class="sidebar-menu-category">
 
                 <button class="sidebar-accordion-menu" data-accordion-btn>
@@ -543,13 +553,15 @@ $conn->close();
                   <div class="menu-title-flex">
                     <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
                       height="20">
-  
-                    <a href="services.php"> <p class="menu-title">Services</p></a>
+
+                    <a href="services.php">
+                      <p class="menu-title">Services</p>
+                    </a>
                   </div>
 
-                  <div>   <a href="services.php">
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
+                  <div> <a href="services.php">
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
                   </div>
 
                 </button>
@@ -583,12 +595,14 @@ $conn->close();
                     <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
                       height="20">
 
-                    <a href="vendors.php" ><p class="menu-title">vendors</p></a>
+                    <a href="vendors.php">
+                      <p class="menu-title">vendors</p>
+                    </a>
                   </div>
 
-                  <div>  <a href="vendors.php" >
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
+                  <div> <a href="vendors.php">
+                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
                   </div>
 
                 </button>
@@ -609,7 +623,7 @@ $conn->close();
                     </a>
                   </li>
 
-                  
+
 
                 </ul>
 
@@ -623,14 +637,14 @@ $conn->close();
         </div>
 
 
-        
 
-    <div class="product-box">
-    <!-- PRODUCT GRID -->
-        <div class="product-grid">
-          <?php include 'Admin/fetch_products.php'; ?>
+
+        <div class="product-box">
+          <!-- PRODUCT GRID -->
+          <div class="product-grid">
+            <?php include 'Admin/fetch_products.php'; ?>
+          </div>
         </div>
-    </div>
       </div>
 
     </div>
@@ -659,7 +673,8 @@ $conn->close();
 
             <div class="testimonial-card">
 
-              <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80" height="80">
+              <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80"
+                height="80">
 
               <p class="testimonial-name">Alan Doe</p>
 
@@ -728,63 +743,63 @@ $conn->close();
               </a>
 
               <a href="#" class="service-item">
-              
+
                 <div class="service-icon">
                   <ion-icon name="rocket-outline"></ion-icon>
                 </div>
-              
+
                 <div class="service-content">
-              
+
                   <h3 class="service-title">Next Day delivery</h3>
                   <p class="service-desc">UK Orders Only</p>
-              
+
                 </div>
-              
+
               </a>
 
               <a href="#" class="service-item">
-              
+
                 <div class="service-icon">
                   <ion-icon name="call-outline"></ion-icon>
                 </div>
-              
+
                 <div class="service-content">
-              
+
                   <h3 class="service-title">Best Online Support</h3>
                   <p class="service-desc">Hours: 8AM - 11PM</p>
-              
+
                 </div>
-              
+
               </a>
 
               <a href="#" class="service-item">
-              
+
                 <div class="service-icon">
                   <ion-icon name="arrow-undo-outline"></ion-icon>
                 </div>
-              
+
                 <div class="service-content">
-              
+
                   <h3 class="service-title">Return Policy</h3>
                   <p class="service-desc">Easy & Free Return</p>
-              
+
                 </div>
-              
+
               </a>
 
               <a href="#" class="service-item">
-              
+
                 <div class="service-icon">
                   <ion-icon name="ticket-outline"></ion-icon>
                 </div>
-              
+
                 <div class="service-content">
-              
+
                   <h3 class="service-title">30% money back</h3>
                   <p class="service-desc">For Order Over $100</p>
-              
+
                 </div>
-              
+
               </a>
 
             </div>
@@ -1029,87 +1044,87 @@ $conn->close();
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Products</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">New products</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Best sales</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Contact us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Our Company</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Delivery</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Legal Notice</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Terms and conditions</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">About us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Secure payment</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Services</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">New products</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Best sales</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Contact us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
@@ -1221,27 +1236,27 @@ $conn->close();
 
   <script>
     const sliderContainer = document.querySelector('.slider-container');
-const sliderItems = document.querySelectorAll('.slider-item');
-const prevBtn = document.querySelector('.prev-btn');
-const nextBtn = document.querySelector('.next-btn');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
 
-let currentIndex = 0;
+    let currentIndex = 0;
 
-// Function to update the slider position
-function updateSlider() {
-  sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-}
+    // Function to update the slider position
+    function updateSlider() {
+      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-// Event Listeners for Buttons
-prevBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
-  updateSlider();
-});
+    // Event Listeners for Buttons
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+      updateSlider();
+    });
 
-nextBtn.addEventListener('click', () => {
-  currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
-  updateSlider();
-});
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+      updateSlider();
+    });
 
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>

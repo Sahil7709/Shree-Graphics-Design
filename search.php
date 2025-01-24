@@ -18,7 +18,7 @@ if (isset($_GET['search']) && !empty($_GET['search'])) {
     $searchTerm = mysqli_real_escape_string($conn, $_GET['search']); // Prevent SQL injection
 
     // SQL query to search products (replace 'products' with your actual table name)
-    $sql = "SELECT * FROM products WHERE product_name LIKE '%$searchTerm%'"; 
+    $sql = "SELECT * FROM products WHERE product_name LIKE '%$searchTerm%'";
     $result = $conn->query($sql);
 
     // Check if any results are found

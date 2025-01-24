@@ -16,7 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
-  
+
 
 
   <!--
@@ -27,175 +27,192 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <style>
-      /* 2nd Nav */
-.desktop-menu-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+  <style>
+    /* 2nd Nav */
+    .desktop-menu-category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
 
-.menu-category {
-  position: relative;
-  margin-right: 20px;
-}
+    .menu-category {
+      position: relative;
+      margin-right: 20px;
+    }
 
-.menu-category .menu-title {
-  text-decoration: none;
-  color: #000;
-}
+    .menu-category .menu-title {
+      text-decoration: none;
+      color: #000;
+    }
 
-.menu-category .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000; /* Add a high z-index */
-}
+    .menu-category .dropdown {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 1000;
+      /* Add a high z-index */
+    }
 
-.menu-category:hover .dropdown {
-  display: block;
-}
+    .menu-category:hover .dropdown {
+      display: block;
+    }
 
-.dropdown li {
-  padding: 5px 15px;
-  border-bottom: 1px solid #ddd; /* Add a small gray line under each item */
-}
+    .dropdown li {
+      padding: 5px 15px;
+      border-bottom: 1px solid #ddd;
+      /* Add a small gray line under each item */
+    }
 
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-}
+    .dropdown li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-.dropdown li a:hover {
-  color: var(--salmon-pink);
-}
+    .dropdown li a:hover {
+      color: var(--salmon-pink);
+    }
 
-/* Add a higher z-index to the nav container */
-.desktop-navigation-menu {
-  position: relative;
-  z-index: 1000;
-}
-
-  
+    /* Add a higher z-index to the nav container */
+    .desktop-navigation-menu {
+      position: relative;
+      z-index: 1000;
+    }
   </style>
 
   <style>
-         
-/* Style the code box */
-.code-box {
-  font-size: 20px;  /* Adjust the font size */
-  font-family: monospace;  /* Monospaced font for a code appearance */
-  background-color: #f0f0f0;  /* Light background color */
-  padding: 10px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  width: 150px;  /* Adjust the width as per your preference */
-  text-align: center;
-  cursor: not-allowed;  /* Make it non-interactive */
-  user-select: none;  /* Disable text selection */
-  pointer-events: none;  /* Disable interaction with the element */
-}
-.contact-form-section button {
-  padding: 8px 12px; /* Reduced padding to make buttons smaller */
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-}
+    /* Style the code box */
+    .code-box {
+      font-size: 20px;
+      /* Adjust the font size */
+      font-family: monospace;
+      /* Monospaced font for a code appearance */
+      background-color: #f0f0f0;
+      /* Light background color */
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 150px;
+      /* Adjust the width as per your preference */
+      text-align: center;
+      cursor: not-allowed;
+      /* Make it non-interactive */
+      user-select: none;
+      /* Disable text selection */
+      pointer-events: none;
+      /* Disable interaction with the element */
+    }
+
+    .contact-form-section button {
+      padding: 8px 12px;
+      /* Reduced padding to make buttons smaller */
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
     /* Product Grid */
- /* Container and Row */
-.container {
-  display: flex;
-  gap: 30px; /* Adds space between the columns */
-  padding: 20px;
-}
+    /* Container and Row */
+    .container {
+      display: flex;
+      gap: 30px;
+      /* Adds space between the columns */
+      padding: 20px;
+    }
 
-.row {
-  display: flex;
-  width: 100%;
-}
+    .row {
+      display: flex;
+      width: 100%;
+    }
 
-/* Column Styling */
-.col-8 {
-  flex: 2; /* Occupies more space for the product grid */
-}
+    /* Column Styling */
+    .col-8 {
+      flex: 2;
+      /* Occupies more space for the product grid */
+    }
 
-.col-4 {
-  flex: 1; /* Occupies less space for the contact form */
-}
+    .col-4 {
+      flex: 1;
+      /* Occupies less space for the contact form */
+    }
 
-/* Product Grid */
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 products per row */
-  gap: 20px; /* Space between products */
-}
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3 products per row */
+      gap: 20px;
+      /* Space between products */
+    }
 
-.product-grid > * {
-  border: 1px solid #ddd;
-  padding: 10px;
-  border-radius: 5px;
-  text-align: center;
-  background-color: #fff;
-}
+    .product-grid>* {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      background-color: #fff;
+    }
 
-/* Contact Form Styling */
-.contact-form-section {
-  position: sticky;
-  top: 20px; /* Keeps the form 20px from the top when scrolling */
-  background-color: #fff; /* Ensures the background color is consistent */
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-}
+    /* Contact Form Styling */
+    .contact-form-section {
+      position: sticky;
+      top: 20px;
+      /* Keeps the form 20px from the top when scrolling */
+      background-color: #fff;
+      /* Ensures the background color is consistent */
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+      margin-left: 25px;
+    }
 
-/* Form Styling */
-.form-group {
-  margin-bottom: 15px;
-}
+    /* Form Styling */
+    .form-group {
+      margin-bottom: 15px;
+    }
 
-.form-group label {
-  display: block;
-  margin-bottom: 5px;
-  font-weight: bold;
-}
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-}
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
 
-.code-box {
-  font-size: 16px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
+    .code-box {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.submit-btn {
-  background-color: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-.submit-btn:hover {
-  background-color: #0056b3;
-}
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
 
     /* Basic styling */
     .desktop-menu-category-list {
@@ -270,8 +287,6 @@
     .product-box {
       margin-top: 20px;
     }
-
-
   </style>
 
 </head>
@@ -494,91 +509,91 @@
       </div>
 
     </nav>
-       <!-- 2nd Nav Bar  -->
+    <!-- 2nd Nav Bar  -->
 
-       <nav class="desktop-navigation-menu">
+    <nav class="desktop-navigation-menu">
 
-<div class="container">
-
-    <ul class="desktop-menu-category-list">
+      <div class="container">
 
         <ul class="desktop-menu-category-list">
 
+          <ul class="desktop-menu-category-list">
+
             <li class="menu-category">
-                 <a href="#" class="menu-title">Embroidery Designing</a>
+              <a href="#" class="menu-title">Embroidery Designing</a>
             </li>
 
 
             <li class="menu-category">
-                <a href="#" class="menu-title">T-Shirt</a>
-                <ul class="dropdown">
-                    <li><a href="round_neck.php">Round Neck</a></li>
-                    <li><a href="v_neck.php">V-Neck</a></li>
-                    <li><a href="">Pool T-Shirt </a></li>
-                    <li><a href="">Cut and sew T-Shirt</a></li>
-                    <li><a href="">Basic Pool T-Shirt</a></li>
+              <a href="#" class="menu-title">T-Shirt</a>
+              <ul class="dropdown">
+                <li><a href="round_neck.php">Round Neck</a></li>
+                <li><a href="v_neck.php">V-Neck</a></li>
+                <li><a href="">Pool T-Shirt </a></li>
+                <li><a href="">Cut and sew T-Shirt</a></li>
+                <li><a href="">Basic Pool T-Shirt</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="" class="menu-title">Apparels</a>
-                <ul class="dropdown">
-                    <li><a href="cap.php">Cap</a></li>
-                    <li><a href="jackets.php">Jackets</a></li>
-                    <li><a href="">Sweartshirt</a></li>
-                    <li><a href="">Denim Shirt</a></li>
-                    <li><a href="">Windcheaters</a></li>
-                    <li><a href="">Ties</a></li>
+              <a href="" class="menu-title">Apparels</a>
+              <ul class="dropdown">
+                <li><a href="cap.php">Cap</a></li>
+                <li><a href="jackets.php">Jackets</a></li>
+                <li><a href="">Sweartshirt</a></li>
+                <li><a href="">Denim Shirt</a></li>
+                <li><a href="">Windcheaters</a></li>
+                <li><a href="">Ties</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="#" class="menu-title">Travel</a>
-                <ul class="dropdown">
-                    <li><a href="handbag.php">Hand Bag</a></li>
-                    <li><a href="">Strolley Bags</a></li>
-                    <li><a href="travelbag.php">Travel Bags</a></li>
-                    <li><a href="">Back Packs</a></li>
-                    <li><a href="laptopbag.php">Laptop Bags</a></li>
-                    <li><a href="">Laptop Cum Overnighter Bag</a></li>
-                    <li><a href="">Trekking Bag</a></li>
-                    <li><a href="">Passport Holder</a></li>
-                    <li><a href="">I Pad Pouch</a></li>
-                    <li><a href="">Laptop Hand Bag</a></li>
-                    <li><a href="">Laptop Pouch</a></li>
+              <a href="#" class="menu-title">Travel</a>
+              <ul class="dropdown">
+                <li><a href="handbag.php">Hand Bag</a></li>
+                <li><a href="">Strolley Bags</a></li>
+                <li><a href="travelbag.php">Travel Bags</a></li>
+                <li><a href="">Back Packs</a></li>
+                <li><a href="laptopbag.php">Laptop Bags</a></li>
+                <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                <li><a href="">Trekking Bag</a></li>
+                <li><a href="">Passport Holder</a></li>
+                <li><a href="">I Pad Pouch</a></li>
+                <li><a href="">Laptop Hand Bag</a></li>
+                <li><a href="">Laptop Pouch</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="" class="menu-title">Leather</a>
-                <ul class="dropdown">
-                    <li><a href="">Leather office Bags</a></li>
-                    <li><a href="">Leather Passport Holder</a></li>
-                    <li><a href="">Leather Wallets</a></li>
-                    <li><a href="">Leather Organizers</a></li>
-                    <li><a href="">Leather Gift Sets</a></li>
-                </ul>
+              <a href="" class="menu-title">Leather</a>
+              <ul class="dropdown">
+                <li><a href="">Leather office Bags</a></li>
+                <li><a href="">Leather Passport Holder</a></li>
+                <li><a href="">Leather Wallets</a></li>
+                <li><a href="">Leather Organizers</a></li>
+                <li><a href="">Leather Gift Sets</a></li>
+              </ul>
             </li>
 
             <li class="menu-category">
-        <a href="" class="menu-title">Awards</a>
+              <a href="" class="menu-title">Awards</a>
 
-    </li>
+            </li>
 
-    <li class="menu-category">
-        <a href="" class="menu-title">Brands</a>
-    </li>
+            <li class="menu-category">
+              <a href="" class="menu-title">Brands</a>
+            </li>
 
 
 
-        </ul>
+          </ul>
 
-</div>
+      </div>
 
-</nav>
+    </nav>
 
   </header>
 
@@ -588,52 +603,53 @@
 
       <div class="container">
 
-  <!-- products  -->
-   <div class="product-box">
-  <div class="container">
-    <div class="row">
-      <!-- PRODUCT COLUMN -->
-      <div class="col-8 product-column">
-        <?php
-        $category_filter = 'round_neck_tshirt';
-        ?>
-        <div class="product-grid">
-          <?php include 'Admin/fetch_products.php'; ?>
+        <!-- products  -->
+        <div class="product-box">
+          <div class="container">
+            <div class="row">
+              <!-- PRODUCT COLUMN -->
+              <div class="col-8 product-column">
+                <?php
+                $category_filter = 'round_neck_tshirt';
+                ?>
+                <div class="product-grid">
+                  <?php include 'Admin/fetch_products.php'; ?>
+                </div>
+              </div>
+
+              <!-- CONTACT FORM COLUMN -->
+              <div class="col-4 form-column">
+                <div class="contact-form-section">
+                  <form action="submit_contact.php" method="post" id="contactForm">
+                    <div class="form-group">
+                      <label for="name">Name</label>
+                      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email</label>
+                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                      <label for="message">Message</label>
+                      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="verificationCode">Code</label>
+                      <input type="text" id="verificationCode" name="verificationCode"
+                        placeholder="Enter the code below" required>
+                    </div>
+                    <div class="form-group">
+                      <p id="codeDisplay" class="code-box">ABC123</p>
+                      <button type="button" id="refreshCodeBtn">Refresh Code</button>
+                    </div>
+                    <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+                  </form>
+                </div>
+              </div>
+
+            </div>
+          </div>
         </div>
-      </div>
-
-<!-- CONTACT FORM COLUMN -->
-<div class="col-4 form-column">
-  <div class="contact-form-section">
-    <form action="submit_contact.php" method="post" id="contactForm">
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-      </div>
-      <div class="form-group">
-        <label for="email">Email</label>
-        <input type="email" id="email" name="email" placeholder="Enter your email" required>
-      </div>
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-      </div>
-      <div class="form-group">
-        <label for="verificationCode">Code</label>
-        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
-      </div>
-      <div class="form-group">
-        <p id="codeDisplay" class="code-box">ABC123</p>
-        <button type="button" id="refreshCodeBtn">Refresh Code</button>
-      </div>
-      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
-    </form>
-  </div>
-</div>
-
-    </div>
-  </div>
-</div>
 
 
 
@@ -903,8 +919,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 
-    <!-- For Contact Form  -->
-   
+  <!-- For Contact Form  -->
+
   <!-- Script for Contact Form -->
   <script>
     // Initialize the verification code

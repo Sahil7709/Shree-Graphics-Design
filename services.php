@@ -27,72 +27,69 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
 
-        <style>
-      /* 2nd Nav */
-.desktop-menu-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+    <style>
+        /* 2nd Nav */
+        .desktop-menu-category-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+        }
 
-.menu-category {
-  position: relative;
-  margin-right: 20px;
-}
+        .menu-category {
+            position: relative;
+            margin-right: 20px;
+        }
 
-.menu-category .menu-title {
-  text-decoration: none;
-  color: #000;
-}
+        .menu-category .menu-title {
+            text-decoration: none;
+            color: #000;
+        }
 
-.menu-category .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000; /* Add a high z-index */
-}
+        .menu-category .dropdown {
+            list-style: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: #fff;
+            border: 1px solid #ddd;
+            display: none;
+            padding: 10px 0;
+            min-width: 200px;
+            z-index: 1000;
+            /* Add a high z-index */
+        }
 
-.menu-category:hover .dropdown {
-  display: block;
-}
+        .menu-category:hover .dropdown {
+            display: block;
+        }
 
-.dropdown li {
-  padding: 5px 15px;
-  border-bottom: 1px solid #ddd; /* Add a small gray line under each item */
-}
+        .dropdown li {
+            padding: 5px 15px;
+            border-bottom: 1px solid #ddd;
+            /* Add a small gray line under each item */
+        }
 
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-}
+        .dropdown li a {
+            text-decoration: none;
+            color: #333;
+        }
 
-.dropdown li a:hover {
-  color: var(--salmon-pink);
-}
+        .dropdown li a:hover {
+            color: var(--salmon-pink);
+        }
 
-/* Add a higher z-index to the nav container */
-.desktop-navigation-menu {
-  position: relative;
-  z-index: 1000;
-}
-
-  
-  </style>
-   <style>
- 
-
-    .service-container {
-        margin-left: 60px;
-        margin-right: 60px;
-    }
-
+        /* Add a higher z-index to the nav container */
+        .desktop-navigation-menu {
+            position: relative;
+            z-index: 1000;
+        }
+    </style>
+    <style>
+        .service-container {
+            margin-left: 60px;
+            margin-right: 60px;
+        }
     </style>
 
 </head>
@@ -320,91 +317,91 @@
 
         </nav>
 
-       <!-- 2nd Nav Bar  -->
+        <!-- 2nd Nav Bar  -->
 
-       <nav class="desktop-navigation-menu">
+        <nav class="desktop-navigation-menu">
 
-<div class="container">
+            <div class="container">
 
-    <ul class="desktop-menu-category-list">
+                <ul class="desktop-menu-category-list">
 
-        <ul class="desktop-menu-category-list">
+                    <ul class="desktop-menu-category-list">
 
-            <li class="menu-category">
-                 <a href="#" class="menu-title">Embroidery Designing</a>
-            </li>
-
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">T-Shirt</a>
-                <ul class="dropdown">
-                    <li><a href="round_neck.php">Round Neck</a></li>
-                    <li><a href="v_neck.php">V-Neck</a></li>
-                    <li><a href="">Pool T-Shirt </a></li>
-                    <li><a href="">Cut and sew T-Shirt</a></li>
-                    <li><a href="">Basic Pool T-Shirt</a></li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="" class="menu-title">Apparels</a>
-                <ul class="dropdown">
-                    <li><a href="cap.php">Cap</a></li>
-                    <li><a href="jackets.php">Jackets</a></li>
-                    <li><a href="">Sweartshirt</a></li>
-                    <li><a href="">Denim Shirt</a></li>
-                    <li><a href="">Windcheaters</a></li>
-                    <li><a href="">Ties</a></li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="#" class="menu-title">Travel</a>
-                <ul class="dropdown">
-                    <li><a href="handbag.php">Hand Bag</a></li>
-                    <li><a href="">Strolley Bags</a></li>
-                    <li><a href="travelbag.php">Travel Bags</a></li>
-                    <li><a href="">Back Packs</a></li>
-                    <li><a href="laptopbag.php">Laptop Bags</a></li>
-                    <li><a href="">Laptop Cum Overnighter Bag</a></li>
-                    <li><a href="">Trekking Bag</a></li>
-                    <li><a href="">Passport Holder</a></li>
-                    <li><a href="">I Pad Pouch</a></li>
-                    <li><a href="">Laptop Hand Bag</a></li>
-                    <li><a href="">Laptop Pouch</a></li>
-
-                </ul>
-            </li>
-
-            <li class="menu-category">
-                <a href="" class="menu-title">Leather</a>
-                <ul class="dropdown">
-                    <li><a href="">Leather office Bags</a></li>
-                    <li><a href="">Leather Passport Holder</a></li>
-                    <li><a href="">Leather Wallets</a></li>
-                    <li><a href="">Leather Organizers</a></li>
-                    <li><a href="">Leather Gift Sets</a></li>
-                </ul>
-            </li>
-
-            <li class="menu-category">
-        <a href="" class="menu-title">Awards</a>
-
-    </li>
-
-    <li class="menu-category">
-        <a href="" class="menu-title">Brands</a>
-    </li>
+                        <li class="menu-category">
+                            <a href="#" class="menu-title">Embroidery Designing</a>
+                        </li>
 
 
+                        <li class="menu-category">
+                            <a href="#" class="menu-title">T-Shirt</a>
+                            <ul class="dropdown">
+                                <li><a href="round_neck.php">Round Neck</a></li>
+                                <li><a href="v_neck.php">V-Neck</a></li>
+                                <li><a href="">Pool T-Shirt </a></li>
+                                <li><a href="">Cut and sew T-Shirt</a></li>
+                                <li><a href="">Basic Pool T-Shirt</a></li>
 
-        </ul>
+                            </ul>
+                        </li>
 
-</div>
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Apparels</a>
+                            <ul class="dropdown">
+                                <li><a href="cap.php">Cap</a></li>
+                                <li><a href="jackets.php">Jackets</a></li>
+                                <li><a href="">Sweartshirt</a></li>
+                                <li><a href="">Denim Shirt</a></li>
+                                <li><a href="">Windcheaters</a></li>
+                                <li><a href="">Ties</a></li>
 
-</nav>
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="#" class="menu-title">Travel</a>
+                            <ul class="dropdown">
+                                <li><a href="handbag.php">Hand Bag</a></li>
+                                <li><a href="">Strolley Bags</a></li>
+                                <li><a href="travelbag.php">Travel Bags</a></li>
+                                <li><a href="">Back Packs</a></li>
+                                <li><a href="laptopbag.php">Laptop Bags</a></li>
+                                <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                                <li><a href="">Trekking Bag</a></li>
+                                <li><a href="">Passport Holder</a></li>
+                                <li><a href="">I Pad Pouch</a></li>
+                                <li><a href="">Laptop Hand Bag</a></li>
+                                <li><a href="">Laptop Pouch</a></li>
+
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Leather</a>
+                            <ul class="dropdown">
+                                <li><a href="">Leather office Bags</a></li>
+                                <li><a href="">Leather Passport Holder</a></li>
+                                <li><a href="">Leather Wallets</a></li>
+                                <li><a href="">Leather Organizers</a></li>
+                                <li><a href="">Leather Gift Sets</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Awards</a>
+
+                        </li>
+
+                        <li class="menu-category">
+                            <a href="" class="menu-title">Brands</a>
+                        </li>
+
+
+
+                    </ul>
+
+            </div>
+
+        </nav>
 
     </header>
 
@@ -417,21 +414,21 @@
         <!-- PRODUCT CONTAINER -->
         <div class="service-container">
             <?php
-  // Database connection
-  $conn = new mysqli('localhost', 'root', '', 'logo');
+            // Database connection
+            $conn = new mysqli('localhost', 'root', '', 'logo');
 
-  // Check connection
-  if ($conn->connect_error) {
-      die("Connection failed: " . $conn->connect_error);
-  }
+            // Check connection
+            if ($conn->connect_error) {
+                die("Connection failed: " . $conn->connect_error);
+            }
 
-  // Fetch services
-  $sql = "SELECT * FROM services";
-  $result = $conn->query($sql);
+            // Fetch services
+            $sql = "SELECT * FROM services";
+            $result = $conn->query($sql);
 
-  if ($result->num_rows > 0) {
-      while ($row = $result->fetch_assoc()) {
-          echo '
+            if ($result->num_rows > 0) {
+                while ($row = $result->fetch_assoc()) {
+                    echo '
           <div class="service-card">
               <img src="admin/uploads/' . htmlspecialchars($row['service_image']) . '" 
                    alt="' . htmlspecialchars($row['service_name']) . '" 
@@ -440,14 +437,14 @@
               <p class="service-description">' . htmlspecialchars($row['service_description']) . '</p>
               <p class="service-price">Rs. ' . htmlspecialchars($row['service_price']) . '</p>
           </div>';
-      }
-  } else {
-      echo "<p>No services available.</p>";
-  }
+                }
+            } else {
+                echo "<p>No services available.</p>";
+            }
 
-  // Close the database connection
-  $conn->close();
-  ?>
+            // Close the database connection
+            $conn->close();
+            ?>
         </div>
 
 
@@ -687,32 +684,31 @@
     <!-- For Banner -->
 
     <script>
-    const sliderContainer = document.querySelector('.slider-container');
-    const sliderItems = document.querySelectorAll('.slider-item');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
+        const sliderContainer = document.querySelector('.slider-container');
+        const sliderItems = document.querySelectorAll('.slider-item');
+        const prevBtn = document.querySelector('.prev-btn');
+        const nextBtn = document.querySelector('.next-btn');
 
-    let currentIndex = 0;
+        let currentIndex = 0;
 
-    // Function to update the slider position
-    function updateSlider() {
-        sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
+        // Function to update the slider position
+        function updateSlider() {
+            sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+        }
 
-    // Event Listeners for Buttons
-    prevBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
-        updateSlider();
-    });
+        // Event Listeners for Buttons
+        prevBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+            updateSlider();
+        });
 
-    nextBtn.addEventListener('click', () => {
-        currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
-        updateSlider();
-    });
+        nextBtn.addEventListener('click', () => {
+            currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+            updateSlider();
+        });
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
 </html>
-

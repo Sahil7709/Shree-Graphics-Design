@@ -25,103 +25,110 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <style>
-      /* 2nd Nav */
-.desktop-menu-category-list {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-  display: flex;
-}
+  <style>
+    /* 2nd Nav */
+    .desktop-menu-category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
 
-.menu-category {
-  position: relative;
-  margin-right: 20px;
-}
+    .menu-category {
+      position: relative;
+      margin-right: 20px;
+    }
 
-.menu-category .menu-title {
-  text-decoration: none;
-  color: #000;
-}
+    .menu-category .menu-title {
+      text-decoration: none;
+      color: #000;
+    }
 
-.menu-category .dropdown {
-  list-style: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #fff;
-  border: 1px solid #ddd;
-  display: none;
-  padding: 10px 0;
-  min-width: 200px;
-  z-index: 1000; /* Add a high z-index */
-}
+    .menu-category .dropdown {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 1000;
+      /* Add a high z-index */
+    }
 
-.menu-category:hover .dropdown {
-  display: block;
-}
+    .menu-category:hover .dropdown {
+      display: block;
+    }
 
-.dropdown li {
-  padding: 5px 15px;
-  border-bottom: 1px solid #ddd; /* Add a small gray line under each item */
-}
+    .dropdown li {
+      padding: 5px 15px;
+      border-bottom: 1px solid #ddd;
+      /* Add a small gray line under each item */
+    }
 
-.dropdown li a {
-  text-decoration: none;
-  color: #333;
-}
+    .dropdown li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-.dropdown li a:hover {
-  color: var(--salmon-pink);
-}
+    .dropdown li a:hover {
+      color: var(--salmon-pink);
+    }
 
-/* Add a higher z-index to the nav container */
-.desktop-navigation-menu {
-  position: relative;
-  z-index: 1000;
-}
-
-  
+    /* Add a higher z-index to the nav container */
+    .desktop-navigation-menu {
+      position: relative;
+      z-index: 1000;
+    }
   </style>
 
-    <style>
-/* Style for Logo Order Section and Modal */
-/* Center the entire logo-order-section */
-.logo-order-section {
-    display: flex;
-    justify-content: center;  /* Horizontally center */
-    align-items: center;      /* Vertically center */
-    height: 20vh;            /* Make it take up the full height of the viewport */
-}
+  <style>
+    /* Style for Logo Order Section and Modal */
+    /* Center the entire logo-order-section */
+    .logo-order-section {
+      display: flex;
+      justify-content: center;
+      /* Horizontally center */
+      align-items: center;
+      /* Vertically center */
+      height: 20vh;
+      /* Make it take up the full height of the viewport */
+    }
 
-/* Center the content inside the wrapper */
-.wrapper {
-    display: flex;
-    justify-content: center;  /* Horizontally center */
-    align-items: center;      /* Vertically center */
-    width: 100%;              /* Ensure it spans the full width */
-}
+    /* Center the content inside the wrapper */
+    .wrapper {
+      display: flex;
+      justify-content: center;
+      /* Horizontally center */
+      align-items: center;
+      /* Vertically center */
+      width: 100%;
+      /* Ensure it spans the full width */
+    }
 
-/* Ensure the order-box doesn't exceed content's size */
-.order-box {
-    display: flex;
-    justify-content: center;  /* Horizontally center button */
-    align-items: center;      /* Vertically center button */
-}
+    /* Ensure the order-box doesn't exceed content's size */
+    .order-box {
+      display: flex;
+      justify-content: center;
+      /* Horizontally center button */
+      align-items: center;
+      /* Vertically center button */
+    }
 
-/* Style the button */
-.order-btn {
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-</style>
+    /* Style the button */
+    .order-btn {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
 
 </head>
 
 <body>
-    <!--
+  <!--
     - HEADER
   -->
 
@@ -135,31 +142,31 @@
         <a href="#" class="header-logo">
           <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
-        Devcon 
+        Devcon
 
 
-      <div class="header-search-container">
-        <ul class="desktop-menu-category-list">
+        <div class="header-search-container">
+          <ul class="desktop-menu-category-list">
 
-      <li class="menu-category">
-        <a href="index.php" class="menu-title">Home</a>
-      </li>
-
-
-        <li class="menu-category">
-          <a href="vendors.php" class="menu-title">vendors</a>
-        </li>
-
-        <li class="menu-category">
-          <a href="services.php" class="menu-title">Services</a>
-        </li>
+            <li class="menu-category">
+              <a href="index.php" class="menu-title">Home</a>
+            </li>
 
 
-        <li class="menu-category">
-          <a href="contact.php" class="menu-title">Contact</a>
-        </li>
+            <li class="menu-category">
+              <a href="vendors.php" class="menu-title">vendors</a>
+            </li>
 
-        </ul>
+            <li class="menu-category">
+              <a href="services.php" class="menu-title">Services</a>
+            </li>
+
+
+            <li class="menu-category">
+              <a href="contact.php" class="menu-title">Contact</a>
+            </li>
+
+          </ul>
         </div>
       </div>
 
@@ -222,7 +229,7 @@
             </div>
           </button>
 
-      
+
 
         </li>
 
@@ -255,7 +262,7 @@
             </div>
           </button>
 
-          
+
 
         </li>
 
@@ -342,112 +349,112 @@
 
     </nav>
 
-           <!-- 2nd Nav Bar  -->
+    <!-- 2nd Nav Bar  -->
 
-           <nav class="desktop-navigation-menu">
+    <nav class="desktop-navigation-menu">
 
-<div class="container">
-
-    <ul class="desktop-menu-category-list">
+      <div class="container">
 
         <ul class="desktop-menu-category-list">
 
+          <ul class="desktop-menu-category-list">
+
             <li class="menu-category">
-                 <a href="#" class="menu-title">Embroidery Designing</a>
+              <a href="#" class="menu-title">Embroidery Designing</a>
             </li>
 
 
             <li class="menu-category">
-                <a href="#" class="menu-title">T-Shirt</a>
-                <ul class="dropdown">
-                    <li><a href="round_neck.php">Round Neck</a></li>
-                    <li><a href="v_neck.php">V-Neck</a></li>
-                    <li><a href="">Pool T-Shirt </a></li>
-                    <li><a href="">Cut and sew T-Shirt</a></li>
-                    <li><a href="">Basic Pool T-Shirt</a></li>
+              <a href="#" class="menu-title">T-Shirt</a>
+              <ul class="dropdown">
+                <li><a href="round_neck.php">Round Neck</a></li>
+                <li><a href="v_neck.php">V-Neck</a></li>
+                <li><a href="">Pool T-Shirt </a></li>
+                <li><a href="">Cut and sew T-Shirt</a></li>
+                <li><a href="">Basic Pool T-Shirt</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="" class="menu-title">Apparels</a>
-                <ul class="dropdown">
-                    <li><a href="cap.php">Cap</a></li>
-                    <li><a href="jackets.php">Jackets</a></li>
-                    <li><a href="">Sweartshirt</a></li>
-                    <li><a href="">Denim Shirt</a></li>
-                    <li><a href="">Windcheaters</a></li>
-                    <li><a href="">Ties</a></li>
+              <a href="" class="menu-title">Apparels</a>
+              <ul class="dropdown">
+                <li><a href="cap.php">Cap</a></li>
+                <li><a href="jackets.php">Jackets</a></li>
+                <li><a href="">Sweartshirt</a></li>
+                <li><a href="">Denim Shirt</a></li>
+                <li><a href="">Windcheaters</a></li>
+                <li><a href="">Ties</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="#" class="menu-title">Travel</a>
-                <ul class="dropdown">
-                    <li><a href="handbag.php">Hand Bag</a></li>
-                    <li><a href="">Strolley Bags</a></li>
-                    <li><a href="travelbag.php">Travel Bags</a></li>
-                    <li><a href="">Back Packs</a></li>
-                    <li><a href="laptopbag.php">Laptop Bags</a></li>
-                    <li><a href="">Laptop Cum Overnighter Bag</a></li>
-                    <li><a href="">Trekking Bag</a></li>
-                    <li><a href="">Passport Holder</a></li>
-                    <li><a href="">I Pad Pouch</a></li>
-                    <li><a href="">Laptop Hand Bag</a></li>
-                    <li><a href="">Laptop Pouch</a></li>
+              <a href="#" class="menu-title">Travel</a>
+              <ul class="dropdown">
+                <li><a href="handbag.php">Hand Bag</a></li>
+                <li><a href="">Strolley Bags</a></li>
+                <li><a href="travelbag.php">Travel Bags</a></li>
+                <li><a href="">Back Packs</a></li>
+                <li><a href="laptopbag.php">Laptop Bags</a></li>
+                <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                <li><a href="">Trekking Bag</a></li>
+                <li><a href="">Passport Holder</a></li>
+                <li><a href="">I Pad Pouch</a></li>
+                <li><a href="">Laptop Hand Bag</a></li>
+                <li><a href="">Laptop Pouch</a></li>
 
-                </ul>
+              </ul>
             </li>
 
             <li class="menu-category">
-                <a href="" class="menu-title">Leather</a>
-                <ul class="dropdown">
-                    <li><a href="">Leather office Bags</a></li>
-                    <li><a href="">Leather Passport Holder</a></li>
-                    <li><a href="">Leather Wallets</a></li>
-                    <li><a href="">Leather Organizers</a></li>
-                    <li><a href="">Leather Gift Sets</a></li>
-                </ul>
+              <a href="" class="menu-title">Leather</a>
+              <ul class="dropdown">
+                <li><a href="">Leather office Bags</a></li>
+                <li><a href="">Leather Passport Holder</a></li>
+                <li><a href="">Leather Wallets</a></li>
+                <li><a href="">Leather Organizers</a></li>
+                <li><a href="">Leather Gift Sets</a></li>
+              </ul>
             </li>
 
             <li class="menu-category">
-        <a href="" class="menu-title">Awards</a>
+              <a href="" class="menu-title">Awards</a>
 
-    </li>
+            </li>
 
-    <li class="menu-category">
-        <a href="" class="menu-title">Brands</a>
-    </li>
+            <li class="menu-category">
+              <a href="" class="menu-title">Brands</a>
+            </li>
 
 
 
-        </ul>
+          </ul>
 
-</div>
+      </div>
 
-</nav>
+    </nav>
   </header>
 
 
   <!-- Main -->
   <main>
-  <div class="logo-order-section">
-    <div class="wrapper">
-      <div class="order-box">
-        <div class="order-grid">
-          <!-- Wrap the button with an anchor tag to redirect on click -->
-          <a href="vendorsForm.php">
-            <button id="openOrderFormBtn" class="order-btn">Place Order</button>
-          </a>
+    <div class="logo-order-section">
+      <div class="wrapper">
+        <div class="order-box">
+          <div class="order-grid">
+            <!-- Wrap the button with an anchor tag to redirect on click -->
+            <a href="vendorsForm.php">
+              <button id="openOrderFormBtn" class="order-btn">Place Order</button>
+            </a>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-</main>
+  </main>
 
 
-  
+
   <!--
     - FOOTER
   -->
@@ -476,7 +483,7 @@
 
         <div class="footer-category-box">
           <h3 class="category-box-title">footwear :</h3>
-        
+
           <a href="#" class="footer-category-link">sport</a>
           <a href="#" class="footer-category-link">formal</a>
           <a href="#" class="footer-category-link">Boots</a>
@@ -491,7 +498,7 @@
 
         <div class="footer-category-box">
           <h3 class="category-box-title">jewellery :</h3>
-        
+
           <a href="#" class="footer-category-link">Necklace</a>
           <a href="#" class="footer-category-link">Earrings</a>
           <a href="#" class="footer-category-link">Couple rings</a>
@@ -507,7 +514,7 @@
 
         <div class="footer-category-box">
           <h3 class="category-box-title">cosmetics :</h3>
-        
+
           <a href="#" class="footer-category-link">Shampoo</a>
           <a href="#" class="footer-category-link">Bodywash</a>
           <a href="#" class="footer-category-link">Facewash</a>
@@ -563,87 +570,87 @@
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Products</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">New products</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Best sales</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Contact us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Our Company</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Delivery</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Legal Notice</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Terms and conditions</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">About us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Secure payment</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
-        
+
           <li class="footer-nav-item">
             <h2 class="nav-title">Services</h2>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">New products</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Best sales</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Contact us</a>
           </li>
-        
+
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-        
+
         </ul>
 
         <ul class="footer-nav-list">
@@ -747,14 +754,15 @@
 
   <!-- script for Ventodr order form open  -->
   <script>
-  // When the "Place Order" button is clicked, redirect to the vendorsForm.php page
-  document.getElementById('openOrderFormBtn').addEventListener('click', function() {
-    window.location.href = 'vendorsForm.php'; // Redirect to the new page
-  });
-</script>
+    // When the "Place Order" button is clicked, redirect to the vendorsForm.php page
+    document.getElementById('openOrderFormBtn').addEventListener('click', function () {
+      window.location.href = 'vendorsForm.php'; // Redirect to the new page
+    });
+  </script>
 
 
 
 
 </body>
+
 </html>
