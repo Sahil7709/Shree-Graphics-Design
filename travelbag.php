@@ -28,6 +28,64 @@
     rel="stylesheet">
 
     <style>
+      /* 2nd Nav */
+.desktop-menu-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.menu-category {
+  position: relative;
+  margin-right: 20px;
+}
+
+.menu-category .menu-title {
+  text-decoration: none;
+  color: #000;
+}
+
+.menu-category .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000; /* Add a high z-index */
+}
+
+.menu-category:hover .dropdown {
+  display: block;
+}
+
+.dropdown li {
+  padding: 5px 15px;
+  border-bottom: 1px solid #ddd; /* Add a small gray line under each item */
+}
+
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown li a:hover {
+  color: var(--salmon-pink);
+}
+
+/* Add a higher z-index to the nav container */
+.desktop-navigation-menu {
+  position: relative;
+  z-index: 1000;
+}
+
+  
+  </style>
+    <style>
            
 /* Style the code box */
 .code-box {
@@ -435,63 +493,91 @@
 
 </nav>
 
-<!-- 2nd Nav Bar  -->
+       <!-- 2nd Nav Bar  -->
 
-<nav class="desktop-navigation-menu">
+       <nav class="desktop-navigation-menu">
 
-    <div class="container">
+<div class="container">
+
+    <ul class="desktop-menu-category-list">
 
         <ul class="desktop-menu-category-list">
 
-            <ul class="desktop-menu-category-list">
-
-                <li class="menu-category">
-                    <a href="services.php" class="menu-title">Embroidery Designing</a>
-                </li>
+            <li class="menu-category">
+                 <a href="#" class="menu-title">Embroidery Designing</a>
+            </li>
 
 
-                <li class="menu-category">
-                    <a href="services.php" class="menu-title">T-Shirt</a>
-                    <ul class="dropdown">
-                        <li><a href="round_neck.php">Round Neck</a></li>
-                        <li><a href="v_neck.php">V-Neck</a></li>
-                    </ul>
-                </li>
+            <li class="menu-category">
+                <a href="#" class="menu-title">T-Shirt</a>
+                <ul class="dropdown">
+                    <li><a href="round_neck.php">Round Neck</a></li>
+                    <li><a href="v_neck.php">V-Neck</a></li>
+                    <li><a href="">Pool T-Shirt </a></li>
+                    <li><a href="">Cut and sew T-Shirt</a></li>
+                    <li><a href="">Basic Pool T-Shirt</a></li>
 
-                <li class="menu-category">
-                    <a href="services.php" class="menu-title">Apparels</a>
-                    <ul class="dropdown">
-                        <li><a href="cap.php">Cap</a></li>
-                        <li><a href="jackets.php">Jackets</a></li>
-                    </ul>
-                </li>
+                </ul>
+            </li>
 
-                <li class="menu-category">
-                    <a href="services.php" class="menu-title">Travel</a>
-                    <ul class="dropdown">
-                        <li><a href="handbag.php">Hand Bag</a></li>
-                        <li><a href="laptopbag.php">Laptop Bag</a></li>
-                        <li><a href="travelbag.php">Travel Bag</a></li>
-                    </ul>
-                </li>
+            <li class="menu-category">
+                <a href="" class="menu-title">Apparels</a>
+                <ul class="dropdown">
+                    <li><a href="cap.php">Cap</a></li>
+                    <li><a href="jackets.php">Jackets</a></li>
+                    <li><a href="">Sweartshirt</a></li>
+                    <li><a href="">Denim Shirt</a></li>
+                    <li><a href="">Windcheaters</a></li>
+                    <li><a href="">Ties</a></li>
 
-                <li class="menu-category">
-                    <a href="services.php" class="menu-title">Awards</a>
+                </ul>
+            </li>
 
-                </li>
+            <li class="menu-category">
+                <a href="#" class="menu-title">Travel</a>
+                <ul class="dropdown">
+                    <li><a href="handbag.php">Hand Bag</a></li>
+                    <li><a href="">Strolley Bags</a></li>
+                    <li><a href="travelbag.php">Travel Bags</a></li>
+                    <li><a href="">Back Packs</a></li>
+                    <li><a href="laptopbag.php">Laptop Bags</a></li>
+                    <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                    <li><a href="">Trekking Bag</a></li>
+                    <li><a href="">Passport Holder</a></li>
+                    <li><a href="">I Pad Pouch</a></li>
+                    <li><a href="">Laptop Hand Bag</a></li>
+                    <li><a href="">Laptop Pouch</a></li>
 
-                <li class="menu-category">
-                    <a href="services.php" class="menu-title">Brands</a>
-                </li>
+                </ul>
+            </li>
+
+            <li class="menu-category">
+                <a href="" class="menu-title">Leather</a>
+                <ul class="dropdown">
+                    <li><a href="">Leather office Bags</a></li>
+                    <li><a href="">Leather Passport Holder</a></li>
+                    <li><a href="">Leather Wallets</a></li>
+                    <li><a href="">Leather Organizers</a></li>
+                    <li><a href="">Leather Gift Sets</a></li>
+                </ul>
+            </li>
+
+            <li class="menu-category">
+        <a href="" class="menu-title">Awards</a>
+
+    </li>
+
+    <li class="menu-category">
+        <a href="" class="menu-title">Brands</a>
+    </li>
 
 
 
-            </ul>
+        </ul>
 
-    </div>
+</div>
 
 </nav>
-
 </header>
 
 <main>
