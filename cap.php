@@ -622,34 +622,34 @@
           
               </div>
 
-              <!-- CONTACT FORM COLUMN -->
-              <div class="col-4 form-column">
-                <div class="contact-form-section">
-                  <form action="submit_contact.php" method="post" id="contactForm">
-                    <div class="form-group">
-                      <label for="name">Name</label>
-                      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="email">Email</label>
-                      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-                    </div>
-                    <div class="form-group">
-                      <label for="message">Message</label>
-                      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-                    </div>
-                    <div class="form-group">
-                      <label for="verificationCode">Code</label>
-                      <input type="text" id="verificationCode" name="verificationCode"
-                        placeholder="Enter the code below" required>
-                    </div>
-                    <div class="form-group">
-                      <p id="codeDisplay" class="code-box">ABC123</p>
-                      <button type="button" id="refreshCodeBtn">Refresh Code</button>
-                    </div>
-                    <button type="submit" class="submit-btn" id="submitButton">Submit</button>
-                  </form>
-                </div>
+<!-- CONTACT FORM COLUMN -->
+<div class="col-4 form-column">
+  <div class="contact-form-section">
+    <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="verificationCode">Code</label>
+        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
+      </div>
+      <div class="form-group">
+        <p id="codeDisplay" class="code-box">ABC123</p>
+        <button type="button" id="refreshCodeBtn">Refresh Code</button>
+      </div>
+      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+    </form>
+  </div>
+</div>
               </div>
 
             </div>
@@ -923,45 +923,46 @@
   </script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
-  <!-- For Contact Form  -->
 
-  <!-- Script for Contact Form -->
-  <script>
-    // Initialize the verification code
-    const generateCode = () => {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      let newCode = '';
-      for (let i = 0; i < 6; i++) {
-        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      return newCode;
-    };
 
-    // Update the displayed code
-    const refreshCode = () => {
-      const newCode = generateCode();
-      document.getElementById('codeDisplay').textContent = newCode;
-    };
 
-    // Event listener for refreshing the code
-    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+<!-- Script for Contact Form -->
+<script>
+  // Initialize the verification code
+  const generateCode = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let newCode = '';
+    for (let i = 0; i < 6; i++) {
+      newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return newCode;
+  };
 
-    // Validate the code on form submission
-    const validateCode = () => {
-      const displayedCode = document.getElementById('codeDisplay').textContent;
-      const enteredCode = document.getElementById('verificationCode').value;
+  // Update the displayed code
+  const refreshCode = () => {
+    const newCode = generateCode();
+    document.getElementById('codeDisplay').textContent = newCode;
+  };
 
-      if (displayedCode !== enteredCode) {
-        alert('Verification code is incorrect. Please try again.');
-        return false; // Prevent form submission
-      }
+  // Event listener for refreshing the code
+  document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
 
-      return true; // Allow form submission
-    };
+  // Validate the code on form submission
+  const validateCode = () => {
+    const displayedCode = document.getElementById('codeDisplay').textContent;
+    const enteredCode = document.getElementById('verificationCode').value;
 
-    // Set an initial code when the page loads
-    window.onload = refreshCode;
-  </script>
+    if (displayedCode !== enteredCode) {
+      alert('Verification code is incorrect. Please try again.');
+      return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+  };
+
+  // Set an initial code when the page loads
+  window.onload = refreshCode;
+</script>
 
 
 </body>

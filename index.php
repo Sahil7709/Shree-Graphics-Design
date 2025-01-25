@@ -471,7 +471,7 @@
     <?php
     // Close connection
 // Close connection
-    ?>$conn->close(); ?>
+  $conn->close(); ?>
 
 
     <!--

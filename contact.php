@@ -28,7 +28,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-</head>
+    
+
 <style>
   /* 2nd Nav */
   .desktop-menu-category-list {
@@ -87,6 +88,125 @@
     z-index: 1000;
   }
 </style>
+<style>
+  .row {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.col-left,
+.col-right {
+  flex: 1; /* Ensures both columns are of equal width */
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.col-left {
+  position: sticky;
+  top: 0; 
+  height: 100vh; /* Optional: If you want the column to span the full viewport height */
+  padding: 20px;
+}
+
+.col-right {
+  background-color: #ffffff; /* Optional: Background color for the right column */
+}
+
+  </style>
+<style>
+  /* General container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Address container styling */
+.address-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.address-container h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.address-container p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Contact form section styling */
+.contact-form-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+#codeDisplay {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #007bff;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.submit-btn {
+  background-color: #28a745;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+</style>
+
+</head>
+
 
 <body>
 
@@ -396,222 +516,91 @@
   </header>
 
 
-
-
-
   <!--
     - MAIN
   -->
 
   <main>
 
+  <div class="container">
+  <div class="row">
+    <div class="col-left">
+   
+      <div class="address-container">
 
-    <!--
-      - PRODUCT
-    -->
+      <h3>Address:</h3>
+      <p>Devcon software Services<br>
+      Office No. 4-B, Second Floor, <br>
+      Ganesham Commercial -A,<br>
+      Survey No. 21/18-21/24, BRTS Road, <br>
+      Pimple Saudagar, Pune- 411027<br>
+</div>
+      <div class="address-container">
+      <h3>Phone:</h3>
 
-    <div class="product-container">
+         1 234 567 890<br>
+      </div>
+      <div class="address-container">
+         <h3>Email:</h3>
 
-      <div class="container">
-
-
-        <!--
-          - SIDEBAR
-        -->
-
-        <div class="sidebar  has-scrollbar" data-mobile-menu>
-
-          <div class="sidebar-category">
-
-            <div class="sidebar-top">
-              <h2 class="sidebar-title">Quick Links</h2>
-
-              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <ul class="sidebar-menu-category-list">
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
-                      class="menu-title-img">
-
-                    <a href="index.php">
-                      <p class="menu-title">Home </p>
-                    </a>
-                  </div>
-
-                  <div>
-                    <a href="index.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                    </a>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Shirt</p>
-                      <data value="300" class="stock" title="Available Stock">300</data>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">T-Shirt</p>
-                      <data value="60" class="stock" title="Available Stock">60</data>
-                    </a>
-                  </li>
-
-
-
-                </ul>
-
-              </li>
-
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
-                      height="20">
-
-                    <a href="services.php">
-                      <p class="menu-title">Services</p>
-                    </a>
-                  </div>
-
-                  <div> <a href="services.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Shirt</p>
-                      <data value="46" class="stock" title="Available Stock">46</data>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name"> T-Shirt</p>
-                      <data value="73" class="stock" title="Available Stock">73</data>
-                    </a>
-                  </li>
-
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
-                      height="20">
-
-                    <a href="vendors.php">
-                      <p class="menu-title">vendors</p>
-                    </a>
-                  </div>
-
-                  <div> <a href="vendors.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">Shirt</p>
-                      <data value="12" class="stock" title="Available Stock">12 pcs</data>
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="#" class="sidebar-submenu-title">
-                      <p class="product-name">T-Shirt</p>
-                      <data value="60" class="stock" title="Available Stock">60 pcs</data>
-                    </a>
-                  </li>
-                </ul>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="product-container">
-          <h1>Hello</h1>
-          <p>Here All info of Company will come </p>
-
-        </div>
-
-        <!-- CONTACT FORM SECTION -->
-        <div class="contact-form-section">
-          <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
-            <div class="form-group">
-              <label for="name">Name</label>
-              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            </div>
-            <div class="form-group">
-              <label for="message">Message</label>
-              <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-            </div>
-            <div class="form-group">
-              <label for="verificationCode">Code</label>
-              <!-- Display the code inside a div -->
-              <div id="codeDisplay" class="code-box">ABC123</div>
-              <!-- Input field to store the code (invisibly) -->
-              <input type="hidden" id="verificationCode" name="verificationCode" value="ABC123" required>
-            </div>
-            <div class="form-group">
-              <button type="button" id="refreshCodeBtn">Refresh Code</button>
-            </div>
-            <button type="submit" class="submit-btn">Submit</button>
-          </form>
-        </div>
-
-
+          info@company.com</p>
       </div>
 
     </div>
+    <div class="col-right">
+   
+      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+    <div class="form-group">
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+    </div>
+    <div class="form-group">
+      <label for="message">Message</label>
+      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="verificationCode">Code</label>
+      <input type="text" id="verificationCode" name="verificationCode" required>
+      <!-- Display the code inside a div -->
+      <div id="codeDisplay" class="code-box">ABC123</div>
+      <!-- Input field to store the code (invisibly) -->
+    </div>
+
+    <div class="form-group">
+      <button type="button" id="refreshCodeBtn">Refresh Code</button>
+    </div>
+    <button type="submit" class="submit-btn">Submit</button>
+  </form>
+    </div>
+  </div>
+</div>
+
+  <div class="map-container">
+    <!-- <h3> Location</h3> -->
+    <div class="map-responsive">
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4804323839676!2d73.80092486980347!3d18.59744852819473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b95d8c1f62cf%3A0xa88ec1997c7acf8b!2sDevcons%20Software%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1737766217321!5m2!1sen!2sin" 
+        width="100%"
+         height="400" 
+         style="border:0;" 
+         allowfullscreen=""
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+    </div>
+  </div>
+</div>
 
   </main>
-
-
-
-
-
-
   <!--
     - FOOTER
   -->
 
   <footer>
-
 
     <div class="footer-nav">
 
@@ -670,7 +659,6 @@
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
-
         </ul>
 
         <ul class="footer-nav-list">
@@ -834,39 +822,11 @@
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <!-- For Banner -->
-
-  <script>
-    const sliderContainer = document.querySelector('.slider-container');
-    const sliderItems = document.querySelectorAll('.slider-item');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    let currentIndex = 0;
-
-    // Function to update the slider position
-    function updateSlider() {
-      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // Event Listeners for Buttons
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
-      updateSlider();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
-      updateSlider();
-    });
-  </script>
-
-
   <!-- Script for Contact Form -->
   <script>
     // Initialize the verification code
     const generateCode = () => {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
       let newCode = '';
       for (let i = 0; i < 6; i++) {
         newCode += characters.charAt(Math.floor(Math.random() * characters.length));
