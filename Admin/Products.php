@@ -104,13 +104,39 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
         <label for="category" class="form-label">Category</label>
         <select class="form-control" id="category" name="category" required>
           <option value="">Select Product</option>
-          <option value="v_neck_tshirt">V Neck T-shirt</option>
-          <option value="travelbag">Travel Bag</option>
           <option value="round_neck_tshirt">Round Neck T-shirt</option>
-          <option value="laptopbag">Laptop Bag</option>
+          <option value="v_neck_tshirt">V Neck T-shirt</option>
+          <option value="pool_tshir">Pool T-shirt</option>
+          <option value="cutSew">Cut And Sew T-Shirt</option>
+          <option value="basicpool">Basic Pool Tshirt</option>
+
+          <option value="cap">Cap</option>
           <option value="jacket">Jacket</option>
+          <option value="sweartshirt">Sweart Shirt</option>
+          <option value="denimShirt">Denim Shirt</option>
+          <option value="windcheaters">Wind Cheaters</option>
+          <option value="ties">Tie</option>
+
           <option value="handbag">Handbag</option>
-          <option value="cap">Cap</option> <!-- Added "Cap" option -->
+          <option value="strolleybag">Strolley Bag</option>
+          <option value="travelbag">Travel Bag</option>
+          <option value="backpacks">Back Packs</option>
+          <option value="laptopbag">Laptop Bag</option>
+          <option value="laptopcumbag">laptopcumbag</option>
+          <option value="trekkingbag">Trekking Bag</option>
+          <option value="passport">Passport Holder</option>
+          <option value="ipad">I Pad Pouch</option>
+          <option value="laptophandbag">Laptop Hand Bag</option>
+          <option value="laptopPouch">Laptop Pouch</option>
+
+
+          <option value="leatherofficebag">leather Office Bag</option>
+          <option value="leatherpassport">leather passport Holder</option>
+          <option value="leatherwallets">leather Wallets</option>
+          <option value="leatherorganizer">leather Oraganizer</option>
+          <option value="leathergift">leather Gift Set</option>
+
+
         </select>
       </div>
 

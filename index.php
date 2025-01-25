@@ -452,7 +452,7 @@
               echo '<p class="banner-text">starting at RS. <b>' .
                 number_format($row['price'], 2) .
                 '</b></p>';
-              echo '<a href="#" class="banner-btn">Shop now</a>';
+              echo '<a href="services.php" class="banner-btn">Shop now</a>';
               echo '</div>';
               echo '</div>';
             }
@@ -674,15 +674,15 @@
               <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80"
                 height="80">
 
-              <p class="testimonial-name">Alan Doe</p>
+              <p class="testimonial-name">Sonali</p>
 
-              <p class="testimonial-title">CEO & Founder Invision</p>
+              <!-- <p class="testimonial-title">CEO & Founder Invision</p> -->
 
               <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
 
               <p class="testimonial-desc">
-                Lorem ipsum dolor sit amet consectetur Lorem ipsum
-                dolor dolor sit amet.
+              Amazing work!  Devcons Software Solutions created a logo that perfectly represents my brand.
+               Their creativity and professionalism are top-notch. Highly recommend!
               </p>
 
             </div>
@@ -705,7 +705,7 @@
 
               <h2 class="cta-title">Summer collection</h2>
 
-              <p class="cta-text">Starting @ Rs. 10</p>
+              <p class="cta-text">Starting @ Rs. 5000</p>
 
               <button class="cta-btn">Shop now</button>
 
@@ -733,11 +733,10 @@
 
                 <div class="service-content">
 
-                  <h3 class="service-title">Worldwide Delivery</h3>
-                  <p class="service-desc">For Order Over $100</p>
+                  <h3 class="service-title">Logo Design</h3>
+                  <p class="service-desc">Unique and creative logos.</p>
 
                 </div>
-
               </a>
 
               <a href="#" class="service-item">
@@ -748,8 +747,8 @@
 
                 <div class="service-content">
 
-                  <h3 class="service-title">Next Day delivery</h3>
-                  <p class="service-desc">UK Orders Only</p>
+                  <h3 class="service-title">Brand Identity</h3>
+                  <p class="service-desc"> Memorable and consistent branding.</p>
 
                 </div>
 
@@ -763,8 +762,8 @@
 
                 <div class="service-content">
 
-                  <h3 class="service-title">Best Online Support</h3>
-                  <p class="service-desc">Hours: 8AM - 11PM</p>
+                  <h3 class="service-title">Custom Illustrations</h3>
+                  <p class="service-desc">Custom artwork for your brand.</p>
 
                 </div>
 
@@ -778,8 +777,8 @@
 
                 <div class="service-content">
 
-                  <h3 class="service-title">Return Policy</h3>
-                  <p class="service-desc">Easy & Free Return</p>
+                  <h3 class="service-title">Business Cards</h3>
+                  <p class="service-desc">Professional card designs.</p>
 
                 </div>
 
@@ -793,8 +792,8 @@
 
                 <div class="service-content">
 
-                  <h3 class="service-title">30% money back</h3>
-                  <p class="service-desc">For Order Over $100</p>
+                  <h3 class="service-title">Social Media Graphics</h3>
+                  <p class="service-desc">Eye-catching visuals</p>
 
                 </div>
 
