@@ -16,8 +16,7 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-
+  <!-- <link rel="stylesheet" href="./assets/css/style.css"> -->
 
 
   <!--
@@ -28,192 +27,271 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    
 
-<style>
-  /* 2nd Nav */
-  .desktop-menu-category-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
+  <style>
+    /* 2nd Nav */
+    .desktop-menu-category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
 
-  .menu-category {
-    position: relative;
-    margin-right: 20px;
-  }
+    .menu-category {
+      position: relative;
+      margin-right: 20px;
+    }
 
-  .menu-category .menu-title {
-    text-decoration: none;
-    color: #000;
-  }
+    .menu-category .menu-title {
+      text-decoration: none;
+      color: #000;
+    }
 
-  .menu-category .dropdown {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    z-index: 1000;
-    /* Add a high z-index */
-  }
+    .menu-category .dropdown {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      padding: 10px 0;
+      min-width: 200px;
+      z-index: 1000;
+      /* Add a high z-index */
+    }
 
-  .menu-category:hover .dropdown {
-    display: block;
-  }
+    .menu-category:hover .dropdown {
+      display: block;
+    }
 
-  .dropdown li {
-    padding: 5px 15px;
-    border-bottom: 1px solid #ddd;
-    /* Add a small gray line under each item */
-  }
+    .dropdown li {
+      padding: 5px 15px;
+      border-bottom: 1px solid #ddd;
+      /* Add a small gray line under each item */
+    }
 
-  .dropdown li a {
-    text-decoration: none;
-    color: #333;
-  }
+    .dropdown li a {
+      text-decoration: none;
+      color: #333;
+    }
 
-  .dropdown li a:hover {
-    color: var(--salmon-pink);
-  }
+    .dropdown li a:hover {
+      color: var(--salmon-pink);
+    }
 
-  /* Add a higher z-index to the nav container */
-  .desktop-navigation-menu {
-    position: relative;
-    z-index: 1000;
-  }
-</style>
-<style>
-  .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-left,
-.col-right {
-  flex: 1; /* Ensures both columns are of equal width */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.col-left {
-  position: sticky;
-  top: 0; 
-  height: 100vh; /* Optional: If you want the column to span the full viewport height */
-  padding: 20px;
-}
-
-.col-right {
-  background-color: #ffffff; /* Optional: Background color for the right column */
-}
-
+    /* Add a higher z-index to the nav container */
+    .desktop-navigation-menu {
+      position: relative;
+      z-index: 1000;
+    }
   </style>
-<style>
-  /* General container styling */
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px;
-}
+  <style>
+    /* Style the code box */
+    .code-box {
+      font-size: 20px;
+      /* Adjust the font size */
+      font-family: monospace;
+      /* Monospaced font for a code appearance */
+      background-color: #f0f0f0;
+      /* Light background color */
+      padding: 10px;
+      border: 2px solid #ccc;
+      border-radius: 5px;
+      width: 150px;
+      /* Adjust the width as per your preference */
+      text-align: center;
+      cursor: not-allowed;
+      /* Make it non-interactive */
+      user-select: none;
+      /* Disable text selection */
+      pointer-events: none;
+      /* Disable interaction with the element */
+    }
 
-/* Address container styling */
-.address-container {
-  padding: 20px;
-  border-radius: 8px;
-  margin-bottom: 20px;
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
-}
+    .contact-form-section button {
+      padding: 8px 12px;
+      /* Reduced padding to make buttons smaller */
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
 
-.address-container h3 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #333;
-}
+    /* Product Grid */
+    /* Container and Row */
+    .container {
+      display: flex;
+      gap: 30px;
+      /* Adds space between the columns */
+      padding: 20px;
+    }
 
-.address-container p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.5;
-}
+    .row {
+      display: flex;
+      width: 100%;
+    }
 
-/* Contact form section styling */
-.contact-form-section {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
+    /* Column Styling */
+    .col-8 {
+      flex: 2;
+      /* Occupies more space for the product grid */
+    }
 
-.form-group {
-  margin-bottom: 15px;
-}
+    .col-4 {
+      flex: 1;
+      /* Occupies less space for the contact form */
+    }
 
-.form-group label {
-  display: block;
-  font-size: 16px;
-  color: #333;
-  margin-bottom: 5px;
-}
+    /* Product Grid */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      /* 3 products per row */
+      gap: 20px;
+      /* Space between products */
+    }
 
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
+    .product-grid>* {
+      border: 1px solid #ddd;
+      padding: 10px;
+      border-radius: 5px;
+      text-align: center;
+      background-color: #fff;
+    }
 
-.form-group textarea {
-  resize: vertical;
-  height: 100px;
-}
+    /* Contact Form Styling */
+    .contact-form-section {
+      position: sticky;
+      top: 20px;
+      /* Keeps the form 20px from the top when scrolling */
+      background-color: #fff;
+      /* Ensures the background color is consistent */
+      padding: 20px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      /* Subtle shadow */
+    }
 
-#codeDisplay {
-  background-color: #f1f1f1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  text-align: center;
-  margin-bottom: 10px;
-}
+    /* Form Styling */
+    .form-group {
+      margin-bottom: 15px;
+    }
 
-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: #ffffff;
-  cursor: pointer;
-}
+    .form-group label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
 
-button:hover {
-  background-color: #0056b3;
-}
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
 
-.submit-btn {
-  background-color: #28a745;
-}
+    .code-box {
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
 
-.submit-btn:hover {
-  background-color: #218838;
-}
+    .submit-btn {
+      background-color: #007bff;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
 
-</style>
+    .submit-btn:hover {
+      background-color: #0056b3;
+    }
+
+    /* Basic styling */
+    .desktop-menu-category-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+    }
+
+    .menu-category {
+      position: relative;
+      margin-right: 20px;
+    }
+
+    .menu-category .menu-title {
+      text-decoration: none;
+      color: #000;
+      padding: 10px 15px;
+      display: inline-block;
+    }
+
+    .menu-category .dropdown {
+      list-style: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ddd;
+      display: none;
+      /* Hidden by default */
+      padding: 10px 0;
+      min-width: 150px;
+      z-index: 1000;
+      /* Ensures the dropdown is above other elements */
+    }
+
+    .menu-category:hover .dropdown {
+      display: block;
+      /* Show on hover */
+    }
+
+    .dropdown li {
+      padding: 5px 15px;
+    }
+
+    .dropdown li a {
+      text-decoration: none;
+      color: #333;
+      display: block;
+
+    }
+
+    .dropdown li a:hover {
+      color: hsl(0, 100%, 70%);
+      ;
+    }
+
+    /* Ensure parent container doesn't hide overflow */
+    .container {
+      position: relative;
+      z-index: auto;
+      /* Prevents conflicts with dropdown z-index */
+    }
+
+    /* Add clearfix to prevent layout issues */
+    .container::after {
+      content: '';
+      display: table;
+      clear: both;
+    }
+
+    .product-box {
+      margin-top: 20px;
+    }
+  </style>
+
 
 </head>
 
-
 <body>
-
-  <!--
-    - HEADER
-  -->
-
   <header>
 
 
@@ -240,7 +318,7 @@ button:hover {
             </li>
 
             <li class="menu-category">
-              <a href="services.php" class="menu-title">Services</a>
+              <a href="" class="menu-title">Services</a>
             </li>
 
 
@@ -430,6 +508,7 @@ button:hover {
       </div>
 
     </nav>
+
     <!-- 2nd Nav Bar  -->
 
     <nav class="desktop-navigation-menu">
@@ -450,9 +529,9 @@ button:hover {
               <ul class="dropdown">
                 <li><a href="round_neck.php">Round Neck</a></li>
                 <li><a href="v_neck.php">V-Neck</a></li>
-                <li><a href="pool_tshirt.php">Pool T-Shirt </a></li>
-                <li><a href="cutSew.php">Cut and sew T-Shirt</a></li>
-                <li><a href="basicpool.php">Basic Pool T-Shirt</a></li>
+                <li><a href="">Pool T-Shirt </a></li>
+                <li><a href="">Cut and sew T-Shirt</a></li>
+                <li><a href="">Basic Pool T-Shirt</a></li>
 
               </ul>
             </li>
@@ -462,10 +541,10 @@ button:hover {
               <ul class="dropdown">
                 <li><a href="cap.php">Cap</a></li>
                 <li><a href="jackets.php">Jackets</a></li>
-                <li><a href="sweartshirt.php">Sweartshirt</a></li>
-                <li><a href="denimShirt.php">Denim Shirt</a></li>
-                <li><a href="windcheaters.php">Windcheaters</a></li>
-                <li><a href="ties.php">Ties</a></li>
+                <li><a href="">Sweartshirt</a></li>
+                <li><a href="">Denim Shirt</a></li>
+                <li><a href="">Windcheaters</a></li>
+                <li><a href="">Ties</a></li>
 
               </ul>
             </li>
@@ -474,28 +553,28 @@ button:hover {
               <a href="#" class="menu-title">Travel</a>
               <ul class="dropdown">
                 <li><a href="handbag.php">Hand Bag</a></li>
-                <li><a href="strolleybag.php">Strolley Bags</a></li>
+                <li><a href="">Strolley Bags</a></li>
                 <li><a href="travelbag.php">Travel Bags</a></li>
-                <li><a href="backpacks.php">Back Packs</a></li>
+                <li><a href="">Back Packs</a></li>
                 <li><a href="laptopbag.php">Laptop Bags</a></li>
-                <li><a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a></li>
-                <li><a href="trekkingbag.php">Trekking Bag</a></li>
-                <li><a href="passport.php">Passport Holder</a></li>
-                <li><a href="ipad.php">I Pad Pouch</a></li>
-                <li><a href="laptophandbag.php">Laptop Hand Bag</a></li>
-                <li><a href="laptopPouch.php">Laptop Pouch</a></li>
+                <li><a href="">Laptop Cum Overnighter Bag</a></li>
+                <li><a href="">Trekking Bag</a></li>
+                <li><a href="">Passport Holder</a></li>
+                <li><a href="">I Pad Pouch</a></li>
+                <li><a href="">Laptop Hand Bag</a></li>
+                <li><a href="">Laptop Pouch</a></li>
 
               </ul>
             </li>
 
             <li class="menu-category">
-              <a href="" class="menu-title">Leather</a>
+              <a href="services.php" class="menu-title">Leather</a>
               <ul class="dropdown">
-                <li><a href="leatherofficebag.php">Leather office Bags</a></li>
-                <li><a href="leatherpassport.php">Leather Passport Holder</a></li>
-                <li><a href="leatherwallets.php">Leather Wallets</a></li>
-                <li><a href="leatherorganizer.php">Leather Organizers</a></li>
-                <li><a href="leathergift.php">Leather Gift Sets</a></li>
+                <li><a href="">Leather office Bags</a></li>
+                <li><a href="">Leather Passport Holder</a></li>
+                <li><a href="">Leather Wallets</a></li>
+                <li><a href="">Leather Organizers</a></li>
+                <li><a href="">Leather Gift Sets</a></li>
               </ul>
             </li>
 
@@ -507,6 +586,9 @@ button:hover {
             <li class="menu-category">
               <a href="" class="menu-title">Brands</a>
             </li>
+
+
+
           </ul>
 
       </div>
@@ -515,92 +597,79 @@ button:hover {
 
   </header>
 
-
-  <!--
-    - MAIN
-  -->
-
   <main>
 
-  <div class="container">
-  <div class="row">
-    <div class="col-left">
-   
-      <div class="address-container">
+    <div class="product-container">
 
-      <h3>Address:</h3>
-      <p>Devcon software Services<br>
-      Office No. 4-B, Second Floor, <br>
-      Ganesham Commercial -A,<br>
-      Survey No. 21/18-21/24, BRTS Road, <br>
-      Pimple Saudagar, Pune- 411027<br>
-</div>
-      <div class="address-container">
-      <h3>Phone:</h3>
+      <div class="container">
 
-         1 234 567 890<br>
+
+
+        <!-- products  -->
+        <div class="product-box">
+          <div class="container">
+            <div class="row">
+              <!-- PRODUCT COLUMN -->
+              <div class="col-8 product-column">
+               
+               <!-- PRODUCT GRID -->
+          <?php // Set the category filter to 'cap'
+          $category_filter = 'laptophandbag'; ?>
+
+          <div class="product-grid">
+            <?php include 'Admin/fetch_products.php'; ?>
+          </div>
+          
+              </div>
+
+<!-- CONTACT FORM COLUMN -->
+<div class="col-4 form-column">
+  <div class="contact-form-section">
+    <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your full name" required>
       </div>
-      <div class="address-container">
-         <h3>Email:</h3>
-
-          info@company.com</p>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
       </div>
-
-    </div>
-    <div class="col-right">
-   
-      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-    </div>
-    <div class="form-group">
-      <label for="verificationCode">Code</label>
-      <input type="text" id="verificationCode" name="verificationCode" required>
-      <!-- Display the code inside a div -->
-      <div id="codeDisplay" class="code-box">ABC123</div>
-      <!-- Input field to store the code (invisibly) -->
-    </div>
-
-    <div class="form-group">
-      <button type="button" id="refreshCodeBtn">Refresh Code</button>
-    </div>
-    <button type="submit" class="submit-btn">Submit</button>
-  </form>
-    </div>
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+      </div>
+      <div class="form-group">
+        <label for="verificationCode">Code</label>
+        <input type="text" id="verificationCode" name="verificationCode" placeholder="Enter the code below" required>
+      </div>
+      <div class="form-group">
+        <p id="codeDisplay" class="code-box">ABC123</p>
+        <button type="button" id="refreshCodeBtn">Refresh Code</button>
+      </div>
+      <button type="submit" class="submit-btn" id="submitButton">Submit</button>
+    </form>
   </div>
 </div>
+              </div>
 
-  <div class="map-container">
-    <!-- <h3> Location</h3> -->
-    <div class="map-responsive">
+            </div>
+          </div>
+        </div>
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4804323839676!2d73.80092486980347!3d18.59744852819473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b95d8c1f62cf%3A0xa88ec1997c7acf8b!2sDevcons%20Software%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1737766217321!5m2!1sen!2sin" 
-        width="100%"
-         height="400" 
-         style="border:0;" 
-         allowfullscreen=""
-          loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+
+
+      </div>
+
     </div>
-  </div>
-</div>
 
   </main>
-  <!--
-    - FOOTER
-  -->
 
   <footer>
+
+    <div class="footer-category">
+
+
+    </div>
 
     <div class="footer-nav">
 
@@ -659,6 +728,7 @@ button:hover {
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
+
         </ul>
 
         <ul class="footer-nav-list">
@@ -810,6 +880,8 @@ button:hover {
 
   </footer>
 
+
+
   <!--
     - custom js link
   -->
@@ -822,46 +894,76 @@ button:hover {
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <!-- Script for Contact Form -->
+  <!-- For Banner -->
+
   <script>
-    // Initialize the verification code
-    const generateCode = () => {
-      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
-      let newCode = '';
-      for (let i = 0; i < 6; i++) {
-        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
-      }
-      return newCode;
-    };
+    const sliderContainer = document.querySelector('.slider-container');
+    const sliderItems = document.querySelectorAll('.slider-item');
+    const prevBtn = document.querySelector('.prev-btn');
+    const nextBtn = document.querySelector('.next-btn');
 
-    // Update the displayed code
-    const refreshCode = () => {
-      const newCode = generateCode();
-      document.getElementById('codeDisplay').textContent = newCode;
-    };
+    let currentIndex = 0;
 
-    // Event listener for refreshing the code
-    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+    // Function to update the slider position
+    function updateSlider() {
+      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
 
-    // Validate the code on form submission
-    const validateCode = () => {
-      const displayedCode = document.getElementById('codeDisplay').textContent;
-      const enteredCode = document.getElementById('verificationCode').value;
+    // Event Listeners for Buttons
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
+      updateSlider();
+    });
 
-      if (displayedCode !== enteredCode) {
-        alert('Verification code is incorrect. Please try again.');
-        return false; // Prevent form submission
-      }
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
+      updateSlider();
+    });
 
-      return true; // Allow form submission
-    };
-
-    // Set an initial code when the page loads
-    window.onload = refreshCode;
   </script>
-
-
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+
+
+<!-- Script for Contact Form -->
+<script>
+  // Initialize the verification code
+  const generateCode = () => {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let newCode = '';
+    for (let i = 0; i < 6; i++) {
+      newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    return newCode;
+  };
+
+  // Update the displayed code
+  const refreshCode = () => {
+    const newCode = generateCode();
+    document.getElementById('codeDisplay').textContent = newCode;
+  };
+
+  // Event listener for refreshing the code
+  document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+
+  // Validate the code on form submission
+  const validateCode = () => {
+    const displayedCode = document.getElementById('codeDisplay').textContent;
+    const enteredCode = document.getElementById('verificationCode').value;
+
+    if (displayedCode !== enteredCode) {
+      alert('Verification code is incorrect. Please try again.');
+      return false; // Prevent form submission
+    }
+
+    return true; // Allow form submission
+  };
+
+  // Set an initial code when the page loads
+  window.onload = refreshCode;
+</script>
+
 
 </body>
 
