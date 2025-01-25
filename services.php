@@ -318,90 +318,86 @@
         </nav>
 
         <!-- 2nd Nav Bar  -->
-
         <nav class="desktop-navigation-menu">
 
-            <div class="container">
+<div class="container">
 
-                <ul class="desktop-menu-category-list">
+  <ul class="desktop-menu-category-list">
 
-                    <ul class="desktop-menu-category-list">
+    <ul class="desktop-menu-category-list">
 
-                        <li class="menu-category">
-                            <a href="#" class="menu-title">Embroidery Designing</a>
-                        </li>
-
-
-                        <li class="menu-category">
-                            <a href="#" class="menu-title">T-Shirt</a>
-                            <ul class="dropdown">
-                                <li><a href="round_neck.php">Round Neck</a></li>
-                                <li><a href="v_neck.php">V-Neck</a></li>
-                                <li><a href="">Pool T-Shirt </a></li>
-                                <li><a href="">Cut and sew T-Shirt</a></li>
-                                <li><a href="">Basic Pool T-Shirt</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="menu-category">
-                            <a href="" class="menu-title">Apparels</a>
-                            <ul class="dropdown">
-                                <li><a href="cap.php">Cap</a></li>
-                                <li><a href="jackets.php">Jackets</a></li>
-                                <li><a href="">Sweartshirt</a></li>
-                                <li><a href="">Denim Shirt</a></li>
-                                <li><a href="">Windcheaters</a></li>
-                                <li><a href="">Ties</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="menu-category">
-                            <a href="#" class="menu-title">Travel</a>
-                            <ul class="dropdown">
-                                <li><a href="handbag.php">Hand Bag</a></li>
-                                <li><a href="">Strolley Bags</a></li>
-                                <li><a href="travelbag.php">Travel Bags</a></li>
-                                <li><a href="">Back Packs</a></li>
-                                <li><a href="laptopbag.php">Laptop Bags</a></li>
-                                <li><a href="">Laptop Cum Overnighter Bag</a></li>
-                                <li><a href="">Trekking Bag</a></li>
-                                <li><a href="">Passport Holder</a></li>
-                                <li><a href="">I Pad Pouch</a></li>
-                                <li><a href="">Laptop Hand Bag</a></li>
-                                <li><a href="">Laptop Pouch</a></li>
-
-                            </ul>
-                        </li>
-
-                        <li class="menu-category">
-                            <a href="" class="menu-title">Leather</a>
-                            <ul class="dropdown">
-                                <li><a href="">Leather office Bags</a></li>
-                                <li><a href="">Leather Passport Holder</a></li>
-                                <li><a href="">Leather Wallets</a></li>
-                                <li><a href="">Leather Organizers</a></li>
-                                <li><a href="">Leather Gift Sets</a></li>
-                            </ul>
-                        </li>
-
-                        <li class="menu-category">
-                            <a href="" class="menu-title">Awards</a>
-
-                        </li>
-
-                        <li class="menu-category">
-                            <a href="" class="menu-title">Brands</a>
-                        </li>
+      <li class="menu-category">
+        <a href="#" class="menu-title">Embroidery Designing</a>
+      </li>
 
 
+      <li class="menu-category">
+        <a href="#" class="menu-title">T-Shirt</a>
+        <ul class="dropdown">
+          <li><a href="round_neck.php">Round Neck</a></li>
+          <li><a href="v_neck.php">V-Neck</a></li>
+          <li><a href="pool_tshirt.php">Pool T-Shirt </a></li>
+          <li><a href="cutSew.php">Cut and sew T-Shirt</a></li>
+          <li><a href="basicpool.php">Basic Pool T-Shirt</a></li>
 
-                    </ul>
+        </ul>
+      </li>
 
-            </div>
+      <li class="menu-category">
+        <a href="" class="menu-title">Apparels</a>
+        <ul class="dropdown">
+          <li><a href="cap.php">Cap</a></li>
+          <li><a href="jackets.php">Jackets</a></li>
+          <li><a href="sweartshirt.php">Sweartshirt</a></li>
+          <li><a href="denimShirt.php">Denim Shirt</a></li>
+          <li><a href="windcheaters.php">Windcheaters</a></li>
+          <li><a href="ties.php">Ties</a></li>
 
-        </nav>
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="#" class="menu-title">Travel</a>
+        <ul class="dropdown">
+          <li><a href="handbag.php">Hand Bag</a></li>
+          <li><a href="strolleybag.php">Strolley Bags</a></li>
+          <li><a href="travelbag.php">Travel Bags</a></li>
+          <li><a href="backpacks.php">Back Packs</a></li>
+          <li><a href="laptopbag.php">Laptop Bags</a></li>
+          <li><a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a></li>
+          <li><a href="trekkingbag.php">Trekking Bag</a></li>
+          <li><a href="passport.php">Passport Holder</a></li>
+          <li><a href="ipad.php">I Pad Pouch</a></li>
+          <li><a href="laptophandbag.php">Laptop Hand Bag</a></li>
+          <li><a href="laptopPouch.php">Laptop Pouch</a></li>
+
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="" class="menu-title">Leather</a>
+        <ul class="dropdown">
+          <li><a href="leatherofficebag.php">Leather office Bags</a></li>
+          <li><a href="leatherpassport.php">Leather Passport Holder</a></li>
+          <li><a href="leatherwallets.php">Leather Wallets</a></li>
+          <li><a href="leatherorganizer.php">Leather Organizers</a></li>
+          <li><a href="leathergift.php">Leather Gift Sets</a></li>
+        </ul>
+      </li>
+
+      <li class="menu-category">
+        <a href="" class="menu-title">Awards</a>
+
+      </li>
+
+      <li class="menu-category">
+        <a href="" class="menu-title">Brands</a>
+      </li>
+    </ul>
+
+</div>
+
+</nav>
 
     </header>
 
