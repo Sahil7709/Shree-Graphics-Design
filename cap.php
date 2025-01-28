@@ -29,62 +29,146 @@
 
 
   <style>
-    /* 2nd Nav */
-    .desktop-menu-category-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
+    /* 2nd Nav *//* General Styles */
+.desktop-menu-category-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
 
-    .menu-category {
-      position: relative;
-      margin-right: 20px;
-    }
+.menu-category {
+  position: relative;
+  margin-right: 20px;
+}
 
-    .menu-category .menu-title {
-      text-decoration: none;
-      color: #000;
-    }
+.menu-category .menu-title {
+  text-decoration: none;
+  color: #000;
+}
 
-    .menu-category .dropdown {
-      list-style: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      display: none;
-      padding: 10px 0;
-      min-width: 200px;
-      z-index: 1000;
-      /* Add a high z-index */
-    }
+.menu-category .dropdown {
+  list-style: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  display: none;
+  padding: 10px 0;
+  min-width: 200px;
+  z-index: 1000;
+}
 
-    .menu-category:hover .dropdown {
-      display: block;
-    }
+.menu-category:hover .dropdown {
+  display: block;
+}
 
-    .dropdown li {
-      padding: 5px 15px;
-      border-bottom: 1px solid #ddd;
-      /* Add a small gray line under each item */
-    }
+.dropdown li {
+  padding: 5px 15px;
+  border-bottom: 1px solid #ddd;
+}
 
-    .dropdown li a {
-      text-decoration: none;
-      color: #333;
-    }
+.dropdown li a {
+  text-decoration: none;
+  color: #333;
+}
 
-    .dropdown li a:hover {
-      color: var(--salmon-pink);
-    }
+.dropdown li a:hover {
+  color: var(--salmon-pink);
+}
 
-    /* Add a higher z-index to the nav container */
-    .desktop-navigation-menu {
-      position: relative;
-      z-index: 1000;
-    }
+/* Add a higher z-index to the nav container */
+.desktop-navigation-menu {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Hamburger menu for mobile */
+.hamburger-menu {
+  display: none;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.mobile-menu li {
+  margin-bottom: 10px;
+}
+
+.mobile-menu a {
+  text-decoration: none;
+  color: #000;
+}
+
+.mobile-menu .dropdown {
+  position: relative;
+  display: block;
+  width: 100%;
+}
+
+.mobile-menu .dropdown li {
+  border-bottom: none;
+}
+
+.mobile-menu .dropdown li a {
+  padding-left: 30px;
+}
+
+/* Make dropdown visible on mobile */
+.menu-category .dropdown {
+  display: block;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+  .desktop-menu-category-list {
+    display: none;
+  }
+
+  .hamburger-menu {
+    display: block;
+    cursor: pointer;
+  }
+
+  .mobile-menu {
+    display: flex;
+  }
+
+  .menu-category {
+    margin-right: 0;
+  }
+
+  .menu-category .menu-title {
+    display: block;
+    padding: 10px 0;
+    text-align: center;
+  }
+
+  /* Toggle dropdown on click for mobile */
+  .menu-category .dropdown {
+    display: none;
+  }
+
+  .menu-category.active .dropdown {
+    display: block;
+  }
+}
+
+@media (max-width: 480px) {
+  .menu-category .menu-title {
+    font-size: 16px;
+  }
+
+  .desktop-navigation-menu {
+    padding: 0 10px;
+  }
+}
+
   </style>
   <style>
     /* Style the code box */
@@ -337,13 +421,13 @@
     <div class="mobile-bottom-navigation">
 
       <button class="action-btn" data-mobile-menu-open-btn>
-        <ion-icon name="menu-outline"></ion-icon>
+        <a href = "">
+        <ion-icon name="menu-outline"></ion-icon></a>
       </button>
 
       <button class="action-btn">
         <ion-icon name="bag-handle-outline"></ion-icon>
 
-        <span class="count">0</span>
       </button>
 
       <button class="action-btn">
@@ -353,7 +437,6 @@
       <button class="action-btn">
         <ion-icon name="heart-outline"></ion-icon>
 
-        <span class="count">0</span>
       </button>
 
       <button class="action-btn" data-mobile-menu-open-btn>
@@ -514,6 +597,9 @@
     <nav class="desktop-navigation-menu">
 
       <div class="container">
+      <div class="hamburger-menu">
+      <span class="hamburger-icon">&#9776;</span>
+    </div>
 
         <ul class="desktop-menu-category-list">
 
@@ -611,7 +697,8 @@
                
                <!-- PRODUCT GRID -->
           <?php // Set the category filter to 'cap'
-          $category_filter = 'cap'; ?>
+// Set the category filter to 'cap'
+$category_filter = 'cap'; ?>
 
           <div class="product-grid">
             <?php include 'Admin/fetch_products.php'; ?>
@@ -652,8 +739,6 @@
             </div>
           </div>
         </div>
-
-
 
       </div>
 
@@ -918,6 +1003,22 @@
   // Set an initial code when the page loads
   window.onload = refreshCode;
 </script>
+
+
+<!-- SCRIPT FOR 2ND NAV -->
+ <script>
+  document.querySelector('.hamburger-menu').addEventListener('click', function() {
+  document.querySelector('.mobile-menu').classList.toggle('active');
+});
+
+const menuItems = document.querySelectorAll('.menu-category');
+menuItems.forEach(item => {
+  item.addEventListener('click', function() {
+    item.classList.toggle('active');
+  });
+});
+
+  </script>
 
 
 </body>
