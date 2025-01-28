@@ -663,219 +663,180 @@
 
   <footer>
 
-    <div class="footer-category">
 
 
-    </div>
+<div class="footer-nav">
 
-    <div class="footer-nav">
+  <div class="container">
 
-      <div class="container">
+    <ul class="footer-nav-list">
 
-        <ul class="footer-nav-list">
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Popular Categories</h2>
+      </li>
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Popular Categories</h2>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">T-Shirt</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Fashion</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Apparels</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Electronic</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Travel</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cosmetic</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Leather</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Health</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Awards</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Watches</a>
-          </li>
 
-        </ul>
+    </ul>
 
-        <ul class="footer-nav-list">
+    <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Products</h2>
-          </li>
+      <li class="footer-nav-item">
+        <h2 class="nav-title">T-Shirt </h2>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices drop</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link"> Round Neck</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New products</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">V Neck</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best sales</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Pool T-Shirt</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Basic Pool T-Shirt</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Cut and sew T-Shirt</a>
+      </li>
 
-        </ul>
+    </ul>
 
-        <ul class="footer-nav-list">
+    <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Our Company</h2>
-          </li>
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Apparels</h2>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Delivery</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Cap</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Legal Notice</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Jackets</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Terms and conditions</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Sweartshirt</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">About us</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link"> Denim Shirt</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Secure payment</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Ties</a>
+      </li>
 
-        </ul>
+    </ul>
 
-        <ul class="footer-nav-list">
+    <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Services</h2>
-          </li>
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Services</h2>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices drop</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Logo Design</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New products</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Custom Illustrations</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best sales</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Business Cards</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Social Media Graphics</a>
+      </li>
 
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
-          </li>
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Brand Identity</a>
+      </li>
 
-        </ul>
+    </ul>
 
-        <ul class="footer-nav-list">
+    <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Contact</h2>
-          </li>
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Contact</h2>
+      </li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+      <li class="footer-nav-item flex">
+        <div class="icon-box">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
 
-            <address class="content">
-              419 State 414 Rte
-              Beaver Dams, New York(NY), 14812, USA
-            </address>
-          </li>
+        <address class="content">
+          Office No. 4-B, Second Floor,Ganesham Commercial -A,Pune
+        </address>
+      </li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="call-outline"></ion-icon>
-            </div>
+      <li class="footer-nav-item flex">
+        <div class="icon-box">
+          <ion-icon name="call-outline"></ion-icon>
+        </div>
 
-            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
-          </li>
+        <a href="tel:+607936-8058" class="footer-nav-link">+91 9112100663</a>
+      </li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+      <li class="footer-nav-item flex">
+        <div class="icon-box">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
-          </li>
+        <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+      </li>
 
-        </ul>
+    </ul>
 
-        <ul class="footer-nav-list">
+    <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Follow Us</h2>
-          </li>
 
-          <li>
-            <ul class="social-link">
+    </ul>
 
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link">
-                  <ion-icon name="logo-facebook"></ion-icon>
-                </a>
-              </li>
+  </div>
 
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link">
-                  <ion-icon name="logo-twitter"></ion-icon>
-                </a>
-              </li>
+</div>
 
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link">
-                  <ion-icon name="logo-linkedin"></ion-icon>
-                </a>
-              </li>
+<div class="footer-bottom">
 
-              <li class="footer-nav-item">
-                <a href="#" class="footer-nav-link">
-                  <ion-icon name="logo-instagram"></ion-icon>
-                </a>
-              </li>
+  <div class="container">
+    <p class="copyright">
+      Copyright &copy; <a href="#">Devcon</a> all rights reserved.
+    </p>
 
-            </ul>
-          </li>
+  </div>
 
-        </ul>
+</div>
 
-      </div>
-
-    </div>
-
-    <div class="footer-bottom">
-
-      <div class="container">
-
-        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
-
-        <p class="copyright">
-          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
-        </p>
-
-      </div>
-
-    </div>
-
-  </footer>
+</footer>
 
 
 

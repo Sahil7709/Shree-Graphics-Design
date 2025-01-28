@@ -875,7 +875,182 @@
 
     </div>
 
-  </footer>
+    <footer>
+
+
+
+<div class="footer-nav">
+
+  <div class="container">
+
+    <ul class="footer-nav-list">
+
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Popular Categories</h2>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">T-Shirt</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Apparels</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Travel</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Leather</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Awards</a>
+      </li>
+
+
+    </ul>
+
+    <ul class="footer-nav-list">
+
+      <li class="footer-nav-item">
+        <h2 class="nav-title">T-Shirt </h2>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link"> Round Neck</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">V Neck</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Pool T-Shirt</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Basic Pool T-Shirt</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Cut and sew T-Shirt</a>
+      </li>
+
+    </ul>
+
+    <ul class="footer-nav-list">
+
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Apparels</h2>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Cap</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Jackets</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Sweartshirt</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link"> Denim Shirt</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Ties</a>
+      </li>
+
+    </ul>
+
+    <ul class="footer-nav-list">
+
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Services</h2>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Logo Design</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Custom Illustrations</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Business Cards</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Social Media Graphics</a>
+      </li>
+
+      <li class="footer-nav-item">
+        <a href="#" class="footer-nav-link">Brand Identity</a>
+      </li>
+
+    </ul>
+
+    <ul class="footer-nav-list">
+
+      <li class="footer-nav-item">
+        <h2 class="nav-title">Contact</h2>
+      </li>
+
+      <li class="footer-nav-item flex">
+        <div class="icon-box">
+          <ion-icon name="location-outline"></ion-icon>
+        </div>
+
+        <address class="content">
+          Office No. 4-B, Second Floor,Ganesham Commercial -A,Pune
+        </address>
+      </li>
+
+      <li class="footer-nav-item flex">
+        <div class="icon-box">
+          <ion-icon name="call-outline"></ion-icon>
+        </div>
+
+        <a href="tel:+607936-8058" class="footer-nav-link">+91 9112100663</a>
+      </li>
+
+      <li class="footer-nav-item flex">
+        <div class="icon-box">
+          <ion-icon name="mail-outline"></ion-icon>
+        </div>
+
+        <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+      </li>
+
+    </ul>
+
+    <ul class="footer-nav-list">
+
+
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="footer-bottom">
+
+  <div class="container">
+    <p class="copyright">
+      Copyright &copy; <a href="#">Devcon</a> all rights reserved.
+    </p>
+
+  </div>
+
+</div>
+
+</footer>
 
 
 
