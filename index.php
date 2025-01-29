@@ -5,12 +5,12 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devcon - eCommerce Website</title>
+  <title>Devcons </title>
 
   <!--
     - favicon
   -->
-  <!-- <link rel="shortcut icon" href="./assets/images/logo/devcon.webp" type="image/x-icon"> -->
+  <!-- <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon"> -->
 
   <!--
     - custom css link
@@ -25,68 +25,71 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-  <style>
-    /* 2nd Nav */
-    .desktop-menu-category-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-    }
-
-    .menu-category {
-      position: relative;
-      margin-right: 20px;
-    }
-
-    .menu-category .menu-title {
-      text-decoration: none;
-      color: #000;
-    }
-
-    .menu-category .dropdown {
-      list-style: none;
-      position: absolute;
-      top: 100%;
-      left: 0;
-      background-color: #fff;
-      border: 1px solid #ddd;
-      display: none;
-      padding: 10px 0;
-      min-width: 200px;
-      z-index: 1000;
-      /* Add a high z-index */
-    }
-
-    .menu-category:hover .dropdown {
-      display: block;
-    }
-
-    .dropdown li {
-      padding: 5px 15px;
-      border-bottom: 1px solid #ddd;
-      /* Add a small gray line under each item */
-    }
-
-    .dropdown li a {
-      text-decoration: none;
-      color: #333;
-    }
-
-    .dropdown li a:hover {
-      color: var(--salmon-pink);
-    }
-
-    /* Add a higher z-index to the nav container */
-    .desktop-navigation-menu {
-      position: relative;
-      z-index: 1000;
-    }
-
-  </style>
 </head>
 
 <body>
+
+
+  <div class="overlay" data-overlay></div>
+
+  <!--
+    - MODAL
+  -->
+
+  <div class="modal" data-modal>
+
+    <div class="modal-close-overlay" data-modal-overlay></div>
+
+    <div class="modal-content">
+
+      <button class="modal-close-btn" data-modal-close>
+        <ion-icon name="close-outline"></ion-icon>
+      </button>
+
+
+
+    </div>
+
+  </div>
+
+
+
+
+  <!--
+    - NOTIFICATION TOAST
+  -->
+
+  <div class="notification-toast" data-toast>
+
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
+
+    <div class="toast-banner">
+      <img src="./assets/images/cap1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Cap
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p>
+
+    </div>
+
+  </div>
+
+
+
+
 
   <!--
     - HEADER
@@ -100,142 +103,451 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <!-- <img src="./assets/images/logo/devcon.webp" alt="Devcon's logo" width="120" height="36"> -->
+          <!-- <img src="./assets/images/logo/devcons.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
-        Devcon
-
 
         <div class="header-search-container">
-          <ul class="desktop-menu-category-list">
 
-            <li class="menu-category">
-              <a href="index.php" class="menu-title">Home</a>
-            </li>
+          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
 
+          <button class="search-btn">
+            <ion-icon name="search-outline"></ion-icon>
+          </button>
 
-            <li class="menu-category">
-              <a href="vendors.php" class="menu-title">vendors</a>
-            </li>
-
-            <li class="menu-category">
-              <a href="services.php" class="menu-title">Services</a>
-            </li>
-
-
-            <li class="menu-category">
-              <a href="contact.php" class="menu-title">Contact</a>
-            </li>
-
-          </ul>
         </div>
+
+        <div class="header-user-actions">
+
+          <!-- <button class="action-btn">
+            <ion-icon name="person-outline"></ion-icon>
+          </button>
+
+          <button class="action-btn">
+            <ion-icon name="heart-outline"></ion-icon>
+          </button> -->
+
+          <button class="action-btn">
+            <!-- <a href="Awards.php "> -->
+            <ion-icon name="trophy-outline"></ion-icon></a>
+          </button>
+
+        </div>
+
       </div>
 
     </div>
 
+    <nav class="desktop-navigation-menu">
+
+      <div class="container">
+
+        <ul class="desktop-menu-category-list">
+
+          <li class="menu-category">
+            <a href="index.php" class="menu-title">Embroidery Designing
+            </a>
+          </li>
+
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">T-shirt</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="round_neck.php">Round Neck
+                </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="v_neck.php">V-Neck</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="pool_tshirt.php">Pool T-Shirt</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="cutSew.php">Cut and sew T-Shirt</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="basicpool.php">Basic Pool T-Shirt</a>
+              </li>
+            </ul>
+          </li>
+
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Apparels</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="cap.php">Cap</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="jackets.php">Jackets</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="sweartshirt.php">Sweartshirt</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="denimShirt.php">Denim Shirt</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="windcheaters.php">Windcheaters</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="ties.php">Ties</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Travel</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="handbag.php">Hand Bag</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="strolleybag.php">Strolley Bags</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="travelbag.php">Travel Bags</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="backpacks.php">Back Packs</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="laptopbag.php">Laptop Bags</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="trekkingbag.php">Trekking Bag</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="passport.php">Passport Holder</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="ipad.php">I Pad Pouch</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="laptophandbag.php">Laptop Hand Bag</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="laptopPouch.php"> Laptop Pouch</a>
+              </li>
+
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Leather</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="leatherofficebag.php">Leather office Bags</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leatherpassport.php">Leather Passport Holder</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leatherwallets.php">Leather Wallets</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leatherorganizer.php">Leather Organizers</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leathergift.php">Leather Gift Sets</a>
+              </li>
+
+            </ul>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Awards</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Brands</a>
+          </li>
+
+          <li class="menu-category">
+            <a href="contact.php" class="menu-title">Contact
+            </a>
+          </li>
+
+
+        </ul>
+
+      </div>
+
+    </nav>
+
     <div class="mobile-bottom-navigation">
 
-    <button class="action-btn">
-<a href = "index.php">
-  <ion-icon name="home-outline"></ion-icon>
-  </a>
-</button>
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="menu-outline"></ion-icon>
+      </button>
 
+      <button class="action-btn">
+        <ion-icon name="bag-handle-outline"></ion-icon>
 
-    <button class="action-btn" data-mobile-menu-open-btn>
-  <a href="vendors.php">
-  <ion-icon name="heart-outline"></ion-icon></a>
-</button>
+      </button>
 
+      <button class="action-btn">
+        <ion-icon name="home-outline"></ion-icon>
+      </button>
 
-<button class="action-btn" data-mobile-menu-open-btn>
-  <a href="services.php">
-  <ion-icon name="menu-outline"></ion-icon></a>
-</button>
+      <button class="action-btn">
+        <ion-icon name="heart-outline"></ion-icon>
 
+      </button>
 
+      <button class="action-btn" data-mobile-menu-open-btn>
+        <ion-icon name="grid-outline"></ion-icon>
+      </button>
 
-<button class="action-btn">
-  <a href="contact.php">
-  <ion-icon name="arrow-forward-outline"></ion-icon></a>
-</button>
+    </div>
 
+    <nav class="mobile-navigation-menu  has-scrollbar" data-mobile-menu>
 
-</div>
+      <div class="menu-top">
+        <h2 class="menu-title">Menu</h2>
 
+        <button class="menu-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
 
-    <!-- 2nd Nav Bar  -->
+      <ul class="mobile-menu-category-list">
 
-    <nav class="desktop-navigation-menu">
-  <div class="container">
-    <ul class="desktop-menu-category-list">
-      <li class="menu-category">
-        <a href="#" class="menu-title">Embroidery Designing</a>
-      </li>
+        <li class="menu-category">
+          <a href="index.php" class="menu-title">Embroidery Designing</a>
+        </li>
 
-      <li class="menu-category">
-        <a href="#" class="menu-title">T-Shirt</a>
-        <ul class="dropdown">
-          <li><a href="round_neck.php">Round Neck</a></li>
-          <li><a href="v_neck.php">V-Neck</a></li>
-          <li><a href="pool_tshirt.php">Pool T-Shirt</a></li>
-          <li><a href="cutSew.php">Cut and Sew T-Shirt</a></li>
-          <li><a href="basicpool.php">Basic Pool T-Shirt</a></li>
-        </ul>
-      </li>
+        <li class="menu-category">
 
-      <li class="menu-category">
-        <a href="#" class="menu-title">Apparels</a>
-        <ul class="dropdown">
-          <li><a href="cap.php">Cap</a></li>
-          <li><a href="jackets.php">Jackets</a></li>
-          <li><a href="sweartshirt.php">Sweatshirt</a></li>
-          <li><a href="denimShirt.php">Denim Shirt</a></li>
-          <li><a href="windcheaters.php">Windcheaters</a></li>
-          <li><a href="ties.php">Ties</a></li>
-        </ul>
-      </li>
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">T-shirt</p>
 
-      <li class="menu-category">
-        <a href="#" class="menu-title">Travel</a>
-        <ul class="dropdown">
-          <li><a href="handbag.php">Hand Bag</a></li>
-          <li><a href="strolleybag.php">Strolley Bags</a></li>
-          <li><a href="travelbag.php">Travel Bags</a></li>
-          <li><a href="backpacks.php">Back Packs</a></li>
-          <li><a href="laptopbag.php">Laptop Bags</a></li>
-          <li><a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a></li>
-          <li><a href="trekkingbag.php">Trekking Bag</a></li>
-          <li><a href="passport.php">Passport Holder</a></li>
-          <li><a href="ipad.php">I Pad Pouch</a></li>
-          <li><a href="laptophandbag.php">Laptop Hand Bag</a></li>
-          <li><a href="laptopPouch.php">Laptop Pouch</a></li>
-        </ul>
-      </li>
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
 
-      <li class="menu-category">
-        <a href="#" class="menu-title">Leather</a>
-        <ul class="dropdown">
-          <li><a href="leatherofficebag.php">Leather Office Bags</a></li>
-          <li><a href="leatherpassport.php">Leather Passport Holder</a></li>
-          <li><a href="leatherwallets.php">Leather Wallets</a></li>
-          <li><a href="leatherorganizer.php">Leather Organizers</a></li>
-          <li><a href="leathergift.php">Leather Gift Sets</a></li>
-        </ul>
-      </li>
+          <ul class="submenu-category-list" data-accordion>
 
-      <li class="menu-category">
-        <a href="#" class="menu-title">Awards</a>
-      </li>
+            <li class="submenu-category">
+              <a href="round_neck.php" class="submenu-title">Round Neck</a>
+            </li>
 
-      <li class="menu-category">
-        <a href="#" class="menu-title">Brands</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+            <li class="submenu-category">
+              <a href="v_neck.php" class="submenu-title">V-Neck</a>
+            </li>
 
+            <li class="submenu-category">
+              <a href="pool_tshirt.php" class="submenu-title">Pool T-Shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="cutSew.php" class="submenu-title">Cut and sew T-Shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="basicpool.php" class="submenu-title">Basic Pool T-Shirt</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Apparels</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="cap.php" class="submenu-title">Cap</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="jackets.php" class="submenu-title">Jackets</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="sweartshirt.php" class="submenu-title">Sweartshirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="denimShirt.php" class="submenu-title"> Denim Shirt</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="windcheaters.php" class="submenu-title"> Windcheaters</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="ties.php" class="submenu-title"> Ties</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Travel</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="handbag.php" class="submenu-title">Hand Bag</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="strolleybag.php" class="submenu-title">Strolley Bags</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="travelbag.php" class="submenu-title">Travel Bags</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="backpacks.php" class="submenu-title">Back Packs</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="laptopbag.php" class="submenu-title">Laptop Bags</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="laptopcumbag.php" class="submenu-title">Laptop Cum Overnighter Bag</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="trekkingbag.php" class="submenu-title">Trekking Bag</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="passport.php" class="submenu-title">Passport Holder</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="ipad.php" class="submenu-title">I Pad Pouch</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="laptophandbag.php" class="submenu-title">Laptop Hand Bag</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="laptopPouch.php" class="submenu-title">Laptop Pouch</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Leather</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="leatherofficebag.php" class="submenu-title">Leather office Bags</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="leatherpassport.php" class="submenu-title">Leather Passport Holder</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="leatherwallets.php" class="submenu-title">Leather Wallets</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="leatherorganizer.php" class="submenu-title">Leather Organizers</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="leathergift.php" class="submenu-title">Leather Gift Sets</a>
+            </li>
+
+          </ul>
+
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Awards
+          </a>
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Brands</a>
+        </li>
+
+        <li class="menu-category">
+          <a href="#" class="menu-title">Contact</a>
+        </li>
+
+      </ul>
+
+    </nav>
 
   </header>
+
 
   <!--
     - MAIN
@@ -247,69 +559,97 @@
       - BANNER
     -->
 
-    <?php
-    // Database connection
-    $host = 'localhost';
-    $user = 'root'; // Default user for XAMPP
-    $password = ''; // Default password for XAMPP (empty by default)
-    $dbname = 'logo'; // Your database name
-    
-    // Create connection
-    $conn = new mysqli($host, $user, $password, $dbname);
-
-    // Check connection
-    if ($conn->connect_error) {
-      die('Connection failed: ' . $conn->connect_error);
-    }
-
-    // Fetch slider images from the database
-    $sql = 'SELECT * FROM slider_images';
-    $result = $conn->query($sql);
-    ?>
     <div class="banner">
-      <div class="container">
-        <div class="slider-container has-scrollbar">
-          <?php
-          // Fetch slider images from the database
-          $sql = 'SELECT * FROM slider_images';
-          $result = $conn->query($sql);
 
-          if ($result->num_rows > 0) {
-            // Output data of each row
-            while ($row = $result->fetch_assoc()) {
-              echo '<div class="slider-item">';
-              echo '<img src="Admin/uploads/' .
-                $row['image_url'] .
-                '" alt="' .
-                htmlspecialchars($row['title']) .
-                '" class="banner-img">';
-              echo '<div class="banner-content">';
-              echo '<p class="banner-subtitle">' .
-                htmlspecialchars($row['subtitle']) .
-                '</p>';
-              echo '<h2 class="banner-title">' .
-                htmlspecialchars($row['title']) .
-                '</h2>';
-              echo '<p class="banner-text">starting at RS. <b>' .
-                number_format($row['price'], 2) .
-                '</b></p>';
-              echo '<a href="services.php" class="banner-btn">Shop now</a>';
-              echo '</div>';
-              echo '</div>';
-            }
-          } else {
-            echo 'No slider images found.';
-          }
-          ?>
+      <div class="container">
+
+        <div class="slider-container has-scrollbar">
+
+          <div class="slider-item">
+
+            <img src="./assets/images/banner-1.jpg" alt="women's latest fashion sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Trending item</p>
+
+              <h2 class="banner-title">Women's latest fashion sale</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>20</b>.00
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="./assets/images/banner-2.jpg" alt="modern sunglasses" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Trending accessories</p>
+
+              <h2 class="banner-title">Modern sunglasses</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>15</b>.00
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
+          <div class="slider-item">
+
+            <img src="./assets/images/banner-3.jpg" alt="new fashion summer sale" class="banner-img">
+
+            <div class="banner-content">
+
+              <p class="banner-subtitle">Sale Offer</p>
+
+              <h2 class="banner-title">New fashion summer sale</h2>
+
+              <p class="banner-text">
+                starting at &dollar; <b>29</b>.99
+              </p>
+
+              <a href="#" class="banner-btn">Shop now</a>
+
+            </div>
+
+          </div>
+
         </div>
+
       </div>
+
     </div>
 
 
 
-    <?php
-    // Close connection
-    $conn->close(); ?>
+
+
+    <!--
+      - CATEGORY
+    -->
+
+    <div class="category">
+
+      <div class="container">
+
+
+      </div>
+
+    </div>
+
+
+
 
 
     <!--
@@ -330,7 +670,8 @@
           <div class="sidebar-category">
 
             <div class="sidebar-top">
-              <h2 class="sidebar-title">Quick Links</h2>
+              <h2 class="sidebar-title">Embroidery Designing
+              </h2>
 
               <button class="sidebar-close-btn" data-mobile-menu-close-btn>
                 <ion-icon name="close-outline"></ion-icon>
@@ -344,47 +685,288 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/home1.svg" alt="clothes" width="20" height="20"
+                    <img src="./assets/images/icons/dress.svg" alt="clothes" width="20" height="20"
                       class="menu-title-img">
 
-                    <a href="index.php">
-                      <p class="menu-title">Home </p>
-                    </a>
+                    <p class="menu-title">T-Shirt</p>
                   </div>
 
                   <div>
-                    <a href="index.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                    </a>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
                   </div>
 
                 </button>
 
+                <ul class="sidebar-submenu-category-list" data-accordion>
 
+                  <li class="sidebar-submenu-category">
+                    <a href="round_neck.php" class="sidebar-submenu-title">
+                      <p class="product-name">Round Neck</p>
+                      <!-- <data value="300" class="stock" title="Available Stock">300</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="v_neck.php" class="sidebar-submenu-title">
+                      <p class="product-name">V-Neck</p>
+                      <!-- <data value="60" class="stock" title="Available Stock">60</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="pool_tshirt.php" class="sidebar-submenu-title">
+                      <p class="product-name">Pool T-Shirt</p>
+                      <!-- <data value="50" class="stock" title="Available Stock">50</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="cutSew.php" class="sidebar-submenu-title">
+                      <p class="product-name">Cut and sew T-Shirt</p>
+                      <!-- <data value="87" class="stock" title="Available Stock">87</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="basicpool.php" class="sidebar-submenu-title">
+                      <p class="product-name">Basic Pool T-Shirt</p>
+                      <!-- <data value="87" class="stock" title="Available Stock">87</data> -->
+                    </a>
+                  </li>
+
+                </ul>
 
               </li>
-
 
               <li class="sidebar-menu-category">
 
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/services.svg" alt="clothes" class="menu-title-img" width="20"
+                    <img src="./assets/images/icons/shoes.svg" alt="footwear" class="menu-title-img" width="20"
                       height="20">
 
-                    <a href="services.php">
-                      <p class="menu-title">Services</p>
-                    </a>
+                    <p class="menu-title">Apparels</p>
                   </div>
 
-                  <div> <a href="services.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon></a>
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
                   </div>
 
                 </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="cap.php" class="sidebar-submenu-title">
+                      <p class="product-name">Cap</p>
+                      <!-- <data value="45" class="stock" title="Available Stock">45</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="jackets.php" class="sidebar-submenu-title">
+                      <p class="product-name">Jackets</p>
+                      <!-- <data value="75" class="stock" title="Available Stock">75</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="sweartshirt.php" class="sidebar-submenu-title">
+                      <p class="product-name">Sweartshirt</p>
+                      <!-- <data value="35" class="stock" title="Available Stock">35</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="denimShirt.php" class="sidebar-submenu-title">
+                      <p class="product-name">Denim Shirt</p>
+                      <!-- <data value="35" class="stock" title="Available Stock">35</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="windcheaters.php" class="sidebar-submenu-title">
+                      <p class="product-name">Windcheaters</p>
+                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="ties.php" class="sidebar-submenu-title">
+                      <p class="product-name">Ties</p>
+                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/jewelry.svg" alt="clothes" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Travel</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="handbag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Hand Bag</p>
+                      <!-- <data value="46" class="stock" title="Available Stock">46</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="strolleybag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Strolley Bags</p>
+                      <!-- <data value="73" class="stock" title="Available Stock">73</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="travelbag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Travel Bags</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="backpacks.php" class="sidebar-submenu-title">
+                      <p class="product-name">Back Packs</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="laptopbag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Laptop Bags</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="laptopcumbag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Laptop Cum Overnighter Bag</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="trekkingbag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Trekking Bag</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="passport.php" class="sidebar-submenu-title">
+                      <p class="product-name">Passport Holder</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="ipad.php" class="sidebar-submenu-title">
+                      <p class="product-name">I Pad Pouch</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="laptophandbag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Laptop Hand Bag</p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="laptopPouch.php" class="sidebar-submenu-title">
+                      <p class="product-name">Laptop Pouch </p>
+                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
+                    </a>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/perfume.svg" alt="perfume" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Leather</p>
+                  </div>
+
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
+
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="leatherofficebag.php" class="sidebar-submenu-title">
+                      <p class="product-name">Leather office Bags</p>
+                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="leatherpassport.php" class="sidebar-submenu-title">
+                      <p class="product-name">Leather Passport Holder</p>
+                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="leatherwallets.php" class="sidebar-submenu-title">
+                      <p class="product-name">Leather Wallets</p>
+                      <!-- <data value="60" class="stock" title="Available Stock">60 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="leatherorganizer.php" class="sidebar-submenu-title">
+                      <p class="product-name">Leather Organizers</p>
+                      <!-- <data value="50" class="stock" title="Available Stock">50 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="leathergift.php" class="sidebar-submenu-title">
+                      <p class="product-name">Leather Gift Sets</p>
+                      <!-- <data value="87" class="stock" title="Available Stock">87 pcs</data> -->
+                    </a>
+                  </li>
+
+                </ul>
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/cosmetics.svg" alt="cosmetics" class="menu-title-img" width="20"
+                      height="20">
+
+                    <p class="menu-title">Awards</p>
+                  </div>
 
 
 
@@ -395,34 +977,67 @@
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/client.png" alt="perfume" class="menu-title-img" width="20"
+                    <img src="./assets/images/icons/glasses.svg" alt="glasses" class="menu-title-img" width="20"
                       height="20">
 
-                    <a href="vendors.php">
-                      <p class="menu-title">vendors</p>
-                    </a>
+                    <p class="menu-title">Brands</p>
                   </div>
 
-                  <div> <a href="vendors.php">
-                      <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                      <ion-icon name="remove-outline" class="remove-icon"></ion-icon> </a>
+
+                </button>
+
+
+              </li>
+
+              <li class="sidebar-menu-category">
+
+                <button class="sidebar-accordion-menu" data-accordion-btn>
+
+                  <div class="menu-title-flex">
+                    <img src="./assets/images/icons/bag.svg" alt="bags" class="menu-title-img" width="20" height="20">
+
+                    <p class="menu-title">Contact</p>
                   </div>
 
                 </button>
+
+
               </li>
+
             </ul>
-          </div>
-        </div>
 
+          </div>
+
+
+
+        </div>
 
 
 
         <div class="product-box">
-          <!-- PRODUCT GRID -->
-          <div class="product-grid">
-            <?php include 'Admin/fetch_products.php'; ?>
+
+          <!--
+            - PRODUCT MINIMAL
+          -->
+
+          <div class="product-box">
+            <!-- PRODUCT GRID -->
+            <div class="product-grid">
+              <?php include 'Admin/fetch_products.php'; ?>
+            </div>
           </div>
+          <!--
+            - PRODUCT FEATURED
+          -->
+
+
+          <!--
+            - PRODUCT GRID
+          -->
+
+
         </div>
+
       </div>
 
     </div>
@@ -442,8 +1057,8 @@
         <div class="testimonials-box">
 
           <!--
-            - TESTIMONIALS
-          -->
+      - TESTIMONIALS
+    -->
 
           <div class="testimonial">
 
@@ -469,8 +1084,8 @@
           </div>
 
           <!--
-            - CTA
-          -->
+      - CTA
+    -->
 
           <div class="cta-container">
 
@@ -493,8 +1108,8 @@
 
 
           <!--
-            - SERVICE
-          -->
+      - SERVICE
+    -->
 
           <div class="service">
 
@@ -587,13 +1202,91 @@
     </div>
   </main>
 
+
+
+
+
   <!--
     - FOOTER
   -->
 
   <footer>
 
+    <div class="footer-category">
 
+      <div class="container">
+
+        <h2 class="footer-category-title">Brand directory</h2>
+
+        <div class="footer-category-box">
+
+          <h3 class="category-box-title">Fashion :</h3>
+
+          <a href="#" class="footer-category-link">T-shirt</a>
+          <a href="#" class="footer-category-link">Shirts</a>
+          <a href="#" class="footer-category-link">shorts & jeans</a>
+          <a href="#" class="footer-category-link">jacket</a>
+          <a href="#" class="footer-category-link">dress & frock</a>
+          <a href="#" class="footer-category-link">innerwear</a>
+          <a href="#" class="footer-category-link">hosiery</a>
+
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">footwear :</h3>
+
+          <a href="#" class="footer-category-link">sport</a>
+          <a href="#" class="footer-category-link">formal</a>
+          <a href="#" class="footer-category-link">Boots</a>
+          <a href="#" class="footer-category-link">casual</a>
+          <a href="#" class="footer-category-link">cowboy shoes</a>
+          <a href="#" class="footer-category-link">safety shoes</a>
+          <a href="#" class="footer-category-link">Party wear shoes</a>
+          <a href="#" class="footer-category-link">Branded</a>
+          <a href="#" class="footer-category-link">Firstcopy</a>
+          <a href="#" class="footer-category-link">Long shoes</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">jewellery :</h3>
+
+          <a href="#" class="footer-category-link">Necklace</a>
+          <a href="#" class="footer-category-link">Earrings</a>
+          <a href="#" class="footer-category-link">Couple rings</a>
+          <a href="#" class="footer-category-link">Pendants</a>
+          <a href="#" class="footer-category-link">Crystal</a>
+          <a href="#" class="footer-category-link">Bangles</a>
+          <a href="#" class="footer-category-link">bracelets</a>
+          <a href="#" class="footer-category-link">nosepin</a>
+          <a href="#" class="footer-category-link">chain</a>
+          <a href="#" class="footer-category-link">Earrings</a>
+          <a href="#" class="footer-category-link">Couple rings</a>
+        </div>
+
+        <div class="footer-category-box">
+          <h3 class="category-box-title">cosmetics :</h3>
+
+          <a href="#" class="footer-category-link">Shampoo</a>
+          <a href="#" class="footer-category-link">Bodywash</a>
+          <a href="#" class="footer-category-link">Facewash</a>
+          <a href="#" class="footer-category-link">makeup kit</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">lipstick</a>
+          <a href="#" class="footer-category-link">prefume</a>
+          <a href="#" class="footer-category-link">Body soap</a>
+          <a href="#" class="footer-category-link">scrub</a>
+          <a href="#" class="footer-category-link">hair gel</a>
+          <a href="#" class="footer-category-link">hair colors</a>
+          <a href="#" class="footer-category-link">hair dye</a>
+          <a href="#" class="footer-category-link">sunscreen</a>
+          <a href="#" class="footer-category-link">skin loson</a>
+          <a href="#" class="footer-category-link">liner</a>
+          <a href="#" class="footer-category-link">lipstick</a>
+        </div>
+
+      </div>
+
+    </div>
 
     <div class="footer-nav">
 
@@ -606,52 +1299,23 @@
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">T-Shirt</a>
+            <a href="#" class="footer-nav-link">Fashion</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Apparels</a>
+            <a href="#" class="footer-nav-link">Electronic</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Travel</a>
+            <a href="#" class="footer-nav-link">Cosmetic</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Leather</a>
+            <a href="#" class="footer-nav-link">Health</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Awards</a>
-          </li>
-
-
-        </ul>
-
-        <ul class="footer-nav-list">
-
-          <li class="footer-nav-item">
-            <h2 class="nav-title">T-Shirt </h2>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link"> Round Neck</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">V Neck</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Pool T-Shirt</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Basic Pool T-Shirt</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cut and sew T-Shirt</a>
+            <a href="#" class="footer-nav-link">Watches</a>
           </li>
 
         </ul>
@@ -659,27 +1323,55 @@
         <ul class="footer-nav-list">
 
           <li class="footer-nav-item">
-            <h2 class="nav-title">Apparels</h2>
+            <h2 class="nav-title">Products</h2>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cap</a>
+            <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Jackets</a>
+            <a href="#" class="footer-nav-link">New products</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sweartshirt</a>
+            <a href="#" class="footer-nav-link">Best sales</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link"> Denim Shirt</a>
+            <a href="#" class="footer-nav-link">Contact us</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Ties</a>
+            <a href="#" class="footer-nav-link">Sitemap</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Our Company</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Delivery</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Legal Notice</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Terms and conditions</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">About us</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Secure payment</a>
           </li>
 
         </ul>
@@ -691,23 +1383,23 @@
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Logo Design</a>
+            <a href="#" class="footer-nav-link">Prices drop</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Custom Illustrations</a>
+            <a href="#" class="footer-nav-link">New products</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Business Cards</a>
+            <a href="#" class="footer-nav-link">Best sales</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Social Media Graphics</a>
+            <a href="#" class="footer-nav-link">Contact us</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Brand Identity</a>
+            <a href="#" class="footer-nav-link">Sitemap</a>
           </li>
 
         </ul>
@@ -724,7 +1416,8 @@
             </div>
 
             <address class="content">
-              Office No. 4-B, Second Floor,Ganesham Commercial -A,Pune
+              419 State 414 Rte
+              Beaver Dams, New York(NY), 14812, USA
             </address>
           </li>
 
@@ -733,7 +1426,7 @@
               <ion-icon name="call-outline"></ion-icon>
             </div>
 
-            <a href="tel:+607936-8058" class="footer-nav-link">+91 9112100663</a>
+            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
           </li>
 
           <li class="footer-nav-item flex">
@@ -741,13 +1434,46 @@
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
           </li>
 
         </ul>
 
         <ul class="footer-nav-list">
 
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
 
         </ul>
 
@@ -758,8 +1484,11 @@
     <div class="footer-bottom">
 
       <div class="container">
+
+        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
+
         <p class="copyright">
-          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
+          Copyright &copy; <a href="#">Anon</a> all rights reserved.
         </p>
 
       </div>
@@ -767,6 +1496,11 @@
     </div>
 
   </footer>
+
+
+
+
+
 
   <!--
     - custom js link
@@ -778,46 +1512,6 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-
-  <!-- For Banner -->
-
-  <script>
-    const sliderContainer = document.querySelector('.slider-container');
-    const sliderItems = document.querySelectorAll('.slider-item');
-    const prevBtn = document.querySelector('.prev-btn');
-    const nextBtn = document.querySelector('.next-btn');
-
-    let currentIndex = 0;
-
-    // Function to update the slider position
-    function updateSlider() {
-      sliderContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
-    }
-
-    // Event Listeners for Buttons
-    prevBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === 0) ? sliderItems.length - 1 : currentIndex - 1;
-      updateSlider();
-    });
-
-    nextBtn.addEventListener('click', () => {
-      currentIndex = (currentIndex === sliderItems.length - 1) ? 0 : currentIndex + 1;
-      updateSlider();
-    });
-
-  </script>
-
-  <!-- Script for 2nd Nav -->
-   
-  <script >
-    function toggleMenu() {
-  const menu = document.querySelector('.desktop-menu-category-list');
-  menu.classList.toggle('show-menu');
-}
-
-  </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 

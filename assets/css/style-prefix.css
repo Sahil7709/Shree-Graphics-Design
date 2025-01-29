@@ -2031,7 +2031,6 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 
 
 
-
 /*-----------------------------------*\
   #FOOTER
 \*-----------------------------------*/
@@ -2039,6 +2038,14 @@ body::-webkit-scrollbar-thumb:hover { background: hsl(0, 0%, 70%); }
 footer {
   background: var(--eerie-black);
   padding: 30px 0;
+  position: relative; /* Ensure footer doesn't overlap the modal */
+  z-index: 1; /* Make sure footer stays below the modal */
+}
+/* Ensure the footer content does not interfere with the modal */
+.footer-category,
+.footer-nav,
+.footer-bottom {
+  z-index: 1; /* Lower z-index for footer sections */
 }
 
 .footer-category {
@@ -2056,24 +2063,11 @@ footer {
 }
 
 .footer-category-box {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-column-gap: 20px;
-     -moz-column-gap: 20px;
-          column-gap: 20px;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: center;
+  column-gap: 20px;
   row-gap: 3px;
   margin-bottom: 15px;
 }
@@ -2090,8 +2084,6 @@ footer {
   color: var(--sonic-silver);
   font-size: var(--fs-7);
   text-transform: capitalize;
-  -webkit-transition: var(--transition-timing);
-  -o-transition: var(--transition-timing);
   transition: var(--transition-timing);
 }
 
@@ -2143,28 +2135,18 @@ footer {
 
 .footer-nav-link,
 .footer-nav-item .content {
-  width: -webkit-max-content;
-  width: -moz-max-content;
   width: max-content;
   color: var(--sonic-silver);
   font-size: var(--fs-7);
   text-transform: capitalize;
-  -webkit-transition: var(--transition-timing);
-  -o-transition: var(--transition-timing);
   transition: var(--transition-timing);
 }
 
 .footer-nav-link:hover { color: var(--salmon-pink); }
 
 .footer-nav-item.flex {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   gap: 10px;
 }
 
@@ -2181,18 +2163,9 @@ footer {
 .footer-nav-item .icon-box ion-icon { --ionicon-stroke-width: 30px; }
 
 .footer-nav .social-link {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: start;
-  -webkit-justify-content: flex-start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: flex-start;
+  align-items: center;
   gap: 10px;
 }
 
