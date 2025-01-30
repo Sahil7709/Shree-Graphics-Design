@@ -25,6 +25,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+    <style>
+.sidebar {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.code-box {
+  background-color: #f3f3f3;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#refreshCodeBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+</style>
+
+
 </head>
 
 <body>
@@ -612,354 +670,69 @@ $category_filter = 'backpacks'; ?>
 
 
         </div>
-                <!--
-          - SIDEBAR
-        -->
-
-        <div class="sidebar  has-scrollbar" data-mobile-menu>
-
-          <div class="sidebar-category">
-
-            <div class="sidebar-top">
-              <h2 class="sidebar-title">Embroidery Designing
-              </h2>
-
-              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <ul class="sidebar-menu-category-list">
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/dress.svg" alt="clothes" width="20" height="20"
-                      class="menu-title-img">
-
-                    <p class="menu-title">T-Shirt</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="round_neck.php" class="sidebar-submenu-title">
-                      <p class="product-name">Round Neck</p>
-                      <!-- <data value="300" class="stock" title="Available Stock">300</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="v_neck.php" class="sidebar-submenu-title">
-                      <p class="product-name">V-Neck</p>
-                      <!-- <data value="60" class="stock" title="Available Stock">60</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="pool_tshirt.php" class="sidebar-submenu-title">
-                      <p class="product-name">Pool T-Shirt</p>
-                      <!-- <data value="50" class="stock" title="Available Stock">50</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="cutSew.php" class="sidebar-submenu-title">
-                      <p class="product-name">Cut and sew T-Shirt</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="basicpool.php" class="sidebar-submenu-title">
-                      <p class="product-name">Basic Pool T-Shirt</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87</data> -->
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/shoes.svg" alt="footwear" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Apparels</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="cap.php" class="sidebar-submenu-title">
-                      <p class="product-name">Cap</p>
-                      <!-- <data value="45" class="stock" title="Available Stock">45</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="jackets.php" class="sidebar-submenu-title">
-                      <p class="product-name">Jackets</p>
-                      <!-- <data value="75" class="stock" title="Available Stock">75</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="sweartshirt.php" class="sidebar-submenu-title">
-                      <p class="product-name">Sweartshirt</p>
-                      <!-- <data value="35" class="stock" title="Available Stock">35</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="denimShirt.php" class="sidebar-submenu-title">
-                      <p class="product-name">Denim Shirt</p>
-                      <!-- <data value="35" class="stock" title="Available Stock">35</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="windcheaters.php" class="sidebar-submenu-title">
-                      <p class="product-name">Windcheaters</p>
-                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="ties.php" class="sidebar-submenu-title">
-                      <p class="product-name">Ties</p>
-                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/jewelry.svg" alt="clothes" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Travel</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="handbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Hand Bag</p>
-                      <!-- <data value="46" class="stock" title="Available Stock">46</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="strolleybag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Strolley Bags</p>
-                      <!-- <data value="73" class="stock" title="Available Stock">73</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="travelbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Travel Bags</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="backpacks.php" class="sidebar-submenu-title">
-                      <p class="product-name">Back Packs</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Bags</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopcumbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Cum Overnighter Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="trekkingbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Trekking Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="passport.php" class="sidebar-submenu-title">
-                      <p class="product-name">Passport Holder</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="ipad.php" class="sidebar-submenu-title">
-                      <p class="product-name">I Pad Pouch</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptophandbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Hand Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopPouch.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Pouch </p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/perfume.svg" alt="perfume" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Leather</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherofficebag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather office Bags</p>
-                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherpassport.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Passport Holder</p>
-                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherwallets.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Wallets</p>
-                      <!-- <data value="60" class="stock" title="Available Stock">60 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherorganizer.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Organizers</p>
-                      <!-- <data value="50" class="stock" title="Available Stock">50 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leathergift.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Gift Sets</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87 pcs</data> -->
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/cosmetics.svg" alt="cosmetics" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Awards</p>
-                  </div>
-
-
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/glasses.svg" alt="glasses" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Brands</p>
-                  </div>
-
-
-                </button>
-
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/bag.svg" alt="bags" class="menu-title-img" width="20" height="20">
-
-                    <p class="menu-title">Contact</p>
-                  </div>
-
-                </button>
-
-
-              </li>
-
-            </ul>
-
-          </div>
-
+              
+        
+<!--
+  - SIDEBAR
+-->
+
+<div class="sidebar has-scrollbar" data-mobile-menu>
+  <div class="sidebar-category">
+    <div class="sidebar-top">
+    <h2 class="sidebar-title">Contact Form</h2>
+
+        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+    </div>
+    <ul class="sidebar-menu-category-list">
+      <li class="sidebar-menu-category">
+      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </div>
+
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="verificationCode">Code</label>
+            <input type="text" id="verificationCode" name="verificationCode" required>
+            <div id="codeDisplay" class="code-box">ABC123</div>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <button type="button" id="refreshCodeBtn">Refresh Code</button>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </li>
+      </form>
+    </ul>
+  </div>
+</div>
 
       </div>
 
@@ -1281,6 +1054,45 @@ $category_filter = 'backpacks'; ?>
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+  
+      <!-- Script for Contact Form -->
+      <script>
+    // Initialize the verification code
+    const generateCode = () => {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let newCode = '';
+      for (let i = 0; i < 6; i++) {
+        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return newCode;
+    };
+
+    // Update the displayed code
+    const refreshCode = () => {
+      const newCode = generateCode();
+      document.getElementById('codeDisplay').textContent = newCode;
+    };
+
+    // Event listener for refreshing the code
+    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+
+    // Validate the code on form submission
+    const validateCode = () => {
+      const displayedCode = document.getElementById('codeDisplay').textContent;
+      const enteredCode = document.getElementById('verificationCode').value;
+
+      if (displayedCode !== enteredCode) {
+        alert('Verification code is incorrect. Please try again.');
+        return false; // Prevent form submission
+      }
+
+      return true; // Allow form submission
+    };
+
+    // Set an initial code when the page loads
+    window.onload = refreshCode;
+  </script>
 
 </body>
 

@@ -28,6 +28,64 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+    <style>
+.sidebar {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.code-box {
+  background-color: #f3f3f3;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#refreshCodeBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+</style>
+
+
 <style>
   .row {
   display: flex;
@@ -686,35 +744,67 @@
       </div>
 
     </div>
-    <div class="col-right">
-   
-      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
-    <div class="form-group">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" placeholder="Enter your full name" required>
-    </div>
-    <div class="form-group">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="Enter your email" required>
-    </div>
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-    </div>
-    <div class="form-group">
-      <label for="verificationCode">Code</label>
-      <input type="text" id="verificationCode" name="verificationCode" required>
-      <!-- Display the code inside a div -->
-      <div id="codeDisplay" class="code-box">ABC123</div>
-      <!-- Input field to store the code (invisibly) -->
-    </div>
+<!--
+  - SIDEBAR
+-->
 
-    <div class="form-group">
-      <button type="button" id="refreshCodeBtn">Refresh Code</button>
+<div class="sidebar has-scrollbar" data-mobile-menu>
+  <div class="sidebar-category">
+    <div class="sidebar-top">
+    <h2 class="sidebar-title">Contact Form</h2>
+
+        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
     </div>
-    <button type="submit" class="submit-btn">Submit</button>
-  </form>
-    </div>
+    <ul class="sidebar-menu-category-list">
+      <li class="sidebar-menu-category">
+      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        </div>
+
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="verificationCode">Code</label>
+            <input type="text" id="verificationCode" name="verificationCode" required>
+            <div id="codeDisplay" class="code-box">ABC123</div>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <button type="button" id="refreshCodeBtn">Refresh Code</button>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </li>
+      </form>
+    </ul>
+  </div>
+</div>
   </div>
 </div>
 
