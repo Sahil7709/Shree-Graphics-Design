@@ -28,66 +28,6 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    
-
-<style>
-  /* 2nd Nav */
-  .desktop-menu-category-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-  }
-
-  .menu-category {
-    position: relative;
-    margin-right: 20px;
-  }
-
-  .menu-category .menu-title {
-    text-decoration: none;
-    color: #000;
-  }
-
-  .menu-category .dropdown {
-    list-style: none;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    background-color: #fff;
-    border: 1px solid #ddd;
-    display: none;
-    padding: 10px 0;
-    min-width: 200px;
-    z-index: 1000;
-    /* Add a high z-index */
-  }
-
-  .menu-category:hover .dropdown {
-    display: block;
-  }
-
-  .dropdown li {
-    padding: 5px 15px;
-    border-bottom: 1px solid #ddd;
-    /* Add a small gray line under each item */
-  }
-
-  .dropdown li a {
-    text-decoration: none;
-    color: #333;
-  }
-
-  .dropdown li a:hover {
-    color: var(--salmon-pink);
-  }
-
-  /* Add a higher z-index to the nav container */
-  .desktop-navigation-menu {
-    position: relative;
-    z-index: 1000;
-  }
-</style>
 <style>
   .row {
   display: flex;
@@ -180,19 +120,6 @@
   border-radius: 4px;
   text-align: center;
   margin-bottom: 10px;
-}
-
-button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 4px;
-  background-color: #007bff;
-  color: #ffffff;
-  cursor: pointer;
-}
-
-button:hover {
-  background-color: #0056b3;
 }
 
 .submit-btn {

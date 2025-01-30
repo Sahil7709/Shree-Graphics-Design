@@ -580,7 +580,40 @@
       <div class="container">
 
 
-        <!--
+
+
+
+
+        <div class="product-box">
+
+          <!--
+            - PRODUCT MINIMAL
+          -->
+
+          <div class="product-box">
+            <!-- PRODUCT GRID -->
+            <div class="product-grid">
+            <?php // Set the category filter to 'cap'
+// Set the category filter to 'cap'
+$category_filter = 'denimShirt'; ?>
+              <?php include 'Admin/fetch_products.php'; ?>
+            </div>
+          </div>
+          <!--
+            - PRODUCT FEATURED
+          -->
+
+
+
+          <!--
+            - PRODUCT GRID
+          -->
+
+
+
+        </div>
+
+                <!--
           - SIDEBAR
         -->
 
@@ -926,37 +959,6 @@
             </ul>
 
           </div>
-
-
-
-        </div>
-
-
-
-        <div class="product-box">
-
-          <!--
-            - PRODUCT MINIMAL
-          -->
-
-          <div class="product-box">
-            <!-- PRODUCT GRID -->
-            <div class="product-grid">
-            <?php // Set the category filter to 'cap'
-// Set the category filter to 'cap'
-$category_filter = 'denimShirt'; ?>
-              <?php include 'Admin/fetch_products.php'; ?>
-            </div>
-          </div>
-          <!--
-            - PRODUCT FEATURED
-          -->
-
-
-
-          <!--
-            - PRODUCT GRID
-          -->
 
 
 

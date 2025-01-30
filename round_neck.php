@@ -88,9 +88,6 @@
   </div>
 
 
-
-
-
   <!--
     - HEADER
   -->
@@ -580,6 +577,27 @@
       <div class="container">
 
 
+
+        <div class="product-box">
+
+          <!--
+            - PRODUCT MINIMAL
+          -->
+
+          <div class="product-box">
+            <!-- PRODUCT GRID -->
+            <div class="product-grid">
+            <?php // Set the category filter to 'cap'
+
+            $category_filter = 'round_neck_tshirt'; ?>
+              <?php include 'Admin/fetch_products.php'; ?>
+            </div>
+          </div>
+        </div>
+
+        
+
+
         <!--
           - SIDEBAR
         -->
@@ -932,36 +950,6 @@
         </div>
 
 
-
-        <div class="product-box">
-
-          <!--
-            - PRODUCT MINIMAL
-          -->
-
-          <div class="product-box">
-            <!-- PRODUCT GRID -->
-            <div class="product-grid">
-            <?php // Set the category filter to 'cap'
-// Set the category filter to 'cap'
-$category_filter = 'round_neck_tshirt'; ?>
-              <?php include 'Admin/fetch_products.php'; ?>
-            </div>
-          </div>
-          <!--
-            - PRODUCT FEATURED
-          -->
-
-
-
-          <!--
-            - PRODUCT GRID
-          -->
-
-
-
-        </div>
-
       </div>
 
     </div>
@@ -1266,11 +1254,6 @@ $category_filter = 'round_neck_tshirt'; ?>
     </div>
 
   </footer>
-
-
-
-
-
 
   <!--
     - custom js link
