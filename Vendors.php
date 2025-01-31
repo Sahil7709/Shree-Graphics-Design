@@ -187,7 +187,6 @@
 <body>
   
 <div class="overlay" data-overlay></div>
-
 <!--
   - MODAL
 -->
@@ -202,12 +201,26 @@
       <ion-icon name="close-outline"></ion-icon>
     </button>
 
+    <div class="newsletter-img">
+      <img src="./assets/images/img2.jpeg" alt="subscribe newsletter" width="400" height="400">
+    </div>
+
+    <div class="newsletter">
+  <form action="index.php">
+    <div class="newsletter-header">
+      <h3 class="newsletter-title">Stay Inspired with Unique Logo Designs!</h3>
+      <p class="newsletter-desc">
+      We craft unique, high-quality logos that define your brand identity. Whether you're a startup or an established business, our designs will leave a lasting impression.
+      </p>
+    </div>
+    <button type="submit" class="btn-newsletter">Get Started</button>
+  </form>
+</div>
 
 
   </div>
 
 </div>
-
 
 
 
