@@ -825,6 +825,8 @@
 </div>
 
   </main>
+
+  
   <!--
     - FOOTER
   -->
@@ -844,52 +846,23 @@
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">T-Shirt</a>
+            <a href="index.php" class="footer-nav-link">Home</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Apparels</a>
+            <a href="Services.php" class="footer-nav-link">Services</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Travel</a>
+            <a href="Awards.php" class="footer-nav-link">Awards</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Leather</a>
+            <a href="Brands.php" class="footer-nav-link">Brands</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Awards</a>
-          </li>
-
-
-        </ul>
-
-        <ul class="footer-nav-list">
-
-          <li class="footer-nav-item">
-            <h2 class="nav-title">T-Shirt </h2>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link"> Round Neck</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">V Neck</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Pool T-Shirt</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Basic Pool T-Shirt</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cut and sew T-Shirt</a>
+            <a href="contact.php" class="footer-nav-link">Contact</a>
           </li>
 
         </ul>
@@ -897,27 +870,55 @@
         <ul class="footer-nav-list">
 
           <li class="footer-nav-item">
-            <h2 class="nav-title">Apparels</h2>
+            <h2 class="nav-title">Products</h2>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cap</a>
+            <a href="round_neck.php" class="footer-nav-link"> Round Neck T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Jackets</a>
+            <a href="v_neck.php" class="footer-nav-link"> V-neck T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sweartshirt</a>
+            <a href="pool_tshirt.php" class="footer-nav-link">Pool T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link"> Denim Shirt</a>
+            <a href="cutSew.php" class="footer-nav-link">Cut And Sew T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Ties</a>
+            <a href="basicpool.php" class="footer-nav-link">Basic Pool T-Shirt</a>
+          </li>
+
+        </ul>
+
+        <ul class="footer-nav-list">
+
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Products</h2>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="cap.php" class="footer-nav-link">Cap</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="jackets.php" class="footer-nav-link">Jackets</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="sweartshirt.php" class="footer-nav-link">Sweartshirt</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="denimShirt.php" class="footer-nav-link">Denimn Shirt</a>
+          </li>
+
+          <li class="footer-nav-item">
+            <a href="ties.php" class="footer-nav-link">Ties</a>
           </li>
 
         </ul>
@@ -933,6 +934,10 @@
           </li>
 
           <li class="footer-nav-item">
+            <a href="#" class="footer-nav-link">Brand Identity</a>
+          </li>
+
+          <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Custom Illustrations</a>
           </li>
 
@@ -942,10 +947,6 @@
 
           <li class="footer-nav-item">
             <a href="#" class="footer-nav-link">Social Media Graphics</a>
-          </li>
-
-          <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Brand Identity</a>
           </li>
 
         </ul>
@@ -962,8 +963,9 @@
             </div>
 
             <address class="content">
-              Office No. 4-B, Second Floor,Ganesham Commercial -A,Pune
-            </address>
+            Devcon software Services
+Office No. 4-B, Second Floor,
+Ganesham Commercial            </address>
           </li>
 
           <li class="footer-nav-item flex">
@@ -986,6 +988,39 @@
 
         <ul class="footer-nav-list">
 
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Follow Us</h2>
+          </li>
+
+          <li>
+            <ul class="social-link">
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-facebook"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-twitter"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-linkedin"></ion-icon>
+                </a>
+              </li>
+
+              <li class="footer-nav-item">
+                <a href="#" class="footer-nav-link">
+                  <ion-icon name="logo-instagram"></ion-icon>
+                </a>
+              </li>
+
+            </ul>
+          </li>
 
         </ul>
 
@@ -996,15 +1031,18 @@
     <div class="footer-bottom">
 
       <div class="container">
+
+
         <p class="copyright">
-          Copyright &copy; <a href="#">Devcon</a> all rights reserved.
+          Copyright &copy; <a href="#">Devcon software Services </a> all rights reserved.
         </p>
 
       </div>
 
     </div>
 
-  </footer> 
+  </footer>
+
 
   <!--
     - custom js link

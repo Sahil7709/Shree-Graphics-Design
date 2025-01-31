@@ -741,92 +741,14 @@ $category_filter = 'laptopbag'; ?>
 
 
   </main>
-
-
-
-
-
+  
   <!--
     - FOOTER
   -->
 
   <footer>
 
-    <div class="footer-category">
 
-      <div class="container">
-
-        <h2 class="footer-category-title">Brand directory</h2>
-
-        <div class="footer-category-box">
-
-          <h3 class="category-box-title">Fashion :</h3>
-
-          <a href="#" class="footer-category-link">T-shirt</a>
-          <a href="#" class="footer-category-link">Shirts</a>
-          <a href="#" class="footer-category-link">shorts & jeans</a>
-          <a href="#" class="footer-category-link">jacket</a>
-          <a href="#" class="footer-category-link">dress & frock</a>
-          <a href="#" class="footer-category-link">innerwear</a>
-          <a href="#" class="footer-category-link">hosiery</a>
-
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">footwear :</h3>
-
-          <a href="#" class="footer-category-link">sport</a>
-          <a href="#" class="footer-category-link">formal</a>
-          <a href="#" class="footer-category-link">Boots</a>
-          <a href="#" class="footer-category-link">casual</a>
-          <a href="#" class="footer-category-link">cowboy shoes</a>
-          <a href="#" class="footer-category-link">safety shoes</a>
-          <a href="#" class="footer-category-link">Party wear shoes</a>
-          <a href="#" class="footer-category-link">Branded</a>
-          <a href="#" class="footer-category-link">Firstcopy</a>
-          <a href="#" class="footer-category-link">Long shoes</a>
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">jewellery :</h3>
-
-          <a href="#" class="footer-category-link">Necklace</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple rings</a>
-          <a href="#" class="footer-category-link">Pendants</a>
-          <a href="#" class="footer-category-link">Crystal</a>
-          <a href="#" class="footer-category-link">Bangles</a>
-          <a href="#" class="footer-category-link">bracelets</a>
-          <a href="#" class="footer-category-link">nosepin</a>
-          <a href="#" class="footer-category-link">chain</a>
-          <a href="#" class="footer-category-link">Earrings</a>
-          <a href="#" class="footer-category-link">Couple rings</a>
-        </div>
-
-        <div class="footer-category-box">
-          <h3 class="category-box-title">cosmetics :</h3>
-
-          <a href="#" class="footer-category-link">Shampoo</a>
-          <a href="#" class="footer-category-link">Bodywash</a>
-          <a href="#" class="footer-category-link">Facewash</a>
-          <a href="#" class="footer-category-link">makeup kit</a>
-          <a href="#" class="footer-category-link">liner</a>
-          <a href="#" class="footer-category-link">lipstick</a>
-          <a href="#" class="footer-category-link">prefume</a>
-          <a href="#" class="footer-category-link">Body soap</a>
-          <a href="#" class="footer-category-link">scrub</a>
-          <a href="#" class="footer-category-link">hair gel</a>
-          <a href="#" class="footer-category-link">hair colors</a>
-          <a href="#" class="footer-category-link">hair dye</a>
-          <a href="#" class="footer-category-link">sunscreen</a>
-          <a href="#" class="footer-category-link">skin loson</a>
-          <a href="#" class="footer-category-link">liner</a>
-          <a href="#" class="footer-category-link">lipstick</a>
-        </div>
-
-      </div>
-
-    </div>
 
     <div class="footer-nav">
 
@@ -839,23 +761,23 @@ $category_filter = 'laptopbag'; ?>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Fashion</a>
+            <a href="index.php" class="footer-nav-link">Home</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Electronic</a>
+            <a href="Services.php" class="footer-nav-link">Services</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Cosmetic</a>
+            <a href="Awards.php" class="footer-nav-link">Awards</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Health</a>
+            <a href="Brands.php" class="footer-nav-link">Brands</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Watches</a>
+            <a href="contact.php" class="footer-nav-link">Contact</a>
           </li>
 
         </ul>
@@ -867,23 +789,23 @@ $category_filter = 'laptopbag'; ?>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices drop</a>
+            <a href="round_neck.php" class="footer-nav-link"> Round Neck T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New products</a>
+            <a href="v_neck.php" class="footer-nav-link"> V-neck T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best sales</a>
+            <a href="pool_tshirt.php" class="footer-nav-link">Pool T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
+            <a href="cutSew.php" class="footer-nav-link">Cut And Sew T-shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
+            <a href="basicpool.php" class="footer-nav-link">Basic Pool T-Shirt</a>
           </li>
 
         </ul>
@@ -891,27 +813,27 @@ $category_filter = 'laptopbag'; ?>
         <ul class="footer-nav-list">
 
           <li class="footer-nav-item">
-            <h2 class="nav-title">Our Company</h2>
+            <h2 class="nav-title">Products</h2>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Delivery</a>
+            <a href="cap.php" class="footer-nav-link">Cap</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Legal Notice</a>
+            <a href="jackets.php" class="footer-nav-link">Jackets</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Terms and conditions</a>
+            <a href="sweartshirt.php" class="footer-nav-link">Sweartshirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">About us</a>
+            <a href="denimShirt.php" class="footer-nav-link">Denimn Shirt</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Secure payment</a>
+            <a href="ties.php" class="footer-nav-link">Ties</a>
           </li>
 
         </ul>
@@ -923,23 +845,23 @@ $category_filter = 'laptopbag'; ?>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Prices drop</a>
+            <a href="#" class="footer-nav-link">Logo Design</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">New products</a>
+            <a href="#" class="footer-nav-link">Brand Identity</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Best sales</a>
+            <a href="#" class="footer-nav-link">Custom Illustrations</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Contact us</a>
+            <a href="#" class="footer-nav-link">Business Cards</a>
           </li>
 
           <li class="footer-nav-item">
-            <a href="#" class="footer-nav-link">Sitemap</a>
+            <a href="#" class="footer-nav-link">Social Media Graphics</a>
           </li>
 
         </ul>
@@ -956,9 +878,9 @@ $category_filter = 'laptopbag'; ?>
             </div>
 
             <address class="content">
-              419 State 414 Rte
-              Beaver Dams, New York(NY), 14812, USA
-            </address>
+            Devcon software Services
+Office No. 4-B, Second Floor,
+Ganesham Commercial            </address>
           </li>
 
           <li class="footer-nav-item flex">
@@ -966,7 +888,7 @@ $category_filter = 'laptopbag'; ?>
               <ion-icon name="call-outline"></ion-icon>
             </div>
 
-            <a href="tel:+607936-8058" class="footer-nav-link">(607) 936-8058</a>
+            <a href="tel:+607936-8058" class="footer-nav-link">+91 9112100663</a>
           </li>
 
           <li class="footer-nav-item flex">
@@ -974,7 +896,7 @@ $category_filter = 'laptopbag'; ?>
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">example@gmail.com</a>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
           </li>
 
         </ul>
@@ -1025,10 +947,9 @@ $category_filter = 'laptopbag'; ?>
 
       <div class="container">
 
-        <img src="./assets/images/payment.png" alt="payment method" class="payment-img">
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Anon</a> all rights reserved.
+          Copyright &copy; <a href="#">Devcon software Services </a> all rights reserved.
         </p>
 
       </div>
@@ -1036,11 +957,6 @@ $category_filter = 'laptopbag'; ?>
     </div>
 
   </footer>
-
-
-
-
-
 
   <!--
     - custom js link
