@@ -171,7 +171,6 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <!-- <img src="./assets/images/logo/devcons.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
 
         <div class="header-search-container">
@@ -185,20 +184,11 @@
         </div>
 
         <div class="header-user-actions">
-
-          <!-- <button class="action-btn">
-            <ion-icon name="person-outline"></ion-icon>
-          </button>
-
+          <a href="Awards.php">
           <button class="action-btn">
-            <ion-icon name="heart-outline"></ion-icon>
-          </button> -->
-
-          <button class="action-btn">
-            <!-- <a href="Awards.php "> -->
             <ion-icon name="trophy-outline"></ion-icon></a>
           </button>
-
+        </a>
         </div>
 
       </div>
@@ -211,7 +201,7 @@
 
         <ul class="desktop-menu-category-list">
 
-        <li class="menu-category">
+          <li class="menu-category">
             <a href="index.php" class="menu-title">Embroidery Designing
             </a>
           </li>
@@ -245,7 +235,6 @@
             </ul>
           </li>
 
-
           <li class="menu-category">
             <a href="#" class="menu-title">Apparels</a>
 
@@ -274,7 +263,7 @@
               <li class="dropdown-item">
                 <a href="ties.php">Ties</a>
               </li>
-              
+
             </ul>
           </li>
 
@@ -302,7 +291,7 @@
               <li class="dropdown-item">
                 <a href="laptopbag.php">Laptop Bags</a>
               </li>
-              
+
               <li class="dropdown-item">
                 <a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a>
               </li>
@@ -324,10 +313,10 @@
               </li>
 
               <li class="dropdown-item">
-                <a href="laptopPouch.php">  Laptop Pouch</a>
+                <a href="laptopPouch.php"> Laptop Pouch</a>
               </li>
 
-            
+
             </ul>
           </li>
 
@@ -360,18 +349,17 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Awards</a>
+            <a href="Awards.php" class="menu-title">Awards</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Brands</a>
+            <a href="Brands.php" class="menu-title">Brands</a>
           </li>
 
           <li class="menu-category">
             <a href="contact.php" class="menu-title">Contact
             </a>
           </li>
-
 
 
         </ul>
@@ -453,7 +441,7 @@
 
             <li class="submenu-category">
               <a href="basicpool.php" class="submenu-title">Basic Pool T-Shirt</a>
-            </li> 
+            </li>
 
           </ul>
 
@@ -494,7 +482,7 @@
 
             <li class="submenu-category">
               <a href="ties.php" class="submenu-title"> Ties</a>
-            </li> 
+            </li>
 
           </ul>
 
@@ -599,12 +587,12 @@
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Awards
+          <a href="Awards.php" class="menu-title">Awards
           </a>
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Brands</a>
+          <a href="Brands.php" class="menu-title">Brands</a>
         </li>
 
         <li class="menu-category">
@@ -616,6 +604,8 @@
     </nav>
 
   </header>
+
+
 
   <!--
     - MAIN

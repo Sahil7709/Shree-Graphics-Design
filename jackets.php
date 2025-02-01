@@ -166,7 +166,6 @@
   <!--
     - HEADER
   -->
-
   <header>
 
 
@@ -175,7 +174,6 @@
       <div class="container">
 
         <a href="#" class="header-logo">
-          <!-- <img src="./assets/images/logo/devcons.webp" alt="Devcon's logo" width="120" height="36"> -->
         </a>
 
         <div class="header-search-container">
@@ -189,20 +187,11 @@
         </div>
 
         <div class="header-user-actions">
-
-          <!-- <button class="action-btn">
-            <ion-icon name="person-outline"></ion-icon>
-          </button>
-
+          <a href="Awards.php">
           <button class="action-btn">
-            <ion-icon name="heart-outline"></ion-icon>
-          </button> -->
-
-          <button class="action-btn">
-            <!-- <a href="Awards.php "> -->
             <ion-icon name="trophy-outline"></ion-icon></a>
           </button>
-
+        </a>
         </div>
 
       </div>
@@ -248,7 +237,6 @@
               </li>
             </ul>
           </li>
-
 
           <li class="menu-category">
             <a href="#" class="menu-title">Apparels</a>
@@ -364,11 +352,11 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Awards</a>
+            <a href="Awards.php" class="menu-title">Awards</a>
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Brands</a>
+            <a href="Brands.php" class="menu-title">Brands</a>
           </li>
 
           <li class="menu-category">
@@ -602,12 +590,12 @@
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Awards
+          <a href="Awards.php" class="menu-title">Awards
           </a>
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Brands</a>
+          <a href="Brands.php" class="menu-title">Brands</a>
         </li>
 
         <li class="menu-category">
@@ -620,7 +608,7 @@
 
   </header>
 
-
+  
   <!--
     - MAIN
   -->
