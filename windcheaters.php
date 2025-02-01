@@ -1172,7 +1172,8 @@
             <address class="content">
             Devcon software Services
 Office No. 4-B, Second Floor,
-Ganesham Commercial            </address>
+Ganesham Commercial    
+        </address>
           </li>
 
           <li class="footer-nav-item flex">
