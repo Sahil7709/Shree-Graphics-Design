@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devcon - eCommerce Website</title>
+  <title>Shree Graphics Design </title>
 
   <!--
     - favicon
@@ -82,33 +82,8 @@
 }
 </style>
 
-
-<style>
-  .row {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-.col-left,
-.col-right {
-  flex: 1; /* Ensures both columns are of equal width */
-  padding: 20px;
-  box-sizing: border-box;
-}
-
-.col-left {
-  position: sticky;
-  top: 0; 
-  height: 100vh; /* Optional: If you want the column to span the full viewport height */
-  padding: 20px;
-}
-
-.col-right {
-  background-color: #ffffff; /* Optional: Background color for the right column */
-}
-
-  </style>
-<style>
+<style> 
+  <style>
   /* General container styling */
 .container {
   max-width: 1200px;
@@ -186,14 +161,14 @@
 }
 
 </style>
+</style>
 
 </head>
-
 
 <body>
 
 
-<div class="overlay" data-overlay></div>
+  <div class="overlay" data-overlay></div>
 
 <!--
   - MODAL
@@ -232,49 +207,52 @@
 
 
 
-<!--
-  - NOTIFICATION TOAST
--->
+  <!--
+    - NOTIFICATION TOAST
+  -->
 
-<div class="notification-toast" data-toast>
+  <div class="notification-toast" data-toast>
 
-  <button class="toast-close-btn" data-toast-close>
-    <ion-icon name="close-outline"></ion-icon>
-  </button>
+    <button class="toast-close-btn" data-toast-close>
+      <ion-icon name="close-outline"></ion-icon>
+    </button>
 
-  <div class="toast-banner">
-    <img src="./assets/images/img4.jpeg" alt="Rose Gold Earrings" width="80" height="70">
+    <div class="toast-banner">
+      <img src="./assets/images/img9.jpeg" alt="Rose Gold Earrings" width="80" height="70">
+    </div>
+
+    <div class="toast-detail">
+
+      <p class="toast-message">
+        Someone in new just bought
+      </p>
+
+      <p class="toast-title">
+        Cap
+      </p>
+
+      <p class="toast-meta">
+        <time datetime="PT2M">2 Minutes</time> ago
+      </p>
+
+    </div>
+
   </div>
 
-  <div class="toast-detail">
 
-    <p class="toast-message">
-      Someone in new just bought
-    </p>
 
-    <p class="toast-title">
-    Cap   
- </p>
-
-    <p class="toast-meta">
-      <time datetime="PT2M">2 Minutes</time> ago
-    </p>
-
-  </div>
-
-</div>
 
 
   <!--
     - HEADER
   -->
+
   <header>
 
 
     <div class="header-main">
 
       <div class="container">
-
       <a href="index.php" class="header-logo">
         <img src="./assets/logo/Shree_Graphics_Design.png" alt="Logo" width="100" height="60">
         </a>
@@ -718,10 +696,36 @@
 
   <main>
 
-  <div class="container">
+    <!--
+      - CATEGORY
+    -->
 
-  
-  <div class="map-container">
+
+
+    <div class="category">
+      
+
+      <div class="container">
+
+      </div>
+
+    </div>
+
+
+
+
+
+    <!--
+      - PRODUCT
+    -->
+
+    <div class="product-container">
+
+      <div class="container">
+
+        <div class="product-box">
+
+        <div class="map-container">
     <!-- <h3> Location</h3> -->
     <div class="map-responsive">
 
@@ -735,8 +739,11 @@
         </iframe>
     </div>
   </div>
+          <!--
+            - PRODUCT MINIMAL
+          -->
 
-
+          
   <div class="row">
     <div class="col-left">
    
@@ -762,6 +769,15 @@
 
     </div>
 <!--
+  - SIDEBAR
+-->
+
+  </div>
+
+
+        </div>
+
+        <!--
   - SIDEBAR
 -->
 
@@ -822,14 +838,22 @@
     </ul>
   </div>
 </div>
-  </div>
-</div>
 
-</div>
+
+      </div>
+
+    </div>
+
+
+
+
 
   </main>
 
-  
+
+
+
+
   <!--
     - FOOTER
   -->
@@ -1047,6 +1071,10 @@ Ganesham Commercial            </address>
   </footer>
 
 
+
+
+
+
   <!--
     - custom js link
   -->
@@ -1058,9 +1086,8 @@ Ganesham Commercial            </address>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-
-  <!-- Script for Contact Form -->
-  <script>
+    <!-- Script for Contact Form -->
+    <script>
     // Initialize the verification code
     const generateCode = () => {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
@@ -1096,10 +1123,7 @@ Ganesham Commercial            </address>
     // Set an initial code when the page loads
     window.onload = refreshCode;
   </script>
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
-
+  
 </body>
 
 </html>
