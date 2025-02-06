@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devcons </title>
+  <title>Shree Graphics Design </title>
 
   <!--
     - favicon
@@ -881,7 +881,7 @@ $category_filter = 'travelbag'; ?>
             </div>
 
             <address class="content">
-            Devcon software Services
+            Shree Graphics Design
 Office No. 4-B, Second Floor,
 Ganesham Commercial            </address>
           </li>
@@ -952,7 +952,7 @@ Ganesham Commercial            </address>
 
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Devcon software Services </a> all rights reserved.
+          Copyright &copy; <a href="#">Shree Graphics Design </a> all rights reserved.
         </p>
 
       </div>

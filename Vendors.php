@@ -859,7 +859,7 @@
             </div>
 
             <address class="content">
-            Devcon software Services
+            Shree Graphics Design
 Office No. 4-B, Second Floor,
 Ganesham Commercial            </address>
           </li>
@@ -877,7 +877,7 @@ Ganesham Commercial            </address>
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@Shree Graphics Designoftware.com</a>
           </li>
 
         </ul>
@@ -930,7 +930,7 @@ Ganesham Commercial            </address>
 
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Devcon software Services </a> all rights reserved.
+          Copyright &copy; <a href="#">Shree Graphics Design </a> all rights reserved.
         </p>
 
       </div>

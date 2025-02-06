@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Devcons </title>
+  <title>Shree Graphics Design </title>
 
   <!--
     - favicon
@@ -120,6 +120,7 @@
 
         <a href="index.php" class="header-logo">
         <img src="./assets/logo/Shree_Graphics_Design.png" alt="Logo" width="100" height="60">
+        <!-- Shree Graphics Design -->
         </a>
 
         <div class="header-search-container">
@@ -996,7 +997,7 @@
               <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
 
               <p class="testimonial-desc">
-                Amazing work! Devcons Software Solutions created a logo that perfectly represents my brand.
+                Amazing work! Shree Graphics Design Software Solutions created a logo that perfectly represents my brand.
                 Their creativity and professionalism are top-notch. Highly recommend!
               </p>
 
@@ -1260,7 +1261,7 @@
             </div>
 
             <address class="content">
-            Devcon software Services
+            Shree Graphics Design
 Office No. 4-B, Second Floor,
 Ganesham Commercial            </address>
           </li>
@@ -1278,7 +1279,7 @@ Ganesham Commercial            </address>
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@Shree Graphics Designoftware.com</a>
           </li>
 
         </ul>
@@ -1331,7 +1332,7 @@ Ganesham Commercial            </address>
 
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Devcon software Services </a> all rights reserved.
+          Copyright &copy; <a href="#">Shree Graphics Design </a> all rights reserved.
         </p>
 
       </div>

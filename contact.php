@@ -725,7 +725,7 @@
     <!-- <h3> Location</h3> -->
     <div class="map-responsive">
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4804323839676!2d73.80092486980347!3d18.59744852819473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b95d8c1f62cf%3A0xa88ec1997c7acf8b!2sDevcons%20Software%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1737766217321!5m2!1sen!2sin" 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4804323839676!2d73.80092486980347!3d18.59744852819473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b95d8c1f62cf%3A0xa88ec1997c7acf8b!2sShree Graphics Design%20Software%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1737766217321!5m2!1sen!2sin" 
         width="100%"
          height="400" 
          style="border:0;" 
@@ -743,7 +743,7 @@
       <div class="address-container">
 
       <h3>Address:</h3>
-      <p>Devcon software Services<br>
+      <p>Shree Graphics Design<br>
       Office No. 4-B, Second Floor, <br>
       Ganesham Commercial -A,<br>
       Survey No. 21/18-21/24, BRTS Road, <br>
@@ -757,7 +757,7 @@
       <div class="address-container">
          <h3>Email:</h3>
 
-         hr@devconsoftware.com </p>
+         hr@Shree Graphics Designoftware.com </p>
       </div>
 
     </div>
@@ -966,7 +966,7 @@
             </div>
 
             <address class="content">
-            Devcon software Services
+            Shree Graphics Design
 Office No. 4-B, Second Floor,
 Ganesham Commercial            </address>
           </li>
@@ -984,7 +984,7 @@ Ganesham Commercial            </address>
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@Shree Graphics Designoftware.com</a>
           </li>
 
         </ul>
@@ -1037,7 +1037,7 @@ Ganesham Commercial            </address>
 
 
         <p class="copyright">
-          Copyright &copy; <a href="#">Devcon software Services </a> all rights reserved.
+          Copyright &copy; <a href="#">Shree Graphics Design </a> all rights reserved.
         </p>
 
       </div>
