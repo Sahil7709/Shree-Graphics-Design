@@ -10,7 +10,7 @@
   <!--
     - favicon
   -->
-  <!-- <link rel="shortcut icon" href="./assets/images/logo/favicon.ico" type="image/x-icon"> -->
+  <link rel="shortcut icon" href="./assets/logo/Shree_Graphics_Design.png" type="image/x-icon">
 
   <!--
     - custom css link
@@ -171,7 +171,8 @@
 
       <div class="container">
 
-        <a href="#" class="header-logo">
+      <a href="index.php" class="header-logo">
+        <img src="./assets/logo/Shree_Graphics_Design.png" alt="Logo" width="100" height="60">
         </a>
 
         <div class="header-search-container">
