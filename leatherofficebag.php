@@ -883,9 +883,8 @@ $category_filter = 'leatherofficebag'; ?>
             </div>
 
             <address class="content">
-            Shree Graphics Design
-Office No. 4-B, Second Floor,
-Ganesham Commercial            </address>
+            Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
+          </address>
           </li>
 
           <li class="footer-nav-item flex">
@@ -893,7 +892,7 @@ Ganesham Commercial            </address>
               <ion-icon name="call-outline"></ion-icon>
             </div>
 
-            <a href="tel:+607936-8058" class="footer-nav-link">+91 9112100663</a>
+            <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
           </li>
 
           <li class="footer-nav-item flex">
@@ -901,7 +900,7 @@ Ganesham Commercial            </address>
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@Shree Graphics Designoftware.com</a>
+            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">lamkhadegs@gmail.com</a>
           </li>
 
         </ul>

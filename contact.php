@@ -725,11 +725,12 @@
 
         <div class="product-box">
 
+
         <div class="map-container">
     <!-- <h3> Location</h3> -->
     <div class="map-responsive">
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3781.4804323839676!2d73.80092486980347!3d18.59744852819473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b95d8c1f62cf%3A0xa88ec1997c7acf8b!2sShree Graphics Design%20Software%20Solutions%20Pvt.%20Ltd.!5e0!3m2!1sen!2sin!4v1737766217321!5m2!1sen!2sin" 
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5791.746155048721!2d74.00661151226782!3d18.591868666545864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c53efce2f003%3A0x639e279623f77437!2sMountain%20View%20society!5e0!3m2!1sen!2sin!4v1739394566225!5m2!1sen!2sin" 
         width="100%"
          height="400" 
          style="border:0;" 
@@ -750,21 +751,20 @@
       <div class="address-container">
 
       <h3>Address:</h3>
-      <p>Shree Graphics Design<br>
-      Office No. 4-B, Second Floor, <br>
-      Ganesham Commercial -A,<br>
-      Survey No. 21/18-21/24, BRTS Road, <br>
-      Pimple Saudagar, Pune- 411027<br>
+      <p> Mountain View Society, <br>
+      Radhyeswari Nagari,<br> Bakori road Wagholi,
+      <br>
+       Pune.412207</p>
 </div>
       <div class="address-container">
       <h3>Phone:</h3>
 
-      +91 9112100663<br>
+      8888830696<br>
       </div>
       <div class="address-container">
          <h3>Email:</h3>
 
-         hr@Shree Graphics Designoftware.com </p>
+         lamkhadegs@gmail.com </p>
       </div>
 
     </div>
@@ -844,14 +844,7 @@
 
     </div>
 
-
-
-
-
   </main>
-
-
-
 
 
   <!--
@@ -990,9 +983,8 @@
             </div>
 
             <address class="content">
-            Shree Graphics Design
-Office No. 4-B, Second Floor,
-Ganesham Commercial            </address>
+            Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
+          </address>
           </li>
 
           <li class="footer-nav-item flex">
@@ -1000,7 +992,7 @@ Ganesham Commercial            </address>
               <ion-icon name="call-outline"></ion-icon>
             </div>
 
-            <a href="tel:+607936-8058" class="footer-nav-link">+91 9112100663</a>
+            <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
           </li>
 
           <li class="footer-nav-item flex">
@@ -1008,7 +1000,7 @@ Ganesham Commercial            </address>
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:example@gmail.com" class="footer-nav-link">hr@Shree Graphics Designoftware.com</a>
+            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">lamkhadegs@gmail.com</a>
           </li>
 
         </ul>
