@@ -105,9 +105,6 @@
   </div>
 
 
-
-
-
   <!--
     - HEADER
   -->
@@ -156,9 +153,19 @@
             </a>
           </li>
 
+          <li class="menu-category">
+            <a href="index.php" class="menu-title">About
+            </a>
+          </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">T-shirt</a>
+            <a href="index.php" class="menu-title">Services
+            </a>
+          </li>
+
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Tshirt</a>
 
             <ul class="dropdown-list">
 
@@ -299,11 +306,38 @@
           </li>
 
           <li class="menu-category">
-            <a href="Awards.php" class="menu-title">Awards</a>
+            <a href="#" class="menu-title">Uniforms</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="leatherofficebag.php">School Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leatherpassport.php">Corporate Uniforms</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leatherwallets.php"> Security Uniforms</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leatherorganizer.php"> Hotel & Restaurant Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="leathergift.php"> Medical & Hospital Uniforms </a>
+              </li>
+
+            </ul>
           </li>
 
+
+
+
           <li class="menu-category">
-            <a href="Brands.php" class="menu-title">Brands</a>
+            <a href="Brands.php" class="menu-title">Clients</a>
           </li>
 
           <li class="menu-category">
@@ -359,6 +393,8 @@
         <li class="menu-category">
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
+
+        
 
         <li class="menu-category">
 
