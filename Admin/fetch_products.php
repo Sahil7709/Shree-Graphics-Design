@@ -45,28 +45,19 @@ try {
         while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
             // Ensure the image paths are correctly formed
-            $image_default_path = "admin/uploads/" . basename($row['image_default']);
             $image_hover_path = "admin/uploads/" . basename($row['image_hover']);
 
-            // Check if images exist before displaying
-            $image_default_path = file_exists($image_default_path) ? $image_default_path : 'default_image_path.jpg';  // Replace with a default image if not found
-            $image_hover_path = file_exists($image_hover_path) ? $image_hover_path : 'default_image_path.jpg';  // Replace with a default image if not found
+            // Check if the hover image exists; if not, use a default image
+            $image_path = file_exists($image_hover_path) ? $image_hover_path : 'default_image_path.jpg';  
 
             // Display product
             echo '
             <div class="showcase">
                 <div class="showcase-banner">
                     <a href="order_product.php?id=' . $row['id'] . '"> <!-- Link to the order page -->
-                        <img src="' . $image_default_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img default">
-                        <img src="' . $image_hover_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img hover">
+                        <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img">
                         <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>
                     </a>
-                    <div class="showcase-actions">
-                        <button class="btn-action"><ion-icon name="heart-outline"></ion-icon></button>
-                        <button class="btn-action"><ion-icon name="eye-outline"></ion-icon></button>
-                        <button class="btn-action"><ion-icon name="repeat-outline"></ion-icon></button>
-                        <button class="btn-action"><ion-icon name="bag-add-outline"></ion-icon></button>
-                    </div>
                 </div>
                 <div class="showcase-content">
                     <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>
@@ -101,7 +92,6 @@ try {
     echo "Error fetching products: " . $e->getMessage();
 }
 ?>
-
 
 </body>
 </html>

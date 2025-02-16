@@ -806,14 +806,14 @@
     <!-- <h3> Location</h3> -->
     <div class="map-responsive">
 
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5791.746155048721!2d74.00661151226782!3d18.591868666545864!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2c53efce2f003%3A0x639e279623f77437!2sMountain%20View%20society!5e0!3m2!1sen!2sin!4v1739394566225!5m2!1sen!2sin" 
-        width="100%"
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15125.831093933786!2d73.78181868112642!3d18.598468807417532!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bc2b9e7004af8fd%3A0xad0298062ecf4409!2sGanesham%20Phase%201!5e0!3m2!1sen!2sin!4v1739667397820!5m2!1sen!2sin" 
+          width="100%"
          height="400" 
          style="border:0;" 
          allowfullscreen=""
           loading="lazy" 
-          referrerpolicy="no-referrer-when-downgrade">
-        </iframe>
+          referrerpolicy="no-referrer-when-downgrade"></iframe>
+
     </div>
   </div>
           <!--

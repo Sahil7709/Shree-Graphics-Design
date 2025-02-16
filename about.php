@@ -82,6 +82,86 @@
 }
 </style>
 
+<style> 
+  <style>
+  /* General container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Address container styling */
+.address-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.address-container h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.address-container p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Contact form section styling */
+.contact-form-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+#codeDisplay {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: #28a745;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+</style>
+</style>
 
 </head>
 
@@ -138,7 +218,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/img13.jpeg" alt="Rose Gold Earrings" width="80" height="70">
+      <img src="./assets/images/img9.jpeg" alt="Rose Gold Earrings" width="80" height="70">
     </div>
 
     <div class="toast-detail">
@@ -173,7 +253,6 @@
     <div class="header-main">
 
       <div class="container">
-
       <a href="index.php" class="header-logo">
         <img src="./assets/logo/Shree_Graphics_Design.png" alt="Logo" width="100" height="60">
         </a>
@@ -697,7 +776,10 @@
       - CATEGORY
     -->
 
+
+
     <div class="category">
+      
 
       <div class="container">
 
@@ -712,116 +794,118 @@
     <!--
       - PRODUCT
     -->
-
     <div class="product-container">
 
-      <div class="container">
+<div class="container">
 
+  <div class="product-box">
 
+    <div class="row">
+      <div class="col-left">
 
-
-        <div class="product-box">
-
-          <!--
-            - PRODUCT MINIMAL
-          -->
-
-          <div class="product-box">
-            <!-- PRODUCT GRID -->
-            <div class="product-grid">
-            <?php // Set the category filter to 'cap'
-// Set the category filter to 'cap'
-$category_filter = 'ipad'; ?>
-              <?php include 'Admin/fetch_products.php'; ?>
-            </div>
-          </div>
-          <!--
-            - PRODUCT FEATURED
-          -->
-
-
-
-          <!--
-            - PRODUCT GRID
-          -->
-
-
-
+        <div class="address-container">
+          <h3>About Us</h3>
+          <p>Welcome to <strong>Shree Graphics Design</strong>, your trusted partner for professional embroidery and digital logo designing. We specialize in creating custom logos for a wide range of products, including T-Shirts, Uniforms, Apparels, Travel Accessories, Leather Products, and more.</p>
         </div>
 
-        
-<!--
-  - SIDEBAR
--->
-
-<div class="sidebar has-scrollbar" data-mobile-menu>
-  <div class="sidebar-category">
-    <div class="sidebar-top">
-    <h2 class="sidebar-title">Contact Form</h2>
-
-        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-          <ion-icon name="close-outline"></ion-icon>
-        </button>
-    </div>
-    <ul class="sidebar-menu-category-list">
-      <li class="sidebar-menu-category">
-      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+        <div class="address-container">
+          <h3>Our Vision</h3>
+          <p>Our vision is to bring creativity and innovation to logo designing, ensuring that your brand stands out with a unique and professional identity.</p>
         </div>
 
-        <div class="menu-title-flex">
-          <div class="form-group">
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-          </div>
+        <div class="address-container">
+          <h3>What We Offer</h3>
+          <ul>
+            <li>Custom Embroidery Logo Designs</li>
+            <li>High-Quality Digital Logo Creation</li>
+            <li>Branding for Schools, Businesses, and Events</li>
+            <li>Personalized Printing for T-Shirts, Caps, Uniforms, and More</li>
+          </ul>
         </div>
-      </li>
-      <li class="sidebar-menu-category">
-        <div class="menu-title-flex">
-          <div class="form-group">
-            <label for="message">Message</label>
-            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
-          </div>
+
+        <div class="address-container">
+          <h3>Why Choose Us?</h3>
+          <ul>
+            <li>Experienced team of designers</li>
+            <li>Use of advanced embroidery & printing technology</li>
+            <li>Customized solutions for all industries</li>
+            <li>Affordable pricing & on-time delivery</li>
+          </ul>
         </div>
-      </li>
-      <li class="sidebar-menu-category">
-        <div class="menu-title-flex">
-          <div class="form-group">
-            <label for="verificationCode">Code</label>
-            <input type="text" id="verificationCode" name="verificationCode" required>
-            <div id="codeDisplay" class="code-box">ABC123</div>
-          </div>
-        </div>
-      </li>
-      <li class="sidebar-menu-category">
-        <div class="menu-title-flex">
-          <div class="form-group">
-            <button type="button" id="refreshCodeBtn">Refresh Code</button>
-          </div>
-        </div>
-      </li>
-      <li class="sidebar-menu-category">
-        <div class="menu-title-flex">
-          <button type="submit" class="submit-btn">Submit</button>
-        </div>
-      </li>
-      </form>
-    </ul>
-  </div>
-</div>
+
       </div>
 
     </div>
 
+  </div>
 
+  <!-- Sidebar: Contact Form -->
+  <div class="sidebar has-scrollbar" data-mobile-menu>
+    <div class="sidebar-category">
+      <div class="sidebar-top">
+        <h2 class="sidebar-title">Contact Us</h2>
 
+        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+      </div>
+      <ul class="sidebar-menu-category-list">
+        <li class="sidebar-menu-category">
+          <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+            <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+
+            <div class="menu-title-flex">
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+              </div>
+            </div>
+        </li>
+        <li class="sidebar-menu-category">
+          <div class="menu-title-flex">
+            <div class="form-group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+            </div>
+          </div>
+        </li>
+        <li class="sidebar-menu-category">
+          <div class="menu-title-flex">
+            <div class="form-group">
+              <label for="verificationCode">Code</label>
+              <input type="text" id="verificationCode" name="verificationCode" required>
+              <div id="codeDisplay" class="code-box">ABC123</div>
+            </div>
+          </div>
+        </li>
+        <li class="sidebar-menu-category">
+          <div class="menu-title-flex">
+            <div class="form-group">
+              <button type="button" id="refreshCodeBtn">Refresh Code</button>
+            </div>
+          </div>
+        </li>
+        <li class="sidebar-menu-category">
+          <div class="menu-title-flex">
+            <button type="submit" class="submit-btn">Submit</button>
+          </div>
+        </li>
+        </form>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+</div>
 
 
   </main>
 
-  
+
   <!--
     - FOOTER
   -->
@@ -946,41 +1030,39 @@ $category_filter = 'ipad'; ?>
 
         </ul>
 
-
         <ul class="footer-nav-list">
 
-<li class="footer-nav-item">
-  <h2 class="nav-title">Contact</h2>
-</li>
+          <li class="footer-nav-item">
+            <h2 class="nav-title">Contact</h2>
+          </li>
 
-<li class="footer-nav-item flex">
-  <div class="icon-box">
-    <ion-icon name="location-outline"></ion-icon>
-  </div>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
 
-  <address class="content">
-  Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
-</address>
-</li>
+            <address class="content">
+            Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
+          </address>
+          </li>
 
-<li class="footer-nav-item flex">
-  <div class="icon-box">
-    <ion-icon name="call-outline"></ion-icon>
-  </div>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="call-outline"></ion-icon>
+            </div>
 
-  <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
-</li>
+            <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
+          </li>
 
-<li class="footer-nav-item flex">
-  <div class="icon-box">
-    <ion-icon name="mail-outline"></ion-icon>
-  </div>
+          <li class="footer-nav-item flex">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
+            </div>
 
-  <a href="mailto: hr@devconsoftware.com" class="footer-nav-link"> hr@devconsoftware.com</a>
-</li>
+            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
+          </li>
 
-</ul>
-
+        </ul>
 
         <ul class="footer-nav-list">
 
@@ -1040,9 +1122,6 @@ $category_filter = 'ipad'; ?>
   </footer>
 
 
-
-
-
   <!--
     - custom js link
   -->
@@ -1054,8 +1133,8 @@ $category_filter = 'ipad'; ?>
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
-      <!-- Script for Contact Form -->
-      <script>
+    <!-- Script for Contact Form -->
+    <script>
     // Initialize the verification code
     const generateCode = () => {
       const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';

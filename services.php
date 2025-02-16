@@ -16,7 +16,6 @@
     - custom css link
   -->
   <link rel="stylesheet" href="./assets/css/style-prefix.css">
-  <!-- <link rel="stylesheet"  href="./assets/css/style.css"> -->
 
   <!--
     - google font link
@@ -26,14 +25,150 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
+    <style>
+.sidebar {
+  width: 300px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.sidebar-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.code-box {
+  background-color: #f3f3f3;
+  padding: 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 5px;
+  margin-top: 5px;
+}
+#refreshCodeBtn {
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.submit-btn {
+  background-color: #28a745;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+</style>
+
+<style> 
+  <style>
+  /* General container styling */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Address container styling */
+.address-container {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.address-container h3 {
+  margin-top: 0;
+  font-size: 24px;
+  color: #333;
+}
+
+.address-container p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* Contact form section styling */
+.contact-form-section {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.form-group textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+#codeDisplay {
+  background-color: #f1f1f1;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.submit-btn {
+  background-color: #28a745;
+}
+
+.submit-btn:hover {
+  background-color: #218838;
+}
+
+</style>
+</style>
+
 </head>
 
 <body>
 
 
-
-
-<div class="overlay" data-overlay></div>
+  <div class="overlay" data-overlay></div>
 
 <!--
   - MODAL
@@ -72,7 +207,6 @@
 
 
 
-
   <!--
     - NOTIFICATION TOAST
   -->
@@ -84,7 +218,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/cap1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+      <img src="./assets/images/img9.jpeg" alt="Rose Gold Earrings" width="80" height="70">
     </div>
 
     <div class="toast-detail">
@@ -112,16 +246,15 @@
   <!--
     - HEADER
   -->
+
   <header>
 
 
     <div class="header-main">
 
       <div class="container">
-
-        <a href="index.php" class="header-logo">
+      <a href="index.php" class="header-logo">
         <img src="./assets/logo/Shree_Graphics_Design.png" alt="Logo" width="100" height="60">
-        <!-- Shree Graphics Design -->
         </a>
 
         <div class="header-search-container">
@@ -638,608 +771,146 @@
   -->
 
   <main>
+
     <!--
       - CATEGORY
     -->
 
+
+
     <div class="category">
+      
 
       <div class="container">
-
 
       </div>
 
     </div>
+
+
+
+
 
     <!--
       - PRODUCT
     -->
-
     <div class="product-container">
 
-      <div class="container">
+<div class="container">
 
+  <div class="product-box">
 
-        <!--
-          - SIDEBAR
-        -->
+    <div class="row">
+      <div class="col-left">
 
-        <div class="sidebar  has-scrollbar" data-mobile-menu>
-
-          <div class="sidebar-category">
-
-            <div class="sidebar-top">
-              <h2 class="sidebar-title">Embroidery Designing
-              </h2>
-
-              <button class="sidebar-close-btn" data-mobile-menu-close-btn>
-                <ion-icon name="close-outline"></ion-icon>
-              </button>
-            </div>
-
-            <ul class="sidebar-menu-category-list">
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/dress.svg" alt="clothes" width="20" height="20"
-                      class="menu-title-img">
-
-                    <p class="menu-title">T-Shirt</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="round_neck.php" class="sidebar-submenu-title">
-                      <p class="product-name">Round Neck</p>
-                      <!-- <data value="300" class="stock" title="Available Stock">300</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="v_neck.php" class="sidebar-submenu-title">
-                      <p class="product-name">V-Neck</p>
-                      <!-- <data value="60" class="stock" title="Available Stock">60</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="pool_tshirt.php" class="sidebar-submenu-title">
-                      <p class="product-name">Pool T-Shirt</p>
-                      <!-- <data value="50" class="stock" title="Available Stock">50</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="cutSew.php" class="sidebar-submenu-title">
-                      <p class="product-name">Cut and sew T-Shirt</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="basicpool.php" class="sidebar-submenu-title">
-                      <p class="product-name">Basic Pool T-Shirt</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87</data> -->
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/shoes.svg" alt="footwear" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Apparels</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="cap.php" class="sidebar-submenu-title">
-                      <p class="product-name">Cap</p>
-                      <!-- <data value="45" class="stock" title="Available Stock">45</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="jackets.php" class="sidebar-submenu-title">
-                      <p class="product-name">Jackets</p>
-                      <!-- <data value="75" class="stock" title="Available Stock">75</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="sweartshirt.php" class="sidebar-submenu-title">
-                      <p class="product-name">Sweartshirt</p>
-                      <!-- <data value="35" class="stock" title="Available Stock">35</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="denimShirt.php" class="sidebar-submenu-title">
-                      <p class="product-name">Denim Shirt</p>
-                      <!-- <data value="35" class="stock" title="Available Stock">35</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="windcheaters.php" class="sidebar-submenu-title">
-                      <p class="product-name">Windcheaters</p>
-                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="ties.php" class="sidebar-submenu-title">
-                      <p class="product-name">Ties</p>
-                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/jewelry.svg" alt="clothes" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Travel</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="handbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Hand Bag</p>
-                      <!-- <data value="46" class="stock" title="Available Stock">46</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="strolleybag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Strolley Bags</p>
-                      <!-- <data value="73" class="stock" title="Available Stock">73</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="travelbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Travel Bags</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="backpacks.php" class="sidebar-submenu-title">
-                      <p class="product-name">Back Packs</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Bags</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopcumbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Cum Overnighter Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="trekkingbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Trekking Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="passport.php" class="sidebar-submenu-title">
-                      <p class="product-name">Passport Holder</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="ipad.php" class="sidebar-submenu-title">
-                      <p class="product-name">I Pad Pouch</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptophandbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Hand Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopPouch.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Pouch </p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/perfume.svg" alt="perfume" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Leather</p>
-                  </div>
-
-                  <div>
-                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
-                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-                  </div>
-
-                </button>
-
-                <ul class="sidebar-submenu-category-list" data-accordion>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherofficebag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather office Bags</p>
-                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherpassport.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Passport Holder</p>
-                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherwallets.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Wallets</p>
-                      <!-- <data value="60" class="stock" title="Available Stock">60 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leatherorganizer.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Organizers</p>
-                      <!-- <data value="50" class="stock" title="Available Stock">50 pcs</data> -->
-                    </a>
-                  </li>
-
-                  <li class="sidebar-submenu-category">
-                    <a href="leathergift.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Gift Sets</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87 pcs</data> -->
-                    </a>
-                  </li>
-
-                </ul>
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/cosmetics.svg" alt="cosmetics" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Awards</p>
-                  </div>
-
-
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/glasses.svg" alt="glasses" class="menu-title-img" width="20"
-                      height="20">
-
-                    <p class="menu-title">Brands</p>
-                  </div>
-
-
-                </button>
-
-
-              </li>
-
-              <li class="sidebar-menu-category">
-
-                <button class="sidebar-accordion-menu" data-accordion-btn>
-
-                  <div class="menu-title-flex">
-                    <img src="./assets/images/icons/bag.svg" alt="bags" class="menu-title-img" width="20" height="20">
-
-                    <p class="menu-title">Contact</p>
-                  </div>
-
-                </button>
-
-
-              </li>
-
-            </ul>
-
-          </div>
-
-
-
+        <div class="address-container">
+          <h3>Our Services</h3>
+          <p>At <strong>Shree Graphics Design</strong>, we offer a wide range of professional services to help your brand stand out with high-quality embroidery and digital logo designing.</p>
         </div>
 
+        <div class="address-container">
+          <h3>Custom Embroidery Logo Design</h3>
+          <p>We specialize in designing and stitching customized embroidery logos for T-Shirts, Uniforms, and Corporate Wear. Our team ensures precision and quality in every design.</p>
+        </div>
 
+        <div class="address-container">
+          <h3>Digital Logo Creation</h3>
+          <p>We provide high-resolution digital logo designs tailored for businesses, startups, and personal brands, ensuring a professional and unique brand identity.</p>
+        </div>
 
-        
-        <div class="product-box">
+        <div class="address-container">
+          <h3>Printing & Branding Services</h3>
+          <ul>
+            <li>Personalized T-Shirts, Caps, and Hoodies</li>
+            <li>Corporate Uniform Branding</li>
+            <li>Event Merchandise & Promotional Items</li>
+            <li>Leather Products Customization</li>
+          </ul>
+        </div>
 
-          <!--
-            - PRODUCT MINIMAL
-          -->
-
-          <div class="product-box">
-            <!-- PRODUCT GRID -->
-          
-
-
-
-              <div class="product-grid">
-<?php
-// Database connection
-$conn = new mysqli('localhost', 'root', '', 'logo');
-
-// Check connection
-if ($conn->connect_error) {
-  die("Connection failed: " . $conn->connect_error);
-}
-
-// Fetch services from the database
-$sql = "SELECT * FROM services";
-$result = $conn->query($sql);
-
-if ($result->num_rows > 0) {
-  while ($row = $result->fetch_assoc()) {
-      // Define image path
-      $imagePath = "admin/uploads/" . htmlspecialchars($row['service_image']);
-
-      // Check if file exists, otherwise use a default image
-      if (!file_exists($imagePath) || empty($row['service_image'])) {
-          $imagePath = "admin/uploads/default.jpg"; // Default image
-      }
-
-      echo '<img src="' . $imagePath . '"  alt="' . htmlspecialchars($row['service_name']) . '" 
-                   class="service-img">
-              <div class="service-info">
-                  <h3 class="service-title">' . htmlspecialchars($row['service_name']) . '</h3>
-                  <p class="service-description">' . htmlspecialchars($row['service_description']) . '</p>
-                  <p class="service-price">Rs. ' . htmlspecialchars($row['service_price']) . '</p>
-          
-      </div>';
-  }
-} else {
-  echo "<p>No services available.</p>";
-}
-
-// Close the database connection
-$conn->close();
-?>
-
-
-
-
-            </div>
-          </div>
-
+        <div class="address-container">
+          <h3>Why Choose Our Services?</h3>
+          <ul>
+            <li>Premium quality embroidery and printing</li>
+            <li>Custom-made designs for every client</li>
+            <li>Fast and reliable delivery</li>
+            <li>Affordable pricing with no compromise on quality</li>
+          </ul>
         </div>
 
       </div>
-
     </div>
 
-
-
-
-
-    <!--
-      - TESTIMONIALS, CTA & SERVICE
-    -->
-
-    <div>
-
-      <div class="container">
-
-        <div class="testimonials-box">
-
-          <!--
-      - TESTIMONIALS
-    -->
-
-          <div class="testimonial">
-
-            <h2 class="title">testimonial</h2>
-
-            <div class="testimonial-card">
-
-              <img src="./assets/images/testimonial-1.jpg" alt="alan doe" class="testimonial-banner" width="80"
-                height="80">
-
-              <p class="testimonial-name">Sonali</p>
-
-
-              <img src="./assets/images/icons/quotes.svg" alt="quotation" class="quotation-img" width="26">
-
-              <p class="testimonial-desc">
-                Amazing work! Shree Graphics Design Software Solutions created a logo that perfectly represents my brand.
-                Their creativity and professionalism are top-notch. Highly recommend!
-              </p>
-
-            </div>
-
-          </div>
-
-          <!--
-      - CTA
-    -->
-
-          <div class="cta-container">
-
-            <img src="./assets/images/cta-banner.jpg" alt="summer collection" class="cta-banner">
-
-            <a href="#" class="cta-content">
-
-              <p class="discount">25% Discount</p>
-
-              <h2 class="cta-title">Summer collection</h2>
-
-              <p class="cta-text">Starting @ Rs. 5000</p>
-
-              <button class="cta-btn">Shop now</button>
-
-            </a>
-
-          </div>
-
-
-
-          <!--
-      - SERVICE
-    -->
-
-          <div class="service">
-
-            <h2 class="title">Our Services</h2>
-
-            <div class="service-container">
-
-              <a href="#" class="service-item">
-
-                <div class="service-icon">
-                  <ion-icon name="boat-outline"></ion-icon>
-                </div>
-
-                <div class="service-content">
-
-                  <h3 class="service-title">Logo Design</h3>
-                  <p class="service-desc">Unique and creative logos.</p>
-
-                </div>
-              </a>
-
-              <a href="#" class="service-item">
-
-                <div class="service-icon">
-                  <ion-icon name="rocket-outline"></ion-icon>
-                </div>
-
-                <div class="service-content">
-
-                  <h3 class="service-title">Brand Identity</h3>
-                  <p class="service-desc"> Memorable and consistent branding.</p>
-
-                </div>
-
-              </a>
-
-              <a href="#" class="service-item">
-
-                <div class="service-icon">
-                  <ion-icon name="call-outline"></ion-icon>
-                </div>
-
-                <div class="service-content">
-
-                  <h3 class="service-title">Custom Illustrations</h3>
-                  <p class="service-desc">Custom artwork for your brand.</p>
-
-                </div>
-
-              </a>
-
-              <a href="#" class="service-item">
-
-                <div class="service-icon">
-                  <ion-icon name="arrow-undo-outline"></ion-icon>
-                </div>
-
-                <div class="service-content">
-
-                  <h3 class="service-title">Business Cards</h3>
-                  <p class="service-desc">Professional card designs.</p>
-
-                </div>
-
-              </a>
-
-              <a href="#" class="service-item">
-
-                <div class="service-icon">
-                  <ion-icon name="ticket-outline"></ion-icon>
-                </div>
-
-                <div class="service-content">
-
-                  <h3 class="service-title">Social Media Graphics</h3>
-                  <p class="service-desc">Eye-catching visuals</p>
-
-                </div>
-
-              </a>
-
-            </div>
-
-          </div>
-
+  </div>
+
+  <!-- Sidebar: Contact Form -->
+  <div class="sidebar has-scrollbar" data-mobile-menu>
+  <div class="sidebar-category">
+    <div class="sidebar-top">
+    <h2 class="sidebar-title">Contact Form</h2>
+
+        <button class="sidebar-close-btn" data-mobile-menu-close-btn>
+          <ion-icon name="close-outline"></ion-icon>
+        </button>
+    </div>
+    <ul class="sidebar-menu-category-list">
+      <li class="sidebar-menu-category">
+      <form action="submit_contact.php" method="post" id="contactForm" onsubmit="return validateCode()">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" placeholder="Enter your full name" required>
         </div>
 
-      </div>
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here" required></textarea>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <label for="verificationCode">Code</label>
+            <input type="text" id="verificationCode" name="verificationCode" required>
+            <div id="codeDisplay" class="code-box">ABC123</div>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <div class="form-group">
+            <button type="button" id="refreshCodeBtn">Refresh Code</button>
+          </div>
+        </div>
+      </li>
+      <li class="sidebar-menu-category">
+        <div class="menu-title-flex">
+          <button type="submit" class="submit-btn">Submit</button>
+        </div>
+      </li>
+      </form>
+    </ul>
+  </div>
+</div>
 
-    </div>
+</div>
+
+</div>
+
+
+
   </main>
 
-  
+
   <!--
     - FOOTER
   -->
@@ -1393,7 +1064,7 @@ $conn->close();
               <ion-icon name="mail-outline"></ion-icon>
             </div>
 
-            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">lamkhadegs@gmail.com</a>
+            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">hr@devconsoftware.com</a>
           </li>
 
         </ul>
@@ -1456,8 +1127,6 @@ $conn->close();
   </footer>
 
 
-
-
   <!--
     - custom js link
   -->
@@ -1469,6 +1138,44 @@ $conn->close();
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <!-- Script for Contact Form -->
+    <script>
+    // Initialize the verification code
+    const generateCode = () => {
+      const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+      let newCode = '';
+      for (let i = 0; i < 6; i++) {
+        newCode += characters.charAt(Math.floor(Math.random() * characters.length));
+      }
+      return newCode;
+    };
+
+    // Update the displayed code
+    const refreshCode = () => {
+      const newCode = generateCode();
+      document.getElementById('codeDisplay').textContent = newCode;
+    };
+
+    // Event listener for refreshing the code
+    document.getElementById('refreshCodeBtn').addEventListener('click', refreshCode);
+
+    // Validate the code on form submission
+    const validateCode = () => {
+      const displayedCode = document.getElementById('codeDisplay').textContent;
+      const enteredCode = document.getElementById('verificationCode').value;
+
+      if (displayedCode !== enteredCode) {
+        alert('Verification code is incorrect. Please try again.');
+        return false; // Prevent form submission
+      }
+
+      return true; // Allow form submission
+    };
+
+    // Set an initial code when the page loads
+    window.onload = refreshCode;
+  </script>
+  
 </body>
 
 </html>
