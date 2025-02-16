@@ -154,12 +154,12 @@
           </li>
 
           <li class="menu-category">
-            <a href="index.php" class="menu-title">About
+            <a href="about.php" class="menu-title">About
             </a>
           </li>
 
           <li class="menu-category">
-            <a href="index.php" class="menu-title">Services
+            <a href="services.php" class="menu-title">Services
             </a>
           </li>
 
@@ -311,23 +311,23 @@
             <ul class="dropdown-list">
 
               <li class="dropdown-item">
-                <a href="leatherofficebag.php">School Uniforms </a>
+                <a href="school.php">School Uniforms </a>
               </li>
 
               <li class="dropdown-item">
-                <a href="leatherpassport.php">Corporate Uniforms</a>
+                <a href="corporate.php">Corporate Uniforms</a>
               </li>
 
               <li class="dropdown-item">
-                <a href="leatherwallets.php"> Security Uniforms</a>
+                <a href="security.php"> Security Uniforms</a>
               </li>
 
               <li class="dropdown-item">
-                <a href="leatherorganizer.php"> Hotel & Restaurant Uniforms </a>
+                <a href="hotal.php"> Hotel & Restaurant Uniforms </a>
               </li>
 
               <li class="dropdown-item">
-                <a href="leathergift.php"> Medical & Hospital Uniforms </a>
+                <a href="medical.php"> Medical & Hospital Uniforms </a>
               </li>
 
             </ul>
@@ -337,7 +337,7 @@
 
 
           <li class="menu-category">
-            <a href="Brands.php" class="menu-title">Clients</a>
+            <a href="clients.php" class="menu-title">Clients</a>
           </li>
 
           <li class="menu-category">
@@ -573,12 +573,48 @@
         </li>
 
         <li class="menu-category">
-          <a href="Awards.php" class="menu-title">Awards
-          </a>
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Uniforms</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="school.php" class="submenu-title">School Uniforms</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="corporate.php" class="submenu-title">Corporate Uniforms
+              </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="security.php" class="submenu-title">Security Uniforms
+              </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="hotal.php" class="submenu-title">Hotel & Restaurant Uniforms
+              </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="medical.php" class="submenu-title">Medical & Hospital Uniforms
+              </a>
+            </li>
+
+          </ul>
+
         </li>
 
         <li class="menu-category">
-          <a href="Brands.php" class="menu-title">Brands</a>
+          <a href="clients.php" class="menu-title">Clients</a>
         </li>
 
         <li class="menu-category">
@@ -915,18 +951,67 @@
 
               </li>
 
+
               <li class="sidebar-menu-category">
 
                 <button class="sidebar-accordion-menu" data-accordion-btn>
 
                   <div class="menu-title-flex">
-                    <img src="./assets/images/icons/cosmetics.svg" alt="cosmetics" class="menu-title-img" width="20"
+                    <img src="./assets/images/icons/perfume.svg" alt="perfume" class="menu-title-img" width="20"
                       height="20">
 
-                    <p class="menu-title">Awards</p>
+                    <p class="menu-title">Uniforms</p>
                   </div>
 
+                  <div>
+                    <ion-icon name="add-outline" class="add-icon"></ion-icon>
+                    <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+                  </div>
 
+                </button>
+
+                <ul class="sidebar-submenu-category-list" data-accordion>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="school.php" class="sidebar-submenu-title">
+                      <p class="product-name">School Uniforms</p>
+                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="corporate.php" class="sidebar-submenu-title">
+                      <p class="product-name">Corporate Uniforms
+                      </p>
+                      <!-- <data value="12" class="stock" title="Available Stock">12 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="security.php" class="sidebar-submenu-title">
+                      <p class="product-name">Security Uniforms
+                      </p>
+                      <!-- <data value="60" class="stock" title="Available Stock">60 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="hotal.php" class="sidebar-submenu-title">
+                      <p class="product-name">Hotel & Restaurant Uniforms
+                      </p>
+                      <!-- <data value="50" class="stock" title="Available Stock">50 pcs</data> -->
+                    </a>
+                  </li>
+
+                  <li class="sidebar-submenu-category">
+                    <a href="medical.php" class="sidebar-submenu-title">
+                      <p class="product-name">Medical & Hospital Uniforms
+                      </p>
+                      <!-- <data value="87" class="stock" title="Available Stock">87 pcs</data> -->
+                    </a>
+                  </li>
+
+                </ul>
 
               </li>
 
@@ -938,7 +1023,7 @@
                     <img src="./assets/images/icons/glasses.svg" alt="glasses" class="menu-title-img" width="20"
                       height="20">
 
-                    <p class="menu-title">Brands</p>
+                    <p class="menu-title">Clients</p>
                   </div>
 
 

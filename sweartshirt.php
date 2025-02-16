@@ -203,6 +203,7 @@
 
     </div>
 
+
     <nav class="desktop-navigation-menu">
 
       <div class="container">
@@ -214,9 +215,19 @@
             </a>
           </li>
 
+          <li class="menu-category">
+            <a href="about.php" class="menu-title">About
+            </a>
+          </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">T-shirt</a>
+            <a href="services.php" class="menu-title">Services
+            </a>
+          </li>
+
+
+          <li class="menu-category">
+            <a href="#" class="menu-title">Tshirt</a>
 
             <ul class="dropdown-list">
 
@@ -357,11 +368,38 @@
           </li>
 
           <li class="menu-category">
-            <a href="Awards.php" class="menu-title">Awards</a>
+            <a href="#" class="menu-title">Uniforms</a>
+
+            <ul class="dropdown-list">
+
+              <li class="dropdown-item">
+                <a href="school.php">School Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="corporate.php">Corporate Uniforms</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="security.php"> Security Uniforms</a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="hotal.php"> Hotel & Restaurant Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="medical.php"> Medical & Hospital Uniforms </a>
+              </li>
+
+            </ul>
           </li>
 
+
+
+
           <li class="menu-category">
-            <a href="Brands.php" class="menu-title">Brands</a>
+            <a href="clients.php" class="menu-title">Clients</a>
           </li>
 
           <li class="menu-category">
@@ -417,6 +455,8 @@
         <li class="menu-category">
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
+
+        
 
         <li class="menu-category">
 
@@ -595,12 +635,48 @@
         </li>
 
         <li class="menu-category">
-          <a href="Awards.php" class="menu-title">Awards
-          </a>
+
+          <button class="accordion-menu" data-accordion-btn>
+            <p class="menu-title">Uniforms</p>
+
+            <div>
+              <ion-icon name="add-outline" class="add-icon"></ion-icon>
+              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
+            </div>
+          </button>
+
+          <ul class="submenu-category-list" data-accordion>
+
+            <li class="submenu-category">
+              <a href="school.php" class="submenu-title">School Uniforms</a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="corporate.php" class="submenu-title">Corporate Uniforms
+              </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="security.php" class="submenu-title">Security Uniforms
+              </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="hotal.php" class="submenu-title">Hotel & Restaurant Uniforms
+              </a>
+            </li>
+
+            <li class="submenu-category">
+              <a href="medical.php" class="submenu-title">Medical & Hospital Uniforms
+              </a>
+            </li>
+
+          </ul>
+
         </li>
 
         <li class="menu-category">
-          <a href="Brands.php" class="menu-title">Brands</a>
+          <a href="clients.php" class="menu-title">Clients</a>
         </li>
 
         <li class="menu-category">

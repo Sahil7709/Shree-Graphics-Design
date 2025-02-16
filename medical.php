@@ -82,6 +82,7 @@
 }
 </style>
 
+
 </head>
 
 <body>
@@ -125,6 +126,7 @@
 </div>
 
 
+
   <!--
     - NOTIFICATION TOAST
   -->
@@ -136,7 +138,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/cap1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+      <img src="./assets/images/img13.jpeg" alt="Rose Gold Earrings" width="80" height="70">
     </div>
 
     <div class="toast-detail">
@@ -164,6 +166,7 @@
   <!--
     - HEADER
   -->
+
   <header>
 
 
@@ -197,7 +200,6 @@
 
     </div>
 
-
     <nav class="desktop-navigation-menu">
 
       <div class="container">
@@ -209,19 +211,9 @@
             </a>
           </li>
 
-          <li class="menu-category">
-            <a href="about.php" class="menu-title">About
-            </a>
-          </li>
 
           <li class="menu-category">
-            <a href="services.php" class="menu-title">Services
-            </a>
-          </li>
-
-
-          <li class="menu-category">
-            <a href="#" class="menu-title">Tshirt</a>
+            <a href="#" class="menu-title">T-shirt</a>
 
             <ul class="dropdown-list">
 
@@ -362,38 +354,11 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Uniforms</a>
-
-            <ul class="dropdown-list">
-
-              <li class="dropdown-item">
-                <a href="school.php">School Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="corporate.php">Corporate Uniforms</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="security.php"> Security Uniforms</a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="hotal.php"> Hotel & Restaurant Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="medical.php"> Medical & Hospital Uniforms </a>
-              </li>
-
-            </ul>
+            <a href="Awards.php" class="menu-title">Awards</a>
           </li>
 
-
-
-
           <li class="menu-category">
-            <a href="clients.php" class="menu-title">Clients</a>
+            <a href="Brands.php" class="menu-title">Brands</a>
           </li>
 
           <li class="menu-category">
@@ -449,8 +414,6 @@
         <li class="menu-category">
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
-
-        
 
         <li class="menu-category">
 
@@ -629,48 +592,12 @@
         </li>
 
         <li class="menu-category">
-
-          <button class="accordion-menu" data-accordion-btn>
-            <p class="menu-title">Uniforms</p>
-
-            <div>
-              <ion-icon name="add-outline" class="add-icon"></ion-icon>
-              <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
-            </div>
-          </button>
-
-          <ul class="submenu-category-list" data-accordion>
-
-            <li class="submenu-category">
-              <a href="school.php" class="submenu-title">School Uniforms</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="corporate.php" class="submenu-title">Corporate Uniforms
-              </a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="security.php" class="submenu-title">Security Uniforms
-              </a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="hotal.php" class="submenu-title">Hotel & Restaurant Uniforms
-              </a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="medical.php" class="submenu-title">Medical & Hospital Uniforms
-              </a>
-            </li>
-
-          </ul>
-
+          <a href="Awards.php" class="menu-title">Awards
+          </a>
         </li>
 
         <li class="menu-category">
-          <a href="clients.php" class="menu-title">Clients</a>
+          <a href="Brands.php" class="menu-title">Brands</a>
         </li>
 
         <li class="menu-category">
@@ -683,7 +610,7 @@
 
   </header>
 
-  
+
   <!--
     - MAIN
   -->
@@ -728,7 +655,7 @@
             <div class="product-grid">
             <?php // Set the category filter to 'cap'
 // Set the category filter to 'cap'
-$category_filter = 'laptophandbag'; ?>
+$category_filter = 'medical'; ?>
               <?php include 'Admin/fetch_products.php'; ?>
             </div>
           </div>
@@ -808,7 +735,6 @@ $category_filter = 'laptophandbag'; ?>
     </ul>
   </div>
 </div>
-
       </div>
 
     </div>
@@ -819,8 +745,7 @@ $category_filter = 'laptophandbag'; ?>
 
   </main>
 
-
-   
+  
   <!--
     - FOOTER
   -->
@@ -945,40 +870,41 @@ $category_filter = 'laptophandbag'; ?>
 
         </ul>
 
+
         <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Contact</h2>
-          </li>
+<li class="footer-nav-item">
+  <h2 class="nav-title">Contact</h2>
+</li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+<li class="footer-nav-item flex">
+  <div class="icon-box">
+    <ion-icon name="location-outline"></ion-icon>
+  </div>
 
-            <address class="content">
-            Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
-          </address>
-          </li>
+  <address class="content">
+  Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
+</address>
+</li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="call-outline"></ion-icon>
-            </div>
+<li class="footer-nav-item flex">
+  <div class="icon-box">
+    <ion-icon name="call-outline"></ion-icon>
+  </div>
 
-            <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
-          </li>
+  <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
+</li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+<li class="footer-nav-item flex">
+  <div class="icon-box">
+    <ion-icon name="mail-outline"></ion-icon>
+  </div>
 
-            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">lamkhadegs@gmail.com</a>
-          </li>
+  <a href="mailto: hr@devconsoftware.com" class="footer-nav-link"> hr@devconsoftware.com</a>
+</li>
 
-        </ul>
-        
+</ul>
+
 
         <ul class="footer-nav-list">
 
@@ -1036,6 +962,9 @@ $category_filter = 'laptophandbag'; ?>
     </div>
 
   </footer>
+
+
+
 
 
   <!--
