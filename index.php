@@ -7,6 +7,41 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shree Graphics Design </title>
 
+  <style>
+    .product-img {
+    width: 100%;
+    height: 250px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images fill the area without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+
+.showcase {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%; /* Ensures uniform height */
+}
+
+.showcase-banner {
+    width: 100%;
+    height: 250px; /* Set a fixed height */
+    display: flex;
+    /* align-items: center; */
+    justify-content: center;
+    overflow: hidden;
+}
+
+.product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the space */
+}
+
+
+
+</style>
+
   <!--
     - favicon
   -->
