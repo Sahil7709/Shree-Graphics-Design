@@ -6,6 +6,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Product Showcase</title>
     <link rel="stylesheet" href="CSS/index.css">
+    <style>
+        .showcase {
+            position: relative;
+            width: 300px;
+            margin: 20px;
+        }
+
+        .showcase-banner {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .product-img {
+            width: 100%;
+            display: block;
+        }
+
+        .product-img.hover {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 80px; /* Adjust size as needed */
+            height: auto;
+            transform: translate(-50%, -50%);
+            opacity: 0.8; /* Make it slightly transparent */
+        }
+    </style>
 </head>
 
 <body>
@@ -32,30 +60,15 @@
             $image_hover_path = "admin/uploads/" . basename($row['image_hover']);
 
             // Check if images exist before displaying
-            $image_default_path = file_exists($image_default_path) ? $image_default_path : 'default_image_path.jpg';  // Replace with a default image if not found
-            $image_hover_path = file_exists($image_hover_path) ? $image_hover_path : 'default_image_path.jpg';  // Replace with a default image if not found
+            $image_default_path = file_exists($image_default_path) ? $image_default_path : 'default_image_path.jpg';
+            $image_hover_path = file_exists($image_hover_path) ? $image_hover_path : 'default_logo.png'; // Logo over main image
     
             // Display product in the specified card format
             echo '
         <div class="showcase">
             <div class="showcase-banner">
-                <img src="' . $image_default_path . '" alt="' . htmlspecialchars($row['name']) . '" width="300" class="product-img default">
-                <img src="' . $image_hover_path . '" alt="' . htmlspecialchars($row['name']) . '" width="300" class="product-img hover">
-                <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>
-                <div class="showcase-actions">
-                    <button class="btn-action">
-                        <ion-icon name="heart-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                        <ion-icon name="eye-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                        <ion-icon name="repeat-outline"></ion-icon>
-                    </button>
-                    <button class="btn-action">
-                        <ion-icon name="bag-add-outline"></ion-icon>
-                    </button>
-                </div>
+                <img src="' . $image_default_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img default">
+                <img src="' . $image_hover_path . '" alt="Logo" class="product-img hover">
             </div>
             <div class="showcase-content">
                 <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>
