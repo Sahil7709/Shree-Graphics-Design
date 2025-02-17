@@ -122,7 +122,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <option value="travelbag">Travel Bag</option>
           <option value="backpacks">Back Packs</option>
           <option value="laptopbag">Laptop Bag</option>
-          <option value="laptopcumbag">laptopcumbag</option>
+          <option value="laptopcumbag">Laptop Cum Bag</option>
           <option value="trekkingbag">Trekking Bag</option>
           <option value="passport">Passport Holder</option>
           <option value="ipad">I Pad Pouch</option>
@@ -135,6 +135,12 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <option value="leatherwallets">leather Wallets</option>
           <option value="leatherorganizer">leather Oraganizer</option>
           <option value="leathergift">leather Gift Set</option>
+
+          <option value="school">School Uniforms</option>
+          <option value="corporate">Corporate Uniforms </option>
+          <option value="security">Security Uniforms </option>
+          <option value="hotal">Hotal & Restaurant Uniforms</option>
+          <option value="medical">Medical & Hospital Uniforms</option>
 
 
         </select>
