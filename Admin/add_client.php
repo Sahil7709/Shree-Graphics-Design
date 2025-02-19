@@ -1,6 +1,4 @@
 <?php
-// admin_add_service.php
-
 // Database connection
 $conn = new mysqli('localhost', 'root', '', 'logo');
 
@@ -10,16 +8,15 @@ if ($conn->connect_error) {
 }
 
 // Handle form submission
-if (isset($_POST['submit_service'])) {
-    $service_name = $_POST['service_name'];
-    $service_description = $_POST['service_description'];
-    $service_price = $_POST['service_price'];
+if (isset($_POST['submit_client'])) {
+    $client_name = $conn->real_escape_string($_POST['client_name']);
+    $client_description = $conn->real_escape_string($_POST['client_description']);
 
     // Handle file upload
-    if (isset($_FILES['service_image']) && $_FILES['service_image']['error'] == 0) {
-        $image_name = $_FILES['service_image']['name'];
-        $image_tmp = $_FILES['service_image']['tmp_name'];
-        $image_size = $_FILES['service_image']['size'];
+    if (isset($_FILES['client_image']) && $_FILES['client_image']['error'] == 0) {
+        $image_name = $_FILES['client_image']['name'];
+        $image_tmp = $_FILES['client_image']['tmp_name'];
+        $image_size = $_FILES['client_image']['size'];
         $image_extension = pathinfo($image_name, PATHINFO_EXTENSION);
         $allowed_extensions = ['jpg', 'jpeg', 'png'];
 
@@ -32,9 +29,11 @@ if (isset($_POST['submit_service'])) {
             // Move the uploaded image to the "uploads" folder
             if (move_uploaded_file($image_tmp, $upload_path)) {
                 // Insert data into the database
-                $sql = "INSERT INTO services (service_name, service_description, service_price, service_image) VALUES ('$service_name', '$service_description', '$service_price', '$new_image_name')";
+                $sql = "INSERT INTO clients (client_name, client_description, client_image) 
+                        VALUES ('$client_name', '$client_description', '$new_image_name')";
+                
                 if ($conn->query($sql) === TRUE) {
-                    echo "New service added successfully!";
+                    echo "New client added successfully!";
                 } else {
                     echo "Error: " . $sql . "<br>" . $conn->error;
                 }

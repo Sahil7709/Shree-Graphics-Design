@@ -43,7 +43,7 @@ $vendors = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     <a href="customers.php"><i class="fas fa-users"></i> Customers</a>
     <!-- <a href="#settings"><i class="fas fa-cog"></i> Settings</a> -->
-    <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
+    <a href="Clients.php"><i class="fas fa-briefcase"></i> Clients</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
     <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>

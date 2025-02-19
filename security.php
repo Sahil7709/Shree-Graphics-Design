@@ -450,7 +450,7 @@
       <ul class="mobile-menu-category-list">
 
         <li class="menu-category">
-          <a href="index.php" class="menu-title">Embroidery Designing</a>
+          <a href="index.php" class="menu-title">Embroidery </a>
         </li>
 
         

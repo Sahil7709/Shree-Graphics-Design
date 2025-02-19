@@ -34,7 +34,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <a href="admin_orders.php"><i class="fas fa-shopping-cart"></i> Orders</a>
     <a href="customers.php"><i class="fas fa-users"></i> Customers</a>
     <!-- <a href="#settings"><i class="fas fa-cog"></i> Settings</a> -->
-    <a href="services.php"><i class="fas fa-briefcase"></i> Services</a>
+    <a href="clients.php"><i class="fas fa-briefcase"></i> Clients</a>
     <a href="slider.php"><i class="fas fa-images"></i> Slider</a>
     <a href="logout.php"><i class="fas fa-sign-out-alt"></i> Logout</a>
   </div>
@@ -68,10 +68,10 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
   </div>
 
   <div class="col-md-3">
-    <a href="services.php">
+    <a href="clients.php">
       <div class="card text-white bg-warning small-card">
         <div class="card-body">
-          <h5 class="card-title">Services</h5>
+          <h5 class="card-title">Clients</h5>
           <!-- <p class="card-text">350</p> -->
         </div>
       </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Product Showcase</title>
+    <title>Product </title>
     <link rel="stylesheet" href="CSS/index.css">
     <script type="module" src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
@@ -219,7 +219,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e.target === modal) {
             modal.style.display = "none";
         }
-    });
+    }); 
 });
 </script>
 
