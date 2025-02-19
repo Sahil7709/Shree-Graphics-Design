@@ -25,7 +25,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
-    <style>
+ 
+ <style>
 .sidebar {
   width: 300px;
   background-color: #fff;
@@ -532,7 +533,15 @@
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
 
-        
+        <li class="menu-category">
+          <a href="about.php" class="menu-title">About</a>
+        </li>
+
+
+        <li class="menu-category">
+          <a href="services.php" class="menu-title">Services</a>
+        </li>
+
 
         <li class="menu-category">
 

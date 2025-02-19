@@ -453,6 +453,14 @@
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
 
+        <li class="menu-category">
+          <a href="about.php" class="menu-title">About</a>
+        </li>
+
+
+        <li class="menu-category">
+          <a href="services.php" class="menu-title">Services</a>
+        </li>
         
 
         <li class="menu-category">
