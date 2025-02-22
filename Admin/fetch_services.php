@@ -12,7 +12,7 @@
 
 <style>
     /* Modal styles */
-    .modal {
+    .modal-container {
         display: none;
         position: fixed;
         z-index: 10;
@@ -25,13 +25,13 @@
         align-items: center;
     }
 
-    .modal-content {
+    .modal-content-box {
         max-width: 90%;
         max-height: 90%;
         border-radius: 10px;
     }
 
-    .close {
+    .close-btn {
         position: absolute;
         top: 20px;
         right: 30px;
@@ -40,157 +40,165 @@
         cursor: pointer;
     }
 
-    /* Service Card Styles */
-    .service-container {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-        padding: 20px;
+    /* Service section styles */
+    .service-section {
+        margin-bottom: 40px;
     }
 
-    .service-card {
-        width: 300px;
-        border-radius: 10px;
-        overflow: hidden;
-        background: #fff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        text-align: center;
-        transition: transform 0.3s ease-in-out;
-    }
-
-    .service-card:hover {
-        transform: scale(1.05);
-    }
-
-    .service-img {
+    .service-image {
         width: 100%;
-        height: 200px;
+        height: 250px;
         object-fit: cover;
+        border-radius: 10px;
     }
 
-    .service-info {
-        padding: 15px;
+    .service-box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        position: relative;
+        margin-bottom: 20px;
     }
 
-    .service-title {
-        font-size: 18px;
+    .service-banner-container {
+        width: 100%;
+        height: 250px;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Logo overlay (hover image) */
+    .service-overlay-logo {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 80px;
+        height: auto;
+        transform: translate(-50%, -40%);
+        opacity: 0.8;
+        z-index: 1;
+    }
+
+    .discount-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
         font-weight: bold;
-        margin-bottom: 5px;
-    }
-
-    .service-price {
-        color: green;
-        font-size: 16px;
-    }
-
-    .service-desc {
-        font-size: 14px;
-        margin-top: 5px;
+        z-index: 2;
     }
 </style>
 
 <body>
-<?php
-// Database connection
-include 'db.php'; // Ensure PDO-based database connection is included
 
-// Check if the database connection is successful
-if (!$pdo) {
-    die("Database connection failed.");
-}
+    <?php
+    include 'db.php';
 
-// Check if category filter is set
-$category_filter = isset($category_filter) ? $category_filter : '';
-
-// Prepare the SQL query based on the category filter
-$query = "SELECT * FROM products";
-if (!empty($category_filter)) {
-    $query .= " WHERE category = :category";
-}
-
-try {
-    // Prepare and execute the query
-    $stmt = $pdo->prepare($query);
-
-    // Bind category parameter if the filter is set
-    if (!empty($category_filter)) {
-        $stmt->bindParam(':category', $category_filter);
+    if (!$pdo) {
+        die("Database connection failed.");
     }
 
-    $stmt->execute();
+    $categories = ["Medical", "Corporate", "School", "Hotal", "Security"];
 
-    // Check if there are products
-    if ($stmt->rowCount() > 0) {
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+    foreach ($categories as $category) {
+        echo "<div class='service-section'>";
+        // echo "<p>$category Services</p>";
 
-            // Ensure the image paths are correctly formed
-            $image_path = "admin/uploads/" . $row['image_default'];
-            $logo_path = "admin/uploads/" . $row['image_hover'];
+        $query = "SELECT * FROM products WHERE category = :category";
 
-            // Check if the images exist; if not, use a default image
-            if (!file_exists($image_path) || empty($row['image_default'])) {
-                $image_path = 'assets/default_image.jpg'; // Provide a default image
+        try {
+            $stmt = $pdo->prepare($query);
+            $stmt->bindParam(':category', $category);
+            $stmt->execute();
+
+            if ($stmt->rowCount() > 0) {
+                while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                    $image_path = "admin/uploads/" . basename($row['image_default']);
+                    $logo_path = "admin/uploads/" . basename($row['image_hover']);
+
+                    $image_path = file_exists($image_path) ? $image_path : 'default_image.jpg';
+                    $logo_path = file_exists($logo_path) ? $logo_path : 'default_logo.png';
+
+                    $discountPercentage = ($row['discount_price'] > 0 && $row['discount_price'] < $row['price'])
+                        ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '';
+
+                    echo '
+                    <div class="service-box">
+                        <div class="service-banner-container">
+                            <a href="#" class="trigger-modal" data-img="' . $logo_path . '">
+                                <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="service-image">
+                                <img src="' . $logo_path . '" alt="Service Logo" class="service-overlay-logo">
+                                <p class="discount-badge">' . $discountPercentage . '</p>
+                            </a>
+                        </div>
+
+                        <div class="service-description">
+                            <a href="order_service.php?id=' . $row['id'] . '">
+                                <h3 class="service-title">' . htmlspecialchars($row['name']) . '</h3>
+                            </a>
+
+                            <div class="price-container">
+                                <p class="discounted-price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
+                    if ($row['discount_price'] < $row['price']) {
+                        echo '<del>Rs.' . number_format($row['price'], 2) . '</del>';
+                    }
+                    echo '</div>
+                        </div>
+                    </div>';
+                }
+            } else {
+                echo "<p>No services found in this category.</p>";
             }
-            if (!file_exists($logo_path) || empty($row['image_hover'])) {
-                $logo_path = 'assets/default_logo.png'; // Provide a default logo
-            }
-
-            // Debugging Output (Remove this after testing)
-            echo "<!-- Debug: $image_path -->";
-            echo "<!-- Debug: $logo_path -->";
-
-            // Display product
-            echo '
-            <div class="showcase">
-                <div class="showcase-banner">
-                    <a href="#" class="openModal" data-img="' . htmlspecialchars($logo_path) . '">
-                        <!-- Main product image -->
-                        <img src="' . htmlspecialchars($image_path) . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img">
-                        <!-- Logo (hover image always visible) -->
-                        <img src="' . htmlspecialchars($logo_path) . '" alt="Logo" class="product-logo">
-                        <!-- Discount badge -->
-                        <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>
-                    </a>
-                </div>
-
-                <div class="showcase-content">
-                    <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>
-                    <a href="order_product.php?id=' . $row['id'] . '">
-                        <h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3>
-                    </a>
-
-                    <div class="showcase-rating">';
-            
-            // Rating stars display
-            for ($i = 0; $i < $row['rating']; $i++) {
-                echo '<ion-icon name="star"></ion-icon>';
-            }
-            for ($i = $row['rating']; $i < 5; $i++) {
-                echo '<ion-icon name="star-outline"></ion-icon>';
-            }
-
-            echo '</div>
-                    <div class="price-box">
-                        <p class="price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
-
-            // Only show original price if there is a discount
-            if ($row['discount_price'] < $row['price']) {
-                echo '<del>Rs.' . number_format($row['price'], 2) . '</del>';
-            }
-
-            echo '</div>
-                </div>
-            </div>';
+        } catch (PDOException $e) {
+            echo "Error fetching services: " . $e->getMessage();
         }
-    } else {
-        echo "<p style='color:red;'>No products found.</p>";
+
+        echo "</div>";
     }
-} catch (PDOException $e) {
-    echo "<p style='color:red;'>Error fetching products: " . $e->getMessage() . "</p>";
-}
-?>
+    ?>
+
+    <!-- Single Modal (Outside Loop) -->
+    <div id="serviceModal" class="modal-container">
+        <span class="close-btn">&times;</span>
+        <img class="modal-content-box" id="modalImage">
+    </div>
+
+    <script>
+        document.addEventListener("readystatechange", function () {
+            if (document.readyState === "complete") {
+                const modal = document.getElementById("serviceModal");
+                const modalImg = document.getElementById("modalImage");
+                const closeModal = document.querySelector(".close-btn");
+
+                document.querySelectorAll(".trigger-modal").forEach(item => {
+                    item.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        const imgSrc = this.getAttribute("data-img");
+                        modalImg.src = imgSrc;
+                        modal.style.display = "flex";
+                    });
+                });
+
+                closeModal.addEventListener("click", function () {
+                    modal.style.display = "none";
+                });
+
+                modal.addEventListener("click", function (e) {
+                    if (e.target === modal) {
+                        modal.style.display = "none";
+                    }
+                });
+            }
+        });
+    </script>
 
 </body>
-
 </html>
