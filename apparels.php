@@ -124,6 +124,7 @@
 
 </div>
 
+
   <!--
     - NOTIFICATION TOAST
   -->
@@ -196,7 +197,6 @@
       </div>
 
     </div>
-
 
 
     <nav class="desktop-navigation-menu">
@@ -693,7 +693,7 @@
       </ul>
 
     </nav>
-    
+
   </header>
 
   
@@ -730,6 +730,7 @@
 
 
 
+
         <div class="product-box">
 
           <!--
@@ -739,9 +740,7 @@
           <div class="product-box">
             <!-- PRODUCT GRID -->
             <div class="product-grid">
-            <?php // Set the category filter to 'cap'
-// Set the category filter to 'cap'
-$category_filter = 'leathergift'; ?>
+        
               <?php include 'Admin/fetch_products.php'; ?>
             </div>
           </div>
@@ -759,6 +758,7 @@ $category_filter = 'leathergift'; ?>
 
         </div>
 
+        
 <!--
   - SIDEBAR
 -->
@@ -820,8 +820,6 @@ $category_filter = 'leathergift'; ?>
     </ul>
   </div>
 </div>
-        
-
       </div>
 
     </div>
@@ -831,7 +829,6 @@ $category_filter = 'leathergift'; ?>
 
 
   </main>
-
 
   
   <!--

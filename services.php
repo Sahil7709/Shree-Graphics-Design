@@ -303,7 +303,7 @@
 
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Tshirt</a>
+            <a href="tshirt.php" class="menu-title">Tshirt</a>
 
             <ul class="dropdown-list">
 
@@ -331,7 +331,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Apparels</a>
+            <a href="Apparels.php" class="menu-title">Apparels</a>
 
             <ul class="dropdown-list">
 
@@ -363,7 +363,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Travel</a>
+            <a href="travel.php" class="menu-title">Travel</a>
 
             <ul class="dropdown-list">
 
@@ -416,7 +416,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Leather</a>
+            <a href="leather.php" class="menu-title">Leather</a>
 
             <ul class="dropdown-list">
 
@@ -444,7 +444,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Uniforms</a>
+            <a href="uniforms.php" class="menu-title">Uniforms</a>
 
             <ul class="dropdown-list">
 
@@ -544,8 +544,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="tshirt.php">
             <p class="menu-title">T-shirt</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -581,8 +582,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="apparels.php">
             <p class="menu-title">Apparels</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -622,8 +624,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="travel.php">
             <p class="menu-title">Travel</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -683,8 +686,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="leather.php">
             <p class="menu-title">Leather</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -720,8 +724,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="uniforms.php">
             <p class="menu-title">Uniforms</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -763,7 +768,7 @@
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Contact</a>
+          <a href="contact.php" class="menu-title">Contact</a>
         </li>
 
       </ul>
@@ -805,50 +810,18 @@
 
 <div class="container">
 
-  <div class="product-box">
-
-    <div class="row">
-      <div class="col-left">
-
-        <div class="address-container">
-          <h3>Our Services</h3>
-          <p>At <strong>Shree Graphics Design</strong>, we offer a wide range of professional services to help your brand stand out with high-quality embroidery and digital logo designing.</p>
-        </div>
-
-        <div class="address-container">
-          <h3>Custom Embroidery Logo Design</h3>
-          <p>We specialize in designing and stitching customized embroidery logos for T-Shirts, Uniforms, and Corporate Wear. Our team ensures precision and quality in every design.</p>
-        </div>
-
-        <div class="address-container">
-          <h3>Digital Logo Creation</h3>
-          <p>We provide high-resolution digital logo designs tailored for businesses, startups, and personal brands, ensuring a professional and unique brand identity.</p>
-        </div>
-
-        <div class="address-container">
-          <h3>Printing & Branding Services</h3>
-          <ul>
-            <li>Personalized T-Shirts, Caps, and Hoodies</li>
-            <li>Corporate Uniform Branding</li>
-            <li>Event Merchandise & Promotional Items</li>
-            <li>Leather Products Customization</li>
-          </ul>
-        </div>
-
-        <div class="address-container">
-          <h3>Why Choose Our Services?</h3>
-          <ul>
-            <li>Premium quality embroidery and printing</li>
-            <li>Custom-made designs for every client</li>
-            <li>Fast and reliable delivery</li>
-            <li>Affordable pricing with no compromise on quality</li>
-          </ul>
-        </div>
-
-      </div>
+<div class="product-box">
+    <div class="product-grid">
+        <?php 
+        // Set the category filter
+        $category_filter = 'security'; 
+        
+        // Include the product fetching script
+        include 'Admin/fetch_services.php'; 
+        ?>
     </div>
+</div>
 
-  </div>
 
   <!-- Sidebar: Contact Form -->
   <div class="sidebar has-scrollbar" data-mobile-menu>

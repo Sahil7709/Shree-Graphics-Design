@@ -199,7 +199,6 @@
 
     </div>
 
-
     <nav class="desktop-navigation-menu">
 
       <div class="container">
@@ -223,7 +222,7 @@
 
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Tshirt</a>
+            <a href="tshirt.php" class="menu-title">Tshirt</a>
 
             <ul class="dropdown-list">
 
@@ -251,7 +250,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Apparels</a>
+            <a href="Apparels.php" class="menu-title">Apparels</a>
 
             <ul class="dropdown-list">
 
@@ -283,7 +282,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Travel</a>
+            <a href="travel.php" class="menu-title">Travel</a>
 
             <ul class="dropdown-list">
 
@@ -336,7 +335,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Leather</a>
+            <a href="leather.php" class="menu-title">Leather</a>
 
             <ul class="dropdown-list">
 
@@ -364,7 +363,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Uniforms</a>
+            <a href="uniforms.php" class="menu-title">Uniforms</a>
 
             <ul class="dropdown-list">
 
@@ -448,7 +447,7 @@
 
       <ul class="mobile-menu-category-list">
 
-      <li class="menu-category">
+        <li class="menu-category">
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
 
@@ -464,8 +463,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="tshirt.php">
             <p class="menu-title">T-shirt</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -501,8 +501,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="apparels.php">
             <p class="menu-title">Apparels</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -542,8 +543,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="travel.php">
             <p class="menu-title">Travel</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -603,8 +605,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="leather.php">
             <p class="menu-title">Leather</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -640,8 +643,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="uniforms.php">
             <p class="menu-title">Uniforms</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -683,7 +687,7 @@
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Contact</a>
+          <a href="contact.php" class="menu-title">Contact</a>
         </li>
 
       </ul>

@@ -8,6 +8,16 @@
   <title>Shree Graphics Design </title>
 
   <style>
+/* Highlighted text style */
+mark.highlight {
+    background-color: yellow;
+    color: black;
+    font-weight: bold;
+}
+</style>
+
+
+  <style>
     .product-img {
     width: 100%;
     height: 250px; /* Set a fixed height for all images */
@@ -156,14 +166,15 @@
         </a>
 
         <div class="header-search-container">
+    <input type="text" id="searchInput" class="search-field" placeholder="Search..." onkeyup="searchContent()">
+    <button class="search-btn">
+        <ion-icon name="search-outline"></ion-icon>
+    </button>
+</div>
 
-          <input type="search" name="search" class="search-field" placeholder="Enter your product name...">
 
-          <button class="search-btn">
-            <ion-icon name="search-outline"></ion-icon>
-          </button>
 
-        </div>
+
 
         <div class="header-user-actions">
           <a href="Awards.php">
@@ -176,6 +187,7 @@
       </div>
 
     </div>
+
 
     <nav class="desktop-navigation-menu">
 
@@ -200,7 +212,7 @@
 
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Tshirt</a>
+            <a href="tshirt.php" class="menu-title">Tshirt</a>
 
             <ul class="dropdown-list">
 
@@ -228,7 +240,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Apparels</a>
+            <a href="Apparels.php" class="menu-title">Apparels</a>
 
             <ul class="dropdown-list">
 
@@ -260,7 +272,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Travel</a>
+            <a href="travel.php" class="menu-title">Travel</a>
 
             <ul class="dropdown-list">
 
@@ -313,7 +325,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Leather</a>
+            <a href="leather.php" class="menu-title">Leather</a>
 
             <ul class="dropdown-list">
 
@@ -341,7 +353,7 @@
           </li>
 
           <li class="menu-category">
-            <a href="#" class="menu-title">Uniforms</a>
+            <a href="uniforms.php" class="menu-title">Uniforms</a>
 
             <ul class="dropdown-list">
 
@@ -429,7 +441,6 @@
           <a href="index.php" class="menu-title">Embroidery Designing</a>
         </li>
 
-    
         <li class="menu-category">
           <a href="about.php" class="menu-title">About</a>
         </li>
@@ -442,8 +453,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="tshirt.php">
             <p class="menu-title">T-shirt</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -479,8 +491,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="apparels.php">
             <p class="menu-title">Apparels</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -520,8 +533,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="travel.php">
             <p class="menu-title">Travel</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -581,8 +595,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="leather.php">
             <p class="menu-title">Leather</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -618,8 +633,9 @@
         <li class="menu-category">
 
           <button class="accordion-menu" data-accordion-btn>
+            <a href="uniforms.php">
             <p class="menu-title">Uniforms</p>
-
+            </a>
             <div>
               <ion-icon name="add-outline" class="add-icon"></ion-icon>
               <ion-icon name="remove-outline" class="remove-icon"></ion-icon>
@@ -661,7 +677,7 @@
         </li>
 
         <li class="menu-category">
-          <a href="#" class="menu-title">Contact</a>
+          <a href="contact.php" class="menu-title">Contact</a>
         </li>
 
       </ul>
@@ -1517,6 +1533,25 @@
   -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+
+  <script>
+function searchContent() {
+    let input = document.getElementById("searchInput").value.toLowerCase();
+    let items = document.querySelectorAll(".search-item");
+
+    items.forEach(item => {
+        let text = item.innerText.toLowerCase();
+        if (text.includes(input)) {
+            item.style.display = "block"; // Show matching items
+        } else {
+            item.style.display = "none"; // Hide non-matching items
+        }
+    });
+}
+</script>
+
+
 
 </body>
 
