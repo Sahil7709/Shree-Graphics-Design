@@ -199,7 +199,6 @@
     </div>
 
 
-
     <nav class="desktop-navigation-menu">
 
       <div class="container">
@@ -729,9 +728,6 @@
 
       <div class="container">
 
-
-
-
         <div class="product-box">
 
           <!--
@@ -742,7 +738,7 @@
             <!-- PRODUCT GRID -->
             <div class="product-grid">
         
-              <?php include 'Admin/fetch_products.php'; ?>
+              <?php include 'Admin/fetch_leather.php'; ?>
             </div>
           </div>
           <!--
