@@ -25,67 +25,10 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
     rel="stylesheet">
 
- 
- <style>
-.sidebar {
-  width: 300px;
-  background-color: #fff;
-  padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-.sidebar-title {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-.form-group {
-  margin-bottom: 15px;
-}
-.form-group label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.form-group input,
-.form-group textarea {
-  width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.code-box {
-  background-color: #f3f3f3;
-  padding: 10px;
-  text-align: center;
-  font-weight: bold;
-  border-radius: 5px;
-  margin-top: 5px;
-}
-#refreshCodeBtn {
-  background-color: #007bff;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-  cursor: pointer;
-}
-.submit-btn {
-  background-color: #28a745;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  width: 100%;
-  border-radius: 5px;
-  cursor: pointer;
-  margin-top: 10px;
-}
-</style>
+
 
 <style> 
-  <style>
-  /* General container styling */
+/* General container styling */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -94,75 +37,168 @@
 
 /* Address container styling */
 .address-container {
-  padding: 20px;
-  border-radius: 8px;
+  padding: 25px;
+  border-radius: 12px;
   margin-bottom: 20px;
-  box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.address-container:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
 }
 
 .address-container h3 {
-  margin-top: 0;
-  font-size: 24px;
-  color: #333;
+  font-size: 26px;
+  font-weight: bold;
+  color: #007bff;
+  border-left: 6px solid #007bff;
+  padding-left: 12px;
+  text-transform: uppercase;
 }
 
-.address-container p {
-  font-size: 16px;
-  color: #555;
-  line-height: 1.5;
+.address-container p,
+.address-container ul {
+  font-size: 18px;
+  color: #444;
+  line-height: 1.6;
 }
 
-/* Contact form section styling */
-.contact-form-section {
-  background-color: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+/* Sidebar styling */
+.sidebar {
+  width: 350px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.2), rgba(240, 240, 240, 0.6));
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+  backdrop-filter: blur(15px);
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
 }
 
-.form-group {
+.sidebar:hover {
+  transform: scale(1.03);
+  box-shadow: 0 14px 28px rgba(0, 0, 0, 0.35);
+}
+
+.sidebar-title {
+  font-size: 22px;
+  font-weight: bold;
   margin-bottom: 15px;
+  color: #007bff;
+  text-transform: uppercase;
+  text-shadow: 1px 1px 3px rgba(0, 123, 255, 0.6);
+}
+
+/* Form Styling */
+.form-group {
+  margin-bottom: 20px;
 }
 
 .form-group label {
   display: block;
-  font-size: 16px;
+  font-size: 18px;
   color: #333;
+  font-weight: bold;
   margin-bottom: 5px;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+  padding: 12px;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  font-size: 16px;
+  transition: 0.3s;
+  background: rgba(255, 255, 255, 0.5);
+  backdrop-filter: blur(8px);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #0056b3;
+  box-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
 }
 
 .form-group textarea {
   resize: vertical;
-  height: 100px;
+  height: 120px;
 }
 
-#codeDisplay {
-  background-color: #f1f1f1;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
+/* Code Box Styling */
+.code-box {
+  background: linear-gradient(135deg, #f3f3f3, #e0e0e0);
+  padding: 12px;
   text-align: center;
-  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 18px;
+  border-radius: 6px;
+  margin-top: 5px;
+  border: 2px solid #007bff;
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Buttons Styling */
+#refreshCodeBtn,
+.submit-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s ease-in-out;
+  text-transform: uppercase;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#refreshCodeBtn {
+  background: linear-gradient(135deg, #007bff, #0056b3);
+  color: #fff;
+  border: none;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+#refreshCodeBtn:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
 .submit-btn {
-  background-color: #28a745;
+  background: linear-gradient(135deg, #28a745, #218838);
+  color: #fff;
+  border: none;
+  margin-top: 10px;
 }
 
 .submit-btn:hover {
-  background-color: #218838;
+  background: linear-gradient(135deg, #218838, #1e7e34);
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .container {
+    padding: 15px;
+  }
+
+  .sidebar {
+    width: 100%;
+  }
+
+  .address-container {
+    padding: 15px;
+  }
 }
 
 </style>
-</style>
+
 
 </head>
 
