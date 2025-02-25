@@ -10,6 +10,34 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
+<style>
+
+<style>
+.pagination {
+    text-align: left;
+    margin-top: 20px;
+}
+.pagination a {
+    display: inline-block;
+    padding: 8px 12px;
+    margin: 5px;
+    border: 2px solid #ccc;
+    text-decoration: none;
+    color: #333;
+    border-radius: 5px;
+}
+.pagination a.active {
+    background-color: #007bff;
+    color: white;
+    border: 1px solid #007bff;
+}
+.pagination a:hover {
+    background-color: #0056b3;
+    color: white;
+}
+</style>
+
+</style>
 
 <style>
     /* Modal styles */
@@ -96,105 +124,118 @@
 </style>
 
 <body>
+<?php
+// Database connection
+include 'db.php';  // Ensure PDO-based database connection is included
 
-    <?php
-    // Database connection
-    include 'db.php';  // Ensure PDO-based database connection is included
+// Check if the database connection is successful
+if (!$pdo) {
+    die("Database connection failed.");
+}
 
-    // Check if the database connection is successful
-    if (!$pdo) {
-        die("Database connection failed.");
-    }
+// Check if category filter is set
+$category_filter = isset($category_filter) ? $category_filter : '';
 
-    // Check if category filter is set
-    $category_filter = isset($category_filter) ? $category_filter : '';
+// Pagination variables
+$limit = 8; // Number of products per page
+$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
+$offset = ($page - 1) * $limit;
 
-    // Prepare the SQL query based on the category filter
-    $query = "SELECT * FROM products";
+// Prepare the SQL query based on the category filter
+$query = "SELECT * FROM products";
+if ($category_filter) {
+    $query .= " WHERE category = :category";
+}
+$query .= " LIMIT :limit OFFSET :offset";
+
+
+
+try {
+    // Prepare and execute the query
+    $stmt = $pdo->prepare($query);
+
+    // Bind parameters
     if ($category_filter) {
-        $query .= " WHERE category = :category";
+        $stmt->bindParam(':category', $category_filter);
     }
+    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
+    $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
 
-    try {
-        // Prepare and execute the query
-        $stmt = $pdo->prepare($query);
+    $stmt->execute();
 
-        // Bind category parameter if the filter is set
-        if ($category_filter) {
-            $stmt->bindParam(':category', $category_filter);
-        }
+    // Fetch total number of products for pagination
+    $totalQuery = "SELECT COUNT(*) FROM products";
+    if ($category_filter) {
+        $totalQuery .= " WHERE category = :category";
+    }
+    $totalStmt = $pdo->prepare($totalQuery);
+    if ($category_filter) {
+        $totalStmt->bindParam(':category', $category_filter);
+    }
+    $totalStmt->execute();
+    $totalProducts = $totalStmt->fetchColumn();
+    $totalPages = ceil($totalProducts / $limit);
 
-        $stmt->execute();
+    // Check if there are products
+    if ($stmt->rowCount() > 0) {
+        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            // Ensure the image paths are correctly formed
+            $image_path = "admin/uploads/" . basename($row['image_default']);
+            $logo_path = "admin/uploads/" . basename($row['image_hover']);
 
-        // Check if there are products
-        if ($stmt->rowCount() > 0) {
-            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+            // Check if the images exist; if not, use a default image
+            $image_path = file_exists($image_path) ? $image_path : 'default_image_path.jpg';
+            $logo_path = file_exists($logo_path) ? $logo_path : 'default_logo.png';
 
-                // Ensure the image paths are correctly formed
-                $image_path = "admin/uploads/" . basename($row['image_default']);
-                $logo_path = "admin/uploads/" . basename($row['image_hover']);
-
-                // Check if the images exist; if not, use a default image
-                $image_path = file_exists($image_path) ? $image_path : 'default_image_path.jpg';
-                $logo_path = file_exists($logo_path) ? $logo_path : 'default_logo.png';
-
-                // Display product
-                echo '
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img class="modal-content" id="modalImg">
-</div>
-
-
-            <div class="showcase">
-                <div class="showcase-banner">
-                <a href="#" class="openModal" data-img="'. $logo_path . '">
-
-                        <!-- Main product image -->
-                        <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img">
-                        <!-- Logo (hover image always visible) -->
-                        <img src="' . $logo_path . '" alt="Logo" class="product-logo">
-                        <!-- Discount badge -->
-                        <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>
-                    </a>
-                </div>
-
-                <div class="showcase-content">
-                    <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>
-                    <a href="order_product.php?id=' . $row['id'] . '">
-                        <h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3>
-                    </a>
-
-                    <div class="showcase-rating">';
-
-                // Rating stars display
-                for ($i = 0; $i < $row['rating']; $i++) {
-                    echo '<ion-icon name="star"></ion-icon>';
-                }
-                for ($i = $row['rating']; $i < 5; $i++) {
-                    echo '<ion-icon name="star-outline"></ion-icon>';
-                }
-
-                echo '</div>
-                    <div class="price-box">
-                        <p class="price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
-
-                // Only show original price if there is a discount
-                if ($row['discount_price'] < $row['price']) {
-                    echo '<del>Rs.' . number_format($row['price'], 2) . '</del>';
-                }
-
-                echo '</div>
-                </div>
-            </div>';
+            // Display product
+            echo '<div class="showcase">';
+            echo '  <div class="showcase-banner">';
+            echo '    <a href="#" class="openModal" data-img="' . $logo_path . '">';
+            echo '      <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img">';
+            echo '      <img src="' . $logo_path . '" alt="Logo" class="product-logo">';
+            echo '      <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>';
+            echo '    </a>';
+            echo '  </div>';
+            echo '  <div class="showcase-content">';
+            echo '    <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>';
+            echo '    <a href="order_product.php?id=' . $row['id'] . '"><h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3></a>';
+            echo '    <div class="showcase-rating">';
+            for ($i = 0; $i < $row['rating']; $i++) {
+                echo '      <ion-icon name="star"></ion-icon>';
             }
-        } else {
-            echo "No products found.";
+            for ($i = $row['rating']; $i < 5; $i++) {
+                echo '      <ion-icon name="star-outline"></ion-icon>';
+            }
+            echo '    </div>';
+            echo '    <div class="price-box">';
+            echo '      <p class="price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
+            if ($row['discount_price'] < $row['price']) {
+                echo '      <del>Rs.' . number_format($row['price'], 2) . '</del>';
+            }
+            echo '    </div>';
+            echo '  </div>';
+            echo '</div>';
         }
-    } catch (PDOException $e) {
-        echo "Error fetching products: " . $e->getMessage();
+    } else {
+        echo "No products found.";
     }
-    ?>
+
+    // Pagination Links
+    echo '<div class="pagination">';
+    if ($page > 1) {
+        echo '<a href="?page=' . ($page - 1) . '">Previous</a>';
+    }
+    for ($i = 1; $i <= $totalPages; $i++) {
+        echo '<a href="?page=' . $i . '"' . ($i == $page ? ' class="active"' : '') . '>' . $i . '</a>';
+    }
+    if ($page < $totalPages) {
+        echo '<a href="?page=' . ($page + 1) . '">Next</a>';
+    }
+    echo '</div>';
+} catch (PDOException $e) {
+    echo "Error fetching products: " . $e->getMessage();
+}
+?>
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
