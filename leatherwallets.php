@@ -135,7 +135,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/cap1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+      <img src="./assets/images/logosample/img2.jpeg" alt="Rose Gold Earrings" width="80" height="70">
     </div>
 
     <div class="toast-detail">

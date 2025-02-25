@@ -108,7 +108,7 @@
     </button>
 
     <div class="newsletter-img">
-      <img src="./assets/images/img2.jpeg" alt="subscribe newsletter" width="400" height="400">
+      <img src="./assets/images/logosample/img2.jpeg" alt="subscribe newsletter" width="400" height="400">
     </div>
 
     <div class="newsletter">
@@ -141,7 +141,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/cap1.jpg" alt="Rose Gold Earrings" width="80" height="70">
+      <img src="./assets/images/logosample/img10.jpeg" alt="Logo" width="80" height="70">
     </div>
 
     <div class="toast-detail">

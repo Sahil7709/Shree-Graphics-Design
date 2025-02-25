@@ -7,6 +7,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Shree Graphics Design </title>
 
+<style>
+.action-btn {
+  display: flex;
+  flex-direction: column; /* Stacks the icon and text vertically */
+  align-items: center; /* Centers them horizontally */
+  justify-content: center; /* Centers them vertically */
+  gap: 4px; /* Adds space between icon and text */
+  padding: 8px 12px;
+  font-size: 14px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.action-btn ion-icon {
+  font-size: 30px; /* Adjust icon size */
+}
+
+.action-btn p {
+  margin: 0;
+  font-size: 15px; /* Adjust text size */
+}
+
+</style>  
   <style>
     .product-container {
     display: flex;
@@ -248,23 +272,39 @@ mark.highlight {
         <!-- Shree Graphics Design -->
         </a>
 
-        <div class="header-search-container">
-    <input type="text" id="searchInput" class="search-field" placeholder="Search..." onkeyup="searchContent()">
-    <button class="search-btn">
-        <ion-icon name="search-outline"></ion-icon>
-    </button>
-</div>
-
-
+        Shree Graphics Design 
 
 
 
         <div class="header-user-actions">
-          <a href="Awards.php">
+
+
+
+        <a href="about.php">
           <button class="action-btn">
-            <ion-icon name="trophy-outline"></ion-icon></a>
+          <ion-icon name="bookmark-outline"></ion-icon>
+          <p>About</p>
+
+         </button>
+
+
+
+        <a href="services.php">
+          <button class="action-btn">
+            <ion-icon name="apps-outline"></ion-icon>
+            <p>Services</p>
+
           </button>
         </a>
+         
+        <a href="clients.php">
+  <button class="action-btn">
+    <ion-icon name="trophy-outline"></ion-icon>
+    <p>Clients</p>
+  </button>
+</a>
+
+
         </div>
 
       </div>
@@ -1264,26 +1304,6 @@ mark.highlight {
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 
-  <script>
-function searchContent() {
-    let input = document.getElementById("searchInput").value.toLowerCase();
-    let items = document.querySelectorAll(".search-item");
-
-    items.forEach(item => {
-        let text = item.innerText.toLowerCase();
-        if (text.includes(input)) {
-            item.style.display = "block"; // Show matching items
-        } else {
-            item.style.display = "none"; // Hide non-matching items
-        }
-    });
-}
-
-document.querySelector("[data-mobile-menu-close-btn]").addEventListener("click", function () {
-    document.querySelector(".sidebar").classList.remove("active");
-});
-
-</script>
 
 <script>
     // Initialize the verification code
