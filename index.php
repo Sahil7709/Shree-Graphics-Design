@@ -272,13 +272,16 @@ mark.highlight {
         <!-- Shree Graphics Design -->
         </a>
 
-        Shree Graphics Design 
+        <div class="header-search-container">
+    <input type="search" id="searchBar" name="search" class="search-field" placeholder="Enter your product name...">
+    <button class="search-btn">
+        <ion-icon name="search-outline"></ion-icon>
+    </button>
+</div>
 
 
 
         <div class="header-user-actions">
-
-
 
         <a href="about.php">
           <button class="action-btn">
@@ -1341,6 +1344,28 @@ mark.highlight {
     // Set an initial code when the page loads
     window.onload = refreshCode;
   </script>
+
+
+<!-- For searcha button -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const searchBar = document.getElementById("searchBar");
+    const showcases = document.querySelectorAll(".showcase");
+
+    searchBar.addEventListener("keyup", function () {
+        const query = searchBar.value.toLowerCase();
+
+        showcases.forEach(showcase => {
+            const title = showcase.querySelector(".showcase-title").innerText.toLowerCase();
+            if (title.includes(query)) {
+                showcase.style.display = "block";
+            } else {
+                showcase.style.display = "none";
+            }
+        });
+    });
+});
+</script>
 
 
 </body>

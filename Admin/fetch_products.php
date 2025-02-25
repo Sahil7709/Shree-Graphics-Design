@@ -10,7 +10,6 @@
     <script nomodule src="https://cdn.jsdelivr.net/npm/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 </head>
 
-<style>
 
 <style>
 .pagination {
@@ -35,7 +34,6 @@
     background-color: #0056b3;
     color: white;
 }
-</style>
 
 </style>
 
@@ -124,6 +122,13 @@
 </style>
 
 <body>
+    <!-- Image Modal -->
+<div id="imageModal" class="modal">
+    <span class="close">&times;</span>
+    <img id="modalImg" class="modal-content">
+    
+</div>
+
 <?php
 // Database connection
 include 'db.php';  // Ensure PDO-based database connection is included
@@ -264,7 +269,60 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 </script>
 
+<script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImg");
+    const closeModal = document.querySelector(".close");
 
+    // Preload images for faster display
+    document.querySelectorAll(".openModal").forEach(item => {
+        const imgSrc = item.getAttribute("data-img");
+        const img = new Image();
+        img.src = imgSrc;
+    });
+
+    // Handle image click event to open modal
+    document.querySelectorAll(".openModal").forEach(item => {
+        item.addEventListener("click", function (event) {
+            event.preventDefault();
+            const imgSrc = this.getAttribute("data-img");
+
+            // Show loading animation while the image loads
+            modalImg.src = "loader.gif"; // Replace with a valid loading icon
+            modal.style.display = "flex";
+
+            // Load the actual image
+            const newImg = new Image();
+            newImg.src = imgSrc;
+            newImg.onload = function () {
+                modalImg.src = imgSrc;
+            };
+        });
+    });
+
+    // Close modal when clicking the close button
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
+
+    // Close modal when clicking outside the image
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    });
+
+    // Preload product images if the products array exists
+    if (typeof products !== "undefined" && Array.isArray(products)) {
+        products.forEach(product => {
+            const img = new Image();
+            img.src = product.image_url;
+        });
+    }
+});
+
+</script>
 
 </body>
 
