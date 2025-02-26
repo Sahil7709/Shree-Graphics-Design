@@ -26,61 +26,133 @@
     rel="stylesheet">
 
     <style>
+      /* General Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Sidebar */
 .sidebar {
-  width: 300px;
-  background-color: #fff;
+  width: 100%;
+  max-width: 320px;
+  background: linear-gradient(135deg, #ffffff, #f2f2f2);
   padding: 20px;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease-in-out;
 }
+
 .sidebar-title {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
-  margin-bottom: 10px;
+  color: #222;
+  text-align: center;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
+
+/* Form Groups */
 .form-group {
   margin-bottom: 15px;
 }
+
 .form-group label {
   display: block;
   font-weight: bold;
-  margin-bottom: 5px;
+  margin-bottom: 6px;
+  color: #444;
 }
+
+/* Input & Textarea Styling */
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 8px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+  padding: 12px;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+  background: #fafafa;
+  transition: all 0.3s ease-in-out;
+  font-family: inherit;
 }
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #007bff;
+  background: #fff;
+  outline: none;
+  box-shadow: 0 0 8px rgba(0, 123, 255, 0.2);
+}
+
+/* Code Box */
 .code-box {
-  background-color: #f3f3f3;
-  padding: 10px;
+  background: #e0e0e0;
+  padding: 12px;
   text-align: center;
   font-weight: bold;
-  border-radius: 5px;
-  margin-top: 5px;
+  font-size: 16px;
+  border-radius: 6px;
+  letter-spacing: 1px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  margin-top: 8px;
 }
+
+/* Refresh Code Button */
 #refreshCodeBtn {
-  background-color: #007bff;
+  background: linear-gradient(135deg, #007bff, #0056b3);
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: all 0.3s ease-in-out;
+  outline: none;
 }
+
+#refreshCodeBtn:hover {
+  background: linear-gradient(135deg, #0056b3, #003d80);
+  transform: scale(1.05);
+}
+
+/* Submit Button */
 .submit-btn {
-  background-color: #28a745;
+  background: linear-gradient(135deg, #28a745, #1e7e34);
   color: #fff;
   border: none;
-  padding: 10px;
+  padding: 12px;
   width: 100%;
-  border-radius: 5px;
+  border-radius: 6px;
   cursor: pointer;
-  margin-top: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  transition: all 0.3s ease-in-out;
+  margin-top: 12px;
+  outline: none;
 }
-</style>
+
+.submit-btn:hover {
+  background: linear-gradient(135deg, #1e7e34, #155d27);
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    width: 90%;
+    margin: auto;
+  }
+}
+
+    </style>
+
 
 </head>
 

@@ -204,3 +204,6 @@ form button:hover {
 a {
   text-decoration: none;
 }
+.service-title {
+  color: var(--salmon-pink);
+}

@@ -11,6 +11,22 @@
 </head>
 
 <style>
+    .service-title {
+        color: var(--salmon-pink);
+    }
+
+    .showcase-badge {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background: red;
+        color: white;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-size: 12px;
+        font-weight: bold;
+        z-index: 2; /* Ensure badge is on top */
+    }
     /* Modal styles */
     .modal-container {
         display: none;
@@ -83,11 +99,12 @@
         z-index: 1;
     }
 
+    /* Updated Discount Badge */
     .discount-badge {
         position: absolute;
         top: 10px;
         left: 10px;
-        background: red;
+        background: var(--ocean-green) !important; /* Ensures red color */
         color: white;
         padding: 5px 10px;
         border-radius: 5px;
@@ -109,8 +126,7 @@
     $categories = ["Medical", "Corporate", "School", "Hotal", "Security"];
 
     foreach ($categories as $category) {
-        echo "<div class='service-section'>";
-        // echo "<p>$category Services</p>";
+        echo "<div class='showcase'>";
 
         $query = "SELECT * FROM products WHERE category = :category";
 
@@ -135,9 +151,13 @@
                         <div class="service-banner-container">
                             <a href="#" class="trigger-modal" data-img="' . $logo_path . '">
                                 <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="service-image">
-                                <img src="' . $logo_path . '" alt="Service Logo" class="service-overlay-logo">
-                                <p class="discount-badge">' . $discountPercentage . '</p>
-                            </a>
+                                <img src="' . $logo_path . '" alt="Service Logo" class="service-overlay-logo">';
+
+                    if (!empty($discountPercentage)) {
+                        echo '<p class="discount-badge">' . $discountPercentage . '</p>';
+                    }
+
+                    echo '</a>
                         </div>
 
                         <div class="service-description">

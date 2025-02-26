@@ -11,6 +11,9 @@
 </head>
 
 <style>
+        .service-title {
+        color: var(--salmon-pink);
+    }
     /* Modal styles */
     .modal-container {
         display: none;
@@ -85,7 +88,7 @@
         position: absolute;
         top: 10px;
         left: 10px;
-        background: red;
+        background: var(--ocean-green) !important;
         color: white;
         padding: 5px 10px;
         border-radius: 5px;

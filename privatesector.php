@@ -82,6 +82,7 @@
 }
 </style>
 
+
 </head>
 
 <body>
@@ -125,6 +126,7 @@
 </div>
 
 
+
   <!--
     - NOTIFICATION TOAST
   -->
@@ -136,7 +138,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/logosample/img13.jpg" alt="Logo" width="80" height="70">
+      <img src="./assets/images/img13.jpeg" alt="Logo" width="80" height="70">
     </div>
 
     <div class="toast-detail">
@@ -385,30 +387,6 @@
 
               <li class="dropdown-item">
                 <a href="medical.php"> Medical & Hospital Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="bank.php">Bank Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="government.php">Government Staff Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="housekeeping.php">House Keeping Staff Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="privatesector.php">Private Sector Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="delivery.php">Delivery staff Uniforms </a>
-              </li>
-
-              <li class="dropdown-item">
-                <a href="sports.php">Sports Uniforms </a>
               </li>
 
             </ul>
@@ -720,7 +698,6 @@
 
   </header>
 
-  
 
   <!--
     - MAIN
@@ -752,6 +729,9 @@
 
       <div class="container">
 
+
+
+
         <div class="product-box">
 
           <!--
@@ -761,8 +741,10 @@
           <div class="product-box">
             <!-- PRODUCT GRID -->
             <div class="product-grid">
-        
-              <?php include 'Admin/fetch_uniforms.php'; ?>
+            <?php // Set the category filter to 'cap'
+// Set the category filter to 'cap'
+$category_filter = 'privatesector'; ?>
+              <?php include 'Admin/fetch_products.php'; ?>
             </div>
           </div>
           <!--
@@ -976,39 +958,41 @@
 
         </ul>
 
+
         <ul class="footer-nav-list">
 
-          <li class="footer-nav-item">
-            <h2 class="nav-title">Contact</h2>
-          </li>
+<li class="footer-nav-item">
+  <h2 class="nav-title">Contact</h2>
+</li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="location-outline"></ion-icon>
-            </div>
+<li class="footer-nav-item flex">
+  <div class="icon-box">
+    <ion-icon name="location-outline"></ion-icon>
+  </div>
 
-            <address class="content">
-            Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
-          </address>
-          </li>
+  <address class="content">
+  Mountain View Society, Radhyeswari Nagari, Bakori road Wagholi, Pune.412207
+</address>
+</li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="call-outline"></ion-icon>
-            </div>
+<li class="footer-nav-item flex">
+  <div class="icon-box">
+    <ion-icon name="call-outline"></ion-icon>
+  </div>
 
-            <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
-          </li>
+  <a href="tel:8888830696" class="footer-nav-link">8888830696</a>
+</li>
 
-          <li class="footer-nav-item flex">
-            <div class="icon-box">
-              <ion-icon name="mail-outline"></ion-icon>
-            </div>
+<li class="footer-nav-item flex">
+  <div class="icon-box">
+    <ion-icon name="mail-outline"></ion-icon>
+  </div>
 
-            <a href="mailto:lamkhadegs@gmail.com" class="footer-nav-link">lamkhadegs@gmail.com</a>
-          </li>
+  <a href="mailto: hr@devconsoftware.com" class="footer-nav-link"> hr@devconsoftware.com</a>
+</li>
 
-        </ul>
+</ul>
+
 
         <ul class="footer-nav-list">
 
@@ -1066,6 +1050,7 @@
     </div>
 
   </footer>
+
 
 
 

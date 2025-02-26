@@ -27,13 +27,23 @@
 
 
 
-<style> 
-/* General container styling */
+<style>
+  /* General Styling */
 .container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 20px;
 }
+
+/* Row Styling */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  text-align: justify;
+}
+
+
 
 /* Address container styling */
 .address-container {
@@ -44,6 +54,7 @@
   backdrop-filter: blur(10px);
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+  text-align: justify;
 }
 
 .address-container:hover {
@@ -54,17 +65,41 @@
 .address-container h3 {
   font-size: 26px;
   font-weight: bold;
-  color: #007bff;
-  border-left: 6px solid #007bff;
+  color: orangered;
+  border-left: 6px solid orange;
   padding-left: 12px;
   text-transform: uppercase;
 }
 
 .address-container p,
 .address-container ul {
+  list-style: none; /* Remove default bullets */
   font-size: 18px;
   color: #444;
   line-height: 1.6;
+}
+.address-container ul li {
+  font-size: 18px;
+  color: #444;
+  padding: 8px 0;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease-in-out;
+}
+/* Custom bullet icons */
+.address-container ul li::before {
+  content: "✔"; /* Checkmark symbol */
+  color: orangered;
+  font-weight: bold;
+  margin-right: 10px;
+  font-size: 20px;
+}
+
+/* Hover effect */
+.address-container ul li:hover {
+  color: orangered;
+  transform: translateX(5px);
+  transition: all 0.3s ease;
 }
 
 /* Sidebar styling */
@@ -87,9 +122,9 @@
   font-size: 22px;
   font-weight: bold;
   margin-bottom: 15px;
-  color: #007bff;
+  color: orangered;
   text-transform: uppercase;
-  text-shadow: 1px 1px 3px rgba(0, 123, 255, 0.6);
+  text-shadow: 1px 1px 3px orange;
 }
 
 /* Form Styling */
@@ -138,7 +173,6 @@
   font-size: 18px;
   border-radius: 6px;
   margin-top: 5px;
-  border: 2px solid #007bff;
   box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.2);
 }
 
@@ -182,20 +216,6 @@
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .container {
-    padding: 15px;
-  }
-
-  .sidebar {
-    width: 100%;
-  }
-
-  .address-container {
-    padding: 15px;
-  }
-}
 
 </style>
 
