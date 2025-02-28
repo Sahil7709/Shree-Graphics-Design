@@ -364,6 +364,7 @@
             </ul>
           </li>
 
+         
           <li class="menu-category">
             <a href="uniforms.php" class="menu-title">Uniforms</a>
 
@@ -389,10 +390,32 @@
                 <a href="medical.php"> Medical & Hospital Uniforms </a>
               </li>
 
+              <li class="dropdown-item">
+                <a href="bank.php">Bank Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="government.php">Government Staff Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="housekeeping.php">House Keeping Staff Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="privatesector.php">Private Sector Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="delivery.php">Delivery staff Uniforms </a>
+              </li>
+
+              <li class="dropdown-item">
+                <a href="sports.php">Sports Uniforms </a>
+              </li>
+
             </ul>
           </li>
-
-
 
 
           <li class="menu-category">

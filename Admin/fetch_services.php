@@ -69,14 +69,19 @@
     }
 
     .service-box {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        height: 100%;
-        position: relative;
-        margin-bottom: 20px;
-    }
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    width: 100%;
+    max-width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background: #fff;
+    margin-bottom: 20px
+}
 
     .service-banner-container {
         width: 100%;
