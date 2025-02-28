@@ -106,7 +106,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <option value="">Select Product</option>
           <option value="round_neck_tshirt">Round Neck T-shirt</option>
           <option value="v_neck_tshirt">V Neck T-shirt</option>
-          <option value="pool_tshir">Pool T-shirt</option>
+          <option value="pool_tshirt">Pool T-shirt</option>
           <option value="cutSew">Cut And Sew T-Shirt</option>
           <option value="basicpool">Basic Pool Tshirt</option>
 
@@ -179,7 +179,7 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
         <!-- Hover Image -->
         <div class="mb-3">
-          <label for="image_hover" class="form-label">Hover Image</label>
+          <label for="image_hover" class="form-label">Logo Image</label>
           <input type="file" class="form-control" id="image_hover" name="image_hover" required>
         </div>
       </div>

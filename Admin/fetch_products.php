@@ -123,207 +123,122 @@
 
 <body>
     <!-- Image Modal -->
-<div id="imageModal" class="modal">
-    <span class="close">&times;</span>
-    <img id="modalImg" class="modal-content">
-    
-</div>
+    <div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img id="modalImg" class="modal-content">
+    </div>
 
-<?php
-// Database connection
-include 'db.php';  // Ensure PDO-based database connection is included
+    <?php
+    // Database connection
+    include 'db.php';  // Ensure PDO-based database connection is included
 
-// Check if the database connection is successful
-if (!$pdo) {
-    die("Database connection failed.");
-}
+    // Check if the database connection is successful
+    if (!$pdo) {
+        die("Database connection failed.");
+    }
 
-// Check if category filter is set
-$category_filter = isset($category_filter) ? $category_filter : '';
+    // Check if category filter is set
+    $category_filter = isset($category_filter) ? $category_filter : '';
 
-// Pagination variables
-$limit = 8; // Number of products per page
-$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
-$offset = ($page - 1) * $limit;
-
-// Prepare the SQL query based on the category filter
-$query = "SELECT * FROM products";
-if ($category_filter) {
-    $query .= " WHERE category = :category";
-}
-$query .= " LIMIT :limit OFFSET :offset";
-
-
-
-try {
-    // Prepare and execute the query
-    $stmt = $pdo->prepare($query);
-
-    // Bind parameters
+    // Prepare the SQL query based on the category filter
+    $query = "SELECT * FROM products";
     if ($category_filter) {
-        $stmt->bindParam(':category', $category_filter);
+        $query .= " WHERE category = :category";
     }
-    $stmt->bindParam(':limit', $limit, PDO::PARAM_INT);
-    $stmt->bindParam(':offset', $offset, PDO::PARAM_INT);
 
-    $stmt->execute();
+    try {
+        // Prepare and execute the query
+        $stmt = $pdo->prepare($query);
 
-    // Fetch total number of products for pagination
-    $totalQuery = "SELECT COUNT(*) FROM products";
-    if ($category_filter) {
-        $totalQuery .= " WHERE category = :category";
-    }
-    $totalStmt = $pdo->prepare($totalQuery);
-    if ($category_filter) {
-        $totalStmt->bindParam(':category', $category_filter);
-    }
-    $totalStmt->execute();
-    $totalProducts = $totalStmt->fetchColumn();
-    $totalPages = ceil($totalProducts / $limit);
-
-    // Check if there are products
-    if ($stmt->rowCount() > 0) {
-        while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-            // Ensure the image paths are correctly formed
-            $image_path = "admin/uploads/" . basename($row['image_default']);
-            $logo_path = "admin/uploads/" . basename($row['image_hover']);
-
-            // Check if the images exist; if not, use a default image
-            $image_path = file_exists($image_path) ? $image_path : 'default_image_path.jpg';
-            $logo_path = file_exists($logo_path) ? $logo_path : 'default_logo.png';
-
-            // Display product
-            echo '<div class="showcase">';
-            echo '  <div class="showcase-banner">';
-            echo '    <a href="#" class="openModal" data-img="' . $logo_path . '">';
-            echo '      <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img">';
-            echo '      <img src="' . $logo_path . '" alt="Logo" class="product-logo">';
-            echo '      <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>';
-            echo '    </a>';
-            echo '  </div>';
-            echo '  <div class="showcase-content">';
-            echo '    <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>';
-            echo '    <a href="order_product.php?id=' . $row['id'] . '"><h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3></a>';
-            echo '    <div class="showcase-rating">';
-            for ($i = 0; $i < $row['rating']; $i++) {
-                echo '      <ion-icon name="star"></ion-icon>';
-            }
-            for ($i = $row['rating']; $i < 5; $i++) {
-                echo '      <ion-icon name="star-outline"></ion-icon>';
-            }
-            echo '    </div>';
-            echo '    <div class="price-box">';
-            echo '      <p class="price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
-            if ($row['discount_price'] < $row['price']) {
-                echo '      <del>Rs.' . number_format($row['price'], 2) . '</del>';
-            }
-            echo '    </div>';
-            echo '  </div>';
-            echo '</div>';
+        // Bind parameters
+        if ($category_filter) {
+            $stmt->bindParam(':category', $category_filter);
         }
-    } else {
-        echo "No products found.";
-    }
 
-    // Pagination Links
-    echo '<div class="pagination">';
-    if ($page > 1) {
-        echo '<a href="?page=' . ($page - 1) . '">Previous</a>';
-    }
-    for ($i = 1; $i <= $totalPages; $i++) {
-        echo '<a href="?page=' . $i . '"' . ($i == $page ? ' class="active"' : '') . '>' . $i . '</a>';
-    }
-    if ($page < $totalPages) {
-        echo '<a href="?page=' . ($page + 1) . '">Next</a>';
-    }
-    echo '</div>';
-} catch (PDOException $e) {
-    echo "Error fetching products: " . $e->getMessage();
-}
-?>
+        $stmt->execute();
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeModal = document.querySelector(".close");
+        // Check if there are products
+        if ($stmt->rowCount() > 0) {
+            while ($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
+                // Ensure the image paths are correctly formed
+                $image_path = "admin/uploads/" . basename($row['image_default']);
+                $logo_path = "admin/uploads/" . basename($row['image_hover']);
 
-    document.querySelectorAll(".openModal").forEach(item => {
-        item.addEventListener("click", function (event) {
-            event.preventDefault(); // Prevent default link action
-            const imgSrc = this.getAttribute("data-img");
-            modalImg.src = imgSrc;
-            modal.style.display = "flex";
-        });
-    });
+                // Check if the images exist; if not, use a default image
+                $image_path = file_exists($image_path) ? $image_path : 'default_image_path.jpg';
+                $logo_path = file_exists($logo_path) ? $logo_path : 'default_logo.png';
 
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
+                // Display product
+                echo '<div class="showcase">';
+                echo '  <div class="showcase-banner">';
+                echo '    <a href="#" class="openModal" data-img="' . $logo_path . '">';
+                echo '      <img src="' . $image_path . '" alt="' . htmlspecialchars($row['name']) . '" class="product-img">';
+                echo '      <img src="' . $logo_path . '" alt="Logo" class="product-logo">';
+                echo '      <p class="showcase-badge">' . ($row['discount_price'] ? round(100 - ($row['discount_price'] / $row['price']) * 100) . '%' : '') . '</p>';
+                echo '    </a>';
+                echo '  </div>';
+                echo '  <div class="showcase-content">';
+                echo '    <a href="order_product.php?id=' . $row['id'] . '" class="showcase-category">' . htmlspecialchars($row['category']) . '</a>';
+                echo '    <a href="order_product.php?id=' . $row['id'] . '"><h3 class="showcase-title">' . htmlspecialchars($row['name']) . '</h3></a>';
+                echo '    <div class="showcase-rating">';
+                for ($i = 0; $i < $row['rating']; $i++) {
+                    echo '      <ion-icon name="star"></ion-icon>';
+                }
+                for ($i = $row['rating']; $i < 5; $i++) {
+                    echo '      <ion-icon name="star-outline"></ion-icon>';
+                }
+                echo '    </div>';
+                echo '    <div class="price-box">';
+                echo '      <p class="price">Rs.' . number_format($row['discount_price'], 2) . '</p>';
+                if ($row['discount_price'] < $row['price']) {
+                    echo '      <del>Rs.' . number_format($row['price'], 2) . '</del>';
+                }
+                echo '    </div>';
+                echo '  </div>';
+                echo '</div>';
+            }
+        } else {
+            echo "No products found.";
         }
-    }); 
-});
-</script>
-
-<script>
-   document.addEventListener("DOMContentLoaded", function () {
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImg");
-    const closeModal = document.querySelector(".close");
-
-    // Preload images for faster display
-    document.querySelectorAll(".openModal").forEach(item => {
-        const imgSrc = item.getAttribute("data-img");
-        const img = new Image();
-        img.src = imgSrc;
-    });
-
-    // Handle image click event to open modal
-    document.querySelectorAll(".openModal").forEach(item => {
-        item.addEventListener("click", function (event) {
-            event.preventDefault();
-            const imgSrc = this.getAttribute("data-img");
-
-            // Show loading animation while the image loads
-            modalImg.src = "loader.gif"; // Replace with a valid loading icon
-            modal.style.display = "flex";
-
-            // Load the actual image
-            const newImg = new Image();
-            newImg.src = imgSrc;
-            newImg.onload = function () {
-                modalImg.src = imgSrc;
-            };
-        });
-    });
-
-    // Close modal when clicking the close button
-    closeModal.addEventListener("click", function () {
-        modal.style.display = "none";
-    });
-
-    // Close modal when clicking outside the image
-    modal.addEventListener("click", function (e) {
-        if (e.target === modal) {
-            modal.style.display = "none";
-        }
-    });
-
-    // Preload product images if the products array exists
-    if (typeof products !== "undefined" && Array.isArray(products)) {
-        products.forEach(product => {
-            const img = new Image();
-            img.src = product.image_url;
-        });
+    } catch (PDOException $e) {
+        echo "Error fetching products: " . $e->getMessage();
     }
-});
+    ?>
 
-</script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const modal = document.getElementById("imageModal");
+            const modalImg = document.getElementById("modalImg");
+            const closeModal = document.querySelector(".close");
 
+            document.querySelectorAll(".openModal").forEach(item => {
+                item.addEventListener("click", function (event) {
+                    event.preventDefault();
+                    const imgSrc = this.getAttribute("data-img");
+
+                    modalImg.src = "loader.gif";
+                    modal.style.display = "flex";
+
+                    const newImg = new Image();
+                    newImg.src = imgSrc;
+                    newImg.onload = function () {
+                        modalImg.src = imgSrc;
+                    };
+                });
+            });
+
+            closeModal.addEventListener("click", function () {
+                modal.style.display = "none";
+            });
+
+            modal.addEventListener("click", function (e) {
+                if (e.target === modal) {
+                    modal.style.display = "none";
+                }
+            });
+        });
+    </script>
 </body>
+
 
 </html>
