@@ -26,6 +26,78 @@
     rel="stylesheet">
 
     <style>
+      .product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.client-card {
+    background: linear-gradient(145deg, #ffffff, #e6e6e6);
+    box-shadow: 8px 8px 16px #b3b3b3, -8px -8px 16px #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    position: relative;
+    overflow: hidden;
+}
+
+.client-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 12px 12px 20px #aaaaaa, -12px -12px 20px #ffffff;
+}
+
+.client-card img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 5px solid rgba(255, 255, 255, 0.8);
+    transition: transform 0.3s ease-in-out;
+}
+
+.client-card:hover img {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.client-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.client-description {
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* 3D Floating Effect */
+.client-card::before {
+    content: "";
+    position: absolute;
+    top: -50px;
+    left: -50px;
+    width: 100px;
+    height: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    transition: all 0.5s ease-in-out;
+}
+
+.client-card:hover::before {
+    top: -20px;
+    left: -20px;
+    width: 120px;
+    height: 120px;
+}
+
+      </style>
+    <style>
 .sidebar {
   width: 300px;
   background-color: #fff;

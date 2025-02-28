@@ -17,11 +17,11 @@ if (isset($_POST['submit_client'])) {
         $image_name = $_FILES['client_image']['name'];
         $image_tmp = $_FILES['client_image']['tmp_name'];
         $image_size = $_FILES['client_image']['size'];
-        $image_extension = pathinfo($image_name, PATHINFO_EXTENSION);
-        $allowed_extensions = ['jpg', 'jpeg', 'png'];
+        $image_extension = strtolower(pathinfo($image_name, PATHINFO_EXTENSION));
+        $allowed_extensions = ['jpg', 'jpeg', 'png', 'webp'];
 
         // Check file type
-        if (in_array(strtolower($image_extension), $allowed_extensions)) {
+        if (in_array($image_extension, $allowed_extensions)) {
             // Generate a unique name for the image
             $new_image_name = uniqid() . '.' . $image_extension;
             $upload_path = 'uploads/' . $new_image_name;
@@ -41,7 +41,7 @@ if (isset($_POST['submit_client'])) {
                 echo "Failed to upload image.";
             }
         } else {
-            echo "Only JPG, JPEG, and PNG images are allowed.";
+            echo "Only JPG, JPEG, PNG, and WEBP images are allowed.";
         }
     } else {
         echo "Please upload an image.";
