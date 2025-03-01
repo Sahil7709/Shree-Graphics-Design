@@ -137,7 +137,7 @@
     </button>
 
     <div class="toast-banner">
-      <img src="./assets/images/logosample/imh12.jpeg" alt="Logo" width="80" height="70">
+      <img src="./assets/images/logosample/img12.jpeg" alt="Logo" width="80" height="70">
     </div>
 
     <div class="toast-detail">

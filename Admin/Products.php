@@ -185,7 +185,8 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
       </div>
       <div class="modal-footer">
        <button type="submit" class="btn btn-primary">Add Product</button>
-       <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+       <button type="button" class="btn btn-secondary" data-bs-dis
+        miss="modal">Close</button>
       </div>
     </form>
   </div>
