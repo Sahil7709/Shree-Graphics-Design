@@ -148,7 +148,7 @@
       </p>
 
       <p class="toast-title">
-        Cap
+        Logo
       </p>
 
       <p class="toast-meta">
@@ -294,7 +294,7 @@
               </li>
 
               <li class="dropdown-item">
-                <a href="strolleybag.php">Strolley Bags</a>
+                <a href="strolleybag.php">trolley Bags</a>
               </li>
 
               <li class="dropdown-item">
