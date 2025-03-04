@@ -273,9 +273,7 @@
                 <a href="windcheaters.php">Windcheaters</a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="ties.php">Ties</a>
-              </li>
+             
 
             </ul>
           </li>
@@ -531,9 +529,7 @@
               <a href="windcheaters.php" class="submenu-title"> Windcheaters</a>
             </li>
 
-            <li class="submenu-category">
-              <a href="ties.php" class="submenu-title"> Ties</a>
-            </li>
+            
 
           </ul>
 
@@ -927,7 +923,7 @@ $category_filter = 'passport'; ?>
           </li>
 
           <li class="footer-nav-item">
-            <a href="ties.php" class="footer-nav-link">Ties</a>
+          <a href="handbag.php" class="footer-nav-link">Hand Bag</a>
           </li>
 
         </ul>

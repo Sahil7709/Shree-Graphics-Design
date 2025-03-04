@@ -272,10 +272,6 @@
                 <a href="windcheaters.php">Windcheaters</a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="ties.php">Ties</a>
-              </li>
-
             </ul>
           </li>
 
@@ -530,9 +526,7 @@
               <a href="windcheaters.php" class="submenu-title"> Windcheaters</a>
             </li>
 
-            <li class="submenu-category">
-              <a href="ties.php" class="submenu-title"> Ties</a>
-            </li>
+           
 
           </ul>
 
@@ -891,12 +885,7 @@
                     </a>
                   </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="ties.php" class="sidebar-submenu-title">
-                      <p class="product-name">Ties</p>
-                      <!-- <data value="26" class="stock" title="Available Stock">26</data> -->
-                    </a>
-                  </li>
+                 
 
                 </ul>
 
@@ -1214,7 +1203,7 @@
           </li>
 
           <li class="footer-nav-item">
-            <a href="ties.php" class="footer-nav-link">Ties</a>
+          <a href="handbag.php" class="footer-nav-link">Hand Bag</a>
           </li>
 
         </ul>
