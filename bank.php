@@ -276,9 +276,7 @@
                 <a href="windcheaters.php">Windcheaters</a>
               </li>
 
-              <!-- <li class="dropdown-item">
-                <a href="ties.php">Ties</a>
-              </li> -->
+           
 
             </ul>
           </li>
@@ -308,10 +306,7 @@
                 <a href="laptopbag.php">Laptop Bags</a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a>
-              </li>
-
+            
               <li class="dropdown-item">
                 <a href="trekkingbag.php">Trekking Bag</a>
               </li>
@@ -558,10 +553,6 @@
               <a href="windcheaters.php" class="submenu-title"> Windcheaters</a>
             </li>
 
-            <!-- <li class="submenu-category">
-              <a href="ties.php" class="submenu-title"> Ties</a>
-            </li> -->
-
           </ul>
 
         </li>
@@ -600,9 +591,7 @@
               <a href="laptopbag.php" class="submenu-title">Laptop Bags</a>
             </li>
 
-            <li class="submenu-category">
-              <a href="laptopcumbag.php" class="submenu-title">Laptop Cum Overnighter Bag</a>
-            </li>
+         
 
             <li class="submenu-category">
               <a href="trekkingbag.php" class="submenu-title">Trekking Bag</a>

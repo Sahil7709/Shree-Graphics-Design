@@ -300,9 +300,7 @@
                 <a href="laptopbag.php">Laptop Bags</a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="laptopcumbag.php">Laptop Cum Overnighter Bag</a>
-              </li>
+            
 
               <li class="dropdown-item">
                 <a href="trekkingbag.php">Trekking Bag</a>
@@ -566,9 +564,6 @@
               <a href="laptopbag.php" class="submenu-title">Laptop Bags</a>
             </li>
 
-            <li class="submenu-category">
-              <a href="laptopcumbag.php" class="submenu-title">Laptop Cum Overnighter Bag</a>
-            </li>
 
             <li class="submenu-category">
               <a href="trekkingbag.php" class="submenu-title">Trekking Bag</a>
@@ -944,11 +939,6 @@
                       <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
                     </a>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="laptopcumbag.php" class="sidebar-submenu-title">
-                      <p class="product-name">Laptop Cum Overnighter Bag</p>
-                      <!-- <data value="61" class="stock" title="Available Stock">61</data> -->
-                    </a>
 
                   <li class="sidebar-submenu-category">
                     <a href="trekkingbag.php" class="sidebar-submenu-title">
