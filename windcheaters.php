@@ -347,10 +347,7 @@
                 <a href="leatherorganizer.php">Leather Organizers</a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="leathergift.php">Leather Gift Sets</a>
-              </li>
-
+            
             </ul>
           </li>
 
@@ -617,10 +614,6 @@
 
             <li class="submenu-category">
               <a href="leatherorganizer.php" class="submenu-title">Leather Organizers</a>
-            </li>
-
-            <li class="submenu-category">
-              <a href="leathergift.php" class="submenu-title">Leather Gift Sets</a>
             </li>
 
           </ul>
@@ -1022,12 +1015,7 @@
                     </a>
                   </li>
 
-                  <li class="sidebar-submenu-category">
-                    <a href="leathergift.php" class="sidebar-submenu-title">
-                      <p class="product-name">Leather Gift Sets</p>
-                      <!-- <data value="87" class="stock" title="Available Stock">87 pcs</data> -->
-                    </a>
-                  </li>
+                 
 
                 </ul>
 

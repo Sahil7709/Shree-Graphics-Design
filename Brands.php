@@ -360,10 +360,7 @@
                 <a href="leatherorganizer.php">Leather Organizers</a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="leathergift.php">Leather Gift Sets</a>
-              </li>
-
+             
             </ul>
           </li>
 
@@ -633,9 +630,7 @@
               <a href="leatherorganizer.php" class="submenu-title">Leather Organizers</a>
             </li>
 
-            <li class="submenu-category">
-              <a href="leathergift.php" class="submenu-title">Leather Gift Sets</a>
-            </li>
+     
 
           </ul>
 
