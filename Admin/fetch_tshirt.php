@@ -14,6 +14,7 @@
 
 <style>
 
+
     .service-title {
         color: var(--salmon-pink);
     }
@@ -32,10 +33,11 @@
     }
 
     .modal-content-box {
-        max-width: 90%;
-        max-height: 90%;
-        border-radius: 10px;
-    }
+    max-width: 80%;
+    max-height: 80vh;
+    object-fit: contain;
+}
+
 
     .close-btn {
         position: absolute;
@@ -48,8 +50,9 @@
 
     /* Service section styles */
     .service-section {
-        margin-bottom: 40px;
-    }
+        display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 20px; /* Space between cards */    }
 
     .service-image {
         width: 100%;
@@ -60,11 +63,14 @@
 
     .service-box {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
-        margin-bottom: 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    background: #fff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 
     .service-banner-container {
@@ -185,36 +191,33 @@ foreach ($categories as $category) {
 </div>
 
 
-
 <script>
-    document.addEventListener("readystatechange", function () {
-        if (document.readyState === "complete") {
-            const modal = document.getElementById("serviceModal");
-            const modalImg = document.getElementById("modalImage");
-            const closeModal = document.querySelector(".close-btn");
+    document.addEventListener("DOMContentLoaded", function () {
+    const modal = document.getElementById("serviceModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeModal = document.querySelector(".close-btn");
 
-            document.querySelectorAll(".trigger-modal").forEach(item => {
-                item.addEventListener("click", function (event) {
-                    event.preventDefault();
-                    const imgSrc = this.getAttribute("data-img");
-                    modalImg.src = imgSrc;
-                    modal.style.display = "flex";
-                });
-            });
+    document.querySelectorAll(".trigger-modal").forEach(item => {
+        item.addEventListener("click", function (event) {
+            event.preventDefault(); // Prevents default link action
+            const imgSrc = this.getAttribute("data-img");
+            modalImg.src = imgSrc;
+            modal.style.display = "flex";
+        });
+    });
 
-            closeModal.addEventListener("click", function () {
-                modal.style.display = "none";
-            });
+    closeModal.addEventListener("click", function () {
+        modal.style.display = "none";
+    });
 
-            modal.addEventListener("click", function (e) {
-                if (e.target === modal) {
-                    modal.style.display = "none";
-                }
-            });
+    modal.addEventListener("click", function (e) {
+        if (e.target === modal) {
+            modal.style.display = "none";
         }
     });
-</script>
+});
 
+</script>
 
 </body>
 </html>

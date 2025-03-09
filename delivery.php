@@ -757,7 +757,7 @@
             <div class="product-grid">
             <?php // Set the category filter to 'cap'
 // Set the category filter to 'cap'
-$category_filter = 'delivary'; ?>
+$category_filter = 'delivery'; ?>
               <?php include 'Admin/fetch_products.php'; ?>
             </div>
           </div>

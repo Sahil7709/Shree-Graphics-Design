@@ -142,6 +142,13 @@ $products = $stmt->fetchAll(PDO::FETCH_ASSOC);
           <option value="hotal">Hotal & Restaurant Uniforms</option>
           <option value="medical">Medical & Hospital Uniforms</option>
 
+          <option value="bank">Bank Uniforms </option>
+          <option value="government">Government Uniforms </option>
+          <option value="housekeeping">HouseKeeping Staff Uniforms </option>
+          <option value="privatesector">Security Uniforms </option>
+          <option value="delivery">Delivery Uniforms </option>
+          <option value="sports">Sports Uniforms </option>  
+
 
         </select>
       </div>
