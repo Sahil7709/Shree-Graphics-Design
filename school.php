@@ -385,17 +385,12 @@
                 <a href="bank.php">Bank Uniforms </a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="government.php">Government Staff Uniforms </a>
-              </li>
 
               <li class="dropdown-item">
                 <a href="housekeeping.php">House Keeping Staff Uniforms </a>
               </li>
 
-              <li class="dropdown-item">
-                <a href="privatesector.php">Private Sector Uniforms </a>
-              </li>
+            
 
               <li class="dropdown-item">
                 <a href="delivery.php">Delivery staff Uniforms </a>
@@ -407,9 +402,6 @@
 
             </ul>
           </li>
-
-
-
 
           <li class="menu-category">
             <a href="clients.php" class="menu-title">Clients</a>
